@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.1",
+  "dataset": "coles.products",
+  "run_id": "20260916180037-a6d54a47",
+  "retailer": "coles",
+  "started_at_utc": "2026-09-16T18:01:33Z",
+  "finished_at_utc": "2026-09-16T18:02:11Z",
+  "status": "complete",
+  "capture_context": {
+    "postcode": "",
+    "price_basis": "online",
+    "egress": "proxy",
+    "egress_country": "au",
+    "exit_ip": "115.186.228.127",
+    "build_id": "20260911.5-85c551818e881d4f64ee51c98ecdbf315b30a3d2",
+    "build_id_pinned": false,
+    "store_id": "7674"
+  },
+  "requested_nodes": [
+    {
+      "node_id": "fruit-vegetables",
+      "name": "Fruit & Vegetables"
+    }
+  ],
+  "counts": {
+    "total_reported": 488,
+    "pages_fetched": 11,
+    "tiles_seen": 488,
+    "sponsored_tiles": 0,
+    "sponsored_duplicates_dropped": 0,
+    "market_products_skipped": 0,
+    "proxy_rotations": 0,
+    "rows_written": 488,
+    "rows_with_price": 486,
+    "rows_with_warnings": 488
+  },
+  "errors": [],
+  "cheapest_by_subcategory": {
+    "rows_written": 88,
+    "subcategories": 88,
+    "groups_with_no_candidate": 12,
+    "rows_without_subcategory": 0,
+    "on_special": 15,
+    "selection_rule": "min_unit_price_within_sap_subcategory_excl_organic_prepared",
+    "produce_rows": 69,
+    "canonical_groups": 42,
+    "rows_by_group_kind": {
+      "non_produce": 16,
+      "prepared": 3,
+      "produce": 69
+    },
+    "rows_by_group_source": {
+      "product_name": 5,
+      "subcategory": 83
+    },
+    "rescued_by_product_name": 3,
+    "unmapped_subcategories": [
+      "POMEGRANATES"
+    ]
+  }
+}
