@@ -46,12 +46,33 @@ DEFAULTS = {
 
 
 def start(target, session, log) -> dict:
-    """No warm-up needed: the endpoint is unauthenticated and stateless."""
-    return {}
+    """No warm-up needed: the endpoint is unauthenticated and stateless.
+
+    The one thing worth carrying across pages is which store priced them. We
+    never tell Woolworths a postcode — the browse request carries no location
+    at all — so the server picks a fulfilment store from the exit IP, and each
+    product tile reports it as `FulfilmentStoreId`. Measured across 12 runs:
+    the Fruit & Veg category was 472/473 products from store 1101, 400/403
+    from store 7008 and 516 from store 3221. The category IS the store's
+    range, so a run served by a different store is a different series, and
+    the manifest has to say which one it was.
+    """
+    return {"store_ids": {}}
 
 
 def capture_extras(state) -> dict:
-    return {}
+    """Which store's range and prices this run was shown (spec section 5).
+
+    `store_id` is the store every tile agreed on, so history can be filtered
+    to one store. `store_ids_seen` only differs from a single entry if the
+    session was re-homed mid-crawl (a proxy rotation landing in another city),
+    in which case the run is a splice of two stores and is worth suspicion.
+    """
+    counts = (state or {}).get("store_ids") or {}
+    if not counts:
+        return {"store_id": "", "store_ids_seen": {}}
+    (top, _), = sorted(counts.items(), key=lambda kv: -kv[1])[:1]
+    return {"store_id": top, "store_ids_seen": dict(sorted(counts.items()))}
 
 
 def fetch_page(target: dict, page_number: int, session=None, state=None) -> dict:
@@ -89,7 +110,14 @@ def fetch_page(target: dict, page_number: int, session=None, state=None) -> dict
 
 
 def page_products(payload: dict, state=None) -> list:
-    return [p for b in (payload.get("Bundles") or []) for p in (b.get("Products") or []) if p]
+    products = [p for b in (payload.get("Bundles") or []) for p in (b.get("Products") or []) if p]
+    if state is not None:
+        counts = state.setdefault("store_ids", {})
+        for p in products:
+            sid = p.get("FulfilmentStoreId")
+            if sid is not None:
+                counts[str(sid)] = counts.get(str(sid), 0) + 1
+    return products
 
 
 def total_count(payload: dict):

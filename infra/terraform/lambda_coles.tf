@@ -33,6 +33,12 @@ resource "aws_iam_role_policy_attachment" "coles_category_basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
+resource "aws_iam_role_policy" "coles_category_read" {
+  name   = "${var.project_name}-coles-category-read"
+  role   = aws_iam_role.coles_category.id
+  policy = data.aws_iam_policy_document.crawler_read_manifests.json
+}
+
 resource "aws_iam_role_policy" "coles_category_s3" {
   name = "${var.project_name}-coles-category-s3"
   role = aws_iam_role.coles_category.id
@@ -95,8 +101,11 @@ resource "aws_lambda_function" "coles_category" {
       # rather than a located one (COLES_DISCOVERY.md section 5.5), so there is
       # no honest postcode to claim — the store id it WAS served is recorded on
       # every row and in the manifest instead.
-      POSTCODE      = var.coles_postcode
-      PAGE_DELAY_MS = tostring(var.coles_page_delay_ms)
+      POSTCODE = var.coles_postcode
+
+      DRIFT_THRESHOLD_PCT = tostring(var.crawler_drift_threshold_pct)
+      DRIFT_WINDOW        = tostring(var.crawler_drift_window)
+      PAGE_DELAY_MS       = tostring(var.coles_page_delay_ms)
 
       # Escape hatch for COLES_DISCOVERY.md section 5.3: the buildId can only be
       # read from an HTML page, and HTML is the surface the edge blocks first,
@@ -166,4 +175,7 @@ resource "aws_cloudwatch_metric_alarm" "coles_category_errors" {
   dimensions = {
     FunctionName = aws_lambda_function.coles_category.function_name
   }
+
+  alarm_actions = [aws_sns_topic.alerts.arn]
+  ok_actions    = [aws_sns_topic.alerts.arn]
 }

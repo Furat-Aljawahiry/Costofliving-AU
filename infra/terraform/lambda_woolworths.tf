@@ -26,10 +26,16 @@ resource "aws_iam_role_policy_attachment" "woolworths_category_basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# Write-only, scoped to this dataset's prefix. The crawler never needs to read
-# back what it wrote, and never needs to delete: raw runs are immutable. Scoping
-# per retailer also means a bug in one crawler cannot overwrite the other's
-# archive.
+# Write scoped to this dataset's prefix, and never delete: raw runs are
+# immutable. Scoping per retailer also means a bug in one crawler cannot
+# overwrite the other's archive. The only read is the manifests of the trailing
+# runs, for the drift check (lambda_crawler_shared.tf).
+resource "aws_iam_role_policy" "woolworths_category_read" {
+  name   = "${var.project_name}-woolworths-category-read"
+  role   = aws_iam_role.woolworths_category.id
+  policy = data.aws_iam_policy_document.crawler_read_manifests.json
+}
+
 resource "aws_iam_role_policy" "woolworths_category_s3" {
   name = "${var.project_name}-woolworths-category-s3"
   role = aws_iam_role.woolworths_category.id
@@ -94,6 +100,13 @@ resource "aws_lambda_function" "woolworths_category" {
       CATEGORY_NAME = var.woolworths_category_name
       POSTCODE      = var.woolworths_postcode
       PAGE_DELAY_MS = tostring(var.woolworths_page_delay_ms)
+
+      # The store this series must be served from (drift.py). The browse
+      # request carries no location, so Woolworths picks a store from the
+      # exit IP; any other store is a different range and trips the alarm.
+      EXPECTED_STORE_ID   = var.woolworths_expected_store_id
+      DRIFT_THRESHOLD_PCT = tostring(var.crawler_drift_threshold_pct)
+      DRIFT_WINDOW        = tostring(var.crawler_drift_window)
 
       # Egress proxy (see proxy.py). Only the secret's NAME is here — the
       # credential is read from Secrets Manager at cold start, so this env var
@@ -160,4 +173,7 @@ resource "aws_cloudwatch_metric_alarm" "woolworths_category_errors" {
   dimensions = {
     FunctionName = aws_lambda_function.woolworths_category.function_name
   }
+
+  alarm_actions = [aws_sns_topic.alerts.arn]
+  ok_actions    = [aws_sns_topic.alerts.arn]
 }

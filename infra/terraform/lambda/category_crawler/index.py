@@ -54,6 +54,7 @@ import json
 import os
 
 import coles
+import drift as drift_check
 import woolworths
 from cheapest import build_cheapest_rows
 from cheapest import to_csv as cheapest_to_csv
@@ -82,6 +83,13 @@ COMBINED_DATASET = "supermarkets.products"
 
 BUCKET = os.environ.get("OUTPUT_BUCKET")
 DELAY_MS = int(os.environ.get("PAGE_DELAY_MS", "700"))
+# Drift check (drift.py): this run's total_reported against the median of the
+# trailing complete runs, and its fulfilment store against theirs. A run that
+# fetched every product the API listed is "complete" even when the API listed
+# a different store's range — measured, 70 Woolworths SKUs come and go with
+# the store — so completeness alone says nothing about comparability.
+DRIFT_WINDOW = int(os.environ.get("DRIFT_WINDOW", str(drift_check.DEFAULT_WINDOW)))
+DRIFT_THRESHOLD_PCT = float(os.environ.get("DRIFT_THRESHOLD_PCT", str(drift_check.DEFAULT_THRESHOLD_PCT)))
 # Probe the exit IP once per run by default: one extra request per day, and it
 # puts the address we crawled from in the log next to the run id.
 PROBE = os.environ.get("PROXY_PROBE", "true").lower() == "true"
@@ -160,23 +168,43 @@ def _setting_present(name: str, retailer: str, single: bool, default=None):
 
 
 def _s3_put(bucket: str, key: str, body: str, content_type: str):
-    # Imported lazily so this module can be exercised with an injected writer
-    # and no boto3 credentials on the path.
-    global _s3
-    if _s3 is None:
-        import boto3
-
-        _s3 = boto3.client("s3")
-    return _s3.put_object(
+    return _s3_client().put_object(
         Bucket=bucket, Key=key, Body=body.encode("utf-8"), ContentType=content_type
     )
 
 
-def _run_one(retailer, event, put, bucket, run_id, delay_ms, resolved_proxy, probe, single):
+def _assess_drift(history, slug, prefix, run_id, manifest, expected_store="") -> dict:
+    """Run the drift check and record it; never let it fail the crawl.
+
+    The data is already in hand at this point. A listing permission that has
+    gone missing is worth a loud log line, not a lost day of prices — but it
+    is recorded as "unavailable" in the manifest rather than "ok", and no
+    metric is emitted, so the alarm's treat_missing_data policy decides.
+    """
+    total = manifest["counts"]["total_reported"]
+    store_id = manifest["capture_context"].get("store_id", "")
+    if history is None:
+        return {"status": "skipped"}
+    try:
+        trailing = history(prefix, DRIFT_WINDOW)
+    except Exception as e:  # noqa: BLE001
+        print(json.dumps({"msg": "drift.unavailable", "runId": run_id, "retailer": slug,
+                          "error": str(e)}))
+        return {"status": "unavailable", "error": str(e)}
+    result = drift_check.assess(total, store_id, trailing, DRIFT_THRESHOLD_PCT, expected_store)
+    print(json.dumps(drift_check.emf_record(slug, total, result, run_id)))
+    return result
+
+
+def _run_one(retailer, event, put, bucket, run_id, delay_ms, resolved_proxy, probe, single,
+             history=None):
     """Crawl one retailer end to end and write its four artefacts.
 
     Returns (result, rows, cheapest_rows). Raises if the crawl produced nothing
     usable — the caller decides whether that ends the invocation.
+
+    `history(prefix, window)` returns the trailing complete runs' manifest
+    summaries for the drift check; None skips the check (the test harness).
     """
     slug = retailer.RETAILER
     prefix = _setting("OUTPUT_PREFIX", slug, single, DEFAULT_PREFIX[slug])
@@ -233,6 +261,10 @@ def _run_one(retailer, event, put, bucket, run_id, delay_ms, resolved_proxy, pro
         "price_basis": manifest["capture_context"]["price_basis"],
     })
     manifest["cheapest_by_subcategory"] = cheapest_summary
+    # WOOLWORTHS_EXPECTED_STORE_ID=1101: the store this series is meant to be
+    # served from. Any other store is a different range (drift.py).
+    expected_store = _setting("EXPECTED_STORE_ID", slug, single, "")
+    manifest["drift"] = _assess_drift(history, slug, prefix, run_id, manifest, expected_store)
 
     day = f"{prefix}/dt={captured_at[:10]}"
     stem = f"{day}/{run_id}"
@@ -264,6 +296,9 @@ def _run_one(retailer, event, put, bucket, run_id, delay_ms, resolved_proxy, pro
         "reported": manifest["counts"]["total_reported"],
         "pages": manifest["counts"]["pages_fetched"],
         "egress": manifest["capture_context"]["egress"],
+        "storeId": manifest["capture_context"].get("store_id", ""),
+        "drift": manifest["drift"].get("status"),
+        "driftPct": manifest["drift"].get("pct"),
         "proxyRotations": manifest["counts"]["proxy_rotations"],
         "sponsoredDuplicatesDropped": manifest["counts"]["sponsored_duplicates_dropped"],
     }
@@ -320,9 +355,11 @@ def _put_combined(put, bucket, run_id, started_at, prefix, members, rows, cheape
     }
 
 
-def run(event=None, put=None, bucket=None, delay_ms=None, proxy=..., probe=None) -> dict:
+def run(event=None, put=None, bucket=None, delay_ms=None, proxy=..., probe=None,
+        history=None) -> dict:
     """Core run logic, with the object writer injected so it can be exercised
     without AWS. `put(key, body, content_type)` must not raise on success.
+    `history(prefix, window)` likewise; None skips the drift check.
 
     Returns the single retailer's result dict when one retailer was crawled —
     unchanged from before — and a batch summary when several were.
@@ -356,7 +393,7 @@ def run(event=None, put=None, bucket=None, delay_ms=None, proxy=..., probe=None)
         try:
             result, rows, cheapest = _run_one(
                 retailer, event, put, bucket, run_id,
-                delay_ms, resolved_proxy, probe, single,
+                delay_ms, resolved_proxy, probe, single, history=history,
             )
         except Exception as e:
             # One retailer being blocked is not a reason to throw away the
@@ -413,6 +450,17 @@ def run(event=None, put=None, bucket=None, delay_ms=None, proxy=..., probe=None)
     return summary
 
 
+def _s3_client():
+    # boto3 is imported lazily so this module can be exercised with an injected
+    # writer and history reader, and no boto3 credentials on the path.
+    global _s3
+    if _s3 is None:
+        import boto3
+
+        _s3 = boto3.client("s3")
+    return _s3
+
+
 def handler(event=None, context=None):
     """Lambda entrypoint: wires `run` to real S3."""
     if not BUCKET:
@@ -420,4 +468,5 @@ def handler(event=None, context=None):
     return run(
         event or {},
         put=lambda key, body, content_type: _s3_put(BUCKET, key, body, content_type),
+        history=drift_check.s3_history_reader(_s3_client(), BUCKET),
     )

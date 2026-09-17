@@ -159,7 +159,19 @@ no organic potatoes today" from "the organic-potatoes page 403'd".
     "price_basis": "online",
     "egress": "proxy",                       // proxy | direct - see below
     "egress_country": "au",
-    "exit_ip": "203.0.113.47"                // "" unless the exit-IP probe ran
+    "exit_ip": "203.0.113.47",               // "" unless the exit-IP probe ran
+    "store_id": "1101",                      // fulfilment store that priced the run - see below
+    "store_ids_seen": { "1101": 537 }        // Woolworths: tiles per store; >1 key = spliced run
+  },
+  "drift": {                                 // this run against the trailing complete runs - see below
+    "status": "ok",                          // ok | drift | no_history | no_total | unavailable | skipped
+    "pct": -0.11,                            // signed % change of total_reported from the trailing median
+    "trailing_median": 472.5,
+    "store_id": "1101",
+    "trailing_store_id": "1101",             // pinned (EXPECTED_STORE_ID) or the trailing modal store
+    "store_baseline": "pinned",              // pinned | trailing | none
+    "store_changed": false,
+    "alarm": false                           // the one bit the CloudWatch alarm watches
   },
   "requested_nodes": [
     { "node_id": "1_03F7B3C", "name": "Potatoes & Pumpkins", "level": 3 }
@@ -189,6 +201,29 @@ prices, and anyone comparing two days of history needs to know when that
 changed. `proxy_rotations` above zero means the run was blocked mid-crawl and
 changed exit IP to finish; a rising count across nights is the early warning
 that the endpoint has started fingerprinting the crawler.
+
+`store_id` is the fulfilment store the retailer actually priced the run from,
+and it is the field that explains a category changing size between two
+"complete" runs. **The Woolworths browse request carries no location at all** —
+`postcode` is a label this pipeline writes, not something Woolworths receives —
+so Woolworths resolves a store from the exit IP, and the category is that
+store's range. Measured, 13–16 Sep 2026: store 1101 serves 472/473 Fruit & Veg
+products, store 7008 serves 400/403, store 3221 serves 516. A run served from a
+different store is a different series, not a smaller one: ~100 lines (mostly
+`VALUE ADD VEG` / `VALUE ADD FRUIT` packs, organics, tropical fruit) simply do
+not exist at the smaller store. Coles already recorded this as `store_id`
+(COLES_DISCOVERY.md section 5.5); Woolworths now does too, from the
+`FulfilmentStoreId` every tile carries.
+
+`drift` is the run's comparability check (`drift.py`): `total_reported`
+against the median of the trailing `_SUCCESS` runs, and `store_id` against the
+pinned expected store (Terraform `woolworths_expected_store_id`, default 1101)
+or, unpinned, the trailing runs' modal store. Either a count move beyond the
+threshold (default 10%) or a store change sets `alarm`, which is emitted as the
+CloudWatch metric `CostOfLivingAU/Crawler DriftAlarm{Retailer}` and alarmed on
+per retailer. `complete` still means "every product the API listed was
+fetched"; it does not and cannot mean "the same category as yesterday" — read
+`drift.status` and `capture_context.store_id` before comparing two runs.
 
 ### 3.3 `cheapest-by-subcategory.csv`
 
@@ -258,8 +293,8 @@ the same SKU. A price without its context is not a fact.
 
 | Column | Type | Null? | Description |
 |---|---|---|---|
-| `postcode` | string | no | Postcode the session was scoped to, e.g. `2000`. Pin this per Lambda and do not let it drift, or your history gets a discontinuity you cannot detect |
-| `fulfilment_store_id` | string | yes | Retailer's store identifier for the scoped session, when exposed |
+| `postcode` | string | no | Postcode the session was scoped to, e.g. `2000`. Pin this per Lambda and do not let it drift, or your history gets a discontinuity you cannot detect. **Woolworths caveat:** the browse request sends no postcode; this is the pipeline's label, and the store actually served is `fulfilment_store_id` |
+| `fulfilment_store_id` | string | yes | Retailer's store identifier for the scoped session, when exposed. Woolworths: `FulfilmentStoreId` from the tile, resolved by Woolworths from the exit IP — filter history on it, because the category's range is the store's (section 3.2, `store_id`) |
 | `price_basis` | enum | no | `online` \| `instore`. Which price populated `price_aud`. Emit **one row per basis** if you capture both — never blend them into one row |
 
 > **Consequence for the site:** two Lambdas pinned to different postcodes produce

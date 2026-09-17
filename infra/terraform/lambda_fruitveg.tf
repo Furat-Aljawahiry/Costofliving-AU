@@ -59,9 +59,15 @@ resource "aws_iam_role_policy_attachment" "fruitveg_category_basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# Write-only, and scoped to exactly the three prefixes this function writes.
-# Raw runs are immutable: the crawler never reads back what it wrote and never
-# deletes.
+# Write scoped to exactly the three prefixes this function writes, and never
+# delete: raw runs are immutable. The only read is the trailing manifests for
+# the drift check (lambda_crawler_shared.tf).
+resource "aws_iam_role_policy" "fruitveg_category_read" {
+  name   = "${var.project_name}-fruitveg-category-read"
+  role   = aws_iam_role.fruitveg_category.id
+  policy = data.aws_iam_policy_document.crawler_read_manifests.json
+}
+
 resource "aws_iam_role_policy" "fruitveg_category_s3" {
   name = "${var.project_name}-fruitveg-category-s3"
   role = aws_iam_role.fruitveg_category.id
@@ -133,6 +139,11 @@ resource "aws_lambda_function" "fruitveg_category" {
       WOOLWORTHS_CATEGORY_URL  = var.woolworths_category_url
       WOOLWORTHS_CATEGORY_NAME = var.woolworths_category_name
       WOOLWORTHS_POSTCODE      = var.woolworths_postcode
+      # See lambda_woolworths.tf: the store this series must be served from.
+      WOOLWORTHS_EXPECTED_STORE_ID = var.woolworths_expected_store_id
+
+      DRIFT_THRESHOLD_PCT = tostring(var.crawler_drift_threshold_pct)
+      DRIFT_WINDOW        = tostring(var.crawler_drift_window)
 
       COLES_OUTPUT_PREFIX = var.coles_output_prefix
       COLES_CATEGORY_ID   = var.coles_category_id
@@ -219,4 +230,7 @@ resource "aws_cloudwatch_metric_alarm" "fruitveg_category_errors" {
   dimensions = {
     FunctionName = aws_lambda_function.fruitveg_category.function_name
   }
+
+  alarm_actions = [aws_sns_topic.alerts.arn]
+  ok_actions    = [aws_sns_topic.alerts.arn]
 }
