@@ -13,10 +13,47 @@
 // Nothing here is estimated. If a number is not in a CSV, it is not served.
 import fs from 'node:fs'
 import path from 'node:path'
+import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(HERE, '..', '..', 'data', 'out'))
+
+// ---------------------------------------------------------------- S3 sync
+//
+// The archive lives in S3; data/out is a working copy. With DATA_BUCKET set
+// the server pulls the archive down (incrementally — `aws s3 sync` copies only
+// what changed) before every load, so a freshly booted server serves the
+// newest run and a reload picks up last night's without anyone running a
+// script. Without DATA_BUCKET, or when the CLI is missing or unauthenticated,
+// it says so once and serves whatever data/out holds — the dev fallback.
+//
+// The CLI rather than the SDK: it is what this repo already assumes for
+// credentials and region (data/scripts/pull_latest_reports.py does the same).
+const DATA_BUCKET = process.env.DATA_BUCKET || ''
+const DATA_PREFIX = process.env.DATA_PREFIX || 'reports/supermarkets'
+const AWS_REGION = process.env.AWS_REGION || 'ap-southeast-2'
+const SYNC_DIR = path.join(DATA_DIR, 's3')
+
+let LAST_SYNC = { at: null, ok: null, message: DATA_BUCKET ? 'not yet run' : 'DATA_BUCKET not set; serving data/out as is' }
+
+export function syncArchive() {
+  if (!DATA_BUCKET) return LAST_SYNC
+  const started = Date.now()
+  const r = spawnSync('aws', [
+    '--region', AWS_REGION, 's3', 'sync', `s3://${DATA_BUCKET}/${DATA_PREFIX}`, SYNC_DIR,
+    '--exclude', '*', '--include', '*.csv', '--include', '*.json', '--no-progress',
+  ], { encoding: 'utf8', timeout: 5 * 60 * 1000 })
+  const ok = r.status === 0
+  const copied = ok ? (r.stdout.match(/^download:/gm) || []).length : 0
+  const failure = (r.error?.message || r.stderr || `exit ${r.status}`).trim().split('\n')[0]
+  LAST_SYNC = {
+    at: new Date().toISOString(), ok,
+    message: ok ? `${copied} files copied in ${Date.now() - started} ms` : failure,
+  }
+  console.log(`[observations] s3 sync ${ok ? 'ok' : 'FAILED'}: ${LAST_SYNC.message}${ok ? '' : ' — serving local data/out'}`)
+  return LAST_SYNC
+}
 
 // ---------------------------------------------------------------- CSV parsing
 
@@ -72,11 +109,12 @@ function walk(dir, out = []) {
 
 let INDEX = null
 
-export function loadObservations({ force = false } = {}) {
+export function loadObservations({ force = false, sync = true } = {}) {
   if (INDEX && !force) return INDEX
+  if (sync) syncArchive()
 
   const products = new Map()    // key retailer:sku
-  const cheapestByRun = new Map() // retailer -> { run_id, captured_at, rows }
+  const cheapestCandidates = [] // every cheapest file; the newest COMPLETE run per retailer wins below
   const runs = new Map()         // run_id:retailer -> manifest summary
   const seenObs = new Set()      // retailer:sku:run_id
   const files = { products: 0, cheapest: 0, manifests: 0, skipped: 0 }
@@ -107,16 +145,11 @@ export function loadObservations({ force = false } = {}) {
         for (const r of rows) ingestProduct(products, seenObs, r, file)
       } else if (dataset.endsWith('.cheapest_by_subcategory')) {
         files.cheapest++
-        const retailer = rows[0].retailer
-        const cur = cheapestByRun.get(retailer)
-        // keep the newest run per retailer
-        if (!cur || rows[0].captured_at_utc > cur.capturedAt) {
-          cheapestByRun.set(retailer, {
-            retailer, runId: rows[0].run_id, capturedAt: rows[0].captured_at_utc,
-            selectionRule: rows[0].selection_rule,
-            rows: rows.map(cheapestRow),
-          })
-        }
+        cheapestCandidates.push({
+          retailer: rows[0].retailer, runId: rows[0].run_id, capturedAt: rows[0].captured_at_utc,
+          selectionRule: rows[0].selection_rule,
+          rows: rows.map(cheapestRow),
+        })
       } else files.skipped++
     } catch (e) {
       console.warn(`[observations] skipped ${file}: ${e.message}`)
@@ -124,31 +157,82 @@ export function loadObservations({ force = false } = {}) {
     }
   }
 
-  // Finalise: sort observations, derive latest.
-  for (const p of products.values()) {
+  // Collapse near-duplicate runs. Two hand invocations 13 s apart on 4 Sep
+  // put two observations of every product on one day; the schedule's own two
+  // runs (06:00 and 18:00 UTC) are twelve hours apart and both count. Rule:
+  // per retailer, a run starting within COLLAPSE_WINDOW_MS of the previous
+  // kept run is folded into it — the complete one wins, else the later one.
+  const collapsed = collapseRuns([...runs.values()])
+  const dropped = new Set(collapsed.filter(r => r.collapsedInto).map(r => `${r.retailer}:${r.runId}`))
+
+  // Finalise: drop observations from collapsed runs, sort, derive latest.
+  for (const [key, p] of products) {
+    p.observations = p.observations.filter(o => !dropped.has(`${p.retailer}:${o.runId}`))
+    if (!p.observations.length) { products.delete(key); continue }
     p.observations.sort((a, b) => a.capturedAt.localeCompare(b.capturedAt))
     p.latest = p.observations[p.observations.length - 1]
     p.firstSeen = p.observations[0].capturedAt
     p.lastSeen = p.latest.capturedAt
   }
 
-  const runList = [...runs.values()].sort((a, b) => (b.startedAt || '').localeCompare(a.startedAt || ''))
-  const lastCapture = runList.find(r => r.status === 'complete' || r.status === 'partial') || null
+  const runList = collapsed.sort((a, b) => (b.startedAt || '').localeCompare(a.startedAt || ''))
+  const lastCapture = runList.find(r => !r.collapsedInto && (r.status === 'complete' || r.status === 'partial')) || null
+
+  // "Cheapest today" comes from the newest COMPLETE run per retailer: a
+  // partial run's cheapest file is missing whatever the crawl missed, and a
+  // cheapest line that was simply not fetched would read as "got dearer".
+  // With no complete run at all for a retailer, the newest partial is used
+  // and the status endpoint says so.
+  const cheapestByRun = new Map()
+  const statusOf = (c) => runs.get(`${c.runId}:${c.retailer}`)?.status
+  for (const c of cheapestCandidates.sort((a, b) => b.capturedAt.localeCompare(a.capturedAt))) {
+    if (dropped.has(`${c.retailer}:${c.runId}`)) continue
+    const cur = cheapestByRun.get(c.retailer)
+    const complete = statusOf(c) === 'complete'
+    if (!cur || (complete && !cur.complete)) cheapestByRun.set(c.retailer, { ...c, complete })
+  }
 
   INDEX = {
-    dataDir: DATA_DIR, files,
+    dataDir: DATA_DIR, files, sync: LAST_SYNC,
     products, cheapest: cheapestByRun, runs: runList,
     summary: {
       productCount: products.size,
       retailers: [...new Set([...products.values()].map(p => p.retailer))],
       observationCount: [...products.values()].reduce((n, p) => n + p.observations.length, 0),
       lastCapturedAt: lastCapture?.finishedAt || lastCapture?.startedAt || null,
-      runCount: runList.length,
+      runCount: runList.filter(r => !r.collapsedInto).length,
+      collapsedRunCount: dropped.size,
+      cheapestFromPartial: [...cheapestByRun.values()].filter(c => !c.complete).map(c => c.retailer),
     },
     loadedAt: new Date().toISOString(),
   }
   console.log(`[observations] ${INDEX.summary.productCount} products, ${INDEX.summary.observationCount} observations from ${files.products} product files, ${files.cheapest} cheapest files, ${files.manifests} manifests (${DATA_DIR})`)
   return INDEX
+}
+
+const COLLAPSE_WINDOW_MS = 60 * 60 * 1000
+
+function collapseRuns(list) {
+  const rank = (r) => (r.status === 'complete' ? 1 : 0)
+  const byRetailer = new Map()
+  for (const r of list) {
+    r.collapsedInto = null
+    if (!byRetailer.has(r.retailer)) byRetailer.set(r.retailer, [])
+    byRetailer.get(r.retailer).push(r)
+  }
+  for (const rs of byRetailer.values()) {
+    rs.sort((a, b) => (a.startedAt || '').localeCompare(b.startedAt || ''))
+    let kept = null
+    for (const r of rs) {
+      const close = kept && r.startedAt && kept.startedAt
+        && (Date.parse(r.startedAt) - Date.parse(kept.startedAt)) < COLLAPSE_WINDOW_MS
+      if (!close) { kept = r; continue }
+      // Same capture, twice. Keep the better one; the later wins a tie.
+      if (rank(r) >= rank(kept)) { kept.collapsedInto = r.runId; kept = r }
+      else r.collapsedInto = kept.runId
+    }
+  }
+  return list
 }
 
 function ingestProduct(products, seenObs, r, file) {
@@ -274,5 +358,5 @@ export function getCheapest({ retailer } = {}) {
 
 export function getStatus() {
   const idx = loadObservations()
-  return { ...idx.summary, dataDir: idx.dataDir, files: idx.files, loadedAt: idx.loadedAt, runs: idx.runs }
+  return { ...idx.summary, dataDir: idx.dataDir, files: idx.files, sync: idx.sync, loadedAt: idx.loadedAt, runs: idx.runs }
 }

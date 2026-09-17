@@ -36,7 +36,9 @@ app.get('/api/products/:retailer/:sku', (req, res) => {
   res.json(p)
 })
 app.get('/api/cheapest', (req, res) => res.json(getCheapest({ retailer: req.query.retailer })))
-// Re-read data/out without restarting (after an `aws s3 sync`).
+// Pull the archive from S3 (when DATA_BUCKET is set) and re-read it, without
+// restarting. The same thing runs on a timer below, so the site follows the
+// crawler's twice-daily schedule on its own.
 app.post('/api/reload', (req, res) => { loadObservations({ force: true }); res.json(getStatus()) })
 
 // Trigger a collection cycle (also what a daily scheduled task would hit).
@@ -44,6 +46,15 @@ app.post('/api/collect', async (req, res) => {
   try { res.json(await collect()) }
   catch (e) { res.status(500).json({ error: String(e) }) }
 })
+
+// Boot: sync + load once up front so the first request is not the slow one.
+loadObservations()
+const SYNC_INTERVAL_MIN = Number(process.env.SYNC_INTERVAL_MIN || (process.env.DATA_BUCKET ? 60 : 0))
+if (SYNC_INTERVAL_MIN > 0) {
+  setInterval(() => {
+    try { loadObservations({ force: true }) } catch (e) { console.warn(`[observations] scheduled reload failed: ${e.message}`) }
+  }, SYNC_INTERVAL_MIN * 60 * 1000)
+}
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
