@@ -43,7 +43,7 @@ variable "woolworths_category_name" {
 }
 
 variable "woolworths_postcode" {
-  description = "Postcode the capture is scoped to. Woolworths prices vary by location, so this must stay pinned or the history gets an undetectable discontinuity (spec section 5)."
+  description = "Postcode the capture is scoped to. Woolworths prices vary by location, so this must stay pinned or the history gets an undetectable discontinuity (spec section 5). NOTE: this is a LABEL written into the output, not something the browse request sends — Woolworths resolves the store from the exit IP. See woolworths_expected_store_id."
   type        = string
   default     = "2000"
 }
@@ -64,6 +64,24 @@ variable "woolworths_schedule_enabled" {
 
 # Same code, same schema, same zip as the Woolworths crawler — see
 # lambda_coles.tf. Only the target and the destination prefix differ.
+
+variable "woolworths_expected_store_id" {
+  description = "FulfilmentStoreId the Woolworths series must be served from. The browse API carries no location, so the store is whatever Woolworths resolves from the exit IP; measured, store 1101 serves 472 Fruit & Veg products, 7008 serves 400 and 3221 serves 516. A run served by any other store trips the drift alarm. Empty disables the pin and falls back to the modal store of the trailing runs."
+  type        = string
+  default     = "1101"
+}
+
+variable "crawler_drift_threshold_pct" {
+  description = "Drift alarm: a run whose total_reported moves more than this percentage from the median of the trailing complete runs is flagged (drift.py)."
+  type        = number
+  default     = 10
+}
+
+variable "crawler_drift_window" {
+  description = "Drift alarm: how many trailing complete runs the median is taken over."
+  type        = number
+  default     = 7
+}
 
 variable "coles_output_prefix" {
   description = "S3 key prefix for the Coles crawl. Separate from the Woolworths prefix on purpose: identical columns, separate files, so a bad Coles run cannot contaminate the Woolworths series."
@@ -120,9 +138,9 @@ variable "coles_proxy_enabled" {
 }
 
 variable "coles_proxy_required" {
-  description = "Fail the Coles run rather than silently crawling direct if no proxy is configured."
+  description = "Fail the run rather than silently crawling direct if no proxy is configured. Direct AWS egress is blocked by both retailers (data/DATA_SUPPLY_DECISION.md section 2), so a misconfigured secret should trip the error alarm, not go out on the AWS IP."
   type        = bool
-  default     = false
+  default     = true
 }
 
 # --------------------------------------------------------------- egress proxy
@@ -161,9 +179,9 @@ variable "crawler_proxy_session_minutes" {
 }
 
 variable "woolworths_proxy_required" {
-  description = "Fail the run rather than silently crawling direct if no proxy is configured. Turn this on once the proxy is the intended path, so a misconfiguration trips the error alarm instead of going out on the AWS IP."
+  description = "Fail the run rather than silently crawling direct if no proxy is configured. Direct AWS egress is blocked by both retailers (data/DATA_SUPPLY_DECISION.md section 2), so a misconfigured secret should trip the error alarm, not go out on the AWS IP."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "crawler_proxy_probe" {
@@ -209,7 +227,15 @@ variable "fruitveg_proxy_enabled" {
 }
 
 variable "fruitveg_proxy_required" {
-  description = "Fail the run rather than silently crawling direct if no proxy is configured. Turn this on once the proxy is the intended path, so a misconfiguration trips the error alarm."
+  description = "Fail the run rather than silently crawling direct if no proxy is configured. Direct AWS egress is blocked by both retailers (data/DATA_SUPPLY_DECISION.md section 2), so a misconfigured secret should trip the error alarm, not go out on the AWS IP."
   type        = bool
-  default     = false
+  default     = true
+}
+
+# --------------------------------------------------------------- alerting
+
+variable "alert_email" {
+  description = "Address every alarm in the stack emails (alerting.tf). Empty creates the topic with no subscription. The address must click AWS's confirmation email before anything is delivered."
+  type        = string
+  default     = ""
 }

@@ -28,7 +28,7 @@ the Terraform state — not against the docs, several of which are out of date.
 | Crawler (`infra/terraform/lambda/category_crawler`) | One codebase, Woolworths + Coles adapters, 67-column spec, cheapest-by-subcategory report, produce taxonomy. 98 Python tests pass. Audited; defects in `FIXES.md` fixed. |
 | Deployed | Three Lambdas + S3 bucket + EventBridge, all via Terraform. All three functions redeployed **today 02:33 UTC**. |
 | Schedule | `fruitveg` rule **ENABLED** (`cron(0 6,18 * * ? *)`, both retailers in one invocation). Target + invoke permission verified. **First unattended firing is 06:00 UTC today.** It has never fired on its own — every run in the archive so far was invoked by hand. |
-| The 403 wall (v1's blocker) | **Not standing** for the endpoints in use. Coles from AWS: `complete` on Aug 31 and Sep 4. Woolworths from AWS: Sep 4 run wrote 470/473 rows → `partial`, no `_SUCCESS`. A residential-proxy module (`proxy.py`, Decodo) has been built but is **not enabled** (`proxy_rotations: 0`, `egress: direct`). |
+| The 403 wall (v1's blocker) | **Standing, for both retailers.** Direct AWS egress: Woolworths 403 (Aug 28, re-probed Sep 17), Coles serves an interstitial instead of JSON (probed Sep 17). Every run in the archive since Aug 28 has gone through one AU residential exit per run (`egress: proxy`, `proxy_rotations: 0`). The earlier claim here that runs went direct came from mislabelled laptop manifests. Decision and evidence: `data/DATA_SUPPLY_DECISION.md`. |
 | Archive in S3 | 5 runs: Aug 28, Aug 29, Aug 31 (Coles only), Sep 4 ×2 (double hand-invocation 13 s apart). **Nothing between Sep 5 and Sep 13** — the schedule was off. |
 | Archive on disk (`data/out`) | 962 products, 2,850 observations, 951 products seen more than once. Hand-copied from S3; `npm run sync-data` has never been run (`data/out/s3/` does not exist). A stray `data/out/woolies/` duplicate is deduped by run_id at load. |
 | Cross-retailer matching | **Does not exist.** `canonical_product_key` matches **0** rows between the two retailers (word order + `variety` differ). Flagged in `FIXES.md` as "the finding most worth acting on next". Still true. |
@@ -55,7 +55,7 @@ the Terraform state — not against the docs, several of which are out of date.
 | 0.1 Real ABS history | Not done. |
 | 0.2 Persistence | Solved differently — S3 archive + manifests. Local sync still manual. |
 | 0.3 Loud failure in the Express adapter | Moot — the adapter should be deleted, not fixed. |
-| 0.4 Data-supply decision | Answered in practice (direct AWS egress works) but **never written down**, and a proxy module was built that principle #6 says not to use. |
+| 0.4 Data-supply decision | **Written (Sep 17): `data/DATA_SUPPLY_DECISION.md`.** Direct AWS egress does not work for either retailer; the proxy has been the path since Aug 28. Principle #6 amended to match. |
 | 0.5 `confidence` end-to-end | Done on the product page; the API carries it everywhere. |
 | 1.1–1.3 Methodology / quality dashboard / staleness | Not done. The trust strip links to them and is dead. |
 | 1.4 Provenance on every number | Done (product page). |
@@ -79,9 +79,14 @@ the Terraform state — not against the docs, several of which are out of date.
 4. The archive is the product. **Amendment:** the archive only compounds while
    the schedule fires unattended. Until that is proven, nothing else counts.
 5. Publish the method.
-6. Stay on the right side of the line: no IP rotation to defeat blocks, no
-   CAPTCHA solving, no scraping behind a login. **The Decodo proxy module
-   conflicts with this and is currently unused. §2 P0.5 resolves it.**
+6. Stay on the right side of the line. **Amended Sep 17** (full text and
+   reasoning in `data/DATA_SUPPLY_DECISION.md` §4): one Australian residential
+   exit per run, presenting as one shopper browsing one category at a polite
+   rate; no CAPTCHA solving, no scraping behind a login, no keyword search, no
+   pool of exits paging in parallel. If a retailer blocks the residential exit
+   too, stop that retailer and pursue an agreement or the ACCC-recommended
+   API — do not rotate through more addresses. Direct AWS egress is blocked by
+   both retailers and the proxy has been the live path since Aug 28.
 
 ---
 
@@ -102,7 +107,7 @@ until a run lands without a human. Everything here is about making tonight's
 | **0.2** | **Watch the 06:00 UTC and 18:00 UTC runs today.** Confirm `_SUCCESS` for both retailers under `dt=2026-09-13`. If Woolworths comes back `partial` again, fix it (see 0.3). | Nothing has ever fired from the schedule. |
 | **0.3** | **Make Woolworths earn `_SUCCESS`.** The Sep 4 run wrote 470 of a reported 473. `FIXES.md` lists the likely cause (`TotalRecordCount` vs sponsored/marketplace dedupe) as "found, deliberately not fixed". Measure it against tonight's run, then either count skipped tiles toward `total` or relax `complete` to `len(rows) >= total - skipped`. | A retailer that can never be `complete` never writes `_SUCCESS`, so its runs look failed forever and any downstream `_SUCCESS` gate silently drops it. |
 | **0.4** | **A "no data in 36 h" alarm, wired to an email.** The existing per-function error alarms catch a run that *crashes*; they cannot catch a run that *never starts* — which is the failure that actually occurred (Sep 5–13, zero invocations, zero alarms). CloudWatch `Invocations` `Sum < 1` over 36 h with `treat_missing_data = breaching`, SNS → email. Confirm the existing error alarms have an action at all. | Principle #2, applied to the scheduler rather than the code. |
-| **0.5** | **Write the data-supply decision (v1's 0.4) — one page in `data/`.** Record: direct AWS egress is the chosen path; both retailers verified from AWS; the proxy module is **not** to be enabled for evasion; if a retailer starts blocking, the response is to stop and pursue an agreement / wait for the ACCC-recommended API, not to rotate IPs. Then either delete `proxy.py` or mark it explicitly as "kept for a future authorised use only". | The code and the principles currently disagree. A journalist reading the repo would notice. |
+| **0.5** | ~~Write the data-supply decision~~ **Done Sep 17: `data/DATA_SUPPLY_DECISION.md`.** The premise here was wrong — direct AWS egress has never worked from Lambda; the proxy has been live since Aug 28. Decision: keep one residential exit per run, principle #6 amended openly, ~US$12/month. Remaining from it: turn rotate-on-block off in `proxy.py` (a 403 ends the run), fix the `egress_country: "aws"` label on laptop runs, and give the three error alarms an action. | The code and the principles disagreed. Now the principle says what the code does, and the page says why. |
 | **0.6** | **Automate the archive → server path.** Either `npm run sync-data` + `POST /api/reload` on a schedule, or have `observations.js` read from S3 directly at boot (with `data/out` as the local dev fallback). Recommend the latter — it removes a manual step that will lapse. Also collapse same-day duplicate runs per retailer at load (Sep 4 currently counts as two observations of every product). | Otherwise the site shows Sep 4 data forever, no matter how well the Lambda runs. |
 
 **Done when:** three consecutive scheduled days have `_SUCCESS` for both
@@ -120,7 +125,7 @@ leftovers of Phase 2, re-ordered by what is cheapest per unit of credibility.
 | **1.1** | **Delete the mock layer.** Remove `store.js`, `adapters/`, `/api/prices`, `/api/collect`, the mock `HISTORY`; keep `basket.js` (the basket definition is real, its prices were not). Rewrite `README.md` around the observations API. Retire or rewrite `ARCHITECTURE.md`. | Removes the last place a made-up number could leak from, and the README no longer contradicts the site. |
 | **1.2** | **Real ABS Food CPI (v1's 0.1).** ABS Data API → `/api/history`. Series: Food & non-alcoholic beverages, plus sub-groups that map to the six aisles (Fruit & veg, Meat & seafood, Bread & cereal, Dairy, Food products n.e.c. …). Monthly CPI indicator where available. | The "Annual change, indexed" chart on home gets its ABS line; each category page gets its 2014→today index. The basket line stays `NotWired` until 1.6/2.2. |
 | **1.3** | **Data-quality page** (`#/data`). Everything it needs is already in `/api/status`: last run per retailer, status, rows written vs reported, warnings count, egress, store id, run history. Wire the "Data quality →" trust link and the masthead. | Public proof the pipeline runs. No competitor shows this. |
-| **1.4** | **Methodology page** (`#/methodology`). Pure writing: what is captured, the 67-column contract in plain English, the cheapest-line selection rule verbatim from the manifest, the organic/prepared exclusion, what "measured" means, what is not captured (Aldi, in-store prices, other postcodes), the legal/ethical stance from 0.5. Wire the nav and trust links. | Trust. Needed before any press or sharing. |
+| **1.4** | **Methodology page** (`#/methodology`). Pure writing: what is captured, the 67-column contract in plain English, the cheapest-line selection rule verbatim from the manifest, the organic/prepared exclusion, what "measured" means, what is not captured (Aldi, in-store prices, other postcodes), and — verbatim in spirit from `data/DATA_SUPPLY_DECISION.md` §6 — that every run leaves from one Australian residential address because both retailers block cloud datacenters, and what happens if they block that too. Wire the nav and trust links. | Trust. Needed before any press or sharing. |
 | **1.5** | **Staleness rule.** If `lastCapturedAt` is older than 48 h, every page shows a "no capture since …" banner and the hero ticket says so instead of "cheapest today". | The site now runs unattended; it must not present a week-old price as today's. |
 | **1.6** | **Download the data.** Per-run CSV links straight from S3 (public-read on the `reports/` prefix or a signed-URL endpoint) plus a "latest" link. Licence statement (recommend CC BY 4.0). Wire the trust link. | v1's 4.3 at near-zero cost. Turns researchers into distribution. |
 | **1.7** | **Tests.** Vitest on the pure functions carrying the analysis: `parseCsv`, `ingestProduct` dedupe, `getProduct` alternatives, `buildWall`, `buildView`, `formatUnit`, `pct`. A fixture of ~20 real rows. | Every later feature edits these functions. |
@@ -188,7 +193,8 @@ honest, and the matcher — which everything in P2 waits on — is underway.
   Woolworths, but two permanently hatched columns for retailers with no
   crawler planned add noise. Drop `market`; keep `aldi` only if a crawler is
   actually on the horizon.
-- `proxy.py` — per P0.5, unless a documented authorised use exists.
+- ~~`proxy.py`~~ — kept; it is the live egress path (`data/DATA_SUPPLY_DECISION.md`).
+  What goes instead is its rotate-on-block behaviour (P0.5 follow-up).
 
 ---
 
@@ -199,9 +205,9 @@ honest, and the matcher — which everything in P2 waits on — is underway.
 | Work lost — no version control | **Live, highest.** | P0.1 today. |
 | Schedule fires but nobody notices it stop | **Occurred Sep 5–13.** | P0.4 no-data alarm. |
 | Woolworths never `complete` → never `_SUCCESS` | Live (Sep 4). | P0.3. |
-| Retailer starts blocking AWS egress | Not currently. | P0.5: stop, don't evade. ABS-only mode (P1.2) keeps the trend story alive. |
+| Retailer blocks the residential exit (AWS egress is already blocked by both) | Not currently; `proxy_rotations` is the early warning. | `DATA_SUPPLY_DECISION.md` §4: stop that retailer, don't rotate. ABS-only mode (P1.2) keeps the trend story alive. |
 | Stale data shown as current | Live once unattended. | P1.5. |
 | Matching quality — a wrong "same product" is a wrong headline | Future (P2.1). | Show the confidence tier; never present a `weak` match as a price comparison; hand-verify the produce groups. |
 | Solo-maintainer lapse | Structural. | P0.6 and P1.9 remove every recurring manual step (sync, reload, server uptime). |
-| Legal / ToS exposure | Unchanged from v1. | Get a real read before public launch (P1.9); publish the stance (P1.4). |
+| Legal / ToS exposure | Unchanged from v1; the stance is now written (`DATA_SUPPLY_DECISION.md` §6). | Get a real read before public launch (P1.9); the methodology page (P1.4) carries §6 in its own words. |
 | Building UI ahead of data | Largely avoided by `NotWired`. | Keep the rule: a block lights up only when its data exists. |

@@ -118,9 +118,15 @@ This will be tackled in `infra/terraform/lambda.tf` next.
 
 ## 5. Egress proxy (Decodo / Smartproxy)
 
-The Woolworths crawler can send every request through a Decodo residential
-session instead of the Lambda's own AWS address. It is **off by default** —
-with no proxy URL configured the crawler behaves exactly as it did before.
+Every crawler sends its requests through one Decodo residential session per
+run instead of the Lambda's own AWS address. **This is the live path and the
+Terraform default** (`*_proxy_enabled = true`, `*_proxy_required = true`):
+direct AWS egress is blocked by both retailers — Woolworths with a 403, Coles
+with an interstitial in place of JSON — verified 2026-08-28 and re-probed
+2026-09-17. The why, the cost and the line we hold are in
+`data/DATA_SUPPLY_DECISION.md`. The *code* still treats the proxy as
+optional (no URL configured → direct), which is what makes the local CLI and
+the tests work without an account.
 
 ### How it is wired
 
