@@ -48,6 +48,9 @@ from datetime import datetime, timezone
 from proxy import ProxyError, create_session, http_get_text, probe_exit_ip
 
 SCHEMA_VERSION = "1.1"
+# How many pages past ceil(total / PAGE_SIZE) the crawl may go on fetching
+# while pages keep yielding new products. Measured overrun is one page.
+OVERRUN_PAGES = 4
 MAX_RETRIES = 3
 
 UA = (
@@ -552,7 +555,18 @@ def crawl_category(
         if not products:
             break
         if total is not None and n >= -(-total // retailer.PAGE_SIZE):
-            break
+            # The page count above assumes every slot is an organic product.
+            # It is not: sponsored tiles take slots too (Woolworths, 8/page,
+            # 112-120 per evening run against 60-70 in the morning), so the
+            # organic tail spills past the computed last page and a run that
+            # stopped here came up 5-8 rows short on every 18:00 run from
+            # 13 to 16 Sep. Keep paging while pages still yield new products,
+            # bounded so a miscounted category cannot page forever.
+            if len(seen) >= total or added == 0:
+                break
+            if n >= -(-total // retailer.PAGE_SIZE) + OVERRUN_PAGES:
+                log(f"stopping at page {n}: {len(seen)}/{total} after {OVERRUN_PAGES} extra pages")
+                break
         if delay_ms:
             time.sleep(delay_ms / 1000)
 
