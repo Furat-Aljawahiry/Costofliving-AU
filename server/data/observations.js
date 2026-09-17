@@ -28,6 +28,8 @@ const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(HERE, '..', '..'
 // script. Without DATA_BUCKET, or when the CLI is missing or unauthenticated,
 // it says so once and serves whatever data/out holds — the dev fallback.
 //
+// --delete keeps the mirror honest (the 17 Sep layout migration removed the
+// old run= prefixes); it is safe because the crawler only ever appends.
 // The CLI rather than the SDK: it is what this repo already assumes for
 // credentials and region (data/scripts/pull_latest_reports.py does the same).
 const DATA_BUCKET = process.env.DATA_BUCKET || ''
@@ -42,7 +44,7 @@ export function syncArchive() {
   const started = Date.now()
   const r = spawnSync('aws', [
     '--region', AWS_REGION, 's3', 'sync', `s3://${DATA_BUCKET}/${DATA_PREFIX}`, SYNC_DIR,
-    '--exclude', '*', '--include', '*.csv', '--include', '*.json', '--no-progress',
+    '--exclude', '*', '--include', '*.csv', '--include', '*.json', '--delete', '--no-progress',
   ], { encoding: 'utf8', timeout: 5 * 60 * 1000 })
   const ok = r.status === 0
   const copied = ok ? (r.stdout.match(/^download:/gm) || []).length : 0

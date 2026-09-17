@@ -57,7 +57,6 @@ import re
 import shutil
 import subprocess
 import sys
-import urllib.parse
 
 # run=<run_id>/<file>, captured so the run_id can become the filename stem.
 _RUN_KEY = re.compile(r"^(?P<day>.*/dt=[^/]+)/run=(?P<run>[^/]+)/(?P<name>[^/]+)$")
@@ -162,10 +161,12 @@ def main() -> int:
         if _size(bucket, dest) == size:
             already += 1
         else:
-            # quote() because keys carry '=' from the dt= partition; the CLI
-            # takes copy-source as a URL path, not as a raw key.
+            # The CLI takes copy-source as "bucket/key" with the key RAW: the
+            # '=' in dt=/run= must not be percent-encoded, or S3 looks for a
+            # key containing a literal "%3D" and answers NoSuchKey (measured
+            # 17 Sep 2026; the encoded form was the first version of this).
             _aws("s3api", "copy-object", "--bucket", bucket, "--key", dest,
-                 "--copy-source", urllib.parse.quote(f"{bucket}/{src}", safe="/"))
+                 "--copy-source", f"{bucket}/{src}")
             if _size(bucket, dest) != size:
                 # Leave the source in place and say so — a half-copied object
                 # that got deleted anyway is the one outcome worth failing over.
