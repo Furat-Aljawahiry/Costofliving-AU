@@ -29,8 +29,8 @@ the Terraform state — not against the docs, several of which are out of date.
 | Deployed | Three Lambdas + S3 bucket + EventBridge, all via Terraform. All three functions redeployed **today 02:33 UTC**. |
 | Schedule | `fruitveg` rule **ENABLED** (`cron(0 6,18 * * ? *)`, both retailers in one invocation). Target + invoke permission verified. **First unattended firing is 06:00 UTC today.** It has never fired on its own — every run in the archive so far was invoked by hand. |
 | The 403 wall (v1's blocker) | **Standing, for both retailers.** Direct AWS egress: Woolworths 403 (Aug 28, re-probed Sep 17), Coles serves an interstitial instead of JSON (probed Sep 17). Every run in the archive since Aug 28 has gone through one AU residential exit per run (`egress: proxy`, `proxy_rotations: 0`). The earlier claim here that runs went direct came from mislabelled laptop manifests. Decision and evidence: `data/DATA_SUPPLY_DECISION.md`. |
-| Archive in S3 | 5 runs: Aug 28, Aug 29, Aug 31 (Coles only), Sep 4 ×2 (double hand-invocation 13 s apart). **Nothing between Sep 5 and Sep 13** — the schedule was off. |
-| Archive on disk (`data/out`) | 962 products, 2,850 observations, 951 products seen more than once. Hand-copied from S3; `npm run sync-data` has never been run (`data/out/s3/` does not exist). A stray `data/out/woolies/` duplicate is deduped by run_id at load. |
+| Archive in S3 | 23 runs, 28 Aug → 17 Sep, **one layout** (`dt=…/<run_id>.csv`) since the 17 Sep flatten. Aug 28 and both Sep 4 Woolworths runs are `partial` in their own manifests and have no `_SUCCESS`; that is the note. Scheduled runs 13–16 Sep: 8/8 fired. |
+| Archive on disk (`data/out`) | The server mirrors S3 into `data/out/s3/` itself (`aws s3 sync --delete`) at boot, on `/api/reload` and hourly when `DATA_BUCKET` is set; 1,047 products, 9,980 observations, 22 runs after collapsing the Sep 4 double. Top-level `data/out/*` is the committed dev fallback (`npm run pull-reports`). |
 | Cross-retailer matching | **Does not exist.** `canonical_product_key` matches **0** rows between the two retailers (word order + `variety` differ). Flagged in `FIXES.md` as "the finding most worth acting on next". Still true. |
 | Basket matching | `basket_item_id` is empty in every row. The 34-item basket is not linked to any SKU. |
 | Persistence | S3 is the archive (append-only, manifested, `_SUCCESS`-gated). The Express server is a read-only in-memory index over CSVs. At ~1 MB/run this is fine for a year or more; v1's "add SQLite" is no longer the priority. |
@@ -103,16 +103,17 @@ until a run lands without a human. Everything here is about making tonight's
 
 | # | Work | Why first |
 |---|---|---|
-| **0.1** | **`git init`, commit, push to GitHub.** Add `.gitignore` for `infra/terraform/terraform.tfstate*`, `.terraform/`, `*.zip`, `__pycache__/`, `node_modules/`, `.env`. Decide whether `data/out` is committed (recommend: yes for now — it is 3 MB and it is what makes a fresh clone render anything). | Two weeks of crawler, infra and UI work exist in exactly one place on one disk. This is the single largest risk in the project and it costs ten minutes. |
-| **0.2** | **Watch the 06:00 UTC and 18:00 UTC runs today.** Confirm `_SUCCESS` for both retailers under `dt=2026-09-13`. If Woolworths comes back `partial` again, fix it (see 0.3). | Nothing has ever fired from the schedule. |
-| **0.3** | **Make Woolworths earn `_SUCCESS`.** The Sep 4 run wrote 470 of a reported 473. `FIXES.md` lists the likely cause (`TotalRecordCount` vs sponsored/marketplace dedupe) as "found, deliberately not fixed". Measure it against tonight's run, then either count skipped tiles toward `total` or relax `complete` to `len(rows) >= total - skipped`. | A retailer that can never be `complete` never writes `_SUCCESS`, so its runs look failed forever and any downstream `_SUCCESS` gate silently drops it. |
-| **0.4** | **A "no data in 36 h" alarm, wired to an email.** The existing per-function error alarms catch a run that *crashes*; they cannot catch a run that *never starts* — which is the failure that actually occurred (Sep 5–13, zero invocations, zero alarms). CloudWatch `Invocations` `Sum < 1` over 36 h with `treat_missing_data = breaching`, SNS → email. Confirm the existing error alarms have an action at all. | Principle #2, applied to the scheduler rather than the code. |
+| **0.1** | ~~`git init`, commit, push~~ **Done.** Repo on GitHub, `main` in sync; tfstate never tracked; `.terraform/`, `*.tfvars`, `__pycache__/`, `*.zip`, `data/out/s3/` ignored (the `.pyc`s and the Lambda zip were untracked 17 Sep). | — |
+| **0.2** | ~~Watch the runs~~ **Done.** 8/8 scheduled firings 13–16 Sep. Coles 8/8 `_SUCCESS`; Woolworths 4/8 — the evening runs, see 0.3. | — |
+| **0.3** | ~~Make Woolworths earn `_SUCCESS`~~ **Fixed 17 Sep, awaiting the 18:00 UTC run.** Cause: sponsored tiles take page slots, so the organic tail spills past `ceil(total / 36)`; every evening run (112–120 sponsored vs 60–70 mornings) stopped 5–8 rows short. `crawler.py` now keeps paging while pages yield new products, bounded at 4 extra (`paging_test.py`). A full proxied run on the new code: 472/472, complete. | The evening run is the proof; check `dt=2026-09-17/*180037*._SUCCESS` for Woolworths. |
+| **0.4** | ~~No-data alarm → email~~ **Done 17 Sep** (`infra/terraform/alerting.tf`). SNS topic `costofliving-au-alerts` → furat.jawahiry@gmail.com (**confirm the subscription email**). Every alarm now has it as an action — the three `-errors` ones had none. New: `fruitveg-no-data-24h` (`Invocations < 1`, missing data breaches — CloudWatch caps a single window at 24 h, not 36) and `fruitveg-partial-runs` (metric filter on `crawl.partial`), plus the two drift alarms from 0.7. | Test by disabling the rule for a day, per the done-when. |
 | **0.5** | ~~Write the data-supply decision~~ **Done Sep 17: `data/DATA_SUPPLY_DECISION.md`.** The premise here was wrong — direct AWS egress has never worked from Lambda; the proxy has been live since Aug 28. Decision: keep one residential exit per run, principle #6 amended openly, ~US$12/month. Remaining from it: turn rotate-on-block off in `proxy.py` (a 403 ends the run), fix the `egress_country: "aws"` label on laptop runs, and give the three error alarms an action. | The code and the principles disagreed. Now the principle says what the code does, and the page says why. |
-| **0.6** | **Automate the archive → server path.** Either `npm run sync-data` + `POST /api/reload` on a schedule, or have `observations.js` read from S3 directly at boot (with `data/out` as the local dev fallback). Recommend the latter — it removes a manual step that will lapse. Also collapse same-day duplicate runs per retailer at load (Sep 4 currently counts as two observations of every product). | Otherwise the site shows Sep 4 data forever, no matter how well the Lambda runs. |
+| **0.6** | ~~Automate the archive → server path~~ **Done 17 Sep.** With `DATA_BUCKET` in `.env`, `observations.js` runs `aws s3 sync` into `data/out/s3/` at boot, on `POST /api/reload` and every 60 min, then loads as before; `data/out` stays the dev fallback. Same-retailer runs starting within an hour collapse into one (the Sep 4 double). "Cheapest today" comes from the newest *complete* run per retailer. | The site now follows the schedule without a hand step. |
+| **0.7** | ~~Pin down the 400-product Woolworths mornings~~ **Done 17 Sep.** The browse request carries no location; Woolworths resolves the store from the exit IP and the category *is* that store's range: 1101 → 472, 7008 → 400, 3221 → 516. The 400-run is not a subset — 99 SKUs absent, 27 different ones present; the absent skew to value-add packs, organics, potatoes. Manifests now record `store_id`; `drift.py` compares count and store against the trailing complete runs; `WOOLWORTHS_EXPECTED_STORE_ID=1101`; alarm per retailer. | A run from another store is flagged, not silently appended. Series code (P2.3) must treat it as a gap. |
+| **0.8** | ~~Flatten the archive~~ **Done 17 Sep.** `flatten_run_prefixes.py --apply` (after fixing its percent-encoded copy-source): 23 objects copied, verified, deleted. One layout from 28 Aug. The three no-`_SUCCESS` Woolworths runs say `partial` in their own manifests. | P2.3's series starts 28 Aug. |
+| **0.9** | **Retire the standalone Lambdas and the test function** once `fruitveg` has a clean week. Not before: `woolworths-category` is the function the 17 Sep probes and smoke test ran on. | Three functions and six alarms for one pipeline is how the wrong one gets watched. |
 
-**Done when:** three consecutive scheduled days have `_SUCCESS` for both
-retailers, the alarm has been tested by disabling the rule for a day, the repo
-is on GitHub, and the local server serves a run it pulled itself.
+**Done when:** three consecutive scheduled days have `_SUCCESS` for both retailers at both times of day (the 0.3 fix went live 17 Sep 01:20 UTC — count from the 17 Sep 18:00 run), the alarm email is confirmed and the no-data alarm has been tested by disabling the rule for a day. Everything else in P0 is done as of 17 Sep.
 
 ### P1 — Make the home page true (next 2–3 weeks)
 
@@ -173,7 +174,7 @@ Unchanged from v1 in substance; re-ordered because P1.9 decides the platform.
 
 | Week | Focus |
 |---|---|
-| **1** (this week) | P0 entire: git, watch the runs, fix `partial`, no-data alarm, decision doc, automated sync. |
+| **1** (this week) | P0: all done 17 Sep except 0.9 (deliberately after a clean week) and 0.3's proof (tonight's 18:00 UTC run). Confirm the alarm email. |
 | **2** | 1.1 delete mocks + README · 1.2 ABS history · 1.5 staleness · 1.7 tests. |
 | **3** | 1.3 data-quality page · 1.4 methodology · 1.6 downloads · 1.8 mobile. |
 | **4** | 1.9 deploy publicly. Start 2.1 matching. |
@@ -188,7 +189,7 @@ honest, and the matcher — which everything in P2 waits on — is underway.
 - `server/store.js`, `server/adapters/*`, `/api/prices`, `/api/collect`, mock
   `HISTORY` (P1.1).
 - The `test` Lambda from Aug 24, still in Terraform state.
-- `data/out/woolies/` — a duplicate of the Aug 28 run under a different name.
+- ~~`data/out/woolies/`~~ (deleted 17 Sep) — a duplicate of the Aug 28 run under a different name.
 - `Product.jsx`'s Aldi / Market columns: keep the `NotWired` for Coles vs
   Woolworths, but two permanently hatched columns for retailers with no
   crawler planned add noise. Drop `market`; keep `aldi` only if a crawler is
@@ -203,8 +204,8 @@ honest, and the matcher — which everything in P2 waits on — is underway.
 | Risk | Status | Mitigation |
 |---|---|---|
 | Work lost — no version control | **Live, highest.** | P0.1 today. |
-| Schedule fires but nobody notices it stop | **Occurred Sep 5–13.** | P0.4 no-data alarm. |
-| Woolworths never `complete` → never `_SUCCESS` | Live (Sep 4). | P0.3. |
+| Schedule fires but nobody notices it stop | **Occurred Sep 5–13.** Mitigated 17 Sep, pending email confirmation. | `fruitveg-no-data-24h` + SNS → email; every alarm has an action. |
+| Woolworths never `complete` → never `_SUCCESS` | Evening runs only; fixed 17 Sep, unproven until 18:00 UTC. | P0.3; `fruitveg-partial-runs` alarm says if it recurs. |
 | Retailer blocks the residential exit (AWS egress is already blocked by both) | Not currently; `proxy_rotations` is the early warning. | `DATA_SUPPLY_DECISION.md` §4: stop that retailer, don't rotate. ABS-only mode (P1.2) keeps the trend story alive. |
 | Stale data shown as current | Live once unattended. | P1.5. |
 | Matching quality — a wrong "same product" is a wrong headline | Future (P2.1). | Show the confidence tier; never present a `weak` match as a price comparison; hand-verify the produce groups. |
