@@ -1,0 +1,10 @@
+.footer { display: flex; flex-direction: column; gap: 36px; padding: 64px var(--gutter); background: var(--ink-2); color: var(--paper-2); }
+.footerNav { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.wordmark { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 42px; white-space: nowrap; }
+.links { width: 600px; max-width: 100%; font-size: 12px; line-height: 1.9; text-align: right; color: var(--muted); }
+.rule { border-top: 1px solid rgba(255, 253, 247, 0.25); }
+.note { font-family: var(--mono); font-size: 13px; line-height: 1.5; color: var(--ticket); }
+@media (max-width: 1100px) {
+  .footerNav { flex-direction: column; }
+  .links { text-align: left; width: auto; }
+}

@@ -1,0 +1,53 @@
+/* Global tokens — lifted from the Figma "Cost of Living AU — design tokens" page. */
+:root {
+  --paper: #f4f0e6;      /* page ground */
+  --paper-2: #fffdf7;    /* cards, search, trust strip */
+  --receipt: #f8f4e8;
+  --ink: #171713;
+  --ink-2: #11110f;      /* dark bands */
+  --muted: #67645b;
+  --rule: #c9c3b5;
+  --accent: #d7472f;     /* tomato */
+  --ticket: #ffd51f;     /* shelf-edge special */
+  --cheap: #176b3a;      /* cheapest / price fall */
+  --blush: #f0b6a8;
+  --mint: #c9dec8;
+  --gutter: 72px;
+
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Roboto Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* retailer colours — badges and chart lines ONLY, never page colour */
+  --woolworths: #178841;
+  --coles: #e01a22;
+  --aldi: #f0a500;
+  --market: #6a4c93;
+
+  color-scheme: light;
+  font-family: var(--sans);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+hr { border: 0; margin: 0; }
+button { font: inherit; color: inherit; }
+
+.serif {
+  font-family: var(--serif);
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  font-weight: 400;
+}
+.mono { font-family: var(--mono); }
+
+.state { padding: 60px 20px; text-align: center; color: var(--muted); font-family: var(--mono); font-size: 13px; }
+
+@media (max-width: 1100px) { :root { --gutter: 32px; } }
+@media (max-width: 600px)  { :root { --gutter: 16px; } }

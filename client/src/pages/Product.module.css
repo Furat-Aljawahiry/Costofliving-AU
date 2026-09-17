@@ -1,0 +1,141 @@
+/* Product detail — layout and tokens from the Figma "Potatoes product detail — desktop" frame. */
+
+.page { background: var(--paper); min-height: 100vh; }
+
+.h2, .h2Light, .h3, .title, .subName { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-weight: 400; }
+.h2 { font-size: 52px; }
+.h2Light { font-size: 50px; color: var(--paper-2); }
+.h3 { font-size: 28px; }
+.tag { font-size: 11px; font-weight: 900; }
+.kickerMono { font-family: var(--mono); font-weight: 700; font-size: 11px; color: var(--accent); margin-bottom: 6px; }
+.mutedSmall { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+/* ---- header ------------------------------------------------------------- */
+.header { display: flex; flex-direction: column; gap: 22px; padding: 42px var(--gutter) 64px; }
+.crumb { font-size: 12px; color: var(--muted); }
+.crumb a:hover { color: var(--accent); }
+.intro { display: flex; gap: 48px; }
+.imageField {
+  position: relative; width: 600px; height: 420px; flex: 0 0 600px;
+  background: var(--blush); overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.imageField img { width: 82%; height: 82%; object-fit: contain; transform: rotate(3deg); mix-blend-mode: multiply; }
+.copy { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.kicker { color: var(--accent); font-size: 12px; font-weight: 900; }
+.title { font-size: 72px; line-height: 0.98; overflow-wrap: anywhere; }
+.sizeTabs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sizeTab { padding: 10px 16px; border: 1px solid var(--ink); background: var(--paper-2); font-family: var(--mono); font-size: 12px; }
+.sizeTabActive { background: var(--ink); color: #fff; }
+.measured { padding: 7px 10px; background: var(--mint); border: 1px solid var(--cheap); color: var(--cheap); font-size: 12px; font-weight: 900; }
+.estimated { padding: 7px 10px; background: var(--ticket); border: 1px solid var(--ink); font-size: 12px; font-weight: 900; }
+.provenance {
+  width: 100%; display: flex; flex-direction: column; gap: 7px; padding: 12px;
+  background: var(--paper-2); border: 1px solid var(--ink);
+  font-family: var(--mono); font-size: 10px; line-height: 1.5;
+}
+.barcode { display: block; width: 100%; height: 28px; object-fit: cover; }
+.provenanceLinks a { font-weight: 700; text-decoration: underline; }
+
+/* ---- price now ---------------------------------------------------------- */
+.priceNow { display: flex; flex-direction: column; gap: 22px; padding: var(--gutter); background: var(--ink-2); }
+.storePrices { display: flex; flex-direction: column; gap: 16px; }
+.storePrice {
+  display: flex; flex-direction: column; gap: 8px; min-height: 205px; padding: 20px;
+  background: var(--paper-2); border: 1px solid var(--ink); color: var(--ink);
+}
+.storePriceSpecial { background: var(--ticket); border-width: 2px; }
+.storeStatus { display: flex; justify-content: space-between; align-items: center; }
+.storeName { font-size: 10px; font-weight: 900; }
+.cheapestTag { font-size: 9px; font-weight: 900; color: var(--muted); }
+.bigPrice { font-family: var(--mono); font-weight: 700; font-size: 45px; }
+.bigPriceSpecial { color: var(--cheap); }
+.per { font-family: var(--mono); font-size: 12px; }
+.scaleDivider { border-top: 1px dashed var(--ink); opacity: 0.5; }
+.unitLine { font-size: 10px; font-weight: 700; color: var(--muted); }
+.specialLine { font-size: 10px; font-weight: 700; color: var(--coles); }
+.storeMissing {
+  display: flex; flex-direction: column; gap: 10px; padding: 14px 20px;
+  background: var(--paper-2); border: 1px solid var(--ink); color: var(--ink);
+}
+.storeMissing > div { min-height: 90px; }
+.priceSentence { font-size: 20px; line-height: 1.4; color: var(--paper-2); }
+
+/* ---- history ------------------------------------------------------------ */
+.history {
+  display: flex; flex-direction: column; gap: 20px; padding: var(--gutter);
+  background: var(--paper-2); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);
+}
+.chartHeading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.range { display: flex; }
+.rangeBtn { padding: 9px 14px; border: 1px solid var(--ink); background: var(--paper-2); font-family: var(--mono); font-size: 11px; }
+.rangeActive { background: var(--ink); color: #fff; }
+.rangeDisabled { color: var(--muted); border-style: dashed; cursor: not-allowed; }
+.legend { display: flex; flex-wrap: wrap; gap: 24px; font-family: var(--mono); font-weight: 700; font-size: 10px; }
+.plotWrap { position: relative; }
+.plot { display: block; width: 100%; height: auto; background: var(--paper); border: 1px solid var(--rule); }
+.grid { stroke: var(--rule); stroke-width: 1; }
+.axisLabel { font-family: var(--mono); font-size: 10px; fill: var(--muted); }
+.wasLine { stroke: var(--coles); stroke-width: 2; stroke-dasharray: 8 6; }
+.wasLabel { font-family: var(--mono); font-size: 10px; font-weight: 700; fill: var(--coles); }
+.tooltip {
+  position: absolute; transform: translate(14px, 14px); width: 260px; padding: 12px;
+  background: var(--ink-2); color: #fff; font-family: var(--mono); font-size: 10px; pointer-events: none;
+  display: flex; flex-direction: column; gap: 5px;
+}
+.tooltipPrice { color: var(--ticket); font-weight: 700; font-size: 20px; }
+.tooltipMeta { font-size: 8px; line-height: 1.4; opacity: 0.9; }
+.chartSentence { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 25px; line-height: 1.3; }
+
+/* ---- evidence ----------------------------------------------------------- */
+.evidence { display: flex; flex-direction: column; gap: 28px; padding: var(--gutter); }
+.checks { display: flex; gap: 18px; align-items: stretch; }
+.check { flex: 1 1 0; min-width: 0; min-height: 270px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; padding: 24px; border: 1px solid var(--ink); }
+.checkTicket { background: var(--ticket); transform: rotate(-1deg); }
+.checkPlain { background: var(--paper-2); }
+.verdict { font-family: var(--mono); font-weight: 700; font-size: 38px; }
+.checkText { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 21px; line-height: 1.3; }
+.packs { flex: 1 1 0; min-width: 0; min-height: 270px; display: flex; flex-direction: column; gap: 14px; padding: 24px; background: var(--blush); border: 1px solid var(--ink); }
+.packBar { display: flex; align-items: center; gap: 10px; }
+.packLabel { width: 60px; font-family: var(--mono); font-size: 12px; }
+.bar { height: 16px; background: var(--ink); }
+.packPrice { font-family: var(--mono); font-size: 11px; }
+.shrink { display: flex; gap: 24px; padding: 24px; background: var(--paper-2); border: 1px solid var(--ink); }
+.shrinkHeading { width: 310px; flex: 0 0 310px; display: flex; flex-direction: column; gap: 8px; }
+.shrinkHeading .h3 { font-size: 30px; }
+.shrinkBody { flex: 1 1 0; }
+
+/* ---- more --------------------------------------------------------------- */
+.more { display: flex; flex-direction: column; gap: 32px; padding: var(--gutter); background: var(--mint); }
+.more .h2 { font-size: 46px; }
+.subs { display: flex; gap: 16px; }
+.sub { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 18px; background: var(--paper-2); border: 1px solid var(--ink); transition: transform .15s, box-shadow .15s; }
+.sub:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 0 var(--ink); }
+.subImage { height: 110px; display: flex; align-items: center; justify-content: center; background: #fff; }
+.subImage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.subName { font-size: 20px; line-height: 1.15; }
+.subStore { font-size: 10px; font-weight: 900; }
+.subPrice { font-family: var(--mono); font-weight: 700; font-size: 22px; color: var(--cheap); }
+.subDelta { font-family: var(--mono); font-size: 11px; }
+.noSubs { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 21px; line-height: 1.3; }
+.skus { display: flex; flex-direction: column; gap: 12px; padding: 18px; background: var(--paper-2); border: 1px solid var(--ink); }
+.skusHeading { display: flex; justify-content: space-between; align-items: baseline; }
+.skusHeading .h3 { font-size: 24px; }
+.skusCount { font-size: 12px; font-weight: 800; }
+.table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table th { text-align: left; padding: 8px 10px 8px 0; font-family: var(--mono); font-weight: 400; font-size: 10px; color: var(--muted); border-bottom: 1px solid var(--ink); }
+.table td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.table a { text-decoration: underline; font-weight: 700; }
+.obsTable { padding: 18px; background: var(--paper-2); border: 1px solid var(--ink); overflow-x: auto; }
+.obsTable summary { cursor: pointer; font-family: var(--mono); font-weight: 700; font-size: 12px; margin-bottom: 12px; }
+
+@media (max-width: 1100px) {
+  .intro { flex-direction: column; }
+  .imageField { width: 100%; flex: 0 0 auto; height: 360px; }
+  .title { font-size: clamp(40px, 8vw, 72px); }
+  .h2, .h2Light { font-size: 40px; }
+  .chartHeading { flex-direction: column; align-items: flex-start; }
+  .checks, .subs, .shrink { flex-direction: column; }
+  .checkTicket { transform: none; }
+  .shrinkHeading { width: auto; flex: 0 0 auto; }
+  .tooltip { width: 200px; }
+}

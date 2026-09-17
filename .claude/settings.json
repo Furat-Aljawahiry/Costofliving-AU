@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws --version)",
+      "Bash(terraform --version)",
+      "Bash(aws sts *)",
+      "Bash(terraform -version)",
+      "Bash(python cheapest_test.py)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(python batch_test.py)",
+      "Bash(npm install *)"
+    ]
+  }
+}

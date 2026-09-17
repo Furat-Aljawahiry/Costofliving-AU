@@ -1,0 +1,163 @@
+/* Home — tokens and layout lifted from the Figma "Cost of Living AU — desktop" frame (1440). */
+
+.page { background: var(--paper); color: var(--ink); min-height: 100vh; }
+
+.h2, .heroTitle, .tile h3, .cellName {
+  font-family: var(--serif);
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  font-weight: 400;
+}
+
+/* ---- Hero ---------------------------------------------------------------- */
+.hero { display: flex; flex-direction: column; }
+.heroStory { display: flex; height: 610px; overflow: hidden; }
+.heroCopy {
+  display: flex; flex-direction: column; gap: 24px;
+  width: 680px; flex: 0 0 680px;
+  padding: 80px 42px 60px var(--gutter);
+}
+.kicker { color: var(--accent); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.heroTitle { font-size: 76px; line-height: 0.96; }
+.heroLede { font-size: 20px; line-height: 1.45; }
+.heroImage { position: relative; flex: 1 1 0; min-width: 0; background: var(--blush); overflow: hidden; }
+.heroImage > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* shelf-edge ticket */
+.ticket {
+  position: absolute; left: 44px; bottom: 29px; width: 430px;
+  transform: rotate(2deg);
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 22px; border-radius: 2px;
+  background: var(--ticket); border: 2px solid var(--ink);
+  box-shadow: 5px 7px 0 0 rgba(23, 23, 19, 0.14);
+}
+.ticketHead { display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; }
+.ticketHead span:first-child { font-weight: 900; text-transform: uppercase; }
+.ticketPrice { font-family: var(--mono); font-weight: 700; font-size: 58px; white-space: nowrap; }
+.ticketWhat { font-size: 15px; font-weight: 700; }
+.ticketDelta { font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--cheap); }
+.barcode { display: block; width: 100%; height: 24px; object-fit: cover; }
+.ticket:hover { transform: rotate(2deg) translate(-2px, -2px); box-shadow: 7px 9px 0 0 rgba(23, 23, 19, 0.2); }
+.ticketMissing { position: absolute; left: 44px; bottom: 29px; width: 430px; transform: rotate(2deg); }
+
+.captureStatus { padding: 16px var(--gutter); font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* ---- Basket index (dark band) ------------------------------------------- */
+.basketIndex { display: flex; gap: 64px; padding: var(--gutter); background: var(--ink-2); }
+.receiptWrap { flex: 0 0 auto; padding: 8px 0; }
+.receipt {
+  width: 600px; max-width: 100%;
+  transform: rotate(1deg);
+  display: flex; flex-direction: column; gap: 18px;
+  padding: 32px; background: var(--receipt); color: var(--ink);
+}
+.receiptWeek { font-family: var(--mono); font-weight: 700; font-size: 13px; text-transform: uppercase; }
+.perforation { border-top: 1px dashed var(--ink); opacity: 0.55; }
+.receiptHeadline { font-size: 38px; line-height: 1.12; }
+.receiptDelta { font-family: var(--mono); font-size: 15px; line-height: 1.5; color: var(--accent); }
+.receiptCta { font-size: 15px; font-weight: 800; }
+.receiptCta { color: var(--muted); cursor: not-allowed; }
+
+.basketChart { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; height: 330px; padding-top: 14px; }
+.chartTitle { color: var(--paper-2); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.legend { display: flex; gap: 20px; font-size: 12px; white-space: nowrap; }
+.plot { flex: 1 1 0; min-height: 0; border-left: 1px solid var(--muted); border-bottom: 1px solid var(--muted); padding: 24px 0 8px 17px; }
+.plot .sparkline { width: 100%; height: 100%; display: block; }
+.sparkline { display: block; }
+
+/* ---- Categories bento ---------------------------------------------------- */
+.categories { display: flex; flex-direction: column; gap: 32px; padding: 96px var(--gutter); }
+.sectionHeading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.h2 { font-size: 48px; white-space: nowrap; }
+.sectionBlurb { width: 360px; max-width: 100%; font-size: 14px; line-height: 1.45; color: var(--muted); }
+
+.bento { display: flex; flex-direction: column; gap: 18px; }
+.bentoRow { display: flex; gap: 18px; }
+.tile {
+  display: flex; flex-direction: column; min-width: 0;
+  border: 1px solid var(--ink); overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.tile:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 0 var(--ink); }
+.tileImage { position: relative; flex: 1 1 0; min-height: 0; }
+.tileImage img { position: absolute; inset: 8px 10px 0 10px; width: calc(100% - 20px); height: calc(100% - 8px); object-fit: cover; }
+.tileDetails { display: flex; flex-direction: column; gap: 10px; padding: 18px; background: var(--paper-2); }
+.tileTitleRow { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.tile h3 { font-size: 24px; flex: 1 1 0; min-width: 0; }
+.yoy { font-family: var(--mono); font-weight: 700; font-size: 10px; color: var(--accent); white-space: nowrap; }
+.tileBlurb { font-size: 12px; line-height: 1.4; color: var(--muted); }
+.tileFoot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.tileMeasured { font-size: 9px; font-weight: 800; color: var(--cheap); white-space: nowrap; }
+.tileFoot { flex-wrap: wrap; }
+
+/* ---- Cheapest today (green band) ---------------------------------------- */
+.cheapest { display: flex; flex-direction: column; gap: 28px; padding: 90px var(--gutter); background: #c9dec8; }
+.readoutKicker { font-family: var(--mono); font-weight: 700; font-size: 11px; color: var(--cheap); margin-bottom: 8px; }
+.seeAll { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.seeAll:hover { color: var(--accent); }
+.priceWall { display: flex; flex-wrap: wrap; }
+.priceCell {
+  display: flex; flex-direction: column; gap: 12px;
+  width: 250px; height: 235px; padding: 18px; margin: 0 -1px -1px 0;
+  background: var(--paper-2); border: 1px solid var(--ink);
+  position: relative;
+}
+.priceCell:hover { z-index: 1; background: #fff; }
+.cellHead { display: flex; justify-content: space-between; align-items: flex-start; }
+.cellSub { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--muted); }
+.specialTicket { padding: 3px 5px; background: var(--ticket); font-size: 9px; font-weight: 900; }
+.cellName { font-size: 20px; line-height: 1.15; }
+.cellPrice { font-family: var(--mono); font-weight: 700; font-size: 26px; color: var(--cheap); white-space: nowrap; }
+.cellFoot { display: flex; align-items: flex-end; justify-content: space-between; margin-top: auto; }
+.cellStore { font-size: 10px; font-weight: 900; }
+.cellMeta { font-family: var(--mono); font-size: 9px; color: var(--muted); text-align: right; }
+.rule { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+/* ---- Findings ------------------------------------------------------------ */
+.findings { display: flex; flex-direction: column; gap: 32px; padding: 96px var(--gutter); }
+.findingCards { display: flex; gap: 16px; align-items: stretch; }
+.finding {
+  flex: 1 1 0; min-width: 0; min-height: 330px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+  padding: 24px; border: 1px solid var(--ink); background: var(--paper-2);
+}
+.findingTag { font-size: 11px; font-weight: 900; }
+.findingBig { font-family: var(--mono); font-weight: 700; font-size: 52px; line-height: 1; }
+.findingText { font-size: 21px; line-height: 1.25; }
+
+/* ---- Trust strip --------------------------------------------------------- */
+.trust {
+  display: flex; gap: 28px; padding: 44px var(--gutter);
+  background: var(--paper-2); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);
+}
+.trustItem { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.trustTitle { font-size: 14px; font-weight: 800; white-space: nowrap; }
+.trustItem { cursor: not-allowed; }
+.trustText { font-size: 12px; line-height: 1.4; color: var(--muted); }
+
+/* ---- Responsive (the frame is 1440; everything below stacks) ------------- */
+@media (max-width: 1100px) {
+  .heroStory { flex-direction: column; height: auto; }
+  .heroCopy { width: auto; flex: 0 0 auto; padding: 56px var(--gutter) 40px; }
+  .heroTitle { font-size: clamp(44px, 8vw, 76px); }
+  .heroImage { height: 480px; }
+  .ticket, .ticketMissing { left: 24px; bottom: 24px; width: min(430px, calc(100% - 48px)); }
+  .basketIndex { flex-direction: column; gap: 40px; }
+  .receipt { width: auto; }
+  .basketChart { height: 280px; }
+  .sectionHeading { flex-direction: column; align-items: flex-start; }
+  .h2 { font-size: 40px; white-space: normal; }
+  .bentoRow { flex-direction: column; height: auto !important; }
+  .tile { flex: 1 1 auto !important; }
+  .tileImage { height: 235px; flex: 0 0 235px; }
+  .priceCell { width: calc(50% + 0.5px); }
+  .findingCards { flex-direction: column; }
+  .trust { flex-wrap: wrap; }
+  .trustItem { flex: 1 1 40%; }
+}
+@media (max-width: 600px) {
+  .ticketPrice { font-size: 44px; }
+  .priceCell { width: 100%; }
+  .categories, .findings { padding-block: 56px; }
+  .cheapest { padding-block: 56px; }
+}

@@ -1,0 +1,27 @@
+# Copy to terraform.tfvars (gitignored) and adjust. Everything here is optional
+# and NON-SECRET: the proxy password is not a Terraform variable at all. It
+# lives in Secrets Manager and is set out-of-band — see infra/README.md section 5.
+
+# One Decodo account, one secret, shared by every retailer crawler; each
+# retailer decides separately whether to use it.
+# crawler_proxy_secret_name     = "costofliving-au/crawler/proxy-url"
+# crawler_proxy_country         = "au"
+# crawler_proxy_session_minutes = 30
+# woolworths_proxy_enabled      = true
+# coles_proxy_enabled           = true
+
+# Once the proxy is the intended egress path, turn this on: a run then fails
+# (and trips the error alarm) instead of quietly crawling from the Lambda's own
+# AWS address.
+# woolworths_proxy_required = true
+# coles_proxy_required      = true
+
+# Flip to true only when you are ready for it to crawl unattended every night.
+# The two run 30 minutes apart, never in the same minute.
+# woolworths_schedule_enabled = false
+# coles_schedule_enabled      = false
+
+# Pin the Coles Next.js buildId, skipping the once-per-run HTML request that
+# normally resolves it. Only needed if HTML starts returning interstitials while
+# the data route still answers — see data/COLES_DISCOVERY.md section 5.3.
+# coles_build_id = "20260825.4-04e74006a8bbaa6cbf7882b792617e5c7de5081a"

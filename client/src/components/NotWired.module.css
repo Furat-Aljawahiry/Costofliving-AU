@@ -1,0 +1,26 @@
+/* Hatched "under construction" field — deliberately unlike any real component. */
+.block {
+  display: flex; flex-direction: column; justify-content: center; gap: 8px;
+  width: 100%; min-height: 120px; padding: 20px;
+  border: 2px dashed var(--ink);
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 10px, rgba(23, 23, 19, 0.06) 10px 20px),
+    var(--paper-2);
+  color: var(--ink);
+}
+.tag {
+  align-self: flex-start;
+  padding: 3px 6px;
+  background: var(--ink); color: var(--ticket);
+  font-family: var(--mono); font-weight: 700; font-size: 10px; letter-spacing: 0.04em;
+}
+.label { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 20px; line-height: 1.2; }
+.needs { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+.inline {
+  display: inline-block; padding: 2px 6px;
+  border: 1px dashed var(--ink);
+  background: repeating-linear-gradient(-45deg, transparent 0 4px, rgba(23, 23, 19, 0.08) 4px 8px);
+  font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--ink);
+  white-space: nowrap; cursor: help;
+}
