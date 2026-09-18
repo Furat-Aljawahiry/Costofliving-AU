@@ -73,22 +73,25 @@ you see it first.
 
 ## Deploy
 
+**Seed before the schedule starts, not after.** The apply creates the rule
+already ENABLED, and at a 1-minute tick it fires within seconds — well before
+you can get a seed invoke in. That happened on the first deploy, 18 Sep 2026:
+the 08:38:11 tick pushed 5 notifications and emailed all 15 anniversary products
+already on sale, 38 seconds before the seed ran. So deploy dark:
+
 ```bash
 cd ../..                          # infra/terraform
-terraform plan  -target=aws_lambda_function.kmart_watch
-terraform apply
-```
+terraform apply -var kmart_watch_enabled=false     # function up, schedule off
 
-Then **seed it once**, or the first tick emails you the ~15 30th-anniversary
-products already on sale:
-
-```bash
 aws lambda invoke --function-name costofliving-au-kmart-watch \
-  --payload '{"seed": true}' --cli-binary-format raw-in-base64-out /dev/stdout
+  --payload '{"seed": true}' --cli-binary-format raw-in-base64-out out.json
+cat out.json                                       # expect "new": 15, "pushed": 0
+
+terraform apply                                    # schedule on, quiet
 ```
 
-That claims every current match silently. From then on you only hear about new
-ones.
+Seeding claims every current match silently. From then on you only hear about
+new ones. It is idempotent, so re-running it costs nothing.
 
 ## Knobs
 
