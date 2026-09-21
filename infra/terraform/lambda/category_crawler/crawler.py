@@ -137,7 +137,13 @@ def fetch(url: str, headers: dict, session=None, label: str = "request", parse=N
         if attempt < MAX_RETRIES:
             time.sleep(attempt * attempt)  # 1s, 4s
 
-    raise RuntimeError(f"{label}: {last_err}")
+    # Name the egress so a block on the AWS IP is recognisable from the per-page
+    # FAILED line alone, without opening the manifest's capture_context.
+    raise RuntimeError(f"{label}: {last_err} (via {_describe_egress(session)})")
+
+
+def _describe_egress(session) -> str:
+    return f"proxy session {session.id}" if session else "direct AWS egress"
 
 
 def json_parser(validate=None):
@@ -150,14 +156,36 @@ def json_parser(validate=None):
     def parse(body):
         try:
             payload = json.loads(body)
-        except json.JSONDecodeError as e:
-            # HTML where JSON was expected is the signature of an interstitial.
-            raise BlockedError(f"response was not JSON ({e})") from None
+        except json.JSONDecodeError:
+            # HTML where JSON was expected is the signature of an interstitial;
+            # an empty 200 is what Imperva hands a direct-from-AWS caller on the
+            # _next/data route. json's own "Expecting value: line 1 column 1"
+            # says neither, so describe the body instead.
+            raise BlockedError(f"response was not JSON ({_describe_body(body)})") from None
         if validate is not None and not validate(payload):
-            raise BlockedError("response did not contain the expected payload")
+            raise BlockedError(
+                f"response did not contain the expected payload ({_describe_keys(payload)})"
+            )
         return payload
 
     return parse
+
+
+def _describe_body(body: str) -> str:
+    """'empty body, 0 bytes' or 'HTML, 6120 bytes: '<!DOCTYPE html>...''."""
+    n = len(body)
+    head = body.strip()
+    if not head:
+        return f"empty body, {n} bytes"
+    kind = "HTML" if head[:1] == "<" else "non-JSON"
+    snippet = head[:80] + ("..." if len(head) > 80 else "")
+    return f"{kind}, {n} bytes: {snippet!r}"
+
+
+def _describe_keys(payload) -> str:
+    if isinstance(payload, dict):
+        return "top-level keys: " + (", ".join(map(str, payload)) if payload else "none")
+    return f"top-level {type(payload).__name__}"
 
 
 # ---------------------------------------------------------------- parsing

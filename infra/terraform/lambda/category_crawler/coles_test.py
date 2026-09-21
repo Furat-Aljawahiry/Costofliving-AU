@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import coles  # noqa: E402
 import woolworths  # noqa: E402
-from crawler import COLUMNS, to_csv  # noqa: E402
+from crawler import COLUMNS, BlockedError, fetch, json_parser, to_csv  # noqa: E402
 
 CTX = {
     "run_id": "20260829040000-test",
@@ -169,6 +169,47 @@ for r in rows:
           f"  per_kg={str(r['price_per_kg_aud'])[:7]:>8} per_ea={str(r['price_per_each_aud'])[:7]:>8}"
           f"  {r['sap_subcategory']:<20} {r['parse_warnings']}")
 
+INTERSTITIAL = (
+    "<!DOCTYPE html><html><head><title>Access Denied</title></head>"
+    "<body><h1>Request unsuccessful. Incapsula incident ID: 1234-5678</h1></body></html>"
+)
+
+
+def blocked_msg(body, validate=None) -> str:
+    """The BlockedError message json_parser() raises for `body`, or '' if none."""
+    try:
+        json_parser(validate)(body)
+    except BlockedError as e:
+        return str(e)
+    return ""
+
+
+class FakeSession:
+    def __init__(self, id):
+        self.id = id
+        self.rotations = 0
+
+    def rotate(self):
+        self.rotations += 1
+
+
+def fetch_failure(session, body="") -> str:
+    """The RuntimeError message fetch() gives up with when every 200 carries `body`."""
+    import crawler
+
+    saved = crawler.http_get_text, crawler.time.sleep
+    crawler.http_get_text = lambda url, headers=None, session=None: (200, body)
+    crawler.time.sleep = lambda _s: None  # no 5s of backoff in a unit test
+    try:
+        fetch("https://www.coles.com.au/_next/data/x/en/browse/fruit-vegetables.json", {},
+              session=session, label="page 1", parse=json_parser())
+    except RuntimeError as e:
+        return str(e)
+    finally:
+        crawler.http_get_text, crawler.time.sleep = saved
+    return ""
+
+
 checks = {
     # --- the point of the whole exercise -------------------------------------
     "Coles rows carry exactly the shared COLUMNS, no more, no less":
@@ -266,6 +307,33 @@ checks = {
         coles.is_sponsored({"adId": "abc"}) is True,
     "basket_item_id is always empty — L2 owns it":
         all(r["basket_item_id"] == "" for r in rows),
+
+    # --- soft-block diagnostics -----------------------------------------------
+    # 2026-09-17: a direct-from-AWS invocation got an empty 200 from Imperva on
+    # the _next/data route and the log said only "Expecting value: line 1
+    # column 1 (char 0)". The message has to say what the body WAS.
+    "an empty body is named as such, with its size":
+        "empty body, 0 bytes" in blocked_msg(""),
+    "a whitespace-only body still counts as empty":
+        "empty body, 3 bytes" in blocked_msg(" \n "),
+    "an HTML interstitial is named, sized and quoted":
+        "HTML" in blocked_msg(INTERSTITIAL)
+        and f"{len(INTERSTITIAL)} bytes" in blocked_msg(INTERSTITIAL)
+        and "'<!DOCTYPE html><html><head><title>Access Denied" in blocked_msg(INTERSTITIAL),
+    "the snippet is capped at ~80 chars of stripped body":
+        blocked_msg(INTERSTITIAL).endswith("...')")
+        and len(blocked_msg(INTERSTITIAL)) < 80 + 60,
+    "a decoded-but-wrong payload lists its top-level keys":
+        "top-level keys: page, statusCode" in blocked_msg('{"page": "/404", "statusCode": 404}',
+                                                            validate=lambda p: "pageProps" in p),
+    "an empty object is reported as having no keys":
+        "top-level keys: none" in blocked_msg("{}", validate=lambda p: "pageProps" in p),
+    "the FAILED line names direct AWS egress":
+        "via direct AWS egress" in fetch_failure(session=None),
+    "the FAILED line names the proxy session":
+        "via proxy session abc123" in fetch_failure(session=FakeSession("abc123")),
+    "the egress suffix follows the body diagnosis":
+        "(empty body, 0 bytes) (via direct AWS egress)" in fetch_failure(session=None),
 }
 
 print("\nCHECKS:")
