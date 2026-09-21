@@ -64,7 +64,7 @@ costofliving-au/
 │  ├─ store.js                in-memory current-price cache + collection orchestration
 │  ├─ data/
 │  │  ├─ basket.js            SOURCE OF TRUTH: categories, stores, the 34-item basket
-│  │  └─ history.js           2014→2026 yearly price index per category (mock, ABS-shaped)
+│  │  └─ history.js           ABS CPI food index 2014→today, read from data/abs/cpi_food.json
 │  └─ adapters/
 │     ├─ mockPrices.js        default price source — deterministic, no network
 │     └─ woolworths.js        optional live price source — scrapes Woolworths' search API
@@ -140,15 +140,19 @@ Exports three constants, all served near-verbatim by the API:
 
 ### 5.2 `server/data/history.js` — historical price index
 
-A hard-coded, ABS-CPI-shaped mock series: 13 years (2014–2026), one index
-number per category per year, base 100 = 2014. Exported as `HISTORY`, an
-array of **wide-format rows**:
+Reads `data/abs/cpi_food.json` once at import and exports `getHistory()`
+(null when the file is missing → `/api/history` answers 503). The file is
+written by `npm run fetch-abs` (`server/scripts/fetch-abs.mjs`) from the ABS
+Data API (dataflow `ABS,CPI,2.0.0`, index numbers, original, Australia,
+quarterly from 2014-Q1, re-based so the 2014 mean = 100). Shape:
 ```js
-[{ year: 2014, vegetables: 100, meat: 100, canned: 100, ... }, ..., { year: 2026, vegetables: 135, meat: 150, ... }]
+{ source: { name, dataflow, base, url, fetchedAt, lastPeriod, ... },
+  periods: ["2014-Q1", ..., "2026-Q2"],
+  series:  { "20001": { code, label, parent, index: [...], yoy: [...] }, ... },   // keyed by ABS code
+  aisles:  { vegetables: { lines: ["114120"], match: "exact", note }, ... } }     // the six aisle ids
 ```
-The comment in this file explicitly says it's shaped to match real ABS Food
-CPI (catalogue 6401.0) so it can be swapped for real figures with **no UI
-changes** — same shape in, same shape out.
+ABS is the backstory (2014 → mid-2026); our own captures take over from
+28 Aug 2026, so this is effectively a one-off pull.
 
 ### 5.3 `server/index.js` — the Express app
 
@@ -416,9 +420,6 @@ doesn't exist in the repo yet).
 If asked to extend this app, these are the natural seams (per the README
 and code comments):
 
-- **Real historical data**: replace the `SERIES` object in
-  `server/data/history.js` with actual ABS Food CPI (6401.0) figures — same
-  row shape, zero UI changes required.
 - **Real Coles/Aldi prices**: add `server/adapters/coles.js` /
   `server/adapters/aldi.js` following the exact pattern of
   `woolworths.js` (a `collectX()` async function returning

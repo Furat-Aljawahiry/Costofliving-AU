@@ -3,7 +3,8 @@ import { api } from "../services/api";
 import { STORE_LABEL, formatUnit, money } from "../lib/format";
 import styles from "./Masthead.module.css";
 
-const NAV = ["Categories", "Cheapest today", "Shrinkflation", "Specials checker", "My basket", "Methodology"];
+// Nav items with a page get an href; the rest are placeholders until theirs exists.
+const NAV = [["Categories"], ["Cheapest today", "#/cheapest"], ["Shrinkflation"], ["Specials checker"], ["My basket"], ["Methodology"]];
 
 /** Masthead from the Figma frame: wordmark, nav, and the product search. */
 export default function Masthead({ productCount }) {
@@ -12,7 +13,7 @@ export default function Masthead({ productCount }) {
       <div className={styles.primaryNav}>
         <a href="#/" className={styles.wordmark}>Cost of Living AU</a>
         <nav className={styles.navLinks}>
-          {NAV.map((n) => <a key={n} href="#/" onClick={(e) => e.preventDefault()} title="Not wired yet">{n}</a>)}
+          {NAV.map(([n, href]) => href ? <a key={n} href={href}>{n}</a> : <a key={n} href="#/" onClick={(e) => e.preventDefault()} title="Not wired yet">{n}</a>)}
         </nav>
       </div>
       <Search productCount={productCount} />

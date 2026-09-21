@@ -4,7 +4,7 @@
 import express from 'express'
 import cors from 'cors'
 import { CATEGORIES, STORES, BASKET } from './data/basket.js'
-import { HISTORY } from './data/history.js'
+import { getHistory } from './data/history.js'
 import { getPrices, collect } from './store.js'
 import { loadObservations, searchProducts, getProduct, getCheapest, getStatus } from './data/observations.js'
 
@@ -19,13 +19,18 @@ app.get('/api/basket', (req, res) => {
   // strip server-only fields (base, keywords) from the public payload
   res.json(BASKET.map(({ base, keywords, ...pub }) => pub))
 })
-app.get('/api/history', (req, res) => res.json(HISTORY))
 app.get('/api/prices', (req, res) => res.json(getPrices()))
 
 // ---- Real observations from the crawler CSVs (data/out) --------------------
 // These are the only endpoints backed by measured data. Everything above is
 // the original mock/basket scaffolding.
 app.get('/api/status', (req, res) => res.json(getStatus()))
+// ABS CPI food series, 2014 -> today (data/abs/cpi_food.json, `npm run fetch-abs`).
+app.get('/api/history', (req, res) => {
+  const h = getHistory()
+  if (!h) return res.status(503).json({ error: 'no ABS snapshot; run npm run fetch-abs' })
+  res.json(h)
+})
 app.get('/api/search', (req, res) => {
   const { q = '', retailer, limit } = req.query
   res.json(searchProducts(q, { retailer, limit: limit ? Number(limit) : undefined }))

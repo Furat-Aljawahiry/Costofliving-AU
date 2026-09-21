@@ -74,8 +74,10 @@ Copy `.env.example` to `.env`:
   running). It's free but unofficial and may be rate-limited — failures fall back
   to mock automatically. Coles/Aldi adapters slot in the same way (see
   `server/adapters/`).
-- **Real history:** replace the series in `server/data/history.js` with ABS food
-  CPI (6401.0) figures. Same shape, no UI changes needed.
+- **ABS history:** `server/data/history.js` serves `data/abs/cpi_food.json`, the
+  ABS CPI food series (quarterly, 2014 = 100) written by `npm run fetch-abs`
+  (`server/scripts/fetch-abs.mjs`). ABS is the backstory; our captures take over
+  from 28 Aug 2026.
 
 ## Planning docs
 
@@ -98,7 +100,7 @@ costofliving-au/
 │  ├─ index.js             Express API
 │  ├─ store.js             in-memory prices + collection orchestration
 │  ├─ data/basket.js       basket, categories, stores (source of truth)
-│  ├─ data/history.js      2014→2026 index (ABS-shaped)
+│  ├─ data/history.js      ABS CPI food index 2014→today (data/abs/cpi_food.json)
 │  └─ adapters/
 │     ├─ mockPrices.js     default, no-network price source
 │     └─ woolworths.js     live Woolworths collector

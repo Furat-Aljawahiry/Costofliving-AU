@@ -144,8 +144,11 @@ For "market" (fresh fruit & veg pricing outside the big chains), there are
 actual public data sources, unlike the independents above:
 
 - **ABS Food CPI (catalogue 6401.0)** — official government price index,
-  already the intended source for `server/data/history.js` (see its
-  comments). Good for **historical trend**, not item-level "today's price."
+  **wired (Sep 17 2026)**: `npm run fetch-abs` pulls dataflow `ABS,CPI,2.0.0`
+  from `https://data.api.abs.gov.au/rest/data/ABS,CPI,2.0.0/1.<codes>.10.50.Q`
+  (index numbers · original · Australia · quarterly, SDMX-JSON, no key,
+  CC BY 4.0) into `data/abs/cpi_food.json`, re-based from ABS's Sep 2025 = 100
+  to 2014 = 100. Good for **historical trend**, not item-level "today's price."
 - **Sydney Markets / Melbourne Market (wholesale) price reports** — both
   publish daily/weekly wholesale fruit & veg price sheets (PDF/table) for
   the wholesale trade. These are wholesale, not retail, prices — useful as

@@ -1,0 +1,40 @@
+.wrap { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-family: var(--mono); font-size: 11px; }
+.legendItem { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.swatch { display: inline-block; width: 18px; height: 3px; }
+.plotWrap { position: relative; }
+.plot { display: block; width: 100%; height: auto; }
+.grid { stroke-width: 1; }
+.axisLabel { font-family: var(--mono); font-size: 10px; }
+.endLabel { font-family: var(--mono); font-size: 10px; font-weight: 700; }
+.handover { stroke-width: 1.5; stroke-dasharray: 6 6; }
+.handoverLabel { font-family: var(--mono); font-size: 10px; }
+.cursor { stroke-width: 1; opacity: 0.5; }
+.source { font-family: var(--mono); font-size: 10px; line-height: 1.5; }
+.tooltip {
+  position: absolute; top: 8%; transform: translate(14px, 0); width: 280px; padding: 12px;
+  background: var(--ink-2); color: #fff; font-family: var(--mono); font-size: 10px; pointer-events: none;
+  display: flex; flex-direction: column; gap: 5px; border: 1px solid var(--muted);
+}
+.tooltip p { display: flex; align-items: center; gap: 6px; }
+.tooltip b { color: var(--ticket); }
+.tooltipPeriod { font-weight: 700; font-size: 12px; }
+.tooltipMeta { font-size: 8px; opacity: 0.8; }
+
+/* Light: on paper (category page) */
+.light { color: var(--ink); }
+.light .grid { stroke: var(--rule); }
+.light .axisLabel, .light .source, .light .handoverLabel { fill: var(--muted); color: var(--muted); }
+.light .endLabel { fill: var(--ink); }
+.light .handover, .light .cursor { stroke: var(--ink); }
+
+/* Dark: the home basket band */
+.dark { color: var(--paper-2); }
+.dark .grid { stroke: rgba(255, 253, 247, 0.18); }
+.dark .axisLabel, .dark .source, .dark .handoverLabel { fill: rgba(255, 253, 247, 0.6); color: rgba(255, 253, 247, 0.6); }
+.dark .endLabel { fill: var(--paper-2); }
+.dark .handover, .dark .cursor { stroke: var(--ticket); }
+.dark .tooltip { border-color: var(--ticket); }
+.dark .chip { border-color: var(--paper-2); color: var(--paper-2); background: repeating-linear-gradient(-45deg, transparent 0 4px, rgba(255, 253, 247, 0.12) 4px 8px); }
+
+@media (max-width: 600px) { .tooltip { width: 200px; } }

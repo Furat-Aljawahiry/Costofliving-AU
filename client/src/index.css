@@ -2,6 +2,7 @@
 :root {
   --paper: #f4f0e6;      /* page ground */
   --paper-2: #fffdf7;    /* cards, search, trust strip */
+  --fact: #fbf6dc;       /* "Did you know?" blocks — a whisper of yellow over the paper */
   --receipt: #f8f4e8;
   --ink: #171713;
   --ink-2: #11110f;      /* dark bands */

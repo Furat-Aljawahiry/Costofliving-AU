@@ -57,13 +57,12 @@
 .receiptDelta { font-family: var(--mono); font-size: 15px; line-height: 1.5; color: var(--accent); }
 .receiptCta { font-size: 15px; font-weight: 800; }
 .receiptCta { color: var(--muted); cursor: not-allowed; }
+.receiptAbs { font-family: var(--mono); font-size: 13px; line-height: 1.5; color: var(--ink); }
 
-.basketChart { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; height: 330px; padding-top: 14px; }
+.basketChart { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; min-height: 330px; padding-top: 14px; }
+.chartHead { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 18px; }
 .chartTitle { color: var(--paper-2); font-size: 12px; font-weight: 800; text-transform: uppercase; }
-.legend { display: flex; gap: 20px; font-size: 12px; white-space: nowrap; }
-.plot { flex: 1 1 0; min-height: 0; border-left: 1px solid var(--muted); border-bottom: 1px solid var(--muted); padding: 24px 0 8px 17px; }
-.plot .sparkline { width: 100%; height: 100%; display: block; }
-.sparkline { display: block; }
+.absReadout { font-family: var(--mono); font-size: 12px; color: var(--ticket); }
 
 /* ---- Categories bento ---------------------------------------------------- */
 .categories { display: flex; flex-direction: column; gap: 32px; padding: 96px var(--gutter); }
@@ -144,7 +143,7 @@
   .ticket, .ticketMissing { left: 24px; bottom: 24px; width: min(430px, calc(100% - 48px)); }
   .basketIndex { flex-direction: column; gap: 40px; }
   .receipt { width: auto; }
-  .basketChart { height: 280px; }
+  .basketChart { min-height: 0; }
   .sectionHeading { flex-direction: column; align-items: flex-start; }
   .h2 { font-size: 40px; white-space: normal; }
   .bentoRow { flex-direction: column; height: auto !important; }
