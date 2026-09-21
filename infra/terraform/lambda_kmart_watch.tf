@@ -1,20 +1,24 @@
-# Kmart pre-order watcher — unrelated to the price series, same account.
+# Kmart + Big W pre-order watcher — unrelated to the price series, same account.
 #
-# Polls Kmart's product feed every minute and pushes to a phone — plus emails —
-# the moment a "30th anniversary" product appears, or anything new lands in the
-# toys pre-order category. Nothing is written to the data bucket and nothing
-# here touches the crawlers; the only shared resource is the alerts topic, so a
-# Kmart alert and a crawler alarm arrive at the same address.
+# Polls both retailers' product feeds every minute and pushes to a phone — plus
+# emails — the moment a "30th anniversary" product appears, or anything new
+# lands in Kmart's toys pre-order category. Nothing is written to the data
+# bucket and nothing here touches the crawlers; the only shared resource is the
+# alerts topic, so a watcher alert and a crawler alarm arrive at the same
+# address. One function, one table, one alarm for both retailers: the retailer
+# is a prefix on the source spec, and Big W rows are namespaced "bigw:<id>".
 #
-# It needs NO proxy, unlike lambda_woolworths.tf: the feed is Constructor.io's
-# public endpoint (ac.cnstrc.com), which answers a bare request from a Lambda
-# IP. The kmart.com.au category pages themselves are 403 behind Akamai —
-# see the module docstring in lambda/kmart_watch/index.py for the measurements.
+# Neither needs the proxy lambda_woolworths.tf does. Kmart's grid comes from
+# Constructor.io's public endpoint (ac.cnstrc.com); Big W's from the site's own
+# search API (api.bigw.com.au/search/v1/search). Both answer a bare request
+# from a Lambda IP, while both retailers' category pages are 403 behind Akamai
+# — see the module docstring in lambda/kmart_watch/index.py for the
+# measurements, including Big W tarpitting the www host after ~30 requests.
 #
-# Cost at the 1-minute default: ~43,200 invocations a month, each well under a
-# second at 128 MB — about 5,400 GB-s against a 400,000 GB-s free tier — plus a
-# couple of on-demand DynamoDB writes per hit. Free in practice, cents at worst.
-# That is also two requests a minute at Constructor's CDN, which is nothing.
+# Cost at the 1-minute default: ~43,200 invocations a month, each ~1s at
+# 128 MB — about 5,400 GB-s against a 400,000 GB-s free tier — plus a couple of
+# on-demand DynamoDB writes per hit. Free in practice, cents at worst. That is
+# four requests a minute across two CDN-fronted APIs, which is nothing.
 
 variable "kmart_watch_enabled" {
   description = "Master switch. false leaves the function deployed but never fired."
@@ -30,13 +34,16 @@ variable "kmart_watch_pattern" {
 
 variable "kmart_watch_sources" {
   description = <<-EOT
-    Comma-separated feed sources, "browse:<group_id>" or "search:<query>".
-    The default pair is the toys pre-order category (group id read off the
-    Constructor group tree on 18 Sep 2026) plus a site-wide title search, so a
-    drop is caught whether or not it is filed under pre-order.
+    Comma-separated feed sources: "browse:<group_id>" and "search:<query>" are
+    Kmart, "bigw:<query>" is Big W. The Kmart pair is the toys pre-order
+    category (group id read off the Constructor group tree on 18 Sep 2026) plus
+    a site-wide title search, so a drop is caught whether or not it is filed
+    under pre-order. Big W has no browsable pre-order category on its API, so
+    it is two searches, newest first: the pattern itself, and "preorder" (the
+    word sellers put in the name) filtered through the pattern.
   EOT
   type        = string
-  default     = "browse:615bf6db4dee158ccbbc1ed5aef1ced9,search:30th anniversary"
+  default     = "browse:615bf6db4dee158ccbbc1ed5aef1ced9,search:30th anniversary,bigw:30th anniversary,bigw:preorder"
 }
 
 variable "kmart_watch_interval_minutes" {
@@ -164,7 +171,7 @@ resource "aws_lambda_function" "kmart_watch" {
   filename         = data.archive_file.kmart_watch.output_path
   source_code_hash = data.archive_file.kmart_watch.output_base64sha256
 
-  # Two feed requests, plus a homepage fetch for the Constructor key on a cold
+  # Four feed requests, plus a homepage fetch for the Constructor key on a cold
   # container, plus up to kmart_watch_push_max pushes at a 10s timeout each.
   # 60s is the worst case with every one of those retrying.
   timeout     = 60
@@ -231,7 +238,7 @@ resource "aws_lambda_permission" "kmart_watch_events" {
 # single Akamai blip is not worth an email.
 resource "aws_cloudwatch_metric_alarm" "kmart_watch_errors" {
   alarm_name          = "${var.project_name}-kmart-watch-errors"
-  alarm_description   = "The Kmart watcher is erroring. The feed shape or the Constructor key changed — run lambda/kmart_watch/dry_run.py locally to see what it returns now."
+  alarm_description   = "The Kmart/Big W watcher is erroring: a feed changed shape, the Constructor key rotated, or one retailer is blocking. The tick log names the failed source; run lambda/kmart_watch/dry_run.py locally to see what it returns now."
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = 1
   threshold           = 3

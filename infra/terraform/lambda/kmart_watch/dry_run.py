@@ -6,6 +6,7 @@ time the alerts go quiet for longer than feels right.
     python dry_run.py
     python dry_run.py "pokemon tcg"          # try a different pattern
     python dry_run.py "30th anniversary" "browse:615bf6db4dee158ccbbc1ed5aef1ced9"
+    python dry_run.py "30th" "bigw:preorder"   # Big W only
 """
 
 import os
@@ -22,16 +23,20 @@ import index  # noqa: E402  -- env must be set before the module reads it
 
 
 def main():
-    print("key      :", index.constructor_key())
     print("pattern  :", index.MATCH_PATTERN)
     print("sources  :", os.environ.get("SOURCES", index.DEFAULT_SOURCES))
     print()
 
-    hits = index.collect()
+    hits, failed = index.collect()
+    if failed:
+        print("FAILED sources (the tick would raise after alerting):", failed, "\n")
     if not hits:
         print("nothing would alert right now.")
         return
-    print("would alert on {} product(s):\n".format(len(hits)))
+    by = {}
+    for h in hits:
+        by[index.retailer(h)] = by.get(index.retailer(h), 0) + 1
+    print("would alert on {} product(s) {}:\n".format(len(hits), by))
     print(index.message(hits))
 
 

@@ -103,9 +103,104 @@ def test_key_scrape():
 def test_message():
     items, _ = index.parse_results(FIXTURE)
     body = index.message(items)
-    assert body.startswith("PRE-ORDER OPEN: Pokemon TCG: Mini Portfolio"), body
-    assert "$59.95" in body and "Category: " in body, body
+    assert body.startswith("[Kmart] PRE-ORDER: Pokemon TCG: Mini Portfolio"), body
+    assert "$59.95" in body and "Kmart pre-orders: " in body, body
     print("ok   message")
+
+
+BIGW_FIXTURE = {
+    "organic": {
+        "resultsCount": 273,
+        "results": [
+            {
+                "identifiers": {"articleId": "9906045598"},
+                "information": {
+                    "name": "PREORDER Pokemon TCG MEGA 30th Anniversary Celebration Japanese Booster Box",
+                    "brand": {},
+                },
+                "prices": {"NAT": {"price": {"cents": 32000}}, "NSW": {"price": {"cents": 32000}}},
+            },
+            {
+                "identifiers": {"articleId": "9906124050"},
+                "information": {"name": "Toy Story Alien 30th Anniversary Pop! Vinyl", "brand": {"name": "Funko"}},
+                "prices": {"NAT": {"price": {"cents": 3695}}},
+            },
+            {
+                "identifiers": {"articleId": "9906143082"},
+                "information": {"name": "Pokemon 30th Celebration Binder Box - Pokemon TCG"},
+                "prices": {},
+            },
+            {"identifiers": {}, "information": {"name": "no id, dropped"}},
+        ],
+    }
+}
+
+
+def test_bigw_parse():
+    items, total = index.parse_bigw(BIGW_FIXTURE)
+    check("bigw total", total, 273)
+    check("bigw drops id-less", len(items), 3)
+    check("bigw id is namespaced", items[0]["id"], "bigw:9906045598")
+    check("bigw url", items[0]["url"], "https://www.bigw.com.au/p/9906045598")
+    check("bigw price from NAT cents", items[0]["price"], 320.0)
+    check("bigw preorder from name", items[0]["preorder"], True)
+    check("bigw not preorder", items[1]["preorder"], False)
+    check("bigw brand", items[1]["brand"], "Funko")
+    check("bigw missing price", items[2]["price"], None)
+
+
+def test_bigw_select():
+    items, _ = index.parse_bigw(BIGW_FIXTURE)
+    # bigw is pattern-only, never alert-all, even with the flag on.
+    picked = [i["id"] for i in index.select("bigw", items, True)]
+    check("bigw pattern only", picked, ["bigw:9906045598", "bigw:9906124050"])
+
+
+def test_bigw_request():
+    body = json.loads(index.bigw_request("30th anniversary").decode("utf-8"))
+    check("bigw text", body["text"], "30th anniversary")
+    check("bigw newest first", body["sort"], "newDesc")
+    check("bigw per page at the cap", body["perPage"], 150)
+    check("bigw format is the string 1", body["format"], "1")
+    check("bigw clientId", body["clientId"], "web")
+
+
+def test_bigw_source_spec():
+    check("bigw spec", index.parse_source("bigw:preorder"), ("bigw", "preorder"))
+
+
+def test_retailer_label():
+    items, _ = index.parse_bigw(BIGW_FIXTURE)
+    check("bigw label", index.retailer(items[0]), "Big W")
+    kmart, _ = index.parse_results(FIXTURE)
+    check("kmart label", index.retailer(kmart[0]), "Kmart")
+    body = index.message([items[0], kmart[0]])
+    assert body.startswith("[Big W] PRE-ORDER: PREORDER Pokemon"), body
+    assert "[Kmart] PRE-ORDER: Pokemon TCG: Mini Portfolio" in body, body
+    print("ok   mixed message")
+
+
+def test_collect_isolates_a_failed_source(monkey=None):
+    """One retailer down must not blind the other."""
+    calls = []
+
+    def fake_read(kind, target, key=None):
+        calls.append(kind)
+        if kind == "bigw":
+            raise RuntimeError("bigw is down")
+        return index.parse_results(FIXTURE)[0]
+
+    real_read, real_key = index.read_source, index.constructor_key
+    index.read_source, index.constructor_key = fake_read, lambda force=False: "key_X"
+    os.environ["SOURCES"] = "search:30th anniversary,bigw:30th anniversary"
+    try:
+        hits, failed = index.collect()
+    finally:
+        index.read_source, index.constructor_key = real_read, real_key
+        del os.environ["SOURCES"]
+    check("both sources attempted", calls, ["search", "bigw"])
+    check("kmart hits survive", [h["id"] for h in hits], ["P_110188874"])
+    check("failure reported", failed, ["bigw:30th anniversary"])
 
 
 if __name__ == "__main__":
