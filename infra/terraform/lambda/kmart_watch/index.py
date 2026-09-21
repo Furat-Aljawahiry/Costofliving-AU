@@ -75,6 +75,17 @@ import urllib.request
 
 import push
 
+# The Decodo session layer is the crawler's, not a copy: lambda_kmart_watch.tf
+# zips proxy.py and secrets_store.py in from ../category_crawler. Locally that
+# directory is a sibling, so fall back to it for dry_run.py and the tests.
+try:
+    import proxy
+except ImportError:
+    import sys
+
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "category_crawler"))
+    import proxy
+
 log = logging.getLogger()
 log.setLevel(logging.INFO)
 
@@ -92,6 +103,14 @@ DEFAULT_SOURCES = (
 )
 KINDS = ("browse", "search", "bigw")
 
+# Big W goes out through the residential proxy, and residential bytes are the
+# one thing here that costs money (US$4/GB past the 3 GB plan). Two searches at
+# 48 results are ~90 KB gzipped on the wire, so every 5th minute-tick is
+# ~0.76 GB/month; every tick would be 3.8 GB and blow the plan on its own.
+# Kmart is direct and free, so it stays on every tick.
+BIGW_EVERY_MINUTES = int(os.environ.get("BIGW_EVERY_MINUTES", "5"))
+BIGW_PER_PAGE = int(os.environ.get("BIGW_PER_PAGE", "48"))
+
 # Big W has no pre-order flag; sellers put it in the name, inconsistently.
 PREORDER_IN_NAME = re.compile(r"pre-?\s?order", re.IGNORECASE)
 
@@ -105,6 +124,22 @@ matcher = re.compile(MATCH_PATTERN, re.IGNORECASE)
 _key_cache = os.environ.get("CONSTRUCTOR_KEY") or None
 _table = None
 _sns = None
+_bigw_session = None
+
+
+def bigw_session():
+    """
+    One sticky residential session per container, resolved from PROXY_URL or
+    PROXY_SECRET_ID exactly as the crawler does. With neither set this is None
+    and Big W goes direct -- which the Lambda IP cannot do (it is tarpitted,
+    measured 21 Sep 2026), but a laptop can, so dry_run.py still works.
+    """
+    global _bigw_session
+    if _bigw_session is None:
+        p = proxy.resolve_proxy()
+        _bigw_session = proxy.create_session(p) or False
+        log.info("bigw egress: %s", _bigw_session.describe() if _bigw_session else "direct")
+    return _bigw_session or None
 
 
 # AWS clients are built lazily so the module imports (and the pure functions
@@ -127,26 +162,30 @@ def sns():
     return _sns
 
 
-def fetch(url, attempts=3, timeout=15, data=None, headers=None):
+def fetch(url, attempts=3, timeout=15, data=None, headers=None, opener=None):
     """
-    GET (or POST, when `data` is given) with a browser UA and linear backoff.
-    Returns decoded text. A 4xx/5xx is retried like a transport error: both
-    retailers answer a bot-score blip with a one-off 403 that clears.
+    GET (or POST, when `data` is given) with a browser UA and linear backoff,
+    through `opener` when one is given (the proxy session's) else direct.
+    Returns decoded text, gunzipped if the server compressed it. A 4xx/5xx is
+    retried like a transport error: both retailers answer a bot-score blip with
+    a one-off 403 that clears.
     """
     last = None
     h = {
         "User-Agent": UA,
         "Accept": "application/json, text/html, */*",
         "Accept-Language": "en-AU,en;q=0.9",
+        "Accept-Encoding": "gzip",
         "Referer": SITE + "/",
     }
     h.update(headers or {})
+    open_ = opener.open if opener else urllib.request.urlopen
     for i in range(attempts):
         req = urllib.request.Request(url, data=data, headers=h, method="POST" if data else "GET")
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read().decode("utf-8", errors="replace")
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+            with open_(req, timeout=timeout) as resp:
+                return proxy._decode(resp.read(), resp.headers.get("Content-Encoding"))
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
             last = exc
             log.warning("fetch attempt %d/%d failed for %s: %s", i + 1, attempts, url, exc)
             if i < attempts - 1:
@@ -243,8 +282,11 @@ def read_kmart(kind, target, key):
 # ---------------------------------------------------------------- Big W
 
 
-def bigw_request(query, per_page=150):
-    """The body the site's own SearchService posts. newDesc: newest listings first."""
+def bigw_request(query, per_page=BIGW_PER_PAGE):
+    """
+    The body the site's own SearchService posts. newDesc puts the newest
+    listing first, which is why 48 results is enough: a drop is row one.
+    """
     return json.dumps(
         {
             "text": query,
@@ -284,8 +326,13 @@ def parse_bigw(body):
 
 
 def read_bigw(target):
+    # Two attempts at 15s, not three at the default: the failure mode here is
+    # a tarpit, not a refusal, and a tarpitted request holds the whole tick.
+    session = bigw_session()
     raw = fetch(
         BIGW_SEARCH,
+        attempts=2,
+        timeout=15,
         data=bigw_request(target),
         headers={
             "Content-Type": "application/json",
@@ -293,8 +340,14 @@ def read_bigw(target):
             "Origin": BIGW,
             "Referer": BIGW + "/",
         },
+        opener=session.opener if session else None,
     )
     return parse_bigw(as_json(raw, "bigw", target))
+
+
+def bigw_due(now=None, every=BIGW_EVERY_MINUTES):
+    """Big W runs on the minute-ticks divisible by BIGW_EVERY_MINUTES."""
+    return every <= 1 or int((now or time.time()) // 60) % every == 0
 
 
 # ---------------------------------------------------------------- common
@@ -326,22 +379,28 @@ def select(kind, items, alert_all_preorder=ALERT_ALL_PREORDER):
     ]
 
 
-def collect():
+def collect(all_sources=False):
     """
-    Hits from every source. One retailer failing must not blind the other, so
-    a source that raises is logged, skipped, and reported back in `failed`; the
-    handler raises AFTER notifying on whatever did come through.
+    Hits from every source due this tick. One retailer failing must not blind
+    the other, so a source that raises is logged, skipped, and reported back in
+    `failed`; the handler raises AFTER notifying on whatever did come through.
+    `all_sources` ignores the Big W cadence -- the seed run uses it.
     """
     specs = [s for s in os.environ.get("SOURCES", DEFAULT_SOURCES).split(",") if s.strip()]
     kinds = [parse_source(s) for s in specs]
     key = constructor_key() if any(k != "bigw" for k, _ in kinds) else None
+    skip_bigw = not all_sources and not bigw_due()
 
     seen, hits, failed = set(), [], []
     for spec, (kind, target) in zip(specs, kinds):
+        if kind == "bigw" and skip_bigw:
+            continue
         try:
             items = read_source(kind, target, key)
-        except RuntimeError as exc:
-            log.error("source %s failed, skipping: %s", spec, exc)
+        except Exception as exc:  # noqa: BLE001 -- isolation is the point
+            # Broad on purpose: a ProxyError or a Secrets Manager failure on
+            # the Big W side must not cost the Kmart sources their tick.
+            log.error("source %s failed, skipping: %s: %s", spec, type(exc).__name__, exc)
             failed.append(spec)
             continue
         for item in select(kind, items):
@@ -410,13 +469,13 @@ def notify(hits):
 
 
 def lambda_handler(event, context):
-    hits, failed = collect()
-    fresh = [p for p in hits if claim(p)]
-
-    # {"seed": true} claims today's matches WITHOUT notifying. Invoke it once by
-    # hand after the first deploy, or the first tick emails you the ~15 30th
-    # anniversary products already on sale and you learn to ignore the alert.
+    # {"seed": true} claims today's matches WITHOUT notifying, across every
+    # source regardless of cadence. Invoke it once by hand after a deploy that
+    # adds a source, or the first tick emails you everything already on sale
+    # and you learn to ignore the alert.
     seed = bool((event or {}).get("seed"))
+    hits, failed = collect(all_sources=seed)
+    fresh = [p for p in hits if claim(p)]
     pushed = 0
     if fresh and not seed:
         # Push FIRST -- it is the channel with a chance of reaching you inside a

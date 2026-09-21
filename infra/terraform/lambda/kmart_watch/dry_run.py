@@ -27,7 +27,7 @@ def main():
     print("sources  :", os.environ.get("SOURCES", index.DEFAULT_SOURCES))
     print()
 
-    hits, failed = index.collect()
+    hits, failed = index.collect(all_sources=True)  # ignore the Big W cadence
     if failed:
         print("FAILED sources (the tick would raise after alerting):", failed, "\n")
     if not hits:

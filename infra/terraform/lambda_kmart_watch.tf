@@ -8,17 +8,21 @@
 # address. One function, one table, one alarm for both retailers: the retailer
 # is a prefix on the source spec, and Big W rows are namespaced "bigw:<id>".
 #
-# Neither needs the proxy lambda_woolworths.tf does. Kmart's grid comes from
-# Constructor.io's public endpoint (ac.cnstrc.com); Big W's from the site's own
-# search API (api.bigw.com.au/search/v1/search). Both answer a bare request
-# from a Lambda IP, while both retailers' category pages are 403 behind Akamai
-# — see the module docstring in lambda/kmart_watch/index.py for the
-# measurements, including Big W tarpitting the www host after ~30 requests.
+# Kmart is direct: its grid comes from Constructor.io's public endpoint
+# (ac.cnstrc.com), which answers a bare request from a Lambda IP. Big W is
+# Woolworths Group and behaves like Woolworths: its search API
+# (api.bigw.com.au/search/v1/search) answers a laptop but TARPITS a Lambda IP
+# — a read timeout, not a 403, measured 21 Sep 2026 — so Big W goes out through
+# the same Decodo residential session lambda_woolworths.tf uses, and on a
+# slower cadence because residential bytes are metered (see
+# kmart_watch_bigw_every_minutes). Both retailers' category pages are 403
+# behind Akamai regardless; the module docstring in lambda/kmart_watch/index.py
+# has the measurements.
 #
 # Cost at the 1-minute default: ~43,200 invocations a month, each ~1s at
 # 128 MB — about 5,400 GB-s against a 400,000 GB-s free tier — plus a couple of
-# on-demand DynamoDB writes per hit. Free in practice, cents at worst. That is
-# four requests a minute across two CDN-fronted APIs, which is nothing.
+# on-demand DynamoDB writes per hit, plus ~0.76 GB/month of residential egress
+# that fits inside the crawlers' existing 3 GB Decodo plan. Free in practice.
 
 variable "kmart_watch_enabled" {
   description = "Master switch. false leaves the function deployed but never fired."
@@ -52,6 +56,20 @@ variable "kmart_watch_interval_minutes" {
   default     = 1
 }
 
+variable "kmart_watch_bigw_every_minutes" {
+  description = <<-EOT
+    Big W is polled on every Nth minute-tick, Kmart on every tick. Big W goes
+    out through the Decodo residential exit, whose bytes are the only thing in
+    this stack with a marginal price (US$4/GB past the 3 GB plan the crawlers
+    use ~0.3 GB of). Two searches at 48 results are ~90 KB gzipped, so:
+      5 -> ~0.76 GB/month, fits inside the existing plan   (default)
+      2 -> ~1.9 GB/month, still fits, tighter
+      1 -> ~3.8 GB/month, overage of roughly US$5/month
+  EOT
+  type        = number
+  default     = 5
+}
+
 variable "kmart_watch_push_target" {
   description = <<-EOT
     Phone push, so the alert does not wait on a mail sync. Empty = email only.
@@ -81,13 +99,32 @@ variable "kmart_watch_alert_all_preorder" {
 
 # --------------------------------------------------------------- package
 
+# Four files, named one by one rather than a source_dir: two are the watcher's
+# own and two are borrowed from the crawler. proxy.py and secrets_store.py are
+# the Decodo session layer lambda_woolworths.tf already ships; Big W needs the
+# same residential exit, so the zip takes the crawler's copy and there is one
+# implementation to fix when Decodo changes something. The local harnesses
+# (*_test.py, dry_run.py, test_push.py) are simply not listed.
 data "archive_file" "kmart_watch" {
   type        = "zip"
-  source_dir  = "${path.module}/lambda/kmart_watch"
   output_path = "${path.module}/lambda/kmart_watch.zip"
 
-  # Local harnesses: *_test.py are offline, dry_run.py and test_push.py go live.
-  excludes = ["index_test.py", "push_test.py", "dry_run.py", "test_push.py", "__pycache__", "README.md"]
+  source {
+    filename = "index.py"
+    content  = file("${path.module}/lambda/kmart_watch/index.py")
+  }
+  source {
+    filename = "push.py"
+    content  = file("${path.module}/lambda/kmart_watch/push.py")
+  }
+  source {
+    filename = "proxy.py"
+    content  = file("${path.module}/lambda/category_crawler/proxy.py")
+  }
+  source {
+    filename = "secrets_store.py"
+    content  = file("${path.module}/lambda/category_crawler/secrets_store.py")
+  }
 }
 
 # --------------------------------------------------------------- dedupe table
@@ -151,6 +188,14 @@ resource "aws_iam_role_policy" "kmart_watch" {
         Action   = ["sns:Publish"]
         Resource = [aws_sns_topic.alerts.arn]
       },
+      # The crawler's Decodo credential, read at cold start for the Big W
+      # sources only. Same secret, same grant shape as lambda_woolworths.tf;
+      # no kms:Decrypt for the same reason (AWS-managed key).
+      {
+        Effect   = "Allow"
+        Action   = ["secretsmanager:GetSecretValue"]
+        Resource = [data.aws_secretsmanager_secret.crawler_proxy_url.arn]
+      },
     ]
   })
 }
@@ -171,10 +216,12 @@ resource "aws_lambda_function" "kmart_watch" {
   filename         = data.archive_file.kmart_watch.output_path
   source_code_hash = data.archive_file.kmart_watch.output_base64sha256
 
-  # Four feed requests, plus a homepage fetch for the Constructor key on a cold
-  # container, plus up to kmart_watch_push_max pushes at a 10s timeout each.
-  # 60s is the worst case with every one of those retrying.
-  timeout     = 60
+  # Two Kmart requests (~1s), two Big W requests through the residential exit
+  # (~5s, or 2x15s each when tarpitted -- that is the measured failure mode,
+  # not a 403), a homepage fetch for the Constructor key on a cold container,
+  # and up to kmart_watch_push_max pushes at 10s each. 90s is the worst case
+  # with every one of those retrying; the ordinary tick is under 2s.
+  timeout     = 90
   memory_size = 128
 
   environment {
@@ -192,6 +239,15 @@ resource "aws_lambda_function" "kmart_watch" {
       PUSH_TARGET = var.kmart_watch_push_target
       PUSH_MAX    = tostring(var.kmart_watch_push_max)
 
+      # Big W only. Kmart is direct and never touches the proxy. Only the
+      # secret's NAME is here; the credential is read at cold start. If the
+      # secret cannot be read the Big W sources fail loudly (alarm) rather
+      # than going out on the AWS IP, which Big W tarpits anyway.
+      PROXY_SECRET_ID    = data.aws_secretsmanager_secret.crawler_proxy_url.name
+      PROXY_COUNTRY      = var.crawler_proxy_country
+      BIGW_EVERY_MINUTES = tostring(var.kmart_watch_bigw_every_minutes)
+      BIGW_PER_PAGE      = "48"
+
       TTL_DAYS = "90"
       # CONSTRUCTOR_KEY deliberately unset: the function scrapes it off the
       # homepage and caches it per container, so a key rotation self-heals.
@@ -205,7 +261,7 @@ resource "aws_lambda_function" "kmart_watch" {
 
 resource "aws_cloudwatch_event_rule" "kmart_watch" {
   name        = "${var.project_name}-kmart-watch"
-  description = "Poll the Kmart pre-order feed for ${var.kmart_watch_pattern}"
+  description = "Poll the Kmart and Big W feeds for ${var.kmart_watch_pattern}"
   # EventBridge rejects "rate(1 minutes)" — the unit is singular at 1 and plural
   # everywhere else, and 1 is this rule's default.
   schedule_expression = "rate(${var.kmart_watch_interval_minutes} ${var.kmart_watch_interval_minutes == 1 ? "minute" : "minutes"})"

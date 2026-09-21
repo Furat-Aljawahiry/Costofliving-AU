@@ -1,9 +1,10 @@
-# Kmart pre-order watcher
+# Kmart + Big W pre-order watcher
 
-Emails you the moment a "30th anniversary" product appears on kmart.com.au, or
-anything new lands in the toys pre-order category. Deployed by
-`../../lambda_kmart_watch.tf` into the same AWS account as the price crawlers,
-sharing only their SNS alerts topic.
+Pushes to your phone, and emails, the moment a "30th anniversary" product
+appears on kmart.com.au or bigw.com.au, or anything new lands in Kmart's toys
+pre-order category. Deployed by `../../lambda_kmart_watch.tf` into the same AWS
+account as the price crawlers, sharing their SNS alerts topic and -- for Big W
+only -- their Decodo residential proxy.
 
 ## How it reads Kmart
 
@@ -28,6 +29,55 @@ Two sources are polled, because a drop can land either way:
 
 Each item carries `isPreOrderActive`, which is the buy signal. A product that
 was already listed and then flips to pre-order-active alerts a *second* time.
+
+## How it reads Big W
+
+Measured 21 Sep 2026. Big W is Woolworths Group and its Akamai is tuned harder:
+
+| request | from a laptop | from Lambda | via Decodo AU |
+| --- | --- | --- | --- |
+| `GET /` with curl | connection reset (TLS fingerprint) | -- | -- |
+| `GET /` with Python | 200 once, then tarpitted after ~30 requests | -- | 200 |
+| `GET /toys/c/674494` | 403 | -- | **403** |
+| `GET /_next/data/.../c/674494.json` | 403 | -- | 403 |
+| `POST api.bigw.com.au/search/v1/search` | **200** | **read timeout (tarpit)** | **200, ~3s** |
+
+So the category pages are out even through a residential exit, but the site's
+own search call is a separate host that answers a residential IP cleanly. It
+was reverse-engineered from the `_app` chunk (`SearchService.search()` posts
+`endpoints.search()` on the `apiBase` client):
+
+```
+POST https://api.bigw.com.au/search/v1/search
+{"text": "30th anniversary", "page": 0, "perPage": 48,
+ "sort": "newDesc", "format": "1", "clientId": "web"}
+```
+
+`perPage` caps at 150; `sort` is one of `relevance|nameAsc|nameDesc|priceAsc|priceDesc|newDesc`.
+`newDesc` puts the newest listing first, which is why 48 is enough -- a drop is
+row one. Big W has no pre-order flag; sellers write `PREORDER` into the name,
+so that is what is read. Product links are `https://www.bigw.com.au/p/<articleId>`.
+
+Two sources: `bigw:30th anniversary` and `bigw:preorder` (every pre-order,
+then filtered through the pattern). Rows are namespaced `bigw:<articleId>` in
+the shared table so they can never collide with a Kmart id.
+
+### Why Big W polls every 5 minutes, not every 1
+
+Residential bytes are the one thing here with a marginal price: Decodo is
+US$4/GB past the 3 GB plan, of which the crawlers use ~0.3 GB. Two Big W
+searches at 48 results are ~90 KB gzipped on the wire:
+
+| `kmart_watch_bigw_every_minutes` | residential egress |
+| --- | --- |
+| 5 (default) | ~0.76 GB/month -- inside the existing plan |
+| 2 | ~1.9 GB/month -- still inside, tighter |
+| 1 | ~3.8 GB/month -- ~US$5/month overage |
+
+Kmart is direct and free, so it stays on every tick. One retailer failing
+never blinds the other: a source that raises is logged and skipped, the
+alerts that did come through go out, and *then* the tick raises so the Errors
+alarm counts it.
 
 ## Getting the message on your phone
 
@@ -62,10 +112,14 @@ it can never cost you the email or fail the tick.
 ## Before deploying
 
 ```bash
-python dry_run.py                 # hits the live feed, prints what would alert
+python dry_run.py                 # hits both live feeds, prints what would alert
 python index_test.py              # offline, no network
 python push_test.py               # offline, no network
 ```
+
+`dry_run.py` reaches Big W directly from your laptop -- a residential IP, so
+that works. The Lambda cannot; it goes through the proxy, resolved the way the
+crawler does it (`PROXY_SECRET_ID`, or `PROXY_URL` inline).
 
 `dry_run.py` writes nothing and needs no credentials. Run it whenever the alerts
 go quiet for longer than feels right — if Kmart reshapes the feed, this is where
@@ -85,7 +139,7 @@ terraform apply -var kmart_watch_enabled=false     # function up, schedule off
 
 aws lambda invoke --function-name costofliving-au-kmart-watch \
   --payload '{"seed": true}' --cli-binary-format raw-in-base64-out out.json
-cat out.json                                       # expect "new": 15, "pushed": 0
+cat out.json                                       # expect "pushed": 0, "failed_sources": []
 
 terraform apply                                    # schedule on, quiet
 ```
@@ -100,8 +154,9 @@ All in `../../lambda_kmart_watch.tf`, set them in `terraform.tfvars`:
 | variable | default | |
 | --- | --- | --- |
 | `kmart_watch_pattern` | `30th\s*anniversary` | any case-insensitive regex |
-| `kmart_watch_sources` | the two above | `browse:<group_id>` / `search:<query>` |
-| `kmart_watch_interval_minutes` | `1` | EventBridge's floor |
+| `kmart_watch_sources` | the four above | `browse:<group_id>` / `search:<query>` / `bigw:<query>` |
+| `kmart_watch_interval_minutes` | `1` | EventBridge's floor; Kmart cadence |
+| `kmart_watch_bigw_every_minutes` | `5` | Big W cadence, see the egress table above |
 | `kmart_watch_push_target` | `""` | `ntfy:` / `pushover:` / `telegram:`, above |
 | `kmart_watch_push_max` | `5` | pushes per tick; the email always lists all |
 | `kmart_watch_alert_all_preorder` | `true` | any new pre-order item, not just matches |

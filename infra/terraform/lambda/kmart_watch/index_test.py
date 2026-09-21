@@ -160,7 +160,7 @@ def test_bigw_request():
     body = json.loads(index.bigw_request("30th anniversary").decode("utf-8"))
     check("bigw text", body["text"], "30th anniversary")
     check("bigw newest first", body["sort"], "newDesc")
-    check("bigw per page at the cap", body["perPage"], 150)
+    check("bigw per page", body["perPage"], 48)
     check("bigw format is the string 1", body["format"], "1")
     check("bigw clientId", body["clientId"], "web")
 
@@ -201,6 +201,36 @@ def test_collect_isolates_a_failed_source(monkey=None):
     check("both sources attempted", calls, ["search", "bigw"])
     check("kmart hits survive", [h["id"] for h in hits], ["P_110188874"])
     check("failure reported", failed, ["bigw:30th anniversary"])
+
+
+def test_bigw_cadence():
+    # 5-minute cadence on a 1-minute tick: minutes 0, 5, 10 ... fire.
+    check("minute 0 due", index.bigw_due(now=0, every=5), True)
+    check("minute 1 not due", index.bigw_due(now=60, every=5), False)
+    check("minute 5 due", index.bigw_due(now=300, every=5), True)
+    check("every=1 always due", index.bigw_due(now=60, every=1), True)
+
+
+def test_collect_skips_bigw_off_cadence():
+    calls = []
+
+    def fake_read(kind, target, key=None):
+        calls.append(kind)
+        return []
+
+    real_read, real_key, real_due = index.read_source, index.constructor_key, index.bigw_due
+    index.read_source, index.constructor_key = fake_read, lambda force=False: "key_X"
+    index.bigw_due = lambda now=None, every=None: False
+    os.environ["SOURCES"] = "search:x,bigw:x"
+    try:
+        index.collect()
+        check("bigw skipped off cadence", calls, ["search"])
+        calls.clear()
+        index.collect(all_sources=True)
+        check("seed ignores cadence", calls, ["search", "bigw"])
+    finally:
+        index.read_source, index.constructor_key, index.bigw_due = real_read, real_key, real_due
+        del os.environ["SOURCES"]
 
 
 if __name__ == "__main__":
