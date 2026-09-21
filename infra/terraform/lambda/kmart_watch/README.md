@@ -49,9 +49,19 @@ was reverse-engineered from the `_app` chunk (`SearchService.search()` posts
 
 ```
 POST https://api.bigw.com.au/search/v1/search
-{"text": "30th anniversary", "page": 0, "perPage": 48,
- "sort": "newDesc", "format": "1", "clientId": "web"}
+{"text": "30th anniversary", "page": 0, "perPage": 48, "sort": "newDesc",
+ "filter": {"soldBy": ["BIG W"]}, "format": "1", "clientId": "web"}
 ```
+
+**Marketplace sellers are excluded.** `soldBy: ["BIG W"]` is the site's own
+"Sold By" facet, applied server-side; without it 266 of 273 "30th anniversary"
+results were third-party sellers (The Nile, Gamerholic, KG Superstore...) and
+Big W's own stock never made the newest-48 window. Behind that, every row is
+also checked for `fulfilment.productChannel == "BIGW"`, so a marketplace row
+can never reach an alert even if the filter stops being honoured. Note that
+`information.vendors` is *not* the signal -- that is the supplier (Jazwares,
+Scholastic), and Big W's own stock has one too. `BIGW_INCLUDE_MARKETPLACE=true`
+turns both off.
 
 `perPage` caps at 150; `sort` is one of `relevance|nameAsc|nameDesc|priceAsc|priceDesc|newDesc`.
 `newDesc` puts the newest listing first, which is why 48 is enough -- a drop is

@@ -19,6 +19,10 @@ if len(sys.argv) > 1:
 if len(sys.argv) > 2:
     os.environ["SOURCES"] = ",".join(sys.argv[2:])
 
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+
 import index  # noqa: E402  -- env must be set before the module reads it
 
 

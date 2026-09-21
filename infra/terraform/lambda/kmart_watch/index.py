@@ -20,27 +20,31 @@ The grid is client-side, fetched from Constructor.io's public endpoint with a
 key that ships in the homepage HTML. Unauthenticated, CDN-fronted, not behind
 the bot wall.
 
-Big W (measured 21 Sep 2026) is nastier on the www host: curl cannot even
-complete a request (TLS fingerprinting), Python urllib gets the homepage once
-and is then tarpitted for minutes after ~30 requests, and every /c/ category
-path is 403 even through an AU residential exit. But the site's own search
-call is a separate host with none of that:
+Big W (measured 21 Sep 2026) is Woolworths Group and nastier: curl cannot
+complete a TLS handshake with www, Python urllib gets the homepage once and is
+then tarpitted for minutes after ~30 requests, every /c/ category path is 403
+even through an AU residential exit, and the site's own search API answers a
+laptop but TARPITS a Lambda IP (read timeout, not a 403). Through the Decodo
+residential session the Woolworths crawler already uses, that API is clean:
 
     POST api.bigw.com.au/search/v1/search
-         {"text": ..., "page": 0, "perPage": 150, "sort": "newDesc",
-          "format": "1", "clientId": "web"}   -> 200, up to 150 products
+         {"text": ..., "page": 0, "perPage": 48, "sort": "newDesc",
+          "filter": {"soldBy": ["BIG W"]},
+          "format": "1", "clientId": "web"}   -> 200 in ~3s
 
 Reverse-engineered from the _app chunk: SearchService.search() posts to
 endpoints.search() on the apiBase client. perPage caps at 150; sort is one of
-relevance|nameAsc|nameDesc|priceAsc|priceDesc|newDesc. Big W has no pre-order
-flag -- sellers write "PREORDER" into the product name, so that is what we
-read. There is no category browse on this API that we found (the "category"
-field is accepted and ignored), which is why Big W is search-only.
+relevance|nameAsc|nameDesc|priceAsc|priceDesc|newDesc; "filter" takes the
+facets the page shows, and soldBy "BIG W" is the "Sold By" facet that
+excludes marketplace sellers (266 of 273 "30th anniversary" results). Big W
+has no pre-order flag -- sellers write "PREORDER" into the name, so that is
+what we read. There is no category browse on this API that we found (the
+"category" field is accepted and ignored), which is why Big W is search-only.
 
-So neither retailer needs the residential proxy the Woolworths crawler uses.
-Kmart's robots.txt disallows /api/ and both disallow /checkout; the hosts we
-read are different hosts, and the pages we link to are Allowed. Read-only, one
-request per source per tick.
+So Kmart goes direct and Big W goes through the proxy, on a slower cadence
+because residential bytes are metered. Kmart's robots.txt disallows /api/ and
+both disallow /checkout; the hosts we read are different hosts, and the pages
+we link to are Allowed. Read-only, one request per source per tick.
 
 SOURCES
 -------
@@ -60,6 +64,9 @@ Env vars:
   MATCH_PATTERN       Case-insensitive regex. Default: 30th\\s*anniversary
   SOURCES             Comma-separated browse:<group_id> / search:<q> / bigw:<q>.
   ALERT_ALL_PREORDER  "true" -> any new item in a browse source alerts.
+  BIGW_INCLUDE_MARKETPLACE  "true" -> third-party sellers too. Default false.
+  BIGW_EVERY_MINUTES  Big W cadence in minute-ticks. Default 5.
+  PROXY_SECRET_ID / PROXY_URL  Decodo credential for Big W, as the crawler.
   CONSTRUCTOR_KEY     Override; otherwise scraped from the homepage and cached.
   TTL_DAYS            How long a seen product stays deduped. Default 90.
 """
@@ -105,14 +112,23 @@ KINDS = ("browse", "search", "bigw")
 
 # Big W goes out through the residential proxy, and residential bytes are the
 # one thing here that costs money (US$4/GB past the 3 GB plan). Two searches at
-# 48 results are ~90 KB gzipped on the wire, so every 5th minute-tick is
-# ~0.76 GB/month; every tick would be 3.8 GB and blow the plan on its own.
+# 48 results were ~90 KB gzipped on the wire before the soldBy filter; with it
+# the pages are a handful of rows and far smaller. Every 5th minute-tick was
+# sized at ~0.76 GB/month on the unfiltered figure, so it now has headroom.
 # Kmart is direct and free, so it stays on every tick.
 BIGW_EVERY_MINUTES = int(os.environ.get("BIGW_EVERY_MINUTES", "5"))
 BIGW_PER_PAGE = int(os.environ.get("BIGW_PER_PAGE", "48"))
 
 # Big W has no pre-order flag; sellers put it in the name, inconsistently.
 PREORDER_IN_NAME = re.compile(r"pre-?\s?order", re.IGNORECASE)
+
+# Marketplace listings are dropped unless asked for. The signal is
+# fulfilment.productChannel: "BIGW" is Big W's own stock, "IMP" is a
+# third-party seller (The Nile, Gamerholic, KG Superstore...). Measured 21 Sep
+# 2026: 148 of 150 "30th anniversary" results and 109 of 109 "preorder"
+# results were IMP. information.vendors is NOT the signal -- that is the
+# supplier (Jazwares, Scholastic), and Big W's own stock has one too.
+BIGW_INCLUDE_MARKETPLACE = os.environ.get("BIGW_INCLUDE_MARKETPLACE", "false").lower() == "true"
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -282,21 +298,28 @@ def read_kmart(kind, target, key):
 # ---------------------------------------------------------------- Big W
 
 
-def bigw_request(query, per_page=BIGW_PER_PAGE):
+def bigw_request(query, per_page=BIGW_PER_PAGE, include_marketplace=BIGW_INCLUDE_MARKETPLACE):
     """
     The body the site's own SearchService posts. newDesc puts the newest
     listing first, which is why 48 results is enough: a drop is row one.
+
+    The soldBy filter is the site's own "Sold By: BIG W" facet, applied
+    server-side. Without it the newest-48 window is all marketplace (266 of
+    273 on 21 Sep 2026) and Big W's own stock never makes the page; with it the
+    window is all own stock and the response is a fraction of the bytes, which
+    matters because this goes over the metered residential exit.
     """
-    return json.dumps(
-        {
-            "text": query,
-            "page": 0,
-            "perPage": per_page,
-            "sort": "newDesc",
-            "format": "1",
-            "clientId": "web",
-        }
-    ).encode("utf-8")
+    body = {
+        "text": query,
+        "page": 0,
+        "perPage": per_page,
+        "sort": "newDesc",
+        "format": "1",
+        "clientId": "web",
+    }
+    if not include_marketplace:
+        body["filter"] = {"soldBy": ["BIG W"]}
+    return json.dumps(body).encode("utf-8")
 
 
 def normalise_bigw(item):
@@ -316,13 +339,22 @@ def normalise_bigw(item):
         "price": cents / 100 if isinstance(cents, (int, float)) else None,
         "preorder": bool(PREORDER_IN_NAME.search(name)),
         "brand": (info.get("brand") or {}).get("name") or "",
+        "marketplace": (item.get("fulfilment") or {}).get("productChannel") != "BIGW",
     }
 
 
-def parse_bigw(body):
+def parse_bigw(body, include_marketplace=BIGW_INCLUDE_MARKETPLACE):
     organic = body.get("organic") or {}
     items = [normalise_bigw(i) for i in organic.get("results") or []]
-    return [i for i in items if i["id"]], organic.get("resultsCount")
+    items = [i for i in items if i["id"]]
+    if not include_marketplace:
+        # Belt and braces behind the server-side soldBy filter: if Big W ever
+        # stops honouring it, marketplace rows still never reach an alert.
+        own = [i for i in items if not i["marketplace"]]
+        if len(own) != len(items):
+            log.warning("bigw: %d marketplace rows leaked past the soldBy filter", len(items) - len(own))
+        items = own
+    return items, organic.get("resultsCount")
 
 
 def read_bigw(target):
@@ -347,7 +379,8 @@ def read_bigw(target):
 
 def bigw_due(now=None, every=BIGW_EVERY_MINUTES):
     """Big W runs on the minute-ticks divisible by BIGW_EVERY_MINUTES."""
-    return every <= 1 or int((now or time.time()) // 60) % every == 0
+    now = time.time() if now is None else now
+    return every <= 1 or int(now // 60) % every == 0
 
 
 # ---------------------------------------------------------------- common

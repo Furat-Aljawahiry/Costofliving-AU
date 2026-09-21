@@ -119,16 +119,19 @@ BIGW_FIXTURE = {
                     "brand": {},
                 },
                 "prices": {"NAT": {"price": {"cents": 32000}}, "NSW": {"price": {"cents": 32000}}},
+                "fulfilment": {"productChannel": "IMP", "logisticType": "DSV_Standard"},
             },
             {
                 "identifiers": {"articleId": "9906124050"},
                 "information": {"name": "Toy Story Alien 30th Anniversary Pop! Vinyl", "brand": {"name": "Funko"}},
                 "prices": {"NAT": {"price": {"cents": 3695}}},
+                "fulfilment": {"productChannel": "BIGW", "logisticType": "Standard"},
             },
             {
                 "identifiers": {"articleId": "9906143082"},
                 "information": {"name": "Pokemon 30th Celebration Binder Box - Pokemon TCG"},
                 "prices": {},
+                "fulfilment": {"productChannel": "BIGW"},
             },
             {"identifiers": {}, "information": {"name": "no id, dropped"}},
         ],
@@ -137,7 +140,7 @@ BIGW_FIXTURE = {
 
 
 def test_bigw_parse():
-    items, total = index.parse_bigw(BIGW_FIXTURE)
+    items, total = index.parse_bigw(BIGW_FIXTURE, include_marketplace=True)
     check("bigw total", total, 273)
     check("bigw drops id-less", len(items), 3)
     check("bigw id is namespaced", items[0]["id"], "bigw:9906045598")
@@ -149,8 +152,17 @@ def test_bigw_parse():
     check("bigw missing price", items[2]["price"], None)
 
 
+def test_bigw_marketplace():
+    everything, _ = index.parse_bigw(BIGW_FIXTURE, include_marketplace=True)
+    check("IMP is marketplace", everything[0]["marketplace"], True)
+    check("BIGW channel is own stock", everything[1]["marketplace"], False)
+    check("missing fulfilment counts as marketplace", index.normalise_bigw({"identifiers": {"articleId": "1"}, "information": {"name": "x"}})["marketplace"], True)
+    own, _ = index.parse_bigw(BIGW_FIXTURE)  # the default: marketplace dropped
+    check("default drops marketplace", [i["id"] for i in own], ["bigw:9906124050", "bigw:9906143082"])
+
+
 def test_bigw_select():
-    items, _ = index.parse_bigw(BIGW_FIXTURE)
+    items, _ = index.parse_bigw(BIGW_FIXTURE, include_marketplace=True)
     # bigw is pattern-only, never alert-all, even with the flag on.
     picked = [i["id"] for i in index.select("bigw", items, True)]
     check("bigw pattern only", picked, ["bigw:9906045598", "bigw:9906124050"])
@@ -158,6 +170,9 @@ def test_bigw_select():
 
 def test_bigw_request():
     body = json.loads(index.bigw_request("30th anniversary").decode("utf-8"))
+    check("bigw sold-by filter on by default", body["filter"], {"soldBy": ["BIG W"]})
+    with_mp = json.loads(index.bigw_request("x", include_marketplace=True).decode("utf-8"))
+    check("bigw no filter when marketplace wanted", "filter" in with_mp, False)
     check("bigw text", body["text"], "30th anniversary")
     check("bigw newest first", body["sort"], "newDesc")
     check("bigw per page", body["perPage"], 48)
@@ -170,7 +185,7 @@ def test_bigw_source_spec():
 
 
 def test_retailer_label():
-    items, _ = index.parse_bigw(BIGW_FIXTURE)
+    items, _ = index.parse_bigw(BIGW_FIXTURE, include_marketplace=True)
     check("bigw label", index.retailer(items[0]), "Big W")
     kmart, _ = index.parse_results(FIXTURE)
     check("kmart label", index.retailer(kmart[0]), "Kmart")
@@ -194,7 +209,7 @@ def test_collect_isolates_a_failed_source(monkey=None):
     index.read_source, index.constructor_key = fake_read, lambda force=False: "key_X"
     os.environ["SOURCES"] = "search:30th anniversary,bigw:30th anniversary"
     try:
-        hits, failed = index.collect()
+        hits, failed = index.collect(all_sources=True)
     finally:
         index.read_source, index.constructor_key = real_read, real_key
         del os.environ["SOURCES"]
