@@ -1,4 +1,5 @@
-# Kmart + Big W pre-order watcher — unrelated to the price series, same account.
+# Kmart + Big W + Target + JB Hi-Fi pre-order watcher — unrelated to the price
+# series, same account.
 #
 # Polls both retailers' product feeds every minute and pushes to a phone — plus
 # emails — the moment a "30th anniversary" product appears, or anything new
@@ -9,7 +10,16 @@
 # is a prefix on the source spec, and Big W rows are namespaced "bigw:<id>".
 #
 # Kmart is direct: its grid comes from Constructor.io's public endpoint
-# (ac.cnstrc.com), which answers a bare request from a Lambda IP. Big W is
+# (ac.cnstrc.com), which answers a bare request from a Lambda IP. Target
+# (added 1 Oct 2026) is the same engine on the same host with its own key, and
+# is why there is no separate target-watch function: a third Lambda would have
+# duplicated ~600 lines to change a key and a sort field. Its homepage is not
+# behind Akamai at all, so it is direct and free like Kmart. JB Hi-Fi (added
+# 2 Oct 2026) is Shopify and uses ALGOLIA rather than Constructor, with the app
+# id and public search key taken from its theme bundle; also direct, also free,
+# but it needs its own filtering because its catalogue is 780k products and
+# most of its "30th anniversary" stock is vinyl reissues — see
+# kmart_watch_jb_exclude_types. Big W is
 # Woolworths Group and behaves like Woolworths: its search API
 # (api.bigw.com.au/search/v1/search) answers a laptop but TARPITS a Lambda IP
 # — a read timeout, not a 403, measured 21 Sep 2026 — so Big W goes out through
@@ -31,23 +41,59 @@ variable "kmart_watch_enabled" {
 }
 
 variable "kmart_watch_pattern" {
-  description = "Case-insensitive regex matched against product titles."
+  description = <<-EOT
+    Case-insensitive regex matched against accent-stripped product titles.
+    "30th anniversary" alone missed the range this exists for: Kmart listed the
+    Pokemon TCG 30th line on 17 Sep 2026 as "30th Celebration". The default
+    takes either wording, or any Pokemon title carrying anniversary /
+    celebration / 30th, so a rename does not blind it again.
+
+    "mini tins?" was added 1 Oct 2026 for the Pokemon TCG 30th anniversary mini
+    tins. It is tight enough to leave the tin CANDLES alone: a Target "mini
+    tin" search returns "Anko Christmas Reindeer Tin Candle", which this regex
+    does not match. Verified against the live feed with dry_run.py -- the four
+    Target rows it selects are all genuine 30th anniversary products.
+  EOT
   type        = string
-  default     = "30th\\s*anniversary"
+  default     = "30th\\s*(anniversary|celebration)|mini\\s*tins?|pokemon.*(anniversary|celebration|30th|30\\s*years?)"
 }
 
 variable "kmart_watch_sources" {
   description = <<-EOT
     Comma-separated feed sources: "browse:<group_id>" and "search:<query>" are
-    Kmart, "bigw:<query>" is Big W. The Kmart pair is the toys pre-order
-    category (group id read off the Constructor group tree on 18 Sep 2026) plus
-    a site-wide title search, so a drop is caught whether or not it is filed
-    under pre-order. Big W has no browsable pre-order category on its API, so
-    it is two searches, newest first: the pattern itself, and "preorder" (the
-    word sellers put in the name) filtered through the pattern.
+    Kmart, "bigw:<query>" is Big W. Kmart is Toys > Latest Arrivals plus
+    site-wide searches, all sorted newest-first, so a drop is caught whether it
+    is filed under a category, sold as an ordinary listing, or named
+    differently from what we expected: "pokemon" is the safety net, the pattern
+    does the filtering.
+
+    The browse group WAS 615bf6db4dee158ccbbc1ed5aef1ced9, the toys pre-order
+    category. Kmart deleted that category; on 2 Oct 2026 the id returned 0
+    results with no error, which is this watcher's worst failure mode because
+    it is indistinguishable from a quiet day. There is no pre-order shelf left
+    anywhere in Kmart's tree, so the replacement is Toys > Latest Arrivals. Big
+    W has no browsable pre-order category on its API and no pre-order flag on
+    its own stock, so it is the same two ideas as newest-first searches.
+    (bigw:preorder returned 0 own-stock rows -- only marketplace sellers write
+    PREORDER into a name -- and was dropped.)
+
+    "target:<query>" and "target-browse:<group_id>" are Target. target-browse
+    W1852642 is its "Pokemon Cards" group, which held 12 products on 1 Oct
+    2026 -- small, and the obvious shelf for a TCG tin. The three searches are
+    the same newest-first idea as Kmart's, plus "mini tin" for the range this
+    was extended for. Target's group tree is NOT browsable the way Kmart's is
+    (browse/group_id/all returns an empty groups array on its index), so new
+    group ids are read off a product's data.group_ids instead -- see the
+    README.
+
+    "jb:<query>" is JB Hi-Fi, through Algolia. There is no browse kind for it:
+    the index has no date-sorted replica, so instead of a newest-first page
+    each query is narrowed to a rolling release_date window
+    (kmart_watch_jb_release_window_days). Two queries, same shape as the
+    others -- the broad "pokemon" safety net and the explicit wording.
   EOT
   type        = string
-  default     = "browse:615bf6db4dee158ccbbc1ed5aef1ced9,search:30th anniversary,bigw:30th anniversary,bigw:preorder"
+  default     = "browse:e35ed26c9b1dfb7fd311f93557216816,search:30th anniversary,search:30th celebration,search:pokemon,bigw:30th anniversary,bigw:pokemon,target-browse:W1852642,target:pokemon,target:30th anniversary,target:mini tin,jb:30th anniversary,jb:pokemon"
 }
 
 variable "kmart_watch_interval_minutes" {
@@ -92,9 +138,89 @@ variable "kmart_watch_push_max" {
 }
 
 variable "kmart_watch_alert_all_preorder" {
-  description = "Alert on ANY new item in a browse source, not just pattern matches."
+  description = <<-EOT
+    Alert on ANY new item in Kmart's browse source, not just pattern matches.
+
+    Was true, and was the point, while that source was the toys pre-order
+    category: 2 items, so everything new in it was worth knowing. Kmart deleted
+    that category (see kmart_watch_sources) and the replacement is Toys >
+    Latest Arrivals -- 455 items, where taking everything is an alert per new
+    toy. So this is now false and the pattern does the filtering, matching
+    kmart_watch_target_alert_all_browse.
+  EOT
   type        = bool
-  default     = true
+  default     = false
+}
+
+variable "kmart_watch_target_alert_all_browse" {
+  description = <<-EOT
+    The same idea for Target's browse group, deliberately a separate switch and
+    deliberately off. Kmart's browse source is a pre-order shelf that held 2
+    items, so reading it whole is quiet and is the point. Target's W1852642 is
+    an ordinary "Pokemon Cards" group of 12 sleeves, deck boxes and blisters;
+    reading it whole means an alert every time Target reshuffles an id, which
+    is how you learn to ignore the notification. The pattern does the work
+    instead. Turn this on for the window around a drop if you would rather see
+    a tin filed under a name nobody predicted than miss it.
+  EOT
+  type        = bool
+  default     = false
+}
+
+variable "kmart_watch_jb_exclude_types" {
+  description = <<-EOT
+    Comma-separated Algolia product_type values dropped from JB Hi-Fi results.
+
+    This one is not cosmetic. Of 33 recent "30th anniversary" matches on JB on
+    2 Oct 2026, 29 were product_type MUSIC -- vinyl reissues, which JB sells
+    constantly and labels "30th Anniversary Edition". Left in, this single
+    source alerts more than the other three retailers combined and you learn
+    to ignore the notification.
+
+    Note that `department` is NOT usable for this: Magic: The Gathering
+    products are filed under department "MOVIES". product_type is consistent.
+    Set to "" to hear the vinyl too.
+  EOT
+  type        = string
+  default     = "MUSIC"
+}
+
+variable "kmart_watch_jb_release_window_days" {
+  description = <<-EOT
+    How far back a JB release_date may be for a product to still count as
+    news. This is how the JB source stays small: its catalogue is 780,376
+    products and "30th anniversary" alone matches 2,704, of which the first
+    550 genuinely match the pattern -- reading that would need hitsPerPage
+    1000, which is 7.5 MB a request. A 60-day window plus attributesToRetrieve
+    puts one query at ~36 KB.
+
+    There is deliberately no forward bound: a pre-order's release date is in
+    the future, and those are the ones worth catching.
+  EOT
+  type        = number
+  default     = 60
+}
+
+variable "kmart_watch_jb_include_marketplace" {
+  description = "true -> third-party JB Hi-Fi sellers too. Same idea as Big W's."
+  type        = bool
+  default     = false
+}
+
+variable "kmart_watch_target_stock_flip" {
+  description = <<-EOT
+    Target has no pre-order flag anywhere on its index -- but it does publish
+    availableonlineqty, and rows really do sit at 0 while listed but not yet
+    purchasable (measured 1 Oct 2026 on the Pokemon 30th Battle Figure
+    Multipack and a Journey Together blister). true makes a 0 -> >0 flip earn a
+    SECOND alert, which is the moment a drop actually becomes buyable.
+
+    Off by default because an ordinary restock of a product you were already
+    alerted about looks identical and is noise. For a drop you are waiting on,
+    this is the single most useful signal here -- turn it on for that window.
+  EOT
+  type        = bool
+  default     = false
 }
 
 # --------------------------------------------------------------- package
@@ -216,7 +342,9 @@ resource "aws_lambda_function" "kmart_watch" {
   filename         = data.archive_file.kmart_watch.output_path
   source_code_hash = data.archive_file.kmart_watch.output_base64sha256
 
-  # Two Kmart requests (~1s), two Big W requests through the residential exit
+  # Two Kmart requests (~1s), four Target requests (~1s each, direct), two
+  # JB Hi-Fi Algolia requests (~0.5s each, direct), two
+  # Big W requests through the residential exit
   # (~5s, or 2x15s each when tarpitted -- that is the measured failure mode,
   # not a 403), a homepage fetch for the Constructor key on a cold container,
   # and up to kmart_watch_push_max pushes at 10s each. 90s is the worst case
@@ -231,7 +359,8 @@ resource "aws_lambda_function" "kmart_watch" {
       MATCH_PATTERN      = var.kmart_watch_pattern
       SOURCES            = var.kmart_watch_sources
       ALERT_ALL_PREORDER = var.kmart_watch_alert_all_preorder ? "true" : "false"
-      PAGE_URL           = "https://www.kmart.com.au/category/toys/pre-order/"
+      # Was /category/toys/pre-order/, a category Kmart has since deleted.
+      PAGE_URL = "https://www.kmart.com.au/category/toys/"
 
       # Sent BEFORE the SNS email, because it is the half that can plausibly
       # reach a phone inside a minute. push.py swallows its own failures, so a
@@ -248,9 +377,27 @@ resource "aws_lambda_function" "kmart_watch" {
       BIGW_EVERY_MINUTES = tostring(var.kmart_watch_bigw_every_minutes)
       BIGW_PER_PAGE      = "48"
 
+      # Target. Direct and free like Kmart, so it rides every tick and has no
+      # cadence knob. TARGET_PER_PAGE is 30 rather than Kmart's 100 because
+      # Target rows carry ~40 fields each (~5 KB a row), and newest-first sort
+      # puts a drop on row one anyway.
+      TARGET_PAGE_URL         = "https://www.target.com.au/c/toys/W138532"
+      TARGET_PER_PAGE         = "30"
+      TARGET_ALERT_ALL_BROWSE = var.kmart_watch_target_alert_all_browse ? "true" : "false"
+      TARGET_STOCK_FLIP       = var.kmart_watch_target_stock_flip ? "true" : "false"
+
+      # JB Hi-Fi. Direct and free like Kmart and Target, so it rides every
+      # tick. JB_APP_ID / JB_SEARCH_KEY / JB_INDEX are deliberately unset:
+      # they default to the values read out of JB's theme bundle, and the
+      # README says how to re-read them if they rotate.
+      JB_RELEASE_WINDOW_DAYS = tostring(var.kmart_watch_jb_release_window_days)
+      JB_EXCLUDE_TYPES       = var.kmart_watch_jb_exclude_types
+      JB_INCLUDE_MARKETPLACE = var.kmart_watch_jb_include_marketplace ? "true" : "false"
+
       TTL_DAYS = "90"
-      # CONSTRUCTOR_KEY deliberately unset: the function scrapes it off the
-      # homepage and caches it per container, so a key rotation self-heals.
+      # CONSTRUCTOR_KEY and TARGET_CONSTRUCTOR_KEY deliberately unset: the
+      # function scrapes each site's key off its own homepage and caches it per
+      # container, so a key rotation self-heals.
     }
   }
 
@@ -261,7 +408,7 @@ resource "aws_lambda_function" "kmart_watch" {
 
 resource "aws_cloudwatch_event_rule" "kmart_watch" {
   name        = "${var.project_name}-kmart-watch"
-  description = "Poll the Kmart and Big W feeds for ${var.kmart_watch_pattern}"
+  description = "Poll the Kmart, Big W, Target and JB Hi-Fi feeds for ${var.kmart_watch_pattern}"
   # EventBridge rejects "rate(1 minutes)" — the unit is singular at 1 and plural
   # everywhere else, and 1 is this rule's default.
   schedule_expression = "rate(${var.kmart_watch_interval_minutes} ${var.kmart_watch_interval_minutes == 1 ? "minute" : "minutes"})"
@@ -294,7 +441,7 @@ resource "aws_lambda_permission" "kmart_watch_events" {
 # single Akamai blip is not worth an email.
 resource "aws_cloudwatch_metric_alarm" "kmart_watch_errors" {
   alarm_name          = "${var.project_name}-kmart-watch-errors"
-  alarm_description   = "The Kmart/Big W watcher is erroring: a feed changed shape, the Constructor key rotated, or one retailer is blocking. The tick log names the failed source; run lambda/kmart_watch/dry_run.py locally to see what it returns now."
+  alarm_description   = "The Kmart/Big W/Target/JB watcher is erroring: a feed changed shape, a Constructor or Algolia key rotated, or one retailer is blocking. The tick log names the failed source; run lambda/kmart_watch/dry_run.py locally to see what it returns now."
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = 1
   threshold           = 3

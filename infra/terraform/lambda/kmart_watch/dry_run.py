@@ -5,8 +5,17 @@ time the alerts go quiet for longer than feels right.
 
     python dry_run.py
     python dry_run.py "pokemon tcg"          # try a different pattern
-    python dry_run.py "30th anniversary" "browse:615bf6db4dee158ccbbc1ed5aef1ced9"
-    python dry_run.py "30th" "bigw:preorder"   # Big W only
+    python dry_run.py "30th anniversary" "browse:e35ed26c9b1dfb7fd311f93557216816"
+    python dry_run.py "pokemon" "bigw:pokemon"   # Big W only
+
+To keep the default pattern and only narrow the sources, set SOURCES in the
+environment instead of passing a pattern you then have to keep in sync:
+
+    SOURCES="target-browse:W1852642,target:mini tin" python dry_run.py
+
+Target reads the same way Kmart does -- same host, its own key, direct from a
+laptop or a Lambda -- so a Target-only run needs nothing special. Big W is the
+only source that needs the residential exit.
 """
 
 import os

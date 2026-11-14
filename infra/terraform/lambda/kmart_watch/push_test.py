@@ -53,8 +53,81 @@ def test_ntfy():
     check("url", p["url"], "https://ntfy.sh/my-secret-topic")
     check("click is the product", p["headers"]["Click"], ITEM["url"])
     check("urgent when preorder", p["headers"]["Priority"], "urgent")
-    assert p["headers"]["Title"].startswith("PRE-ORDER: "), p["headers"]["Title"]
+    assert p["headers"]["Title"].startswith("Kmart PRE-ORDER: "), p["headers"]["Title"]
     print("ok   title")
+
+
+def test_header_transliteration():
+    """
+    Real titles from both retailers, 1 Oct 2026. Deleting non-ASCII instead of
+    transliterating it welded "Evolution" onto "Perfect" and turned "Pokemon"
+    into "Pokmon", which is what this guards.
+    """
+    check(
+        "em dash becomes a hyphen, not nothing",
+        push._header(u"Pokemon TCG: Mega Evolution\u2014Perfect Order Blister"),
+        "Pokemon TCG: Mega Evolution-Perfect Order Blister",
+    )
+    check("accent survives as its letter", push._header(u"Pok\u00e9mon Plush"), "Pokemon Plush")
+    check("en dash", push._header(u"a \u2013 b"), "a - b")
+    check("curly apostrophe", push._header(u"Trainer\u2019s Box"), "Trainer's Box")
+    check("nbsp", push._header(u"30th\u00a0Anniversary"), "30th Anniversary")
+    check("emoji still dropped", push._header(u"Sale \U0001F525 now"), "Sale  now")
+    # The whole point is that it stays encodable -- a header that is not ASCII
+    # makes urllib raise and costs you the push.
+    push._header(u"Pok\u00e9mon\u2014Mega \U0001F525").encode("ascii")
+    print("ok   header stays ascii-encodable")
+
+
+def test_ntfy_target():
+    """
+    A Target row: retailer in the title, and the 0-stock warning in the body.
+    That warning is the difference between "go buy it" and "watch this one",
+    and the notification is the only place it is read in time.
+    """
+    sent.clear()
+    tin = {
+        "id": "target:P72301449",
+        "name": "Pokemon TCG: 30th Anniversary Mini Tin",
+        "url": "https://www.target.com.au/p/pokemon-tcg-30th-anniversary-mini-tin/72301449",
+        "price": 20,
+        "preorder": False,
+        "retailer": "Target",
+        "online_qty": 0,
+    }
+    check("sent", push.push([tin], target="ntfy:t"), 1)
+    p = sent[0]
+    check("title names Target", p["headers"]["Title"], "Target: " + tin["name"])
+    assert "NOT yet buyable online" in p["data"], p["data"]
+    print("ok   0-stock warning in body")
+    check("no preorder flag means high, not urgent", p["headers"]["Priority"], "high")
+
+    sent.clear()
+    push.push([dict(tin, online_qty=37)], target="ntfy:t")
+    assert "37 online" in sent[0]["data"], sent[0]["data"]
+    print("ok   stock count in body")
+
+
+def test_ntfy_action_button():
+    """
+    The action button carries the same deep link as the body tap, labelled per
+    retailer. ntfy parses this header on commas, so the shape matters.
+    """
+    sent.clear()
+    tin = dict(ITEM, retailer="Target",
+               url="https://www.target.com.au/p/pokemon-tin/72301449")
+    push.push([tin], target="ntfy:t")
+    actions = sent[0]["headers"]["Actions"]
+    check("one view action", actions.count("view,"), 1)
+    assert actions.startswith('view, "Open in Target app", '), actions
+    assert tin["url"] in actions, actions
+    assert actions.endswith("clear=true"), actions
+    print("ok   action button shape")
+    # Same URL both ways, so whichever the thumb lands on behaves identically.
+    check("action url matches click", sent[0]["headers"]["Click"], tin["url"])
+    # Headers must stay ASCII or urllib raises and the push is lost.
+    sent[0]["headers"]["Actions"].encode("ascii")
+    print("ok   actions header is ascii")
 
 
 def test_ntfy_self_hosted():
