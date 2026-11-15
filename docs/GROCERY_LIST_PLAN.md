@@ -47,8 +47,8 @@ produce (72%), 169/288 meat (59%).
 
 Three consequences the design must absorb rather than hide:
 
-1. **Roughly three in four lines will carry no comparison at all.** "Not
-   compared" is a designed state, not a gap.
+1. **Around three in four produce lines, and two in three meat lines, will carry
+   no comparison at all.** "Not compared" is a designed state, not a gap.
 2. **A third of comparable pairs are identical in price.** A recommendation must
    not fire on a zero saving.
 3. **Two in five comparable pairs differ in pack size**, so the swap arithmetic
@@ -56,20 +56,44 @@ Three consequences the design must absorb rather than hide:
 
 The top reasons a pair is not comparable, counted the same way:
 
-| Reason | Produce | Meat |
-|---|---|---|
-| variety not yet known (lexicon gap) | 267 | — |
-| no unit price on one side | 35 | 8 |
-| priced per each here, per kg there | 46 | — |
-| not in the retailer's latest capture | 15 | 33 |
-| captured too far apart (capture skew) | 11 | — |
-| listed unavailable at capture | — | 8 |
-| no counterpart at the other retailer | — | 22 |
+Every not-comparable pair-attempt, bucketed by the rule that stopped it. Counted
+by aggregating the matcher's own `notComparableReason` strings — note that
+liveness is written two different ways ("not in X's latest capture" and
+"... — last seen"), so a naive top-N of raw strings splits it and hides that it
+is the largest bucket:
 
-The single biggest lever on savings coverage is **the variety lexicon, not this
-code**: 267 produce pairs are blocked on "we cannot yet tell which variety this
-is". Curating those would raise coverage more than anything in this plan. It is
-out of scope here and worth its own task.
+| Blocker | Produce | Meat |
+|---|---|---|
+| **not in the retailer's latest capture** | **190** | **358** |
+| variety not yet known (lexicon gap) | 191 | 0 |
+| basis — per-each vs per-kg, or no unit price | 103 | 8 |
+| pack semantics (multipack, bundle, grade, portion) | 19 | 33 |
+| listed unavailable at capture | 10 | 15 |
+| captured too far apart (capture skew) | 11 | 0 |
+
+**Most of this is not fixable, and that is the important finding.** Taking the
+buckets in turn:
+
+- **Liveness is mostly legitimate.** Woolworths fruit & veg has 638 SKUs in the
+  archive and 467 in the live run — and 467 is roughly the real shelf size (the
+  crawler reports ~473). The other 171 are 2½ months of seasonal churn that is
+  genuinely gone. Same shape in meat: 821 known, 616 live. There is no defect
+  here to repair.
+- **Basis is closed by Principle #1.** The reason string says it itself: "only
+  comparable through an approximate weight, which we do not measure".
+- **Variety curation has a modest ceiling.** 191 pair-*attempts* over-counts
+  badly, because one unkeyed row blocks several attempts. Ranked by what
+  resolving a variety could actually unlock — `min(WW unkeyed, Coles unkeyed)`
+  per group, since a fix only pays off when both sides have a candidate — the
+  real figure is **~52 pairs across 23 groups**, worth 2–5 each. Every group
+  already has a lexicon; none is missing. The efficient slice is five groups
+  holding 21 of the 52: grapes (5), stone-fruit (4), tropical-fruit (4), mangoes
+  (4), citrus (4).
+
+So matching is near its practical ceiling under the project's own rules. Best
+case, curation moves produce from ~22% to ~24%. The cheaper win is the
+`getItems` liveness gap in §10, which costs nothing and removes a whole class of
+dead receipt lines.
 
 ---
 
@@ -299,7 +323,8 @@ The deliverable is verified by tests, not by eye. All under
 11. rounding up -> 1 kg replaced by 2 × 500 g, saving computed after rounding
 12. overshoot beyond the 1.5x band -> no recommendation
 13. counterpart dearer -> no recommendation
-14. **zero-delta pair -> no recommendation** (46 produce / 125 meat real cases)
+14. **zero-delta pair -> no recommendation** — roughly a third of comparable
+    pairs on both shelves are identical in price, so this is a common case
 15. delisted line -> kept, excluded from subtotal, coverage string correct
 16. **three-retailer fixture (woolworths, coles, aldi)** -> three sections,
     correct subtotals, cheapest of three wins. This is the explicit proof of D8
@@ -314,8 +339,13 @@ The deliverable is verified by tests, not by eye. All under
 
 ## 9. Order of work
 
+Two prerequisites come out of §10 and are cheaper than anything in the feature
+itself. Neither is list code, and both make the list honest.
+
 | Step | What | Done when |
 |---|---|---|
+| 0a | Reproduce or rule out the non-deterministic produce match count (§10) | two cold loads of the same archive give the same match count, or the cause is named |
+| 0b | Liveness filter on `getItems` so off-shelf items stop being listed | produce lists 771 not 951; a dead SKU cannot be added to a list |
 | 1 | `server/data/size.js` — `netAmount`, unit normalisation | g/ml/count normalisation proven; `packWeightGrams` untouched |
 | 2 | `server/data/list/price.js` — `priceList`, sections, subtotals, coverage | tests 9, 15, 19, 20 pass |
 | 3 | swap + recommendations | tests 10–14, 16 pass |
@@ -331,9 +361,28 @@ Steps 1–5 are the actual deliverable. 6–8 make it clickable.
 
 ## 10. Risks and open items
 
-- **Coverage is the feature's main limitation, and it is a data problem.** At
-  15.2% / 25.8%, most lines say nothing. Curating the 267 variety-gap pairs is
-  the highest-value follow-up and is not code.
+- **Coverage is the feature's main limitation, and it is close to its ceiling.**
+  At 22% / 30% of on-shelf items, most lines say nothing, and §1 shows why the
+  large buckets (liveness, basis) are not defects to fix. Variety curation is
+  worth ~52 pairs, not the 191 pair-attempts suggest. Plan the receipt around
+  "mostly not compared" being the permanent normal case, not a temporary one.
+- **`getItems` has no liveness filter, and that is a bug worth fixing first.**
+  The category pages currently list **180 produce items (18.9%) and 143 meat
+  items (12.8%) that are not on the shelf today**. That lets someone add a dead
+  SKU to a list, guarantees D5 lines that need not exist, and understates match
+  coverage (18.2% vs 22.0% on produce). Fixing it is cheaper than any curation
+  and should land before step 8.
+- **The produce match count did not reproduce across runs, and this is unexplained.**
+  One probe returned 951 items / 146 comparable; every run after it returned
+  951 / 173, twice confirmed, against the same live run id. Meat was stable
+  throughout. Produce is the domain whose groups come from
+  `buildSubcategoryMap(cheapestSets)`, and `matchingStatus` already reports
+  `ambiguousSubcategories` — so the hypothesis is that ambiguous subcategory
+  mappings resolve by file load order, making group assignment and therefore the
+  match count vary between loads. **Unproven, and it outranks the 52 pairs:** a
+  saving that appears and disappears between reloads is precisely the wrongness
+  this project refuses to ship, and §4.4's determinism guarantee cannot hold on
+  top of a non-deterministic index. Reproduce it before building step 3.
 - **The crawler's store-drift flag never reaches the loader.** `drift.py` records
   `store_changed` / `alarm` in the manifest (it fired on 24 Sep when the exit IP
   resolved to store 2631 instead of the pinned 1101 — 452 products instead of
