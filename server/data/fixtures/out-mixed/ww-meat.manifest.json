@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.1",
+  "dataset": "woolworths.products",
+  "run_id": "20260916060237-meat0001",
+  "retailer": "woolworths",
+  "started_at_utc": "2026-09-16T06:02:37Z",
+  "finished_at_utc": "2026-09-16T06:03:07Z",
+  "status": "complete",
+  "capture_context": {
+    "egress": "fixture",
+    "price_basis": "online_shelf",
+    "store_id": null
+  },
+  "requested_nodes": [
+    {
+      "node_id": "1_D5A2236",
+      "name": "Poultry, Meat & Seafood"
+    }
+  ],
+  "counts": {
+    "rows_written": 5,
+    "rows_with_price": 5,
+    "pages_fetched": 1
+  },
+  "errors": []
+}

@@ -6,3 +6,8 @@ __pycache__/
 *.pyc
 *.zip
 data/out/s3/
+data/scratch/
+
+# Scratch report dumps at the repo root; the kept copies live in data/review/
+/matches-full.txt
+/unmatched-full.txt

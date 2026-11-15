@@ -14,19 +14,37 @@ import styles from "./DidYouKnow.module.css";
  * gets size and colour. Keep the sentence to one line of plain English:
  * no quarter names, no "YoY", no index values — those belong in `detail`.
  * Closed, the block hugs the sentence; open, it stretches to fit the detail.
+ *
+ * Pass `open` + `onOpenChange` to drive the fold from outside (so another
+ * fact can open this one's chart). Pass `onMore` instead of `detail` when the
+ * headline should do something elsewhere rather than unfold here. `extra` is a
+ * small control rendered beside the headline, outside the button.
  */
-export default function DidYouKnow({ kicker = "Did you know?", more = "See more", less = "Hide the detail", defaultOpen = false, detail, children, className = "" }) {
-  const [open, setOpen] = useState(defaultOpen);
-  const expandable = detail != null;
+export default function DidYouKnow({ kicker = "Did you know?", more = "See more", less = "Hide the detail", defaultOpen = false, open: openProp, onOpenChange, onMore, extra, detail, children, className = "" }) {
+  const [openState, setOpenState] = useState(defaultOpen);
+  const controlled = openProp != null;
+  const open = controlled ? openProp : openState;
+  const setOpen = (next) => {
+    if (!controlled) setOpenState(next);
+    onOpenChange?.(next);
+  };
+  const expandable = detail != null || onMore != null;
+  const onClick = () => {
+    if (onMore) onMore();
+    else if (expandable) setOpen(!open);
+  };
 
   return (
     <section className={`${styles.block} ${open ? styles.open : ""} ${className}`}>
-      <button type="button" className={styles.headline} onClick={() => expandable && setOpen((o) => !o)} aria-expanded={open} disabled={!expandable}>
-        <span className={styles.kicker}>{kicker}</span>
-        <span className={styles.sentence}>{children}</span>
-        {expandable && <span className={styles.more}>{open ? `${less} ▴` : `${more} ▾`}</span>}
-      </button>
-      {open && <div className={styles.detail}>{detail}</div>}
+      <div className={styles.head}>
+        <button type="button" className={styles.headline} onClick={onClick} aria-expanded={onMore ? undefined : open} disabled={!expandable}>
+          <span className={styles.kicker}>{kicker}</span>
+          <span className={styles.sentence}>{children}</span>
+          {expandable && <span className={styles.more}>{open ? `${less} ▴` : `${more} ▾`}</span>}
+        </button>
+        {extra && <div className={styles.extra}>{extra}</div>}
+      </div>
+      {open && detail != null && <div className={styles.detail}>{detail}</div>}
     </section>
   );
 }

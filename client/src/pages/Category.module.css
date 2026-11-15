@@ -6,6 +6,52 @@
 .status { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .body { display: flex; flex-direction: column; gap: 24px; padding: 0 var(--gutter) 96px; }
 .controls { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ---- find + shelves (search, shelf chips, shelf sections) ---------------- */
+.find { display: flex; flex-direction: column; gap: 8px; }
+.search {
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+  background: var(--paper-2); border: 1px solid var(--ink);
+}
+.glass { width: 15px; height: 15px; flex: none; color: var(--muted); }
+.search input {
+  flex: 1; border: 0; background: none; outline: none; color: inherit;
+  font-family: var(--mono); font-size: 14px;
+}
+/* The browser's own search clear sits at a different place in every engine. */
+.search input::-webkit-search-cancel-button { display: none; }
+.clear { border: 0; background: none; cursor: pointer; color: var(--muted); font-size: 13px; padding: 0 2px; }
+.clear:hover { color: var(--ink); }
+.findCount { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+.shelves { display: flex; flex-wrap: wrap; gap: 6px; }
+.count { opacity: 0.55; }
+.suggest { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-size: 13px; color: var(--muted); }
+.suggestLink {
+  border: 0; background: none; padding: 0; cursor: pointer; color: var(--accent);
+  font-family: var(--mono); font-size: 12px; text-decoration: underline; text-underline-offset: 3px;
+}
+
+.shelf { display: flex; flex-direction: column; gap: 12px; }
+/* The count sits next to the heading; "view all" is pushed to the far edge so
+   it lands in the same place on every shelf. */
+.sectionHead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+.h2 { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-weight: 400; font-size: 26px; line-height: 1; }
+.h2Link { color: inherit; text-decoration: none; }
+.h2Link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.sectionCount { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.viewAll, .back {
+  margin-left: auto; border: 0; background: none; padding: 0; cursor: pointer;
+  font-family: var(--mono); font-size: 11px; color: var(--accent);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.back { color: var(--muted); }
+.viewAllProducts {
+  padding: 16px; border: 1px solid var(--ink); background: var(--ink); color: #fff;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; cursor: pointer;
+}
+.viewAllProducts:hover { background: var(--accent); }
+.empty { font-size: 14px; color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { padding: 8px 12px; border: 1px solid var(--ink); background: var(--paper-2); font-family: var(--mono); font-size: 11px; cursor: pointer; }
 .chipActive { background: var(--ink); color: #fff; }
@@ -15,6 +61,16 @@
   background: var(--paper-2); border: 1px solid var(--ink); position: relative;
 }
 .card:hover { z-index: 1; background: #fff; }
+.cardLink { display: flex; flex-direction: column; gap: 8px; color: inherit; text-decoration: none; }
+.organic { font-family: var(--mono); font-size: 10px; color: var(--cheap); vertical-align: middle; }
+/* Size switcher: the picked size is inked; the cheapest per unit is underlined. */
+.sizes { display: flex; flex-wrap: wrap; gap: 4px; }
+.size, .sizeOne { padding: 4px 8px; border: 1px solid var(--ink); background: var(--paper-2); font-family: var(--mono); font-size: 10px; line-height: 1.2; }
+.size { cursor: pointer; }
+.sizeOne { border-color: var(--rule); color: var(--muted); }
+.sizeActive { background: var(--ink); color: #fff; }
+.sizeBest { text-decoration: underline; text-underline-offset: 3px; }
+.unavailable { padding: 2px 5px; border: 1px solid var(--muted); color: var(--muted); font-size: 9px; font-weight: 900; }
 .thumb { height: 120px; display: flex; align-items: center; justify-content: center; }
 .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .name { font-family: var(--serif); font-variation-settings: "SOFT" 0, "WONK" 1; font-size: 18px; line-height: 1.15; }

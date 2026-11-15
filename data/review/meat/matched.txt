@@ -1,0 +1,968 @@
+meat:barramundi:portion:skin_on   (1 coles, 3 woolworths)
+   shown    C Barramundi Skin On 260g                          260g                       $50.00/kg   | W Woolworths 2 Pack Barramundi Portions Skin On 26 260g                       $38.46/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   ok       C Barramundi Skin On 260g                          260g                       $50.00/kg   | W Humpty Doo Barramundi Portions Skin On 300g      300g                       $53.33/kg   r=1.15  +7%
+   COMPARED C Barramundi Skin On 260g                          260g                       $50.00/kg   | W Tassal 2 Pack Fresh Barramundi Skin On 260g      260g                       $57.69/kg   r=1.00  +15%
+
+meat:basa:portion:skinless   (1 coles, 1 woolworths)
+   shown    C Basa Portions Skin Off 2 Pack 260g               260g                       $20.77/kg   | W Woolworths 2 Pack Basa Portions Skinless 260g    260g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:blade-roast   (1 coles, 1 woolworths)
+   COMPARED C Beef Blade Roast approx. 1.55kg                  approx. 1.55kg             $18.00/kg   | W Woolworths Beef Bolar Blade Roast 900g - 2kg     900g–2kg · priced at 2kg   $18.00/kg   r=1.07  0%
+
+meat:beef:bone   (2 coles, 1 woolworths)
+   COMPARED C No Added Hormone Beef Bones approx. 1kg          approx. 1kg                $7.50/kg    | W Woolworths Beef Soup Bones 1kg - 1.3kg           1kg–1.3kg · priced at 1.3k $8.00/kg    r=1.15  +7%
+   COMPARED C Beef Soup Bones approx. 1.2kg                    approx. 1.2kg              $8.00/kg    | W Woolworths Beef Soup Bones 1kg - 1.3kg           1kg–1.3kg · priced at 1.3k $8.00/kg    r=1.04  0%
+
+meat:beef:brisket   (2 coles, 1 woolworths)
+   shown    C No Added Hormone Beef Brisket Slow Cook approx.  approx. 1.4kg              $18.00/kg   | W Woolworths Beef Brisket 1.5kg - 2.5kg            1.5kg–2.5kg · priced at 2. /kg         r=1.43  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C No Added Hormone Beef Brisket approx. 1.9kg      approx. 1.9kg              $14.00/kg   | W Woolworths Beef Brisket 1.5kg - 2.5kg            1.5kg–2.5kg · priced at 2. /kg         r=1.05  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:burger   (5 coles, 2 woolworths)
+   shown    C Signature Beef Burger 2 Pack 270g                270g                       $37.04/kg   | W Woolworths 4 Pack Classic Beef Burgers 500g      500g                       $15.00/kg   r=1.85  — 270g vs 500g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Signature Beef Burger 2 Pack 270g                270g                       $37.04/kg   | W Fettayleh Foods Premium Beef Burgers 500g        500g                       /kg         r=1.85  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Signature Beef Burger 4 Pack 460g                460g                       $32.61/kg   | W Woolworths 4 Pack Classic Beef Burgers 500g      500g                       $15.00/kg   r=1.09  -54%
+   shown    C Signature Beef Burger 4 Pack 460g                460g                       $32.61/kg   | W Fettayleh Foods Premium Beef Burgers 500g        500g                       /kg         r=1.09  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Beef Burgers 500g                                500g                       $29.00/kg   | W Woolworths 4 Pack Classic Beef Burgers 500g      500g                       $15.00/kg   r=1.00  -48%
+   shown    C Beef Burgers 500g                                500g                       $29.00/kg   | W Fettayleh Foods Premium Beef Burgers 500g        500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Classic Beef Burgers 500g                        500g                       $17.00/kg   | W Woolworths 4 Pack Classic Beef Burgers 500g      500g                       $15.00/kg   r=1.00  -12%
+   shown    C Classic Beef Burgers 500g                        500g                       $17.00/kg   | W Fettayleh Foods Premium Beef Burgers 500g        500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Beef Burgers 500g                                500g                       $17.00/kg   | W Woolworths 4 Pack Classic Beef Burgers 500g      500g                       $15.00/kg   r=1.00  -12%
+   shown    C Beef Burgers 500g                                500g                       $17.00/kg   | W Fettayleh Foods Premium Beef Burgers 500g        500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:burger:angus   (1 coles, 2 woolworths)
+   COMPARED C Angus Beef Burgers 300g                          300g                       $30.00/kg   | W Woolworths 2 Pack Big A Angus Beef Burgers 350g  350g                       $28.57/kg   r=1.17  -5%
+   shown    C Angus Beef Burgers 300g                          300g                       $30.00/kg   | W Woolworths 6 Pack Angus Beef Burgers 560g        560g                       $19.64/kg   r=1.87  — 300g vs 560g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:burger:extra_lean   (1 coles, 1 woolworths)
+   COMPARED C Extra Lean Beef Burger 500g                      500g                       $20.00/kg   | W Peppercorn 6 Pack Extra Lean Beef Burgers 500g   500g                       $23.00/kg   r=1.00  +15%
+
+meat:beef:burger:f-bbq   (1 coles, 1 woolworths)
+   shown    C Beef BBQ Burgers 10 Pack 1Kg                     1kg                        $10.50/kg   | W Market Value 10 Pack BBQ Burgers 1kg             1kg                        $10.50/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:beef:burger:smash   (1 coles, 1 woolworths)
+   COMPARED C Beef Smash Burgers 6 Pack 450g                   450g                       $18.89/kg   | W Woolworths 6 Pack Smash Beef Burgers 450g        450g                       $16.67/kg   r=1.00  -12%
+
+meat:beef:burger:stacker   (1 coles, 1 woolworths)
+   shown    C Stacker Beef Burger 6 Pack 500g                  500g                       $17.00/kg   | W Woolworths 6 Pack Stacker Beef Burgers 500g      500g                       $15.00/kg   r=1.00  — this line was listed as unavailable at capture
+
+meat:beef:chipolata   (1 coles, 1 woolworths)
+   COMPARED C Beef Chipolatas 550g                             550g                       $11.82/kg   | W Woolworths 16 Pack Beef Chipolatas 550g          550g                       $11.82/kg   r=1.00  0%
+
+meat:beef:chuck   (2 coles, 1 woolworths)
+   shown    C Beef Chuck Casserole Steak 1Kg                   1kg                        $20.00/kg   | W Woolworths Beef Chuck Steak Medium 380g - 800g   380g–800g · priced at 800g $19.50/kg   r=1.69  — 1kg vs 590g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Slow Cook Chuck Steaks approx. 1.15kg            approx. 1.15kg             $19.00/kg   | W Woolworths Beef Chuck Steak Medium 380g - 800g   380g–800g · priced at 800g $19.50/kg   r=1.95  — 1.15kg vs 590g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:chuck:grass_fed   (2 coles, 1 woolworths)
+   shown    C Graze Grassfed Beef Chuck Casserole 850g         850g                       $20.59/kg   | W Macro Grass Fed Beef Chuck Steak 380g - 800g     380g–800g · priced at 800g /kg         r=1.44  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Graze Grassfed Beef Chuck Casserole 600g         600g                       $23.33/kg   | W Macro Grass Fed Beef Chuck Steak 380g - 800g     380g–800g · priced at 800g /kg         r=1.02  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:corned-silverside   (2 coles, 1 woolworths)
+   COMPARED C Corned Silverside approx. 1.3kg                  approx. 1.3kg              $10.50/kg   | W Woolworths Corned Beef Silverside 1kg - 2.5kg    1kg–2.5kg · priced at 2.5k $10.50/kg   r=1.35  0%
+   shown    C Choice Bulk Corned Silverside approx. 3.2kg      approx. 3.2kg              $10.50/kg   | W Woolworths Corned Beef Silverside 1kg - 2.5kg    1kg–2.5kg · priced at 2.5k $10.50/kg   r=1.83  — 3.2kg vs 1.75kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:diced   (3 coles, 2 woolworths)
+   shown    C Halal Diced Beef 500g                            500g                       $24.00/kg   | W Woolworths Diced Beef Casserole 500g             500g                       $25.00/kg   r=1.00  — this line is not in coles's latest capture
+   shown    C Halal Diced Beef 500g                            500g                       $24.00/kg   | W Fettayleh Foods Beef Diced 500g                  500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Diced Casserole 500g                             500g                       $23.00/kg   | W Woolworths Diced Beef Casserole 500g             500g                       $25.00/kg   r=1.00  +9%
+   shown    C Diced Casserole 500g                             500g                       $23.00/kg   | W Fettayleh Foods Beef Diced 500g                  500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Australian No Added Hormones Diced Beef 500g     500g                       $24.00/kg   | W Woolworths Diced Beef Casserole 500g             500g                       $25.00/kg   r=1.00  +4%
+   shown    C Australian No Added Hormones Diced Beef 500g     500g                       $24.00/kg   | W Fettayleh Foods Beef Diced 500g                  500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:diced:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grassfed Beef Diced Steak 500g             500g                       $26.00/kg   | W Macro Grass Fed Australian Diced Beef 500g       500g                       $26.00/kg   r=1.00  0%
+
+meat:beef:eye_fillet   (3 coles, 2 woolworths)
+   shown    C Brand Beef Eye Fillet Steak 450g                 450g                       $48.89/kg   | W Woolworths Australian Beef Eye Fillet Steak 250g 250g                       $66.00/kg   r=1.80  — 450g vs 250g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Brand Beef Eye Fillet Steak 450g                 450g                       $48.89/kg   | W Woolworths Beef Eye Fillet Steak 200g - 500g     200g–500g · priced at 500g $60.00/kg   r=1.29  +23%
+   shown    C Beef Eye Fillet Steak Small Pack 300g            300g                       $60.00/kg   | W Woolworths Australian Beef Eye Fillet Steak 250g 250g                       $66.00/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Beef Eye Fillet Steak Small Pack 300g            300g                       $60.00/kg   | W Woolworths Beef Eye Fillet Steak 200g - 500g     200g–500g · priced at 500g $60.00/kg   r=1.17  0%
+   shown    C Beef Eye Fillet Steak 330g                       330g                       $81.82/kg   | W Woolworths Australian Beef Eye Fillet Steak 250g 250g                       $66.00/kg   r=1.32  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Beef Eye Fillet Steak 330g                       330g                       $81.82/kg   | W Woolworths Beef Eye Fillet Steak 200g - 500g     200g–500g · priced at 500g $60.00/kg   r=1.06  -27%
+
+meat:beef:eye_fillet:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grassfed Beef Fillet Steak 300g            300g                       $73.33/kg   | W Macro Grass Fed Australian Beef Eye Fillet 350g  350g                       $74.29/kg   r=1.17  +1%
+
+meat:beef:eye_fillet:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Organic Grass-fed Beef Eye Fillet Steak 240g     240g                       $81.25/kg   | W Macro Organic Australian Beef Eye Fillet Steak 3 300g                       /kg         r=1.25  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:meatball:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Grass-fed Beef Meatballs 380g                    380g                       $30.26/kg   | W Macro Organic Classic Beef Meatballs 400g        400g                       $30.00/kg   r=1.05  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:beef:medallion-rump   (2 coles, 1 woolworths)
+   COMPARED C No Added Hormone Beef Rump Medallions 300g       300g                       $43.33/kg   | W Woolworths Australian Beef Rump Steak Medallions 340g                       $38.24/kg   r=1.13  -12%
+   COMPARED C Beef Rump Medallions 380g                        380g                       $40.79/kg   | W Woolworths Australian Beef Rump Steak Medallions 340g                       $38.24/kg   r=1.12  -6%
+
+meat:beef:mince:grade_extra_lean   (1 coles, 1 woolworths)
+   COMPARED C No Added Hormone Beef Extra Lean Mince 500g      500g                       $19.60/kg   | W Woolworths Heart Smart Extra Lean Beef Mince 500 500g                       $19.60/kg   r=1.00  0%
+
+meat:beef:mince:grade_extra_lean:grass_fed:organic   (1 coles, 1 woolworths)
+   COMPARED C Grass-fed Extra Lean Beef Mince 500g             500g                       $29.00/kg   | W Macro Organic Extra Lean Beef Mince 500g         500g                       $33.00/kg   r=1.00  +14%
+
+meat:beef:mince:grade_lean   (3 coles, 2 woolworths)
+   shown    C No Added Hormone Beef Lean Mince 800g            800g                       $19.38/kg   | W Woolworths Lean Beef Mince 500g                  500g                       $19.60/kg   r=1.60  — 800g vs 500g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C No Added Hormone Beef Lean Mince 800g            800g                       $19.38/kg   | W Woolworths Lean Beef Mince 1kg                   1kg                        $19.00/kg   r=1.25  -2%
+   shown    C Beef Lean Mince 500g                             500g                       $25.00/kg   | W Woolworths Lean Beef Mince 500g                  500g                       $19.60/kg   r=1.00  — this line is not in coles's latest capture
+   shown    C Beef Lean Mince 500g                             500g                       $25.00/kg   | W Woolworths Lean Beef Mince 1kg                   1kg                        $19.00/kg   r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Australian No Added Hormones Beef Mince Lean 500 500g                       $19.60/kg   | W Woolworths Lean Beef Mince 500g                  500g                       $19.60/kg   r=1.00  0%
+   shown    C Australian No Added Hormones Beef Mince Lean 500 500g                       $19.60/kg   | W Woolworths Lean Beef Mince 1kg                   1kg                        $19.00/kg   r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:mince:grade_lean:grass_fed:organic   (1 coles, 1 woolworths)
+   COMPARED C Grass-fed Premium Beef Mince 500g                500g                       $31.00/kg   | W Macro Organic Lean Beef Mince 500g               500g                       $31.00/kg   r=1.00  0%
+
+meat:beef:mince:grade_regular   (4 coles, 4 woolworths)
+   shown    C Beef Mince 1Kg                                   1kg                        $15.50/kg   | W Market Value Beef Mince 1.8kg                    1.8kg                      $12.50/kg   r=1.80  — 1kg vs 1.8kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Mince 1Kg                                   1kg                        $15.50/kg   | W Woolworths Beef Mince 500g                       500g                       $15.40/kg   r=2.00  — 1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Mince 1Kg                                   1kg                        $15.50/kg   | W Woolworths Beef Mince 1kg                        1kg                        $15.00/kg   r=1.00  -3%
+   shown    C Beef Mince 1Kg                                   1kg                        $15.50/kg   | W Fettayleh Foods Beef Mince 1kg                   1kg                        /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Big Pack Value Beef Mince 2kg                    2kg                        $12.50/kg   | W Market Value Beef Mince 1.8kg                    1.8kg                      $12.50/kg   r=1.11  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Big Pack Value Beef Mince 2kg                    2kg                        $12.50/kg   | W Woolworths Beef Mince 500g                       500g                       $15.40/kg   r=4.00  — 2kg vs 500g — pack sizes differ (4×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Big Pack Value Beef Mince 2kg                    2kg                        $12.50/kg   | W Woolworths Beef Mince 1kg                        1kg                        $15.00/kg   r=2.00  — 2kg vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Big Pack Value Beef Mince 2kg                    2kg                        $12.50/kg   | W Fettayleh Foods Beef Mince 1kg                   1kg                        /kg         r=2.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C No Added Hormone Beef Regular Mince 500g         500g                       $15.40/kg   | W Market Value Beef Mince 1.8kg                    1.8kg                      $12.50/kg   r=3.60  — 500g vs 1.8kg — pack sizes differ (3.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C No Added Hormone Beef Regular Mince 500g         500g                       $15.40/kg   | W Woolworths Beef Mince 500g                       500g                       $15.40/kg   r=1.00  0%
+   shown    C No Added Hormone Beef Regular Mince 500g         500g                       $15.40/kg   | W Woolworths Beef Mince 1kg                        1kg                        $15.00/kg   r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Regular Mince 500g         500g                       $15.40/kg   | W Fettayleh Foods Beef Mince 1kg                   1kg                        /kg         r=2.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C No Added Hormones Beef Regular Mince 1Kg         1kg                        $15.00/kg   | W Market Value Beef Mince 1.8kg                    1.8kg                      $12.50/kg   r=1.80  — 1kg vs 1.8kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormones Beef Regular Mince 1Kg         1kg                        $15.00/kg   | W Woolworths Beef Mince 500g                       500g                       $15.40/kg   r=2.00  — 1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C No Added Hormones Beef Regular Mince 1Kg         1kg                        $15.00/kg   | W Woolworths Beef Mince 1kg                        1kg                        $15.00/kg   r=1.00  0%
+   shown    C No Added Hormones Beef Regular Mince 1Kg         1kg                        $15.00/kg   | W Fettayleh Foods Beef Mince 1kg                   1kg                        /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:mince:grade_regular:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grass Fed No Added Hormone Beef Mince 500g 500g                       $23.00/kg   | W Macro Grass Fed Australian Beef Mince 500g       500g                       $23.00/kg   r=1.00  0%
+
+meat:beef:oyster_blade   (1 coles, 1 woolworths)
+   shown    C No Added Hormone Beef Oyster Blade Steak 500g    500g                       $26.00/kg   | W Woolworths Beef Oyster Blade Steak 600g          600g                       $26.67/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:beef:porterhouse   (5 coles, 2 woolworths)
+   COMPARED C Beef Porterhouse Steaks 200g                     200g                       $42.50/kg   | W Woolworths Beef Porterhouse Steak 180g           180g                       $50.00/kg   r=1.11  +18%
+   shown    C Beef Porterhouse Steaks 200g                     200g                       $42.50/kg   | W Woolworths Beef Porterhouse Steak Medium 290g -  290g–750g · priced at 750g $45.50/kg   r=2.60  — 200g vs 520g — pack sizes differ (2.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Porterhouse Steak 1Kg      1kg                        $34.00/kg   | W Woolworths Beef Porterhouse Steak 180g           180g                       $50.00/kg   r=5.56  — 1kg vs 180g — pack sizes differ (5.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Porterhouse Steak 1Kg      1kg                        $34.00/kg   | W Woolworths Beef Porterhouse Steak Medium 290g -  290g–750g · priced at 750g $45.50/kg   r=1.92  — 1kg vs 520g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Porterhouse Steak 2 Pack 450g               450g                       $40.00/kg   | W Woolworths Beef Porterhouse Steak 180g           180g                       $50.00/kg   r=2.50  — 450g vs 180g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Porterhouse Steak 2 Pack 450g               450g                       $40.00/kg   | W Woolworths Beef Porterhouse Steak Medium 290g -  290g–750g · priced at 750g $45.50/kg   r=1.16  +14%
+   shown    C Beef Porterhouse Steak 370g                      370g                       $59.46/kg   | W Woolworths Beef Porterhouse Steak 180g           180g                       $50.00/kg   r=2.06  — 370g vs 180g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Porterhouse Steak 370g                      370g                       $59.46/kg   | W Woolworths Beef Porterhouse Steak Medium 290g -  290g–750g · priced at 750g $45.50/kg   r=1.41  -23%
+   shown    C Halal Porterhouse 2 Pack approx. 500g            approx. 500g               $43.00/kg   | W Woolworths Beef Porterhouse Steak 180g           180g                       $50.00/kg   r=2.78  — 500g vs 180g — pack sizes differ (2.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Halal Porterhouse 2 Pack approx. 500g            approx. 500g               $43.00/kg   | W Woolworths Beef Porterhouse Steak Medium 290g -  290g–750g · priced at 750g $45.50/kg   r=1.04  — this line is not in coles's latest capture
+
+meat:beef:porterhouse:grass_fed   (1 coles, 2 woolworths)
+   COMPARED C Graze Grassfed Beef New York Strip Steak 380g    380g                       $52.63/kg   | W Macro Grass Fed Beef Porterhouse Steaks 2 Pack 4 400g                       $60.00/kg   r=1.05  +14%
+   ok       C Graze Grassfed Beef New York Strip Steak 380g    380g                       $52.63/kg   | W Macro Grass Fed Beef Porterhouse Steak 270g      270g                       $48.15/kg   r=1.41  -9%
+
+meat:beef:porterhouse:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Organic Grass-fed Beef Porterhouse Steak 290g    290g                       $60.34/kg   | W Macro Organic Beef Porterhouse Steak 290g        290g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:rissole   (1 coles, 1 woolworths)
+   COMPARED C Beef Rissoles 6 Pack 440g                        440g                       $17.05/kg   | W Woolworths 8 Pack Homestyle Beef Rissoles 600g   600g                       $14.17/kg   r=1.36  -17%
+
+meat:beef:rump   (4 coles, 2 woolworths)
+   shown    C No Added Hormone Beef Rump Steak approx. 1.05Kg  approx. 1.05kg             $24.00/kg   | W Woolworths Beef Rump Steak 250g                  250g                       $36.00/kg   r=4.20  — 1.05kg vs 250g — pack sizes differ (4.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Rump Steak approx. 1.05Kg  approx. 1.05kg             $24.00/kg   | W Woolworths Beef Rump Steak Medium 270g - 750g    270g–750g · priced at 750g $30.00/kg   r=2.06  — 1.05kg vs 510g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Rump Steak 230g                             230g                       $34.78/kg   | W Woolworths Beef Rump Steak 250g                  250g                       $36.00/kg   r=1.09  +4%
+   shown    C Beef Rump Steak 230g                             230g                       $34.78/kg   | W Woolworths Beef Rump Steak Medium 270g - 750g    270g–750g · priced at 750g $30.00/kg   r=2.22  — 230g vs 510g — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C 11x 9 Beef Rump Steak approx. 840g               approx. 840g               $24.00/kg   | W Woolworths Beef Rump Steak 250g                  250g                       $36.00/kg   r=3.36  — 840g vs 250g — pack sizes differ (3.4×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C 11x 9 Beef Rump Steak approx. 840g               approx. 840g               $24.00/kg   | W Woolworths Beef Rump Steak Medium 270g - 750g    270g–750g · priced at 750g $30.00/kg   r=1.65  — 840g vs 510g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Rump Steak 500g            500g                       $27.00/kg   | W Woolworths Beef Rump Steak 250g                  250g                       $36.00/kg   r=2.00  — 500g vs 250g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C No Added Hormone Beef Rump Steak 500g            500g                       $27.00/kg   | W Woolworths Beef Rump Steak Medium 270g - 750g    270g–750g · priced at 750g $30.00/kg   r=1.02  +11%
+
+meat:beef:rump:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grassfed Beef Rump Steak WA 300g           300g                       $41.67/kg   | W Macro Grass Fed Beef Rump Steak 300g             300g                       $41.67/kg   r=1.00  0%
+
+meat:beef:rump:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Organic Grass-fed Beef Rump Steak 300g           300g                       $50.00/kg   | W Macro Organic Beef Rump Steak 300g               300g                       $46.67/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:beef:sausage   (3 coles, 3 woolworths)
+   shown    C Beef Sausage 500g                                500g                       $23.00/kg   | W Woolworths 6 Pack Beef Sausages 505g             505g                       $13.86/kg   r=1.01  — this line was listed as unavailable at capture
+   shown    C Beef Sausage 500g                                500g                       $23.00/kg   | W Woolworths 10 Pack Beef Sausages 550g            550g                       $11.82/kg   r=1.10  — this line was listed as unavailable at capture
+   shown    C Beef Sausage 500g                                500g                       $23.00/kg   | W Fettayleh Foods Beef Sausages 500g               500g                       $20.00/kg   r=1.00  — this line was listed as unavailable at capture
+   ok       C The Original Beef Sausages 550g                  550g                       $11.82/kg   | W Woolworths 6 Pack Beef Sausages 505g             505g                       $13.86/kg   r=1.09  +17%
+   COMPARED C The Original Beef Sausages 550g                  550g                       $11.82/kg   | W Woolworths 10 Pack Beef Sausages 550g            550g                       $11.82/kg   r=1.00  0%
+   ok       C The Original Beef Sausages 550g                  550g                       $11.82/kg   | W Fettayleh Foods Beef Sausages 500g               500g                       $20.00/kg   r=1.10  +69%
+   shown    C Beef Eater Sausage 1kg                           1kg                        $14.00/kg   | W Woolworths 6 Pack Beef Sausages 505g             505g                       $13.86/kg   r=1.98  — 1kg vs 505g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Eater Sausage 1kg                           1kg                        $14.00/kg   | W Woolworths 10 Pack Beef Sausages 550g            550g                       $11.82/kg   r=1.82  — 1kg vs 550g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Eater Sausage 1kg                           1kg                        $14.00/kg   | W Fettayleh Foods Beef Sausages 500g               500g                       $20.00/kg   r=2.00  — 1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:sausage_mince   (1 coles, 1 woolworths)
+   COMPARED C Sausage Mince 500g                               500g                       $11.00/kg   | W Woolworths Beef Sausage Mince 500g               500g                       $11.00/kg   r=1.00  0%
+
+meat:beef:sausage:angus:f-caramelised:f-onion   (1 coles, 1 woolworths)
+   COMPARED C Premium Angus Beef & Caramelised Onion Sausages  450g                       $21.11/kg   | W Woolworths 6 Pack Angus Beef & Caramelised Onion 450g                       $20.00/kg   r=1.00  -5%
+
+meat:beef:sausage:extra_lean   (1 coles, 1 woolworths)
+   COMPARED C Extra Lean Beef Sausages 450g                    450g                       $22.22/kg   | W Peppercorn 7 Pack Extra Lean Beef Sausages 450g  450g                       $25.56/kg   r=1.00  +15%
+
+meat:beef:sausage:f-garlic_herb   (1 coles, 1 woolworths)
+   COMPARED C Beef Garlic & Herb Sausages 550g                 550g                       $11.82/kg   | W Woolworths 10 Pack Herb & Garlic Beef Sausages 5 550g                       $11.82/kg   r=1.00  0%
+
+meat:beef:sausage:grass_fed   (1 coles, 1 woolworths)
+   shown    C Graze Grassfed Beef Sausages 500g                500g                       $17.00/kg   | W Macro 6 Pack Grass Fed Australian Beef Sausages  500g                       $18.00/kg   r=1.00  — this line is not in coles's latest capture
+
+meat:beef:sausage:grass_fed:organic   (1 coles, 1 woolworths)
+   COMPARED C Grass-fed Beef Sausages Gluten Free 450g         450g                       $24.44/kg   | W Macro Australian Organic 6 Beef Sausage 450g     450g                       $25.56/kg   r=1.00  +5%
+
+meat:beef:scotch   (6 coles, 2 woolworths)
+   COMPARED C Beef Scotch Fillet Steaks 170g                   170g                       $50.00/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=1.00  +6%
+   shown    C Beef Scotch Fillet Steaks 170g                   170g                       $50.00/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=3.18  — 170g vs 540g — pack sizes differ (3.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Rib Eye Steak approx. 800g                       approx. 800g               $64.00/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=4.71  — REJECTED BY REVIEW: Coles Finest "Rib Eye Steak approx. 800g" at $64/kg. Coles names its boneless cut "Scotch Fillet" on every other line; an 800g single rib eye at a 35% premium is the bone-in steak, which is not a scotch fillet.
+   shown    C Rib Eye Steak approx. 800g                       approx. 800g               $64.00/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=1.48  — REJECTED BY REVIEW: Coles Finest "Rib Eye Steak approx. 800g" at $64/kg. Coles names its boneless cut "Scotch Fillet" on every other line; an 800g single rib eye at a 35% premium is the bone-in steak, which is not a scotch fillet.
+   shown    C No Added Hormone Beef Scotch Fillet approx. 950g approx. 950g               $39.00/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=5.59  — 950g vs 170g — pack sizes differ (5.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C No Added Hormone Beef Scotch Fillet approx. 950g approx. 950g               $39.00/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=1.76  — 950g vs 540g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Scotch Steak Fillet 2 Pack 480g             480g                       $47.92/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=2.82  — 480g vs 170g — pack sizes differ (2.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Scotch Steak Fillet 2 Pack 480g             480g                       $47.92/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=1.13  -1%
+   shown    C Beef Scotch Fillet Steak 375g                    375g                       $66.67/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=2.21  — 375g vs 170g — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Beef Scotch Fillet Steak 375g                    375g                       $66.67/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=1.44  -29%
+   shown    C Halal Scotch Fillet 2 Pack approx. 500g          approx. 500g               $46.00/kg   | W Woolworths Beef Scotch Fillet Steak 170g         170g                       $52.94/kg   r=2.94  — 500g vs 170g — pack sizes differ (2.9×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Halal Scotch Fillet 2 Pack approx. 500g          approx. 500g               $46.00/kg   | W Woolworths Beef Scotch Fillet Steak Medium 280g  280g–800g · priced at 800g $47.50/kg   r=1.08  +3%
+
+meat:beef:scotch:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grassfed Beef Scotch Fillet Steak 250g     250g                       $58.00/kg   | W Macro Grass Fed Australian Beef Scotch Fillet 27 270g                       $59.26/kg   r=1.08  +2%
+
+meat:beef:scotch:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Organic Grass-Fed Beef Scotch Fillet Steak 290g  290g                       $62.07/kg   | W Macro Organic Beef Scotch Fillet Steak 280g      280g                       /kg         r=1.04  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:scotch:thin_cut   (2 coles, 1 woolworths)
+   shown    C No Added Hormone Beef Quick Cook Scotch Fillet S 170g                       $52.94/kg   | W Woolworths Beef Scotch Fillet Thin Slice 400g -  400g–850g · priced at 850g $52.50/kg   r=3.68  — 170g vs 625g — pack sizes differ (3.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Beef Scotch Fillet Thin Cut 400g                 400g                       $52.50/kg   | W Woolworths Beef Scotch Fillet Thin Slice 400g -  400g–850g · priced at 850g $52.50/kg   r=1.56  — 400g vs 625g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:beef:short_rib   (1 coles, 1 woolworths)
+   COMPARED C Beef Slow Cook Short Ribs approx. 800g           approx. 800g               $19.00/kg   | W Woolworths Beef Short Ribs 800g - 1.5kg          800g–1.5kg · priced at 1.5 $25.00/kg   r=1.44  +32%
+
+meat:beef:sizzle   (1 coles, 1 woolworths)
+   COMPARED C Beef Sizzle Steak 400g                           400g                       $32.50/kg   | W Woolworths Beef Sizzle Steak 400g                400g                       $32.50/kg   r=1.00  0%
+
+meat:beef:steak:f-pepper   (1 coles, 1 woolworths)
+   COMPARED C No Added Hormone Peppered Beef Steaks 300g       300g                       $30.00/kg   | W Woolworths BBQ Beef Steaks With Black Pepper 300 300g                       $26.67/kg   r=1.00  -11%
+
+meat:beef:stir_fry   (3 coles, 1 woolworths)
+   shown    C Beef Stir Fry 500g                               500g                       $23.00/kg   | W Fettayleh Foods Beef Stir Fry 500g               500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Beef Stir Fry 500g                               500g                       $24.00/kg   | W Fettayleh Foods Beef Stir Fry 500g               500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Beef Stir Fry 500g                               500g                       $24.00/kg   | W Fettayleh Foods Beef Stir Fry 500g               500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:beef:stir_fry:grass_fed   (1 coles, 1 woolworths)
+   COMPARED C Graze Grassfed Beef Stir Fry 500g                500g                       $26.00/kg   | W Macro Grass Fed Australian Stir-Fry Beef 500g    500g                       $26.00/kg   r=1.00  0%
+
+meat:beef:stir_fry:grass_fed:organic   (1 coles, 1 woolworths)
+   shown    C Organic Grass-fed Beef Stifry 450g               450g                       $34.44/kg   | W Macro Organic Australian Extra Lean Stir Fry Bee 450g                       $34.44/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:beef:t_bone   (1 coles, 1 woolworths)
+   shown    C Beef T Bone Steak approx. 590g                   approx. 590g               $36.00/kg   | W Woolworths Beef T Bone Steak Medium 250g - 700g  250g–700g · priced at 700g $36.00/kg   r=1.24  — this line is not in coles's latest capture
+
+meat:beef+pork:mince:grade_regular   (2 coles, 1 woolworths)
+   shown    C Pork & Beef 3 Star Regular Mince Bolognese 1kg   1kg                        $11.00/kg   | W Woolworths Pork & Beef Mince 500g                500g                       $12.50/kg   r=2.00  — 1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Pork & Beef 3 Star Regular Mince Bolognese 500g  500g                       $12.50/kg   | W Woolworths Pork & Beef Mince 500g                500g                       $12.50/kg   r=1.00  0%
+
+meat:chicken:breast-diced   (1 coles, 2 woolworths)
+   shown    C RSPCA Approved Chicken Breast Diced 500g         500g                       $18.00/kg   | W Woolworths RSPCA Approved Chicken Breast Diced 1 1kg                        $13.50/kg   r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Breast Diced 500g         500g                       $18.00/kg   | W Woolworths RSPCA Approved Chicken Breast Diced 5 500g                       $18.00/kg   r=1.00  0%
+
+meat:chicken:breast-diced:free_range   (1 coles, 1 woolworths)
+   COMPARED C Free Range Chicken Breast Diced 500g             500g                       $26.00/kg   | W Macro Free Range Diced Chicken Breast 500g       500g                       $24.00/kg   r=1.00  -8%
+
+meat:chicken:breast-fillet   (5 coles, 5 woolworths)
+   COMPARED C Chicken Breast Small Pack approx. 600g           approx. 600g               $15.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillets 650g                       $14.46/kg   r=1.08  -4%
+   ok       C Chicken Breast Small Pack approx. 600g           approx. 600g               $15.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  per kg · service counter   $9.50/kg    r=1.00  -37%
+   shown    C Chicken Breast Small Pack approx. 600g           approx. 600g               $15.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  1.5kg–2.2kg · priced at 2. $11.00/kg   r=3.08  — 600g vs 1.85kg — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Chicken Breast Small Pack approx. 600g           approx. 600g               $15.00/kg   | W Al Sadiq Halal Chicken Breast Fillets Skinless B 1.1kg–1.65kg · priced at 1 /kg         r=2.29  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Chicken Breast Small Pack approx. 600g           approx. 600g               $15.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  300g                       $18.33/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Breast Fillet Value Pack  approx. 2kg                $8.50/kg    | W Woolworths RSPCA Approved Chicken Breast Fillets 650g                       $14.46/kg   r=3.08  — 2kg vs 650g — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C RSPCA Approved Chicken Breast Fillet Value Pack  approx. 2kg                $8.50/kg    | W Woolworths RSPCA Approved Chicken Breast Fillet  per kg · service counter   $9.50/kg    r=1.00  +12%
+   COMPARED C RSPCA Approved Chicken Breast Fillet Value Pack  approx. 2kg                $8.50/kg    | W Woolworths RSPCA Approved Chicken Breast Fillet  1.5kg–2.2kg · priced at 2. $11.00/kg   r=1.08  +29%
+   shown    C RSPCA Approved Chicken Breast Fillet Value Pack  approx. 2kg                $8.50/kg    | W Al Sadiq Halal Chicken Breast Fillets Skinless B 1.1kg–1.65kg · priced at 1 /kg         r=1.45  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Breast Fillet Value Pack  approx. 2kg                $8.50/kg    | W Woolworths RSPCA Approved Chicken Breast Fillet  300g                       $18.33/kg   r=6.67  — 2kg vs 300g — pack sizes differ (6.7×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Breast Fillets Small Pack approx. 600g               $14.50/kg   | W Woolworths RSPCA Approved Chicken Breast Fillets 650g                       $14.46/kg   r=1.08  0%
+   ok       C RSPCA Approved Chicken Breast Fillets Small Pack approx. 600g               $14.50/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  per kg · service counter   $9.50/kg    r=1.00  -34%
+   shown    C RSPCA Approved Chicken Breast Fillets Small Pack approx. 600g               $14.50/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  1.5kg–2.2kg · priced at 2. $11.00/kg   r=3.08  — 600g vs 1.85kg — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Breast Fillets Small Pack approx. 600g               $14.50/kg   | W Al Sadiq Halal Chicken Breast Fillets Skinless B 1.1kg–1.65kg · priced at 1 /kg         r=2.29  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Breast Fillets Small Pack approx. 600g               $14.50/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  300g                       $18.33/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Breast Fillets Large Pack approx. 1.4kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillets 650g                       $14.46/kg   r=2.15  — 1.4kg vs 650g — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C RSPCA Approved Chicken Breast Fillets Large Pack approx. 1.4kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  per kg · service counter   $9.50/kg    r=1.00  -14%
+   COMPARED C RSPCA Approved Chicken Breast Fillets Large Pack approx. 1.4kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  1.5kg–2.2kg · priced at 2. $11.00/kg   r=1.32  0%
+   shown    C RSPCA Approved Chicken Breast Fillets Large Pack approx. 1.4kg              $11.00/kg   | W Al Sadiq Halal Chicken Breast Fillets Skinless B 1.1kg–1.65kg · priced at 1 /kg         r=1.02  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Breast Fillets Large Pack approx. 1.4kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  300g                       $18.33/kg   r=4.67  — 1.4kg vs 300g — pack sizes differ (4.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Halal Chicken Breast Fillets Large Pack approx.  approx. 1.3kg              $13.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillets 650g                       $14.46/kg   r=2.00  — 1.3kg vs 650g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Halal Chicken Breast Fillets Large Pack approx.  approx. 1.3kg              $13.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  per kg · service counter   $9.50/kg    r=1.00  -27%
+   COMPARED C Halal Chicken Breast Fillets Large Pack approx.  approx. 1.3kg              $13.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  1.5kg–2.2kg · priced at 2. $11.00/kg   r=1.42  -15%
+   shown    C Halal Chicken Breast Fillets Large Pack approx.  approx. 1.3kg              $13.00/kg   | W Al Sadiq Halal Chicken Breast Fillets Skinless B 1.1kg–1.65kg · priced at 1 /kg         r=1.06  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Halal Chicken Breast Fillets Large Pack approx.  approx. 1.3kg              $13.00/kg   | W Woolworths RSPCA Approved Chicken Breast Fillet  300g                       $18.33/kg   r=4.33  — 1.3kg vs 300g — pack sizes differ (4.3×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:breast-fillet:free_range   (5 coles, 4 woolworths)
+   shown    C Free Range RSPCA Approved Chicken Breast Fillet  600g                       $18.33/kg   | W Macro RSPCA Approved Chicken Breast Free Range S 300g                       $25.00/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Free Range RSPCA Approved Chicken Breast Fillet  600g                       $18.33/kg   | W Macro Free Range Chicken Breast Fillets 650g     650g                       $18.00/kg   r=1.08  — this line was listed as unavailable at capture
+   shown    C Free Range RSPCA Approved Chicken Breast Fillet  600g                       $18.33/kg   | W Macro Free Range Chicken Breast Fillets 1.1kg -  1.1kg–1.7kg · priced at 1. $13.70/kg   r=2.33  — 600g vs 1.4kg — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Free Range RSPCA Approved Chicken Breast Fillet  600g                       $18.33/kg   | W The Bare Bird Free Range Chicken Breast Fillets  600g                       $22.50/kg   r=1.00  — this line was listed as unavailable at capture
+   shown    C Free Range Chicken Breast Fillets Bulk approx. 1 approx. 1kg                $17.50/kg   | W Macro RSPCA Approved Chicken Breast Free Range S 300g                       $25.00/kg   r=3.33  — 1kg vs 300g — pack sizes differ (3.3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Free Range Chicken Breast Fillets Bulk approx. 1 approx. 1kg                $17.50/kg   | W Macro Free Range Chicken Breast Fillets 650g     650g                       $18.00/kg   r=1.54  — 1kg vs 650g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Free Range Chicken Breast Fillets Bulk approx. 1 approx. 1kg                $17.50/kg   | W Macro Free Range Chicken Breast Fillets 1.1kg -  1.1kg–1.7kg · priced at 1. $13.70/kg   r=1.40  -22%
+   shown    C Free Range Chicken Breast Fillets Bulk approx. 1 approx. 1kg                $17.50/kg   | W The Bare Bird Free Range Chicken Breast Fillets  600g                       $22.50/kg   r=1.67  — 1kg vs 600g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Free Range Chicken Breast Large P approx. 1.25kg             $13.70/kg   | W Macro RSPCA Approved Chicken Breast Free Range S 300g                       $25.00/kg   r=4.17  — 1.25kg vs 300g — pack sizes differ (4.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Free Range Chicken Breast Large P approx. 1.25kg             $13.70/kg   | W Macro Free Range Chicken Breast Fillets 650g     650g                       $18.00/kg   r=1.92  — 1.25kg vs 650g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Free Range Chicken Breast Large P approx. 1.25kg             $13.70/kg   | W Macro Free Range Chicken Breast Fillets 1.1kg -  1.1kg–1.7kg · priced at 1. $13.70/kg   r=1.12  0%
+   shown    C RSPCA Approved Free Range Chicken Breast Large P approx. 1.25kg             $13.70/kg   | W The Bare Bird Free Range Chicken Breast Fillets  600g                       $22.50/kg   r=2.08  — 1.25kg vs 600g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Chicken Breast Fillet 600g                       600g                       $22.50/kg   | W Macro RSPCA Approved Chicken Breast Free Range S 300g                       $25.00/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Chicken Breast Fillet 600g                       600g                       $22.50/kg   | W Macro Free Range Chicken Breast Fillets 650g     650g                       $18.00/kg   r=1.08  — this line is not in coles's latest capture
+   shown    C Chicken Breast Fillet 600g                       600g                       $22.50/kg   | W Macro Free Range Chicken Breast Fillets 1.1kg -  1.1kg–1.7kg · priced at 1. $13.70/kg   r=2.33  — 600g vs 1.4kg — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Chicken Breast Fillet 600g                       600g                       $22.50/kg   | W The Bare Bird Free Range Chicken Breast Fillets  600g                       $22.50/kg   r=1.00  — this line is not in coles's latest capture
+   shown    C Free Range Chicken Breast Fillet 600g            600g                       $21.67/kg   | W Macro RSPCA Approved Chicken Breast Free Range S 300g                       $25.00/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Free Range Chicken Breast Fillet 600g            600g                       $21.67/kg   | W Macro Free Range Chicken Breast Fillets 650g     650g                       $18.00/kg   r=1.08  -17%
+   shown    C Free Range Chicken Breast Fillet 600g            600g                       $21.67/kg   | W Macro Free Range Chicken Breast Fillets 1.1kg -  1.1kg–1.7kg · priced at 1. $13.70/kg   r=2.33  — 600g vs 1.4kg — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Free Range Chicken Breast Fillet 600g            600g                       $21.67/kg   | W The Bare Bird Free Range Chicken Breast Fillets  600g                       $22.50/kg   r=1.00  +4%
+
+meat:chicken:breast-fillet:free_range:organic   (1 coles, 2 woolworths)
+   shown    C Free Range Organic Chicken Breast Fillets Skin O approx. 488g               $34.50/kg   | W Macro Organic Chicken Breast Fillet 300g - 600g  300g–600g · priced at 600g $34.50/kg   r=1.08  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Free Range Organic Chicken Breast Fillets Skin O approx. 488g               $34.50/kg   | W Macro Organic Chicken Breast Fillet 500g - 750g  500g–750g · priced at 750g /kg         r=1.28  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:breast-schnitzel   (2 coles, 1 woolworths)
+   shown    C RSPCA Approved Chicken Breast Schnitzel 500g     500g                       $21.00/kg   | W Woolworths RSPCA Approved Chicken Breast Schnitz 500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Breast Schnitzel Plain Cr 600g                       $13.33/kg   | W Woolworths RSPCA Approved Chicken Breast Schnitz 500g                       /kg         r=1.20  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:breast-schnitzel:free_range   (1 coles, 1 woolworths)
+   shown    C Chicken Breast Schnitzels 400g                   400g                       $30.00/kg   | W Macro Free Range Chicken Breast Schnitzel 500g   500g                       /kg         r=1.25  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:breast-strip:free_range:organic   (1 coles, 1 woolworths)
+   shown    C Organic Chicken Strips Plain 500g                500g                       $27.00/kg   | W Macro Organic Chicken Breast Strips 400g         400g                       $26.25/kg   r=1.25  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:chicken:burger-thigh:f-crumbed:f-southern_fried   (1 coles, 1 woolworths)
+   COMPARED C RSPCA Approved Chicken Southern Fried Thigh Burg 400g                       $25.00/kg   | W Woolworths Southern Fried Chicken Thigh Fillet B 350g                       $22.86/kg   r=1.14  -9%
+
+meat:chicken:burger:f-crumbed   (2 coles, 3 woolworths)
+   COMPARED C RSPCA Approved Chicken Burgers Plain Crumb 400g  400g                       $15.00/kg   | W Woolworths Crumbed Chicken Burgers 440g          440g                       $14.77/kg   r=1.10  -2%
+   shown    C RSPCA Approved Chicken Burgers Plain Crumb 400g  400g                       $15.00/kg   | W Woolworths Family Favourites Chicken Burgers 1.5 1.5kg · 14 pack            $8.33/kg    r=3.75  — 400g vs 1.5kg — pack sizes differ (3.8×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C RSPCA Approved Chicken Burgers Plain Crumb 400g  400g                       $15.00/kg   | W Woolworths 6 Pack Classic Chicken Burgers 600g   600g                       $13.33/kg   r=1.50  -11%
+   shown    C RSPCA Approved Chicken Burgers Plain Crumb 1.2Kg 1.2kg                      $8.33/kg    | W Woolworths Crumbed Chicken Burgers 440g          440g                       $14.77/kg   r=2.73  — 1.2kg vs 440g — pack sizes differ (2.7×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Burgers Plain Crumb 1.2Kg 1.2kg                      $8.33/kg    | W Woolworths Family Favourites Chicken Burgers 1.5 1.5kg · 14 pack            $8.33/kg    r=1.25  0%
+   shown    C RSPCA Approved Chicken Burgers Plain Crumb 1.2Kg 1.2kg                      $8.33/kg    | W Woolworths 6 Pack Classic Chicken Burgers 600g   600g                       $13.33/kg   r=2.00  — 1.2kg vs 600g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:butterflied-whole:boneless:f-greek   (2 coles, 1 woolworths)
+   COMPARED C Greek Inspired Whole Boneless Chicken 1Kg        1kg                        $14.00/kg   | W Woolworths BBQ Boneless Butterflied Chicken Gree 700g–1.25kg · priced at 1. $11.00/kg   r=1.03  -21%
+   COMPARED C RSPCA Approved Chicken Whole Boneless With Greek 1kg                        $11.00/kg   | W Woolworths BBQ Boneless Butterflied Chicken Gree 700g–1.25kg · priced at 1. $11.00/kg   r=1.03  0%
+
+meat:chicken:butterflied-whole:boneless:free_range   (1 coles, 1 woolworths)
+   COMPARED C Boneless Butterflied Chicken 800g                800g                       $15.00/kg   | W The Bare Bird Free Range Boneless Butterflied 80 800g                       $16.25/kg   r=1.00  +8%
+
+meat:chicken:cutlet-thigh   (2 coles, 2 woolworths)
+   COMPARED C Halal Chicken Thigh Cutlets approx. 1.2Kg        approx. 1.2kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Cutlets  per kg · service counter   $8.00/kg    r=1.00  -27%
+   shown    C Halal Chicken Thigh Cutlets approx. 1.2Kg        approx. 1.2kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Cutlets  450g–700g · priced at 700g $10.00/kg   r=2.09  — 1.2kg vs 575g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Thigh Cutlets approx. 1.1 approx. 1.1kg              $10.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Cutlets  per kg · service counter   $8.00/kg    r=1.00  -20%
+   shown    C RSPCA Approved Chicken Thigh Cutlets approx. 1.1 approx. 1.1kg              $10.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Cutlets  450g–700g · priced at 700g $10.00/kg   r=1.91  — 1.1kg vs 575g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:drumstick   (3 coles, 5 woolworths)
+   ok       C RSPCA Approved Chicken Drumsticks 2kg            2kg                        $3.85/kg    | W Woolworths 10 Pack RSPCA Approved Chicken Drumst 1.1kg–1.9kg · priced at 1. $4.30/kg    r=1.33  +12%
+   ok       C RSPCA Approved Chicken Drumsticks 2kg            2kg                        $3.85/kg    | W Woolworths RSPCA Approved Chicken Drumsticks per per kg · service counter   $4.80/kg    r=1.00  +25%
+   shown    C RSPCA Approved Chicken Drumsticks 2kg            2kg                        $3.85/kg    | W Woolworths RSPCA Approved Chicken Drumsticks 2kg 2kg                        $3.85/kg    r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C RSPCA Approved Chicken Drumsticks 2kg            2kg                        $3.85/kg    | W Woolworths 6 Pack RSPCA Approved Chicken Drumsti 650g–1.1kg · priced at 1.1 /kg         r=2.29  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C RSPCA Approved Chicken Drumsticks 2kg            2kg                        $3.85/kg    | W Al Sadiq Halal Chicken Drumsticks Bulk Pack 1.5k 1.5kg–1.8kg · priced at 1. $4.30/kg    r=1.21  +12%
+   ok       C RSPCA Approved Chicken Drumsticks Large Pack app approx. 1.6kg              $4.80/kg    | W Woolworths 10 Pack RSPCA Approved Chicken Drumst 1.1kg–1.9kg · priced at 1. $4.30/kg    r=1.07  -10%
+   ok       C RSPCA Approved Chicken Drumsticks Large Pack app approx. 1.6kg              $4.80/kg    | W Woolworths RSPCA Approved Chicken Drumsticks per per kg · service counter   $4.80/kg    r=1.00  0%
+   shown    C RSPCA Approved Chicken Drumsticks Large Pack app approx. 1.6kg              $4.80/kg    | W Woolworths RSPCA Approved Chicken Drumsticks 2kg 2kg                        $3.85/kg    r=1.25  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C RSPCA Approved Chicken Drumsticks Large Pack app approx. 1.6kg              $4.80/kg    | W Woolworths 6 Pack RSPCA Approved Chicken Drumsti 650g–1.1kg · priced at 1.1 /kg         r=1.83  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C RSPCA Approved Chicken Drumsticks Large Pack app approx. 1.6kg              $4.80/kg    | W Al Sadiq Halal Chicken Drumsticks Bulk Pack 1.5k 1.5kg–1.8kg · priced at 1. $4.30/kg    r=1.03  -10%
+   COMPARED C Chicken Drumsticks Large Pack approx. 1.5Kg      approx. 1.5kg              $4.80/kg    | W Woolworths 10 Pack RSPCA Approved Chicken Drumst 1.1kg–1.9kg · priced at 1. $4.30/kg    r=1.00  -10%
+   ok       C Chicken Drumsticks Large Pack approx. 1.5Kg      approx. 1.5kg              $4.80/kg    | W Woolworths RSPCA Approved Chicken Drumsticks per per kg · service counter   $4.80/kg    r=1.00  0%
+   shown    C Chicken Drumsticks Large Pack approx. 1.5Kg      approx. 1.5kg              $4.80/kg    | W Woolworths RSPCA Approved Chicken Drumsticks 2kg 2kg                        $3.85/kg    r=1.33  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Chicken Drumsticks Large Pack approx. 1.5Kg      approx. 1.5kg              $4.80/kg    | W Woolworths 6 Pack RSPCA Approved Chicken Drumsti 650g–1.1kg · priced at 1.1 /kg         r=1.71  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   ok       C Chicken Drumsticks Large Pack approx. 1.5Kg      approx. 1.5kg              $4.80/kg    | W Al Sadiq Halal Chicken Drumsticks Bulk Pack 1.5k 1.5kg–1.8kg · priced at 1. $4.30/kg    r=1.10  -10%
+
+meat:chicken:drumstick:free_range   (2 coles, 3 woolworths)
+   shown    C Free Range Chicken Drumsticks Bulk approx. 1kg   approx. 1kg                $7.50/kg    | W Macro 6 Pack Free Range Chicken Drumsticks 600g  600g–1.35kg · priced at 1. $5.50/kg    r=1.03  — not in woolworths's latest capture — last seen 2026-10-21
+   ok       C Free Range Chicken Drumsticks Bulk approx. 1kg   approx. 1kg                $7.50/kg    | W The Bare Bird Free Range Chicken Drumsticks 1kg  1kg–1.5kg · priced at 1.5k $6.50/kg    r=1.25  -13%
+   COMPARED C Free Range Chicken Drumsticks Bulk approx. 1kg   approx. 1kg                $7.50/kg    | W Macro 6 Pack Free Range Chicken Drumsticks 650g  650g–1.05kg · priced at 1. $5.50/kg    r=1.18  -27%
+   shown    C Free Range RSPCA Approved Chicken Drumsticks app approx. 1.4kg              $5.50/kg    | W Macro 6 Pack Free Range Chicken Drumsticks 600g  600g–1.35kg · priced at 1. $5.50/kg    r=1.44  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Free Range RSPCA Approved Chicken Drumsticks app approx. 1.4kg              $5.50/kg    | W The Bare Bird Free Range Chicken Drumsticks 1kg  1kg–1.5kg · priced at 1.5k $6.50/kg    r=1.12  +18%
+   shown    C Free Range RSPCA Approved Chicken Drumsticks app approx. 1.4kg              $5.50/kg    | W Macro 6 Pack Free Range Chicken Drumsticks 650g  650g–1.05kg · priced at 1. $5.50/kg    r=1.65  — 1.4kg vs 850g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:drumstick:free_range:organic   (2 coles, 2 woolworths)
+   shown    C Free Range Organic Chicken Drumsticks approx. 42 approx. 420g               $11.50/kg   | W Macro Organic Chicken Drumstick 750g - 1kg       750g–1kg · priced at 1kg   $11.50/kg   r=2.08  — 420g vs 875g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Free Range Organic Chicken Drumsticks approx. 42 approx. 420g               $11.50/kg   | W Macro Organic Chicken Drumstick 390g - 590g      390g–590g · priced at 590g /kg         r=1.17  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Organic Chicken Drumsticks approx 1kg            approx. 1kg                $12.00/kg   | W Macro Organic Chicken Drumstick 750g - 1kg       750g–1kg · priced at 1kg   $11.50/kg   r=1.14  — this line is not in coles's latest capture
+   shown    C Organic Chicken Drumsticks approx 1kg            approx. 1kg                $12.00/kg   | W Macro Organic Chicken Drumstick 390g - 590g      390g–590g · priced at 590g /kg         r=2.04  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:fillet-thigh   (3 coles, 4 woolworths)
+   COMPARED C RSPCA Chicken Thigh Fillets Small Pack approx. 7 approx. 700g               $18.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  550g                       $18.00/kg   r=1.27  0%
+   shown    C RSPCA Chicken Thigh Fillets Small Pack approx. 7 approx. 700g               $18.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  1.2kg–1.8kg · priced at 1. /kg         r=2.14  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   ok       C RSPCA Chicken Thigh Fillets Small Pack approx. 7 approx. 700g               $18.00/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillet p per kg · service counter   $15.50/kg   r=1.00  -14%
+   shown    C RSPCA Chicken Thigh Fillets Small Pack approx. 7 approx. 700g               $18.00/kg   | W Al Sadiq Halal Chicken Thigh Fillets Bulk Pack 1 1.5kg–1.7kg · priced at 1. /kg         r=2.29  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Thigh Fillets Large Pack  approx. 1.2kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  550g                       $18.00/kg   r=2.18  — 1.2kg vs 550g — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Thigh Fillets Large Pack  approx. 1.2kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  1.2kg–1.8kg · priced at 1. /kg         r=1.25  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C RSPCA Approved Chicken Thigh Fillets Large Pack  approx. 1.2kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillet p per kg · service counter   $15.50/kg   r=1.00  +7%
+   shown    C RSPCA Approved Chicken Thigh Fillets Large Pack  approx. 1.2kg              $14.50/kg   | W Al Sadiq Halal Chicken Thigh Fillets Bulk Pack 1 1.5kg–1.7kg · priced at 1. /kg         r=1.33  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Halal Chicken Thigh Fillets Large Pack approx. 1 approx. 1.1kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  550g                       $18.00/kg   r=2.00  — 1.1kg vs 550g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Halal Chicken Thigh Fillets Large Pack approx. 1 approx. 1.1kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillets  1.2kg–1.8kg · priced at 1. /kg         r=1.36  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Halal Chicken Thigh Fillets Large Pack approx. 1 approx. 1.1kg              $14.50/kg   | W Woolworths RSPCA Approved Chicken Thigh Fillet p per kg · service counter   $15.50/kg   r=1.00  +7%
+   shown    C Halal Chicken Thigh Fillets Large Pack approx. 1 approx. 1.1kg              $14.50/kg   | W Al Sadiq Halal Chicken Thigh Fillets Bulk Pack 1 1.5kg–1.7kg · priced at 1. /kg         r=1.45  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:fillet-thigh:free_range   (4 coles, 3 woolworths)
+   shown    C Free Range Chicken Thigh Fillets Bulk approx. 90 approx. 900g               $21.00/kg   | W The Bare Bird Free Range Chicken Thigh Fillets 3 380g–640g · priced at 640g $19.10/kg   r=1.76  — 900g vs 510g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Free Range Chicken Thigh Fillets Bulk approx. 90 approx. 900g               $21.00/kg   | W Macro Free Range Chicken Thigh Fillets 550g      550g                       $20.00/kg   r=1.64  — 900g vs 550g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Free Range Chicken Thigh Fillets Bulk approx. 90 approx. 900g               $21.00/kg   | W Macro Free Range Chicken Thigh Fillet 1.1kg -1.4 1.1kg–1.4kg · priced at 1. $17.00/kg   r=1.39  -19%
+   shown    C RSPCA Approved Free Range Chicken Thigh Large Pa approx. 1.25kg             $17.00/kg   | W The Bare Bird Free Range Chicken Thigh Fillets 3 380g–640g · priced at 640g $19.10/kg   r=2.45  — 1.25kg vs 510g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Free Range Chicken Thigh Large Pa approx. 1.25kg             $17.00/kg   | W Macro Free Range Chicken Thigh Fillets 550g      550g                       $20.00/kg   r=2.27  — 1.25kg vs 550g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Free Range Chicken Thigh Large Pa approx. 1.25kg             $17.00/kg   | W Macro Free Range Chicken Thigh Fillet 1.1kg -1.4 1.1kg–1.4kg · priced at 1. $17.00/kg   r=1.00  0%
+   shown    C Free Range RSPCA Approved Thigh Small Pack appro approx. 500g               $20.00/kg   | W The Bare Bird Free Range Chicken Thigh Fillets 3 380g–640g · priced at 640g $19.10/kg   r=1.02  — this line was listed as unavailable at capture
+   shown    C Free Range RSPCA Approved Thigh Small Pack appro approx. 500g               $20.00/kg   | W Macro Free Range Chicken Thigh Fillets 550g      550g                       $20.00/kg   r=1.10  — this line was listed as unavailable at capture
+   shown    C Free Range RSPCA Approved Thigh Small Pack appro approx. 500g               $20.00/kg   | W Macro Free Range Chicken Thigh Fillet 1.1kg -1.4 1.1kg–1.4kg · priced at 1. $17.00/kg   r=2.50  — 500g vs 1.25kg — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Chicken Thigh Fillets 480g                       480g                       $28.13/kg   | W The Bare Bird Free Range Chicken Thigh Fillets 3 380g–640g · priced at 640g $19.10/kg   r=1.06  -32%
+   ok       C Chicken Thigh Fillets 480g                       480g                       $28.13/kg   | W Macro Free Range Chicken Thigh Fillets 550g      550g                       $20.00/kg   r=1.15  -29%
+   shown    C Chicken Thigh Fillets 480g                       480g                       $28.13/kg   | W Macro Free Range Chicken Thigh Fillet 1.1kg -1.4 1.1kg–1.4kg · priced at 1. $17.00/kg   r=2.60  — 480g vs 1.25kg — pack sizes differ (2.6×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:fillet-thigh:free_range:organic   (1 coles, 2 woolworths)
+   shown    C Chicken Thigh Fillets Skin Off approx. 425g      approx. 425g               $35.50/kg   | W Macro Organic Chicken Thigh Fillet 275g - 600g   275g–600g · priced at 600g /kg         r=1.03  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Chicken Thigh Fillets Skin Off approx. 425g      approx. 425g               $35.50/kg   | W Macro Organic Chicken Thigh Fillet 450g - 550g   450g–550g · priced at 550g /kg         r=1.18  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:giblet   (1 coles, 2 woolworths)
+   COMPARED C RSPCA Approved Chicken Giblets 500g              500g                       $8.00/kg    | W Woolworths RSPCA Approved Chicken Giblets 500g   500g                       $8.00/kg    r=1.00  0%
+   shown    C RSPCA Approved Chicken Giblets 500g              500g                       $8.00/kg    | W Woolworths RSPCA Approved Chicken Giblets 1kg    1kg                        $7.00/kg    r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:kebab:f-honey_soy   (2 coles, 4 woolworths)
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 375g   375g                       $22.67/kg   | W Woolworths RSPCA Approved Chicken Kebab Honey So each                       /kg         r= n/a  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 375g   375g                       $22.67/kg   | W Woolworths 12 Pack Honey Soy Chicken Kebabs 750g 750g                       $16.00/kg   r=2.00  — 375g vs 750g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 375g   375g                       $22.67/kg   | W Woolworths 6 Pack Honey Soy Chicken Kebabs 375g  375g                       $20.00/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C RSPCA Approved Chicken Kebabs Honey & Soy 375g   375g                       $22.67/kg   | W Woolworths 6 Pack Honey Soy Chicken Kebabs 375g  375g                       $20.00/kg   r=1.00  -12%
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 750g   750g                       $13.33/kg   | W Woolworths RSPCA Approved Chicken Kebab Honey So each                       /kg         r= n/a  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C RSPCA Approved Chicken Kebabs Honey & Soy 750g   750g                       $13.33/kg   | W Woolworths 12 Pack Honey Soy Chicken Kebabs 750g 750g                       $16.00/kg   r=1.00  +20%
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 750g   750g                       $13.33/kg   | W Woolworths 6 Pack Honey Soy Chicken Kebabs 375g  375g                       $20.00/kg   r=2.00  — 750g vs 375g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Chicken Kebabs Honey & Soy 750g   750g                       $13.33/kg   | W Woolworths 6 Pack Honey Soy Chicken Kebabs 375g  375g                       $20.00/kg   r=2.00  — 750g vs 375g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:kebab:f-satay   (1 coles, 3 woolworths)
+   shown    C RSPCA Approved Satay Chicken Kebabs 10 Pack 750g 750g                       $13.33/kg   | W Woolworths RSPCA Approved Chicken Kebab Satay    each                       /kg         r= n/a  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Satay Chicken Kebabs 10 Pack 750g 750g                       $13.33/kg   | W Woolworths 8 Pack Mini Satay Style Satay Style C 375g                       $24.00/kg   r=2.00  — 750g vs 375g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C RSPCA Approved Satay Chicken Kebabs 10 Pack 750g 750g                       $13.33/kg   | W Woolworths 8 Pack Mini Satay Style Satay Style C 375g                       $24.00/kg   r=2.00  — 750g vs 375g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:kyiv:f-butter:f-garlic   (1 coles, 1 woolworths)
+   shown    C RSPCA Approved Chicken Kyiv Garlic Butter 700g   700g                       $10.71/kg   | W Woolworths Creamy Garlic Stuffed Boneless Chicke 700g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:liver   (2 coles, 1 woolworths)
+   COMPARED C Halal Chicken Livers approx. 500g                approx. 500g               $9.25/kg    | W Woolworths RSPCA Approved Chicken Livers 500g    500g                       $8.00/kg    r=1.00  -14%
+   COMPARED C RSPCA Approved Chicken Livers 500g               500g                       $8.00/kg    | W Woolworths RSPCA Approved Chicken Livers 500g    500g                       $8.00/kg    r=1.00  0%
+
+meat:chicken:maryland-supreme   (1 coles, 2 woolworths)
+   COMPARED C RSPCA Approved Chicken Maryland Supreme approx.  approx. 800g               $9.50/kg    | W Woolworths RSPCA Approved Chicken Maryland Supre per kg · service counter   $9.00/kg    r=1.00  -5%
+   shown    C RSPCA Approved Chicken Maryland Supreme approx.  approx. 800g               $9.50/kg    | W Woolworths RSPCA Approved Chicken Maryland Supre 530g–800g · priced at 800g /kg         r=1.20  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:mince   (1 coles, 2 woolworths)
+   shown    C RSPCA Approved Chicken Mince 500g                500g                       $13.00/kg   | W Woolworths RSPCA Approved Chicken Mince 1kg      1kg                        $10.50/kg   r=2.00  — 500g vs 1kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Mince 500g                500g                       $13.00/kg   | W Woolworths RSPCA Approved Chicken Mince 500g     500g                       $11.00/kg   r=1.00  -15%
+
+meat:chicken:mince:free_range   (1 coles, 1 woolworths)
+   COMPARED C Free Range Chicken Mince 500g                    500g                       $18.00/kg   | W Macro Chicken Mince Free Range 500g              500g                       $18.00/kg   r=1.00  0%
+
+meat:chicken:neck   (1 coles, 2 woolworths)
+   shown    C RSPCA Approved Chicken Necks 1kg                 1kg                        $6.50/kg    | W Woolworths RSPCA Approved Chicken Necks per 100g per kg · service counter   $5.00/kg    r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C RSPCA Approved Chicken Necks 1kg                 1kg                        $6.50/kg    | W Woolworths RSPCA Approved Chicken Necks 1kg      1kg                        $6.50/kg    r=1.00  0%
+
+meat:chicken:popcorn:f-southern_fried   (1 coles, 1 woolworths)
+   COMPARED C RSPCA Approved Chicken Popcorn Southern Fried 40 400g                       $22.50/kg   | W Woolworths Southern Fried Chicken Pops 400g      400g                       $22.50/kg   r=1.00  0%
+
+meat:chicken:portion   (2 coles, 2 woolworths)
+   shown    C RSPCA Approved Chicken Portions Raw approx. 1.5K approx. 1.5kg              $7.50/kg    | W Woolworths RSPCA Approved Chicken Mixed Pieces 2 2kg                        $4.50/kg    r=1.33  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C RSPCA Approved Chicken Portions Raw approx. 1.5K approx. 1.5kg              $7.50/kg    | W Woolworths RSPCA Approved Chicken 9 Cut Pieces 1 1.05kg–1.45kg · priced at  $6.50/kg    r=1.20  -13%
+   shown    C Halal Chicken Portions Family Pack approx. 2.2Kg approx. 2.2kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken Mixed Pieces 2 2kg                        $4.50/kg    r=1.10  — REJECTED BY REVIEW: El-Amin's "Halal Chicken Portions Family Pack approx. 2.2kg" at $11/kg against Woolworths "Mixed Pieces" at $4.50/kg. "Portions" says nothing about the mix; at more than twice the price of a cut-up bird it is not one (the independent review, 18 Oct, finding 11).
+   shown    C Halal Chicken Portions Family Pack approx. 2.2Kg approx. 2.2kg              $11.00/kg   | W Woolworths RSPCA Approved Chicken 9 Cut Pieces 1 1.05kg–1.45kg · priced at  $6.50/kg    r=1.76  — REJECTED BY REVIEW: El-Amin's "Halal Chicken Portions Family Pack approx. 2.2kg" at $11/kg against Woolworths "Mixed Pieces" at $4.50/kg. "Portions" says nothing about the mix; at more than twice the price of a cut-up bird it is not one (the independent review, 18 Oct, finding 11).
+
+meat:chicken:portion:f-crumbed:f-southern_fried   (1 coles, 1 woolworths)
+   COMPARED C RSPCA Approved Chicken Mixed Portions Southern F 1.2kg                      $13.33/kg   | W Woolworths Southern Style Chicken Portions 1.2kg 1.2kg                      $13.33/kg   r=1.00  0%
+
+meat:chicken:sausage   (1 coles, 2 woolworths)
+   shown    C Chicken Sausages 500g                            500g                       $16.00/kg   | W Woolworths 10 Pack Chicken Sausages 550g         550g                       $11.82/kg   r=1.10  — this line was listed as unavailable at capture
+   shown    C Chicken Sausages 500g                            500g                       $16.00/kg   | W Fettayleh Foods Chicken Sausages 500g            500g                       $16.00/kg   r=1.00  — this line was listed as unavailable at capture
+
+meat:chicken:sausage:extra_lean   (1 coles, 1 woolworths)
+   COMPARED C Extra Lean Chicken Sausages 450g                 450g                       $22.22/kg   | W Peppercorn 7 Pack Extra Lean Chicken Sausages 45 450g                       $25.56/kg   r=1.00  +15%
+
+meat:chicken:schnitzel   (2 coles, 2 woolworths)
+   COMPARED C Chicken Schnitzel Plain Crumb 1.2Kg              1.2kg                      $10.83/kg   | W Woolworths Chicken Bulk Schnitzels 1.5kg         1.5kg                      $9.33/kg    r=1.25  -14%
+   shown    C Chicken Schnitzel Plain Crumb 1.2Kg              1.2kg                      $10.83/kg   | W Woolworths 4 Pack Chicken Schnitzel 600g         600g                       $12.67/kg   r=2.00  — 1.2kg vs 600g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Chicken Schnitzel Plain Crumb 1.2 1.2kg                      $9.33/kg    | W Woolworths Chicken Bulk Schnitzels 1.5kg         1.5kg                      $9.33/kg    r=1.25  0%
+   shown    C RSPCA Approved Chicken Schnitzel Plain Crumb 1.2 1.2kg                      $9.33/kg    | W Woolworths 4 Pack Chicken Schnitzel 600g         600g                       $12.67/kg   r=2.00  — 1.2kg vs 600g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:stir_fry   (1 coles, 1 woolworths)
+   COMPARED C RSPCA Approved Chicken Stir Fry 600g             600g                       $17.50/kg   | W Woolworths RSPCA Approved Chicken Stirfry 500g   500g                       $15.40/kg   r=1.20  -12%
+
+meat:chicken:stir_fry:free_range   (1 coles, 1 woolworths)
+   COMPARED C Free Range Chicken Stir Fry 500g                 500g                       $26.00/kg   | W Macro Free Range Chicken Stir Fry 500g           500g                       $26.00/kg   r=1.00  0%
+
+meat:chicken:strip:f-souvlaki   (1 coles, 1 woolworths)
+   COMPARED C Chicken Strips In Souvlaki Seasoning 500g        500g                       $20.00/kg   | W Zeus Street Greek Souvlaki Chicken Strips 500g   500g                       $20.00/kg   r=1.00  0%
+
+meat:chicken:tender:f-crumbed   (1 coles, 2 woolworths)
+   COMPARED C RSPCA Approved Chicken Tenders 600g              600g                       $16.67/kg   | W Woolworths Chicken Tenders 400g                  400g                       $20.00/kg   r=1.50  +20%
+   shown    C RSPCA Approved Chicken Tenders 600g              600g                       $16.67/kg   | W Canon Foods Crumbed Chicken Breast Tenders 1kg   1kg                        $10.00/kg   r=1.67  — 600g vs 1kg — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:tenderloin   (2 coles, 1 woolworths)
+   shown    C Halal Chicken Tenderloins approx. 500g           approx. 500g               $21.00/kg   | W Woolworths RSPCA Approved Chicken Tenderloins 64 640g                       $16.41/kg   r=1.28  — this line was listed as unavailable at capture
+   COMPARED C RSPCA Approved Chicken Tenderloins 600g          600g                       $17.50/kg   | W Woolworths RSPCA Approved Chicken Tenderloins 64 640g                       $16.41/kg   r=1.07  -6%
+
+meat:chicken:tenderloin:free_range   (3 coles, 2 woolworths)
+   COMPARED C Free Range Chicken Tenderloins 500g              500g                       $26.00/kg   | W The Bare Bird Free Range Chicken Tenderloins 380 380g–560g · priced at 560g $22.50/kg   r=1.06  -13%
+   ok       C Free Range Chicken Tenderloins 500g              500g                       $26.00/kg   | W Macro Free Range Chicken Tenderloins 640g        640g                       $18.44/kg   r=1.28  -29%
+   ok       C RSPCA Approved Free Range Chicken Tenderloins 60 600g                       $20.00/kg   | W The Bare Bird Free Range Chicken Tenderloins 380 380g–560g · priced at 560g $22.50/kg   r=1.28  +13%
+   COMPARED C RSPCA Approved Free Range Chicken Tenderloins 60 600g                       $20.00/kg   | W Macro Free Range Chicken Tenderloins 640g        640g                       $18.44/kg   r=1.07  -8%
+   COMPARED C Chicken Tenderloins 480g                         480g                       $28.13/kg   | W The Bare Bird Free Range Chicken Tenderloins 380 380g–560g · priced at 560g $22.50/kg   r=1.02  -20%
+   ok       C Chicken Tenderloins 480g                         480g                       $28.13/kg   | W Macro Free Range Chicken Tenderloins 640g        640g                       $18.44/kg   r=1.33  -34%
+
+meat:chicken:whole   (3 coles, 4 woolworths)
+   COMPARED C RSPCA Approved Medium Whole Chicken approx. 1.65 approx. 1.65kg             $4.30/kg    | W Woolworths RSPCA Approved Chicken Whole 1.8kg -  1.8kg–2.2kg · priced at 2. $4.30/kg    r=1.21  0%
+   ok       C RSPCA Approved Medium Whole Chicken approx. 1.65 approx. 1.65kg             $4.30/kg    | W Steggles Little Roast Chicken 1.1kg              1.1kg                      $6.82/kg    r=1.50  +59%
+   ok       C RSPCA Approved Medium Whole Chicken approx. 1.65 approx. 1.65kg             $4.30/kg    | W Steggles Family Roast Whole Chicken 1.8kg - 2.5k 1.8kg–2.5kg · priced at 2. $4.50/kg    r=1.30  +5%
+   shown    C RSPCA Approved Medium Whole Chicken approx. 1.65 approx. 1.65kg             $4.30/kg    | W Al Sadiq Halal Whole Chicken 1.2kg - 2.4kg       1.2kg–2.4kg · priced at 2. /kg         r=1.09  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Halal Chicken Whole Medium approx. 1.65kg        approx. 1.65kg             $6.00/kg    | W Woolworths RSPCA Approved Chicken Whole 1.8kg -  1.8kg–2.2kg · priced at 2. $4.30/kg    r=1.21  -28%
+   ok       C Halal Chicken Whole Medium approx. 1.65kg        approx. 1.65kg             $6.00/kg    | W Steggles Little Roast Chicken 1.1kg              1.1kg                      $6.82/kg    r=1.50  +14%
+   ok       C Halal Chicken Whole Medium approx. 1.65kg        approx. 1.65kg             $6.00/kg    | W Steggles Family Roast Whole Chicken 1.8kg - 2.5k 1.8kg–2.5kg · priced at 2. $4.50/kg    r=1.30  -25%
+   shown    C Halal Chicken Whole Medium approx. 1.65kg        approx. 1.65kg             $6.00/kg    | W Al Sadiq Halal Whole Chicken 1.2kg - 2.4kg       1.2kg–2.4kg · priced at 2. /kg         r=1.09  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   ok       C RSPCA Approved Extra Large Whole Chicken approx. approx. 2.4kg              $4.30/kg    | W Woolworths RSPCA Approved Chicken Whole 1.8kg -  1.8kg–2.2kg · priced at 2. $4.30/kg    r=1.20  0%
+   shown    C RSPCA Approved Extra Large Whole Chicken approx. approx. 2.4kg              $4.30/kg    | W Steggles Little Roast Chicken 1.1kg              1.1kg                      $6.82/kg    r=2.18  — 2.4kg vs 1.1kg — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C RSPCA Approved Extra Large Whole Chicken approx. approx. 2.4kg              $4.30/kg    | W Steggles Family Roast Whole Chicken 1.8kg - 2.5k 1.8kg–2.5kg · priced at 2. $4.50/kg    r=1.12  +5%
+   shown    C RSPCA Approved Extra Large Whole Chicken approx. approx. 2.4kg              $4.30/kg    | W Al Sadiq Halal Whole Chicken 1.2kg - 2.4kg       1.2kg–2.4kg · priced at 2. /kg         r=1.33  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:chicken:whole:free_range   (3 coles, 2 woolworths)
+   ok       C Whole Chicken approx. 1.6kg                      approx. 1.6kg              $8.50/kg    | W Macro Whole Chicken Free Range 1.15kg - 2.25kg   1.15kg–2.25kg · priced at  $6.50/kg    r=1.06  -24%
+   COMPARED C Whole Chicken approx. 1.6kg                      approx. 1.6kg              $8.50/kg    | W The Bare Bird Free Range Chicken Whole 1.18kg -  1.18kg–2.1kg · priced at 2 $7.00/kg    r=1.02  -18%
+   ok       C RSPCA Approved Free Range Chicken Whole approx.  approx. 1.6kg              $6.50/kg    | W Macro Whole Chicken Free Range 1.15kg - 2.25kg   1.15kg–2.25kg · priced at  $6.50/kg    r=1.06  0%
+   COMPARED C RSPCA Approved Free Range Chicken Whole approx.  approx. 1.6kg              $6.50/kg    | W The Bare Bird Free Range Chicken Whole 1.18kg -  1.18kg–2.1kg · priced at 2 $7.00/kg    r=1.02  +8%
+   ok       C Free Range Whole Chicken approx. 1.27kg          approx. 1.27kg             $8.50/kg    | W Macro Whole Chicken Free Range 1.15kg - 2.25kg   1.15kg–2.25kg · priced at  $6.50/kg    r=1.34  -24%
+   COMPARED C Free Range Whole Chicken approx. 1.27kg          approx. 1.27kg             $8.50/kg    | W The Bare Bird Free Range Chicken Whole 1.18kg -  1.18kg–2.1kg · priced at 2 $7.00/kg    r=1.29  -18%
+
+meat:chicken:whole:free_range:organic   (1 coles, 1 woolworths)
+   COMPARED C Organic Whole Chicken approx. 1.8kg              approx. 1.8kg              $13.50/kg   | W Macro Organic Whole Chicken 1.2kg - 2.2kg        1.2kg–2.2kg · priced at 2. $13.50/kg   r=1.06  0%
+
+meat:chicken:wing   (1 coles, 4 woolworths)
+   shown    C RSPCA Approved Chicken Wings Value Bag 2kg       2kg                        $4.40/kg    | W Woolworths RSPCA Approved Chicken Wings Three Jo per kg · service counter   $6.50/kg    r=1.00  — this line is not in coles's latest capture
+   shown    C RSPCA Approved Chicken Wings Value Bag 2kg       2kg                        $4.40/kg    | W Woolworths RSPCA Approved Chicken Wings 2kg      2kg                        $4.40/kg    r=1.00  — this line is not in coles's latest capture
+   shown    C RSPCA Approved Chicken Wings Value Bag 2kg       2kg                        $4.40/kg    | W Woolworths 12 Pack RSPCA Approved Chicken Wings  1kg–1.8kg · priced at 1.8k /kg         r=1.43  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C RSPCA Approved Chicken Wings Value Bag 2kg       2kg                        $4.40/kg    | W Woolworths 8 Pack RSPCA Approved Chicken Wings 6 650g–1.15kg · priced at 1. $9.00/kg    r=2.22  — 2kg vs 900g — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:wing_nibble   (2 coles, 1 woolworths)
+   COMPARED C Halal Chicken Wing Nibbles approx. 1Kg           approx. 1kg                $9.50/kg    | W Woolworths RSPCA Approved Chicken Wing Nibbles 1 1kg                        $9.50/kg    r=1.00  0%
+   COMPARED C RSPCA Approved Chicken Wing Nibbles approx. 1.1k approx. 1.1kg              $9.50/kg    | W Woolworths RSPCA Approved Chicken Wing Nibbles 1 1kg                        $9.50/kg    r=1.10  0%
+
+meat:chicken:wing_nibble:free_range   (1 coles, 1 woolworths)
+   shown    C RSPCA Approved Free Range Chicken Wing Nibbles a approx. 600g               $8.50/kg    | W Macro Free Range Chicken Wing Nibbles 1kg        1kg                        $8.50/kg    r=1.67  — 600g vs 1kg — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:chicken:wing_tip   (1 coles, 1 woolworths)
+   shown    C RSPCA Chicken Wing Tips 800g                     800g                       $5.00/kg    | W Woolworths RSPCA Approved Chicken Wing Tips 1kg  1kg                        $4.50/kg    r=1.25  — this line was listed as unavailable at capture
+
+meat:chicken:wing:f-honey_soy   (1 coles, 1 woolworths)
+   COMPARED C RSPCA Approved Chicken Wings Honey & Soy 1Kg     1kg                        $8.50/kg    | W Woolworths Honey Soy Wings with RSPCA Approved C per kg · service counter   $8.00/kg    r=1.00  -6%
+
+meat:crab:meat   (1 coles, 1 woolworths)
+   COMPARED C Premium Blue Swimmer Crab Meat 140g              140g                       $82.14/kg   | W Ocean Blue Crab Meat 140g                        140g                       $70.71/kg   r=1.00  -14%
+
+meat:duck:breast-fillet   (1 coles, 1 woolworths)
+   COMPARED C Fresh Duck Breast Fillets 380g                   380g                       $40.79/kg   | W Luv-A-Duck Fresh Duck Breast Fillets 380g        380g                       $35.53/kg   r=1.00  -13%
+
+meat:duck:breast:f-peking:f-slow_cooked   (1 coles, 1 woolworths)
+   COMPARED C Cooked Duck Breasts Peking Flavoured 380g        380g                       $38.16/kg   | W Luv-A-Duck Peking Duck Breasts Slow Cooked 380g  380g                       $43.42/kg   r=1.00  +14%
+
+meat:duck:leg:f-confit:f-slow_cooked   (1 coles, 1 woolworths)
+   COMPARED C Confit Duck Legs 450g                            450g                       $32.22/kg   | W Luv-A-Duck Confit Duck Legs Slow Cooked 450g     450g                       $32.22/kg   r=1.00  0%
+
+meat:duck:leg:f-peking   (1 coles, 1 woolworths)
+   shown    C Peking Flavoured Duck Legs 450g                  450g                       $32.22/kg   | W Luv-A-Duck Peking Duck Legs 650g                 650g                       /kg         r=1.44  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:kangaroo:burger   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Burgers 440g                            440g                       $20.45/kg   | W K-Roo Kangaroo Burger 440g                       440g                       $18.18/kg   r=1.00  -11%
+
+meat:kangaroo:diced   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Diced 500g                              500g                       $23.00/kg   | W K-Roo Kangaroo Diced 500g                        500g                       $23.00/kg   r=1.00  0%
+
+meat:kangaroo:fillet   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Fillet 400g                             400g                       $38.75/kg   | W K-Roo Kangaroo Fillet 400g                       400g                       $38.75/kg   r=1.00  0%
+
+meat:kangaroo:mince   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Mince 1Kg                               1kg                        $15.00/kg   | W K-Roo Kangaroo Mince 1kg                         1kg                        $15.00/kg   r=1.00  0%
+
+meat:kangaroo:sizzle   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Sizzle Steak 400g                       400g                       $27.50/kg   | W K-Roo Kangaroo Sizzle Steak 400g                 400g                       $27.50/kg   r=1.00  0%
+
+meat:kangaroo:steak   (2 coles, 1 woolworths)
+   COMPARED C Kangaroo Steak 500g                              500g                       $30.00/kg   | W K-Roo Kangaroo Steak 500g                        500g                       $26.00/kg   r=1.00  -13%
+   shown    C Kangaroo Steaks 400g                             400g                       $30.00/kg   | W K-Roo Kangaroo Steak 500g                        500g                       $26.00/kg   r=1.25  — this line was listed as unavailable at capture
+
+meat:kangaroo:steak:f-garlic_herb   (1 coles, 1 woolworths)
+   COMPARED C Kangaroo Herb & Garlic Steaks 500g               500g                       $30.00/kg   | W K-Roo Kangaroo Herb & Garlic Steak 500g          500g                       $30.00/kg   r=1.00  0%
+
+meat:lamb:butterflied-leg:f-garlic_herb   (1 coles, 1 woolworths)
+   COMPARED C Lamb Leg Butterflied With Rosemary & Garlic appr approx. 1kg                $28.00/kg   | W Woolworths BBQ Butterflied Lamb Leg With Garlic  750g–1.35kg · priced at 1. $28.00/kg   r=1.05  0%
+
+meat:lamb:chop-forequarter   (2 coles, 2 woolworths)
+   COMPARED C Lamb Forequarter Chops approx. 500g              approx. 500g               $17.00/kg   | W Woolworths Lamb Forequarter Chops 2-3 Pieces 500 500g–800g · priced at 800g $19.00/kg   r=1.30  +12%
+   shown    C Lamb Forequarter Chops approx. 500g              approx. 500g               $17.00/kg   | W Woolworths Lamb Forequarter Chops 4-6 Pieces 800 800g–1.4kg · priced at 1.4 $19.00/kg   r=2.20  — 500g vs 1.1kg — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Lamb Forequarter Chops 11x9 approx. 1.3Kg        approx. 1.3kg              $17.00/kg   | W Woolworths Lamb Forequarter Chops 2-3 Pieces 500 500g–800g · priced at 800g $19.00/kg   r=2.00  — 1.3kg vs 650g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Lamb Forequarter Chops 11x9 approx. 1.3Kg        approx. 1.3kg              $17.00/kg   | W Woolworths Lamb Forequarter Chops 4-6 Pieces 800 800g–1.4kg · priced at 1.4 $19.00/kg   r=1.18  +12%
+
+meat:lamb:chop-loin   (2 coles, 2 woolworths)
+   shown    C Lamb Loin Chops Bulk (11x9) approx. 1.02g        approx. 1g                 $34.00/kg   | W Woolworths Lamb Midloins Chops 6 - 9 Pieces 650g 650g–1.1kg · priced at 1.1 $26.00/kg   r=875.00  — this listing's per-kg price disagrees with its price ÷ weight by 99900% — not compared
+   shown    C Lamb Loin Chops Bulk (11x9) approx. 1.02g        approx. 1g                 $34.00/kg   | W Woolworths Lamb Midloins Chops 3 - 6 Pieces 450g 450g–800g · priced at 800g $26.00/kg   r=625.00  — this listing's per-kg price disagrees with its price ÷ weight by 99900% — not compared
+   shown    C Lamb Loin Chops (11x5) approx. 500g              approx. 500g               $34.00/kg   | W Woolworths Lamb Midloins Chops 6 - 9 Pieces 650g 650g–1.1kg · priced at 1.1 $26.00/kg   r=1.75  — 500g vs 875g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Lamb Loin Chops (11x5) approx. 500g              approx. 500g               $34.00/kg   | W Woolworths Lamb Midloins Chops 3 - 6 Pieces 450g 450g–800g · priced at 800g $26.00/kg   r=1.25  -24%
+
+meat:lamb:cutlet   (2 coles, 2 woolworths)
+   shown    C Lamb Cutlets approx. 775g                        approx. 775g               $39.00/kg   | W Woolworths Lamb Cutlets Small 250g - 500g        250g–500g · priced at 500g $51.00/kg   r=2.07  — 775g vs 375g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Lamb Cutlets approx. 775g                        approx. 775g               $39.00/kg   | W Woolworths Lamb Cutlets 8 - 10 Pieces 550g - 950 550g–950g · priced at 950g $51.00/kg   r=1.03  +31%
+   COMPARED C Lamb Cutlets approx. 375g                        approx. 375g               $39.00/kg   | W Woolworths Lamb Cutlets Small 250g - 500g        250g–500g · priced at 500g $51.00/kg   r=1.00  +31%
+   shown    C Lamb Cutlets approx. 375g                        approx. 375g               $39.00/kg   | W Woolworths Lamb Cutlets 8 - 10 Pieces 550g - 950 550g–950g · priced at 950g $51.00/kg   r=2.00  — 375g vs 750g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:lamb:cutlet:extra_trim   (1 coles, 1 woolworths)
+   COMPARED C Graze Lamb Extra Trim Cutlets 7x5 approx. 300g   approx. 300g               $53.00/kg   | W Woolworths Lamb Extra Trim Cutlets 4-6 Pieces 25 250g–350g · priced at 350g $60.00/kg   r=1.00  +13%
+
+meat:lamb:diced   (1 coles, 1 woolworths)
+   shown    C Lamb Leg Diced 450g                              450g                       $28.89/kg   | W Woolworths Diced Lamb 450g                       450g                       $28.89/kg   r=1.00  — this line is not in coles's latest capture
+
+meat:lamb:leg-roast   (1 coles, 3 woolworths)
+   shown    C Lamb Whole Leg Roast approx. 2.8kg               approx. 2.8kg              $14.00/kg   | W Woolworths Lamb Leg Mini Roast 2 pack 400g - 850 400g–850g · priced at 850g $27.00/kg   r=4.48  — 2.8kg vs 625g — pack sizes differ (4.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Lamb Whole Leg Roast approx. 2.8kg               approx. 2.8kg              $14.00/kg   | W Woolworths Lamb Leg Roast 750g - 1.7kg           750g–1.7kg · priced at 1.7 /kg         r=2.29  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   shown    C Lamb Whole Leg Roast approx. 2.8kg               approx. 2.8kg              $14.00/kg   | W Woolworths Lamb Leg Roast 1.8kg - 2.8kg          1.8kg–2.8kg · priced at 2. /kg         r=1.22  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:lamb:leg-roast:boneless   (1 coles, 1 woolworths)
+   COMPARED C Butcher Lamb Leg Roast Boneless approx. 1.08kg   approx. 1.08kg             $23.00/kg   | W Woolworths Lamb Easy Carve Leg Roast 900g - 1.5k 900g–1.5kg · priced at 1.5 $22.00/kg   r=1.11  -4%
+
+meat:lamb:leg-steak   (1 coles, 2 woolworths)
+   COMPARED C Lamb Leg Steak 270g                              270g                       $33.33/kg   | W Woolworths Lamb Leg Steak 270g                   270g                       $33.33/kg   r=1.00  0%
+   shown    C Lamb Leg Steak 270g                              270g                       $33.33/kg   | W Woolworths Lamb Leg Steak 540g                   540g                       $27.78/kg   r=2.00  — 270g vs 540g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:lamb:liver   (1 coles, 1 woolworths)
+   shown    C Lamb Fry approx. 900g                            approx. 900g               $7.00/kg    | W Woolworths Lamb Offal Liver 450g - 1kg           450g–1kg · priced at 1kg   /kg         r=1.24  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:lamb:mince:grade_regular   (2 coles, 2 woolworths)
+   shown    C Halal Lamb Mince 500g                            500g                       $18.00/kg   | W Woolworths Lamb Mince 500g                       500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C Halal Lamb Mince 500g                            500g                       $18.00/kg   | W Fettayleh Foods Lamb Mince 500g                  500g                       $27.00/kg   r=1.00  +50%
+   shown    C 3 Star Lamb Mince 500g                           500g                       $18.00/kg   | W Woolworths Lamb Mince 500g                       500g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+   COMPARED C 3 Star Lamb Mince 500g                           500g                       $18.00/kg   | W Fettayleh Foods Lamb Mince 500g                  500g                       $27.00/kg   r=1.00  +50%
+
+meat:lamb:roast-shoulder   (2 coles, 1 woolworths)
+   shown    C Lamb Shoulder Roast On The Bone approx. 2.2Kg    approx. 2.2kg              $18.00/kg   | W Woolworths Lamb Shoulder Roast 1.1kg - 1.7kg     1.1kg–1.7kg · priced at 1. $18.00/kg   r=1.57  — 2.2kg vs 1.4kg — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Lamb Shoulder Roast On The Bone approx. 2.2kg    approx. 2.2kg              $15.00/kg   | W Woolworths Lamb Shoulder Roast 1.1kg - 1.7kg     1.1kg–1.7kg · priced at 1. $18.00/kg   r=1.57  — 2.2kg vs 1.4kg — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:lamb:roast-shoulder:boneless   (1 coles, 1 woolworths)
+   COMPARED C Lamb Boneless Shoulder Roast approx. 1.3kg       approx. 1.3kg              $23.00/kg   | W Woolworths Boneless Lamb Shoulder Rolled 700g -  700g–1.8kg · priced at 1.8 $23.00/kg   r=1.04  0%
+
+meat:lamb:shank   (1 coles, 1 woolworths)
+   COMPARED C Lamb Shanks 2 Pack (cv) approx. 775g             approx. 775g               $14.00/kg   | W Woolworths Lamb Shanks 500g - 1kg                500g–1kg · priced at 1kg   $14.00/kg   r=1.03  0%
+
+meat:lamb:slice:f-souvlaki   (1 coles, 1 woolworths)
+   COMPARED C Lamb Strips With Souvlaki Seasoning 500g         500g                       $27.00/kg   | W Woolworths COOK Lamb Slices Souvlaki 500g        500g                       $26.00/kg   r=1.00  -4%
+
+meat:marinara:whole:frozen   (1 coles, 1 woolworths)
+   COMPARED C Marinara Mix 1Kg                                 1kg                        $14.00/kg   | W Ocean Chef Gourmet Marinara Seafood Mix 1kg      1kg                        $16.50/kg   r=1.00  +18%
+
+meat:mussel:meat:frozen   (1 coles, 1 woolworths)
+   shown    C Mussel Meat 1Kg                                  1kg                        $11.90/kg   | W Just Caught Cooked & Shelled Mussel Meat 1kg     1kg                        $14.00/kg   r=1.00  — this line was listed as unavailable at capture
+
+meat:mussel:whole   (1 coles, 1 woolworths)
+   COMPARED C Mussels Natural 375g                             375g                       $20.67/kg   | W Talley's Chilled Mussels Marinated Plain 375g    375g                       $19.20/kg   r=1.00  -7%
+
+meat:mussel:whole:f-garlic   (1 coles, 1 woolworths)
+   COMPARED C Mussels Garlic 375g                              375g                       $20.67/kg   | W Talley's Chilled Mussels Marinated Garlic 375g   375g                       $19.20/kg   r=1.00  -7%
+
+meat:pork:belly-roast   (1 coles, 1 woolworths)
+   COMPARED C Pork Belly Roast Boneless approx. 1.3kg          approx. 1.3kg              $18.00/kg   | W Woolworths Pork Belly Roast 900g - 1.5kg         900g–1.5kg · priced at 1.5 $18.00/kg   r=1.08  0%
+
+meat:pork:belly-slice:thin_cut   (1 coles, 1 woolworths)
+   shown    C Quick Cook Belly Slices 350g                     350g                       $28.57/kg   | W Woolworths Pork Belly Thinly Sliced 350g         350g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:pork:bone-smoked   (1 coles, 1 woolworths)
+   shown    C Pork Bones Smoked 500g                           500g                       $11.00/kg   | W Woolworths Smoked Pork Bones 500g                500g                       $13.50/kg   r=1.00  — this line was listed as unavailable at capture
+
+meat:pork:chipolata   (1 coles, 1 woolworths)
+   COMPARED C Pork Chipolatas 550g                             550g                       $11.82/kg   | W Woolworths 16 Pack Pork Chipolatas 550g          550g                       $11.82/kg   r=1.00  0%
+
+meat:pork:chop-loin   (1 coles, 1 woolworths)
+   shown    C Pork Loin Chops Large Pack approx 1kg            approx. 1kg                $14.00/kg   | W Woolworths Pork Loin Chop Medium 200g - 600g     200g–600g · priced at 600g $17.50/kg   r=2.50  — 1kg vs 400g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:pork:fillet   (1 coles, 1 woolworths)
+   COMPARED C Pork Fillet approx. 400g                         approx. 400g               $18.50/kg   | W Woolworths Pork Fillet Heart Smart 250g - 600g   250g–600g · priced at 600g $18.50/kg   r=1.06  0%
+
+meat:pork:ham-leg-portion   (1 coles, 1 woolworths)
+   shown    C Brothers Gourmet Leg Ham Portion approx. 1Kg     approx. 1kg                $24.00/kg   | W D'Orsogna Natural Leg Ham Portion 700g           700g                       /kg         r=1.43  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:pork:ham-steak   (1 coles, 1 woolworths)
+   shown    C Butcher Ham Steaks 375g                          375g                       $16.00/kg   | W Hans Pork Ham Steaks 300g                        300g                       $18.00/kg   r=1.25  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:pork:hock-smoked   (1 coles, 1 woolworths)
+   COMPARED C Smoked Meaty Pork Leg Hock approx. 1kg           approx. 1kg                $12.00/kg   | W Woolworths Smoked Pork Hock 500g - 1.5kg         500g–1.5kg · priced at 1.5 $12.00/kg   r=1.00  0%
+
+meat:pork:leg-roast:boneless   (2 coles, 2 woolworths)
+   shown    C Boneless Mini Pork Leg Roast approx. 1kg         approx. 1kg                $14.50/kg   | W Woolworths Pork Leg Mini Roast 500g - 800g       500g–800g · priced at 800g $19.00/kg   r=1.54  — 1kg vs 650g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Boneless Mini Pork Leg Roast approx. 1kg         approx. 1kg                $14.50/kg   | W Woolworths Pork Leg Roast Boneless 1.2kg - 2.6kg 1.2kg–2.6kg · priced at 2. $9.00/kg    r=1.90  — 1kg vs 1.9kg — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Boneless Pork Leg Roast approx. 2.5kg            approx. 2.5kg              $10.50/kg   | W Woolworths Pork Leg Mini Roast 500g - 800g       500g–800g · priced at 800g $19.00/kg   r=3.85  — 2.5kg vs 650g — pack sizes differ (3.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Boneless Pork Leg Roast approx. 2.5kg            approx. 2.5kg              $10.50/kg   | W Woolworths Pork Leg Roast Boneless 1.2kg - 2.6kg 1.2kg–2.6kg · priced at 2. $9.00/kg    r=1.32  -14%
+
+meat:pork:loin-roast:boneless   (1 coles, 1 woolworths)
+   COMPARED C Boneless Pork Loin Roast approx. 2Kg             approx. 2kg                $11.00/kg   | W Woolworths Pork Loin Roast Boneless Small 1kg -  1kg–2kg · priced at 2kg    $13.00/kg   r=1.33  +18%
+
+meat:pork:loin-steak   (1 coles, 1 woolworths)
+   COMPARED C Pork Loin Steaks Thin Cut 500g                   500g                       $20.00/kg   | W Woolworths Loin Steaks Pork 500g                 500g                       $20.00/kg   r=1.00  0%
+
+meat:pork:medallion:free_range   (1 coles, 1 woolworths)
+   COMPARED C Free Range Pork Loin Medallions 300g             300g                       $33.33/kg   | W Macro Free Range Pork Medallion 250g             250g                       $34.00/kg   r=1.20  +2%
+
+meat:pork:mince:free_range:grade_regular   (1 coles, 1 woolworths)
+   shown    C Free Range Pork Mince Wa 500g                    500g                       $17.00/kg   | W Macro Free Range Lean Pork Mince 500g            500g                       $17.00/kg   r=1.00  — this line was listed as unavailable at capture
+
+meat:pork:mince:grade_extra_lean   (1 coles, 1 woolworths)
+   COMPARED C 5 Star Extra Lean Pork Mince 500g                500g                       $16.00/kg   | W Woolworths Heart Smart Extra Lean Pork Mince 500 500g                       $16.00/kg   r=1.00  0%
+
+meat:pork:mince:grade_regular   (2 coles, 1 woolworths)
+   COMPARED C Pork 3 Star Regular Mince 1Kg                    1kg                        $11.00/kg   | W Woolworths Pork Mince 800g                       800g                       $11.00/kg   r=1.25  0%
+   shown    C Regular Pork Mince 500g                          500g                       $12.00/kg   | W Woolworths Pork Mince 800g                       800g                       $11.00/kg   r=1.60  — 500g vs 800g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:pork:roast-shoulder:boneless   (1 coles, 1 woolworths)
+   COMPARED C Boneless Pork Shoulder Roast approx. 2.6kg       approx. 2.6kg              $9.00/kg    | W Woolworths Pork Shoulder Roast Boneless 1.3kg -  1.3kg–2.8kg · priced at 2. $9.90/kg    r=1.27  +10%
+
+meat:pork:sausage   (2 coles, 1 woolworths)
+   COMPARED C Thin Pork Sausages 500g                          500g                       $19.00/kg   | W Woolworths 10 Pack Pork Sausages 550g            550g                       $11.82/kg   r=1.10  -38%
+   COMPARED C Pork Sausage 550g                                550g                       $11.82/kg   | W Woolworths 10 Pack Pork Sausages 550g            550g                       $11.82/kg   r=1.00  0%
+
+meat:pork:sausage:f-bbq   (1 coles, 1 woolworths)
+   shown    C Pork Bbq Sausages 8 Pack 560g                    560g                       $8.57/kg    | W Market Value 8 Pack Thin Pork BBQ Sausages 500g  500g                       $8.80/kg    r=1.12  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:pork:sausage:f-cumberland   (1 coles, 1 woolworths)
+   COMPARED C Cumberland Sausages 500g                         500g                       $19.00/kg   | W Woolworths 6 Pack Classic Cumberland Pork Sausag 500g                       $18.00/kg   r=1.00  -5%
+
+meat:pork:sausage:f-italian   (1 coles, 1 woolworths)
+   shown    C Italian Style Pork Sausages 500g                 500g                       $20.00/kg   | W Woolworths 6 Pack Italian Style Fennel Pork Saus 450g                       $20.00/kg   r=1.11  — this line is not in coles's latest capture
+
+meat:pork:scotch   (2 coles, 2 woolworths)
+   COMPARED C Pork Scotch Fillet Steak 300g                    300g                       $20.00/kg   | W Woolworths Pork Scotch Fillet Steak 300g         300g                       $20.00/kg   r=1.00  0%
+   shown    C Pork Scotch Fillet Steak 300g                    300g                       $20.00/kg   | W Woolworths Scotch Fillet Pork 600g               600g                       $18.33/kg   r=2.00  — 300g vs 600g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Pork Scotch Steak 600g                           600g                       $18.33/kg   | W Woolworths Pork Scotch Fillet Steak 300g         300g                       $20.00/kg   r=2.00  — 600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Pork Scotch Steak 600g                           600g                       $18.33/kg   | W Woolworths Scotch Fillet Pork 600g               600g                       $18.33/kg   r=1.00  0%
+
+meat:pork:sizzle   (1 coles, 1 woolworths)
+   COMPARED C Pork Sizzle Steaks 400g                          400g                       $22.50/kg   | W Woolworths Pork Sizzle Steak 400g                400g                       $22.50/kg   r=1.00  0%
+
+meat:pork:stir_fry   (1 coles, 1 woolworths)
+   shown    C Pork Stir Fry 500g                               500g                       $17.00/kg   | W Woolworths Pork Stir Fry 400g                    400g                       $17.00/kg   r=1.25  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:prawn:cutlet:cooked:jumbo   (1 coles, 1 woolworths)
+   COMPARED C Cooked Jumbo Prawn Cutlets 240g                  240g                       $58.33/kg   | W JC Seafood Jumbo Cooked Prawn Cutlets 240g       240g                       $58.33/kg   r=1.00  0%
+
+meat:prawn:cutlet:jumbo:raw   (1 coles, 1 woolworths)
+   COMPARED C Jumbo Raw Prawn Cutlets 240g                     240g                       $52.08/kg   | W JC Seafood Jumbo Raw Prawn Cutlets 240g          240g                       $50.00/kg   r=1.00  -4%
+
+meat:prawn:peeled:raw   (2 coles, 1 woolworths)
+   COMPARED C Prawns Raw Peeled 260g                           260g                       $48.08/kg   | W Woolworths Raw Prawn Meat 220g                   220g                       $45.45/kg   r=1.18  -5%
+   COMPARED C Prawn Meat 240g                                  240g                       $37.50/kg   | W Woolworths Raw Prawn Meat 220g                   220g                       $45.45/kg   r=1.09  +21%
+
+meat:prawn:whole:cooked:frozen:tiger:x_large   (1 coles, 1 woolworths)
+   COMPARED C Frozen Cooked Extra Large Black Tiger Prawns 3Kg 3kg                        $39.00/kg   | W Frozen Cooked Extra Large Tiger Prawns Carton 3k 3kg                        $30.00/kg   r=1.00  -23%
+
+meat:prawn:whole:cooked:tiger   (1 coles, 2 woolworths)
+   shown    C Cooked Tiger Prawns 1Kg                          1kg                        $26.50/kg   | W Tassal Cooked Aussie Tiger Prawns 475g           475g                       $33.68/kg   r=2.11  — 1kg vs 475g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cooked Tiger Prawns 1Kg                          1kg                        $26.50/kg   | W Woolworths Australian Cooked Tiger Prawns Whole  1kg                        $25.00/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:salmon:bundle   (1 coles, 1 woolworths)
+   shown    C Salmon Family Bundle 460g                        460g                       $40.22/kg   | W Tassal Salmon Family Bundle 460g                 460g                       $40.22/kg   r=1.00  — this line is not in coles's latest capture
+
+meat:salmon:diced   (1 coles, 1 woolworths)
+   COMPARED C Tasmanian Salmon Diced 300g                      300g                       $50.00/kg   | W Woolworths Diced Tasmanian Salmon Skin Off 300g  300g                       $50.00/kg   r=1.00  0%
+
+meat:salmon:double_smoked   (3 coles, 1 woolworths)
+   shown    C Double Smoked Salmon 250g                        250g                       $63.60/kg   | W Ocean Blue Double Smoked Salmon 100g             100g                       $90.00/kg   r=2.50  — 250g vs 100g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Double Smoked Salmon 150g                        150g                       $83.33/kg   | W Ocean Blue Double Smoked Salmon 100g             100g                       $90.00/kg   r=1.50  +8%
+   COMPARED C Double Smoked Salmon 100g                        100g                       $75.00/kg   | W Ocean Blue Double Smoked Salmon 100g             100g                       $90.00/kg   r=1.00  +20%
+
+meat:salmon:hot_smoked   (2 coles, 2 woolworths)
+   COMPARED C Hot Smoked Salmon Natural 150g                   150g                       $66.67/kg   | W Thomas Dux Hot Smoked Salmon Natural 150g        150g                       $56.67/kg   r=1.00  -15%
+   shown    C Hot Smoked Salmon Natural 150g                   150g                       $66.67/kg   | W Tassal Cooked & Smoked Salmon Natural 150g       150g                       $76.67/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Hot Smoked Salmon Natural 150g                   150g                       $56.67/kg   | W Thomas Dux Hot Smoked Salmon Natural 150g        150g                       $56.67/kg   r=1.00  0%
+   shown    C Hot Smoked Salmon Natural 150g                   150g                       $56.67/kg   | W Tassal Cooked & Smoked Salmon Natural 150g       150g                       $76.67/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:salmon:hot_smoked:f-pepper   (2 coles, 2 woolworths)
+   COMPARED C Hot Smoked Salmon Cracked Peppercorn 150g        150g                       $66.67/kg   | W Thomas Dux Hot Smoked Salmon Pepper 150g         150g                       $56.67/kg   r=1.00  -15%
+   ok       C Hot Smoked Salmon Cracked Peppercorn 150g        150g                       $66.67/kg   | W Tassal Cooked & Smoked Salmon Pepper 150g        150g                       $76.67/kg   r=1.00  +15%
+   COMPARED C Hot Smoked Salmon Cracked Pepper 150g            150g                       $56.67/kg   | W Thomas Dux Hot Smoked Salmon Pepper 150g         150g                       $56.67/kg   r=1.00  0%
+   ok       C Hot Smoked Salmon Cracked Pepper 150g            150g                       $56.67/kg   | W Tassal Cooked & Smoked Salmon Pepper 150g        150g                       $76.67/kg   r=1.00  +35%
+
+meat:salmon:portion:f-mustard_dill   (1 coles, 1 woolworths)
+   COMPARED C Salmon Portions Mustard And Dill 300g            300g                       $73.33/kg   | W Tassal 2 Pack Tassie Salmon Mustard & Dill 300g  300g                       $73.33/kg   r=1.00  0%
+
+meat:salmon:portion:skin_on   (6 coles, 5 woolworths)
+   shown    C Tasmanian Salmon Portions Skin On 4 Pack 460g    460g                       $41.30/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.64  — 460g vs 280g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Salmon Portions Skin On 4 Pack 460g    460g                       $41.30/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=1.00  +16%
+   shown    C Tasmanian Salmon Portions Skin On 4 Pack 460g    460g                       $41.30/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=2.30  — 460g vs 200g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Salmon Portions Skin On 4 Pack 460g    460g                       $41.30/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.53  — 460g vs 300g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Salmon Portions Skin On 4 Pack 460g    460g                       $41.30/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  +7%
+   COMPARED C Tasmanian Salmon Portions Skin On 2 Pack 280g    280g                       $53.57/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.00  0%
+   shown    C Tasmanian Salmon Portions Skin On 2 Pack 280g    280g                       $53.57/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=1.64  — 280g vs 460g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Salmon Portions Skin On 2 Pack 280g    280g                       $53.57/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=1.40  +3%
+   ok       C Tasmanian Salmon Portions Skin On 2 Pack 280g    280g                       $53.57/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.07  +37%
+   ok       C Tasmanian Salmon Portions Skin On 2 Pack 280g    280g                       $53.57/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  -18%
+   ok       C Salmon Portions Skin On 300g                     300g                       $73.33/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.07  -27%
+   shown    C Salmon Portions Skin On 300g                     300g                       $73.33/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=1.53  — 300g vs 460g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Salmon Portions Skin On 300g                     300g                       $73.33/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=1.50  -25%
+   COMPARED C Salmon Portions Skin On 300g                     300g                       $73.33/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.00  0%
+   ok       C Salmon Portions Skin On 300g                     300g                       $73.33/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  -40%
+   ok       C Tasmanian Salmon Portion Skin On 200g            200g                       $50.00/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.40  +7%
+   shown    C Tasmanian Salmon Portion Skin On 200g            200g                       $50.00/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=2.30  — 200g vs 460g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Salmon Portion Skin On 200g            200g                       $50.00/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=1.00  +10%
+   ok       C Tasmanian Salmon Portion Skin On 200g            200g                       $50.00/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.50  +47%
+   ok       C Tasmanian Salmon Portion Skin On 200g            200g                       $50.00/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  -12%
+   ok       C Premium Tasmanian Salmon Steak Skin On 200g 200g 200g                       $47.50/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.40  +13%
+   shown    C Premium Tasmanian Salmon Steak Skin On 200g 200g 200g                       $47.50/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=2.30  — 200g vs 460g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Premium Tasmanian Salmon Steak Skin On 200g 200g 200g                       $47.50/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=1.00  +16%
+   ok       C Premium Tasmanian Salmon Steak Skin On 200g 200g 200g                       $47.50/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.50  +54%
+   ok       C Premium Tasmanian Salmon Steak Skin On 200g 200g 200g                       $47.50/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  -7%
+   COMPARED C Salmon To Go Skin On 2 Pack 280g                 280g                       $46.43/kg   | W Woolworths 2 Pack Salmon Portions Skin On 280g   280g                       $53.57/kg   r=1.00  +15%
+   shown    C Salmon To Go Skin On 2 Pack 280g                 280g                       $46.43/kg   | W Woolworths 4 Pack Salmon Portions Skin On 460g   460g                       $47.83/kg   r=1.64  — 280g vs 460g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Salmon To Go Skin On 2 Pack 280g                 280g                       $46.43/kg   | W Woolworths Fresh Tasmanian Salmon Skin On 200g   200g                       $55.00/kg   r=1.40  +18%
+   ok       C Salmon To Go Skin On 2 Pack 280g                 280g                       $46.43/kg   | W Tassal 2 Pack Atlantic Salmon Skin On 300g       300g                       $73.33/kg   r=1.07  +58%
+   ok       C Salmon To Go Skin On 2 Pack 280g                 280g                       $46.43/kg   | W Fresh Tasmanian Atlantic Skin On Salmon Fillets  per kg · service counter   $44.00/kg   r=1.00  -5%
+
+meat:salmon:portion:skinless   (4 coles, 3 woolworths)
+   COMPARED C Salmon Steak Skinless Chef's Cut 200g            200g                       $65.00/kg   | W Woolworths 2 Pack Salmon Portions Skin Off 280g  280g                       $57.14/kg   r=1.40  -12%
+   shown    C Salmon Steak Skinless Chef's Cut 200g            200g                       $65.00/kg   | W Woolworths 4 Pack Salmon Portions Skin Off 460g  460g                       $52.17/kg   r=2.30  — 200g vs 460g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Salmon Steak Skinless Chef's Cut 200g            200g                       $65.00/kg   | W Tassal 2 Pack Atlantic Salmon Skin Off 300g      300g                       $76.67/kg   r=1.50  +18%
+   COMPARED C Tasmanian Salmon Portions Skin Off 280g          280g                       $57.14/kg   | W Woolworths 2 Pack Salmon Portions Skin Off 280g  280g                       $57.14/kg   r=1.00  0%
+   shown    C Tasmanian Salmon Portions Skin Off 280g          280g                       $57.14/kg   | W Woolworths 4 Pack Salmon Portions Skin Off 460g  460g                       $52.17/kg   r=1.64  — 280g vs 460g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Salmon Portions Skin Off 280g          280g                       $57.14/kg   | W Tassal 2 Pack Atlantic Salmon Skin Off 300g      300g                       $76.67/kg   r=1.07  +34%
+   shown    C Tasmanian Salmon Portions Skin Off 4 Pack 460g   460g                       $52.17/kg   | W Woolworths 2 Pack Salmon Portions Skin Off 280g  280g                       $57.14/kg   r=1.64  — 460g vs 280g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Salmon Portions Skin Off 4 Pack 460g   460g                       $52.17/kg   | W Woolworths 4 Pack Salmon Portions Skin Off 460g  460g                       $52.17/kg   r=1.00  0%
+   shown    C Tasmanian Salmon Portions Skin Off 4 Pack 460g   460g                       $52.17/kg   | W Tassal 2 Pack Atlantic Salmon Skin Off 300g      300g                       $76.67/kg   r=1.53  — 460g vs 300g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Fresh Tassie Salmon Portions Skin Off 300g       300g                       $53.33/kg   | W Woolworths 2 Pack Salmon Portions Skin Off 280g  280g                       $57.14/kg   r=1.07  +7%
+   shown    C Fresh Tassie Salmon Portions Skin Off 300g       300g                       $53.33/kg   | W Woolworths 4 Pack Salmon Portions Skin Off 460g  460g                       $52.17/kg   r=1.53  — 300g vs 460g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Fresh Tassie Salmon Portions Skin Off 300g       300g                       $53.33/kg   | W Tassal 2 Pack Atlantic Salmon Skin Off 300g      300g                       $76.67/kg   r=1.00  +44%
+
+meat:salmon:side:skin_on   (1 coles, 1 woolworths)
+   shown    C Fresh Tassie Salmon Side Skin On 500g            500g                       $54.00/kg   | W Tassal Fresh Tassie Salmon Side Skin On 500g     500g                       $54.00/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:salmon:smoked   (12 coles, 8 woolworths)
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=5.00  — 500g vs 100g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=10.00  — 500g vs 50g — pack sizes differ (10×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=2.78  — 500g vs 180g — pack sizes differ (2.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=5.00  — 500g vs 100g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=1.67  — 500g vs 300g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=2.78  — 500g vs 180g — pack sizes differ (2.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=3.33  — 500g vs 150g — pack sizes differ (3.3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 500g                          500g                       $50.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=2.00  — 500g vs 250g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.00  — this line was listed as unavailable at capture
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=2.00  — 100g vs 50g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.00  — this line was listed as unavailable at capture
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.50  — this line was listed as unavailable at capture
+   shown    C Seafood Cold Smoked Salmon 100g                  100g                       $65.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=2.50  — 100g vs 250g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=3.00  — 300g vs 100g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=6.00  — 300g vs 50g — pack sizes differ (6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.67  — 300g vs 180g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=3.00  — 300g vs 100g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=1.00  0%
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.67  — 300g vs 180g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=2.00  — 300g vs 150g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Seafood Cold Smoked Salmon 300g                  300g                       $63.33/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=2.00  — 50g vs 100g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=1.00  +18%
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=3.60  — 50g vs 180g — pack sizes differ (3.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=2.00  — 50g vs 100g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=6.00  — 50g vs 300g — pack sizes differ (6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=3.60  — 50g vs 180g — pack sizes differ (3.6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=3.00  — 50g vs 150g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 50g                         50g                        $100.00/kg  | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=5.00  — 50g vs 250g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=2.00  — 100g vs 50g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.00  -7%
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.50  +16%
+   shown    C Sliced Smoked Salmon 100g                        100g                       $75.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=2.50  — 100g vs 250g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.50  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=3.00  — 150g vs 50g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.20  -25%
+   ok       C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.50  -30%
+   shown    C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=2.00  — 150g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.00  -13%
+   shown    C Tasmanian Smoked Salmon 150g                     150g                       $100.00/kg  | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.67  — 150g vs 250g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=2.50  — 250g vs 100g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=5.00  — 250g vs 50g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.39  -11%
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=2.50  — 250g vs 100g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=1.20  -25%
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.39  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.67  — 250g vs 150g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 250g                     250g                       $84.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=2.00  — 100g vs 50g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.00  0%
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.50  +24%
+   shown    C Tasmanian Smoked Salmon 100g                     100g                       $70.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=2.50  — 100g vs 250g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.80  — 180g vs 100g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=3.60  — 180g vs 50g — pack sizes differ (3.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.00  0%
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.80  — 180g vs 100g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=1.67  — 180g vs 300g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   ok       C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.20  +16%
+   shown    C Sliced Smoked Salmon 180g                        180g                       $75.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.39  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=2.00  — 100g vs 50g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.00  -44%
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.80  — 100g vs 180g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.50  -31%
+   shown    C Tasmanian Smoked Salmon Twin Pack 100g           100g                       $125.00/kg  | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=2.50  — 100g vs 250g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=3.00  — 300g vs 100g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=6.00  — 300g vs 50g — pack sizes differ (6×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.67  — 300g vs 180g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=3.00  — 300g vs 100g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C Smoked Salmon 300g                               300g                       $50.00/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=1.00  +27%
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.67  — 300g vs 180g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=2.00  — 300g vs 150g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Smoked Salmon 300g                               300g                       $50.00/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Tassal Premium Tasmanian Smoked Salmon Slices 10 100g                       $100.00/kg  r=1.50  — not in woolworths's latest capture — last seen 2026-10-21
+   shown    C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Ocean Blue Smoked Salmon Sliced 50g              50g                        $118.00/kg  r=3.00  — 150g vs 50g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   ok       C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Ocean Blue Smoked Salmon 180g                    180g                       $75.00/kg   r=1.20  +18%
+   ok       C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Ocean Blue Smoked Salmon 100g                    100g                       $70.00/kg   r=1.50  +11%
+   shown    C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Ocean Blue Smoked Salmon 300g                    300g                       $63.33/kg   r=2.00  — 150g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Superior Gold Salmon Smoked 180g                 180g                       $88.89/kg   r=1.20  — not in woolworths's latest capture — last seen 2026-10-21
+   COMPARED C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Tassal Smoked Salmon 150g                        150g                       $86.67/kg   r=1.00  +37%
+   shown    C Cold Smoked Salmon 150g                          150g                       $63.33/kg   | W Tassal Smoked Salmon 250g                        250g                       $60.00/kg   r=1.67  — 150g vs 250g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:salmon:smoked:f-pepper   (1 coles, 1 woolworths)
+   COMPARED C Smoked Salmon Cracked Pepper 100g                100g                       $75.00/kg   | W Ocean Blue Sliced Smoked Salmon Cracked Pepper 1 100g                       $70.00/kg   r=1.00  -7%
+
+meat:salmon:smoked:king:f-manuka   (1 coles, 1 woolworths)
+   shown    C New Zealand King Salmon Manuka Wood Smoked Slice 100g                       $105.00/kg  | W Regal Manuka Cold Smoked Salmon Slices 100g      100g                       $125.00/kg  r=1.00  — not in woolworths's latest capture — last seen 2026-10-21
+
+meat:salmon:smoked:wild   (1 coles, 1 woolworths)
+   shown    C Everyday Wild Smoked Salmon 100g                 100g                       $70.00/kg   | W Barossa Fine Foods Wild Smoked Salmon 100g       100g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:surimi:whole   (1 coles, 1 woolworths)
+   COMPARED C Surimi Sea Sticks 150g                           150g                       $26.67/kg   | W Ocean Blue Surimi Sea Sticks 150g                150g                       $36.67/kg   r=1.00  +37%
+
+meat:trout:smoked   (3 coles, 1 woolworths)
+   shown    C Seafood Cold Smoked Trout 100g                   100g                       $65.00/kg   | W Il Pescatore Premium Smoked Steelhead 300g       300g                       $66.67/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Sliced Smoked Ocean Trout 100g                   100g                       $85.00/kg   | W Il Pescatore Premium Smoked Steelhead 300g       300g                       $66.67/kg   r=3.00  — 100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C Cold Smoked Trout 150g                           150g                       $63.33/kg   | W Il Pescatore Premium Smoked Steelhead 300g       300g                       $66.67/kg   r=2.00  — 150g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:tuna:portion:skinless:yellowfin   (1 coles, 1 woolworths)
+   shown    C Tuna Steaks 200g                                 200g                       $55.00/kg   | W Woolworths 2 Pack Yellowfin Tuna Fillets Skinles 200g                       /kg         r=1.00  — no per-kg price on one side (sold per pack or each with no weight) — not compared
+
+meat:turkey:breast:f-oven:f-roasted:f-slow_cooked   (1 coles, 1 woolworths)
+   COMPARED C Oven Roasted Turkey Breast 800g                  800g                       $30.00/kg   | W Ingham's Classic Turkey Breast Oven Roasted 800g 800g                       $31.25/kg   r=1.00  +4%
+
+meat:turkey:mince   (1 coles, 1 woolworths)
+   COMPARED C Turkey Mince 500g                                500g                       $13.00/kg   | W Ingham's Turkey Mince 500g                       500g                       $13.00/kg   r=1.00  0%
+
+meat:turkey:rissole   (1 coles, 1 woolworths)
+   COMPARED C Turkey Rissoles 400g                             400g                       $21.25/kg   | W Ingham's Turkey Rissoles Herb & Onion 400g       400g                       $21.25/kg   r=1.00  0%
+
+meat:unspecified:sausage:f-bbq   (3 coles, 3 woolworths)
+   shown    C BBQ Sausage 1kg                                  1kg                        $12.50/kg   | W Market Value 8 Pack Thin BBQ Sausages 500g       500g                       $8.40/kg    r=2.00  — 1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C BBQ Sausage 1kg                                  1kg                        $12.50/kg   | W Market Value 26 Pack Thin BBQ Sausages 1.8kg     1.8kg                      $5.83/kg    r=1.80  — 1kg vs 1.8kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C BBQ Sausage 1kg                                  1kg                        $12.50/kg   | W Fettayleh Foods BBQ Sausages 1kg                 1kg                        $12.50/kg   r=1.00  0%
+   shown    C BBQ Sausages 24 Pack 1.8Kg                       1.8kg                      $5.83/kg    | W Market Value 8 Pack Thin BBQ Sausages 500g       500g                       $8.40/kg    r=3.60  — 1.8kg vs 500g — pack sizes differ (3.6×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C BBQ Sausages 24 Pack 1.8Kg                       1.8kg                      $5.83/kg    | W Market Value 26 Pack Thin BBQ Sausages 1.8kg     1.8kg                      $5.83/kg    r=1.00  0%
+   shown    C BBQ Sausages 24 Pack 1.8Kg                       1.8kg                      $5.83/kg    | W Fettayleh Foods BBQ Sausages 1kg                 1kg                        $12.50/kg   r=1.80  — 1.8kg vs 1kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+   COMPARED C BBQ Sausages 8 Pack 560g                         560g                       $8.39/kg    | W Market Value 8 Pack Thin BBQ Sausages 500g       500g                       $8.40/kg    r=1.12  0%
+   shown    C BBQ Sausages 8 Pack 560g                         560g                       $8.39/kg    | W Market Value 26 Pack Thin BBQ Sausages 1.8kg     1.8kg                      $5.83/kg    r=3.21  — 560g vs 1.8kg — pack sizes differ (3.2×), and bulk packs are priced differently per kg; both shown, not compared
+   shown    C BBQ Sausages 8 Pack 560g                         560g                       $8.39/kg    | W Fettayleh Foods BBQ Sausages 1kg                 1kg                        $12.50/kg   r=1.79  — 560g vs 1kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+
+meat:unspecified:sausage:f-herb:f-honey   (1 coles, 1 woolworths)
+   shown    C Honey Bbq Sausages 8 Pack 560g                   560g                       $8.57/kg    | W Market Value 8 Pack Thin Honey & Herb BBQ Sausag 500g                       $8.80/kg    r=1.12  — this line is not in coles's latest capture
+

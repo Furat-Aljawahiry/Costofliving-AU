@@ -2,17 +2,22 @@
   "name": "costofliving-au",
   "private": true,
   "version": "1.0.0",
-  "workspaces": ["server", "client"],
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "dev": "concurrently -n server,client -c green,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
     "dev:server": "npm run dev -w server",
     "dev:client": "npm run dev -w client",
     "build": "npm run build -w client",
     "start": "npm run start -w server",
-    "sync-data": "aws s3 sync s3://costofliving-au-data-207208119513/reports/supermarkets data/out/s3 --region ap-southeast-2",
+    "sync-data": "node --env-file-if-exists=.env server/scripts/sync-data.mjs",
     "pull-reports": "python data/scripts/pull_latest_reports.py",
     "fetch-abs": "node server/scripts/fetch-abs.mjs",
-    "test:server": "node --test \"server/scripts/*.test.mjs\""
+    "test:server": "node --test \"server/*.test.mjs\" \"server/scripts/*.test.mjs\" \"server/data/*.test.mjs\" \"server/data/matching/*.test.mjs\" \"server/data/meat/*.test.mjs\" \"server/data/snacks/*.test.mjs\" \"server/data/season/*.test.mjs\"",
+    "matching-report": "node server/scripts/matching-report.mjs",
+    "produce-names-report": "node server/scripts/produce-names-report.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

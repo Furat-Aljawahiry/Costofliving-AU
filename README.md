@@ -13,12 +13,24 @@ touching the UI.
 
 ```bash
 npm install     # installs both client and server (npm workspaces)
+cp .env.example .env
 npm run dev      # starts the API (:4000) AND the React app (:5173) together
 ```
 
 Then open **http://localhost:5173**.
 
-That's it — it works immediately with realistic mock prices. No keys, no config.
+The server pulls the price archive from S3 at boot, so it needs the **AWS CLI on
+PATH with credentials that can read the data bucket**. If the pull fails it
+refuses to start rather than quietly serving whatever is already on disk — a
+server showing last week's prices as today's is worse than one that will not
+come up. To work without AWS:
+
+```bash
+DATA_SYNC=off npm run dev      # serves data/out as is; prices are as old as your checkout
+```
+
+`/api/health` returns 503 whenever the newest capture is over 48 h old or the
+sync is off, so "the data stopped flowing" is visible instead of silent.
 
 ## What runs
 
@@ -64,6 +76,11 @@ well as the CLI's. To pull new Lambda runs down from S3:
 npm run sync-data        # aws s3 sync … -> data/out/s3/
 curl -X POST localhost:4000/api/reload
 ```
+
+The server does both itself at boot and every `SYNC_INTERVAL_MIN` (default 60),
+so this is only for refreshing the mirror without restarting. The bucket,
+prefix and region live in `server/config.js` — that is the one place they are
+spelled, and everything else (this script, `pull_latest_reports.py`) asks it.
 
 ## Turning on real data
 

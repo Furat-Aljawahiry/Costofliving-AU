@@ -42,13 +42,12 @@ export const CODES = {
   '40030':  { label: 'Coffee, tea and cocoa',            parent: '20001' },
 }
 
-// Which ABS line(s) each of the six aisles (client/src/lib/categories.js) shows,
+// Which ABS line(s) each of the five aisles (client/src/lib/categories.js) shows,
 // and how honest the match is. Rendered verbatim on the category page.
 export const AISLES = {
   vegetables: { lines: ['114120'], match: 'exact',   note: 'ABS “Fruit and vegetables”.' },
   meat:       { lines: ['30003'],  match: 'exact',   note: 'ABS “Meat and seafoods” — the ABS group includes seafood.' },
-  snacks:     { lines: ['115501'], match: 'shared',  note: 'ABS groups snacks and confectionery together, so this line is shared with Chocolate & candy.' },
-  chocolate:  { lines: ['115501'], match: 'shared',  note: 'ABS groups snacks and confectionery together, so this line is shared with Snacks.' },
+  snacks:     { lines: ['115501'], match: 'exact',   note: 'ABS “Snacks and confectionery” — chips, biscuits, chocolate and lollies are one ABS group, as they are one aisle here.' },
   canned:     { lines: ['131179'], match: 'nearest', note: 'Nearest ABS group: “Food products n.e.c.” — tinned and packaged goods sit in ABS’s not-elsewhere-classified group.' },
   staples:    { lines: ['40001', '40005', '40027', '40030'], match: 'components',
                 note: 'ABS has no “staples” group; these are its Milk, Bread, Eggs and Coffee, tea and cocoa series.' },

@@ -1,0 +1,57 @@
+SNACKS & CONFECTIONERY — MATCH REVIEW
+========================================
+
+data dir     C:\Users\furat\Documents\GitHub\costofliving-au\data\scratch\snacks
+products     3498  (coles 1688, woolworths 1810)
+captured     2026-10-22T04:34
+
+MATCHING  (same brand, form, line, flavour and count)
+  match keys at both retailers   530
+  SKU pairs under those keys     999
+    comparable (identical pack, per pack)   588
+    shown, not compared            411
+  coles        668 of 1688 products share a key with the other retailer; 588 are compared in an identical pack (39% of 1518 branded)
+  woolworths   666 of 1810 products share a key with the other retailer; 588 are compared in an identical pack (37% of 1574 branded)
+
+WHY THE REST ARE NOT MATCHED
+  NEAR_MISS                  664   same brand, form, count and pack at the other retailer; only the words differ — read first: a missed synonym, or a genuinely different flavour
+  NOT_AT_COLES               306   the brand is at Coles, but no listing with this line, flavour, form, count and pack
+  NOT_AT_WOOLWORTHS          300   the brand is at Woolworths, but no listing with this line, flavour, form, count and pack
+  BRAND_ONLY_AT_COLES        227   Coles stocks this brand; Woolworths does not (in this capture)
+  BRAND_ONLY_AT_WOOLWORTHS   255   Woolworths stocks this brand; Coles does not (in this capture)
+  HOUSE_BRAND                406   own-label (Coles, Woolworths, Macro …) — a different product at the other retailer by definition
+  UNPARSED                   6     no brand on the listing — refused rather than guessed
+
+NOT-COMPARED REASONS (matched pairs)
+  328   N vs N — a different pack size of the same product; shown, not compared
+  31    N-pack vs N-pack — a different pack of the same product; shown, not compared
+  30    a N-pack multipack vs a single share bag — a different pack of the same product; shown, not compared
+  12    no shelf price on one side at capture — not compared
+  7     this line was listed as unavailable at capture
+  2     this listing's per-N price disagrees with its price ÷ weight by N — not compared
+  1     the other listing's per-N price disagrees with its price ÷ weight by N — not compared
+
+BY FORM  (products / share a key / compared)
+  confectionery    819   447   402
+  chip             478   217   168
+  biscuit          394   169   162
+  cracker          386   156   152
+  lolly            339   133   108
+  muesli_bar       336   91    76
+  nuts             334   35    28
+  refresh          141   55    50
+  (none)           131   2     2
+  popcorn          104   26    26
+  dip              36    3     2
+
+FORM SOURCE x RETAILER
+  coles        {"subcategory":1018,"none":52,"name":618}
+  woolworths   {"subcategory":961,"name":770,"none":79}
+
+HOW THE WEIGHT WAS STATED x RETAILER
+  coles        {"package":1668,"implied":8,"name":2,"none":10}
+  woolworths   {"implied":222,"package":1580,"none":8}
+
+WEIGHT / PRICE FLAGS  (per-kg recomputed from price ÷ stated weight)
+  coles        {"ok":1669,"CUP_MISMATCH":5,"CUP_DRIFT":4,"NO_WEIGHT":10}
+  woolworths   {"ok":1797,"NO_WEIGHT":8,"CUP_MISMATCH":4,"CUP_DRIFT":1}

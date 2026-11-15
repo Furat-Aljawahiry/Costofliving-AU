@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.1",
+  "dataset": "woolworths.products",
+  "run_id": "20261021180038-6a818afd",
+  "retailer": "woolworths",
+  "started_at_utc": "2026-10-21T18:00:38Z",
+  "finished_at_utc": "2026-10-21T18:01:31Z",
+  "status": "complete",
+  "capture_context": {
+    "postcode": "2000",
+    "price_basis": "online",
+    "egress": "proxy",
+    "egress_country": "au",
+    "exit_ip": "159.196.13.45",
+    "store_id": "1101",
+    "store_ids_seen": {
+      "1101": 518
+    }
+  },
+  "requested_nodes": [
+    {
+      "node_id": "1-E5BEE36E",
+      "name": "Fruit & Veg"
+    }
+  ],
+  "counts": {
+    "total_reported": 479,
+    "pages_fetched": 14,
+    "tiles_seen": 518,
+    "sponsored_tiles": 42,
+    "sponsored_duplicates_dropped": 39,
+    "market_products_skipped": 0,
+    "proxy_rotations": 0,
+    "rows_written": 479,
+    "rows_with_price": 424,
+    "rows_with_warnings": 124
+  },
+  "errors": [],
+  "cheapest_by_subcategory": {
+    "rows_written": 62,
+    "subcategories": 43,
+    "groups_with_no_candidate": 2,
+    "rows_without_subcategory": 0,
+    "on_special": 2,
+    "selection_rule": "min_unit_price_within_sap_subcategory_excl_organic_prepared",
+    "produce_rows": 58,
+    "canonical_groups": 37,
+    "rows_by_group_kind": {
+      "prepared": 4,
+      "produce": 58
+    },
+    "rows_by_group_source": {
+      "subcategory": 62
+    },
+    "rescued_by_product_name": 0,
+    "unmapped_subcategories": []
+  },
+  "drift": {
+    "window": 7,
+    "trailing_runs": [
+      "20261021060038-94704223",
+      "20261020180038-a1c6b576",
+      "20261020060038-c2bdd17c",
+      "20261019180038-27a8ccba",
+      "20261019060039-2dac2b24",
+      "20261018180038-cf3a3819",
+      "20261018060038-81960015"
+    ],
+    "trailing_median": 479.0,
+    "store_id": "1101",
+    "trailing_store_id": "1101",
+    "store_baseline": "pinned",
+    "threshold_pct": 10.0,
+    "pct": 0.0,
+    "store_changed": false,
+    "alarm": false,
+    "status": "ok"
+  }
+}

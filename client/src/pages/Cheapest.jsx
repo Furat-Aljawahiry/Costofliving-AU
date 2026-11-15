@@ -20,7 +20,7 @@ export default function Cheapest({ status }) {
 
   useEffect(() => {
     let alive = true;
-    api.cheapest().then((c) => alive && setSets(c)).catch(() => alive && setSets([]));
+    api.cheapest("fruitAndVeg").then((c) => alive && setSets(c)).catch(() => alive && setSets([]));
     return () => { alive = false; };
   }, []);
 

@@ -115,6 +115,34 @@ s = drift._manifest_summary({"run_id": "x", "counts": {"total_reported": 472},
                              "capture_context": {"store_id": "1101"}})
 check("manifest summary", s == {"run_id": "x", "total_reported": 472, "store_id": "1101"})
 
+# Which trailing runs are admissible as a baseline. This used to be "_SUCCESS
+# exists on the key", which froze the Woolworths baseline for days in Sep 2026:
+# the crawler only marks a run complete on an exact row count, so a retailer
+# landing four rows short twice a day earned no _SUCCESS and the trailing
+# window emptied out — turning the drift check off exactly when it mattered.
+def _m(status, written, total, errors=None):
+    return {"status": status,
+            "counts": {"total_reported": total, "rows_written": written},
+            "errors": errors or []}
+
+check("admissible: a complete run", drift._admissible(_m("complete", 473, 473)))
+check("admissible: the real 469/473 Woolworths run", drift._admissible(_m("partial", 469, 473)))
+check("admissible: a run that died on page 3 is not",
+      not drift._admissible(_m("partial", 150, 473)))
+check("admissible: exactly at MIN_COVERAGE is in",
+      drift._admissible(_m("partial", 95, 100)))
+check("admissible: a hair under MIN_COVERAGE is out",
+      not drift._admissible(_m("partial", 94, 100)))
+check("admissible: a short run WITH page errors is out",
+      not drift._admissible(_m("partial", 470, 473, [{"page": 3, "message": "403"}])),
+      "an unexplained gap is not a baseline")
+check("admissible: a complete run with errors is still in",
+      drift._admissible(_m("complete", 473, 473, [{"page": 1, "message": "retried"}])),
+      "the crawler already refuses to call an errored run complete")
+check("admissible: no counts at all is out", not drift._admissible(_m("partial", None, None)))
+check("admissible: a zero total does not divide by zero",
+      not drift._admissible(_m("partial", 0, 0)))
+
 print()
 if failures:
     sys.exit(f"{len(failures)} failed: {failures}")

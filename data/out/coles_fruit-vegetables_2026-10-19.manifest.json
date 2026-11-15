@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.1",
+  "dataset": "coles.products",
+  "run_id": "20261019180038-27a8ccba",
+  "retailer": "coles",
+  "started_at_utc": "2026-10-19T18:01:38Z",
+  "finished_at_utc": "2026-10-19T18:02:30Z",
+  "status": "complete",
+  "capture_context": {
+    "postcode": "",
+    "price_basis": "online",
+    "egress": "proxy",
+    "egress_country": "au",
+    "exit_ip": "106.68.221.72",
+    "build_id": "20261006.3-3bfa915f689e9684df4998d8526cb1a667bea56f",
+    "build_id_pinned": false,
+    "store_id": "7674"
+  },
+  "requested_nodes": [
+    {
+      "node_id": "fruit-vegetables",
+      "name": "Fruit & Vegetables"
+    }
+  ],
+  "counts": {
+    "total_reported": 498,
+    "pages_fetched": 11,
+    "tiles_seen": 498,
+    "sponsored_tiles": 0,
+    "sponsored_duplicates_dropped": 0,
+    "market_products_skipped": 0,
+    "proxy_rotations": 0,
+    "rows_written": 498,
+    "rows_with_price": 494,
+    "rows_with_warnings": 498
+  },
+  "errors": [],
+  "cheapest_by_subcategory": {
+    "rows_written": 91,
+    "subcategories": 89,
+    "groups_with_no_candidate": 14,
+    "rows_without_subcategory": 0,
+    "on_special": 17,
+    "selection_rule": "min_unit_price_within_sap_subcategory_excl_organic_prepared",
+    "produce_rows": 74,
+    "canonical_groups": 41,
+    "rows_by_group_kind": {
+      "non_produce": 15,
+      "prepared": 2,
+      "produce": 74
+    },
+    "rows_by_group_source": {
+      "product_name": 5,
+      "subcategory": 86
+    },
+    "rescued_by_product_name": 4,
+    "unmapped_subcategories": [
+      "POMEGRANATES"
+    ]
+  },
+  "drift": {
+    "window": 7,
+    "trailing_runs": [
+      "20261019060039-2dac2b24",
+      "20261018060038-81960015",
+      "20261017180038-f4f13bbd",
+      "20261017060038-502ef8d3",
+      "20261016180038-0ab41a69",
+      "20261016060038-a5f66638",
+      "20261011060038-beba57ed"
+    ],
+    "trailing_median": 499.0,
+    "store_id": "7674",
+    "trailing_store_id": "7674",
+    "store_baseline": "trailing",
+    "threshold_pct": 10.0,
+    "pct": -0.2,
+    "store_changed": false,
+    "alarm": false,
+    "status": "ok"
+  }
+}

@@ -44,7 +44,7 @@ test('buildHistory emits the API shape and refuses missing codes', () => {
   assert.deepEqual(Object.keys(h.series).sort(), Object.keys(CODES).sort())
   assert.equal(h.series['114120'].parent, '20001')
   assert.equal(h.series['114120'].index.length, 8)
-  assert.deepEqual(Object.keys(h.aisles).sort(), ['canned', 'chocolate', 'meat', 'snacks', 'staples', 'vegetables'])
+  assert.deepEqual(Object.keys(h.aisles).sort(), ['canned', 'meat', 'snacks', 'staples', 'vegetables'])
   for (const a of Object.values(AISLES)) for (const c of a.lines) assert.ok(h.series[c], `aisle line ${c} served`)
   delete parsed.raw['40027']
   assert.throws(() => buildHistory(parsed, { url: 'u', fetchedAt: 't' }), /no series for code 40027/)

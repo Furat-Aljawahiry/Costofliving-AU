@@ -5,8 +5,7 @@ export const CATEGORIES = [
   { id: 'vegetables', label: 'Fruit & vegetables', icon: '🥦', blurb: 'Fresh produce — the most volatile prices, hit hard by weather and floods.' },
   { id: 'meat', label: 'Meat & poultry', icon: '🍗', blurb: 'Chicken, beef and pork — steadily the biggest riser since 2014.' },
   { id: 'canned', label: 'Canned & pantry', icon: '🥫', blurb: 'Long-life staples: tinned veg, beans, tuna.' },
-  { id: 'snacks', label: 'Snacks', icon: '🍿', blurb: 'Chips, crackers and biscuits from the famous brands.' },
-  { id: 'chocolate', label: 'Chocolate & candy', icon: '🍫', blurb: 'Blocks, bars and lollies — cocoa costs sent these soaring.' },
+  { id: 'snacks', label: 'Snacks & confectionery', icon: '🍫', blurb: 'Chips, biscuits, chocolate and lollies — cocoa costs sent these soaring.' },
   { id: 'staples', label: 'Everyday staples', icon: '🥛', blurb: 'Milk, bread, eggs, coffee — the headline cost-of-living basket.' },
 ]
 
@@ -44,11 +43,11 @@ export const BASKET = [
   { id: 'timtam', name: 'Tim Tam original', category: 'snacks', unit: 'pack', brandTier: 'branded', base: 4.5, keywords: ['tim tam original'] },
   { id: 'doritos', name: 'Doritos corn chips', category: 'snacks', unit: 'pack', brandTier: 'branded', base: 4.8, keywords: ['doritos'] },
 
-  { id: 'cadbury', name: 'Cadbury Dairy Milk 180g', category: 'chocolate', unit: 'block', brandTier: 'branded', base: 6.0, keywords: ['cadbury dairy milk 180g'] },
-  { id: 'kitkat', name: 'KitKat 4 finger', category: 'chocolate', unit: 'bar', brandTier: 'branded', base: 2.2, keywords: ['kitkat 4 finger'] },
-  { id: 'snickers', name: 'Snickers bar', category: 'chocolate', unit: 'bar', brandTier: 'branded', base: 2.0, keywords: ['snickers bar'] },
-  { id: 'snakes', name: "Allen's Snakes Alive", category: 'chocolate', unit: 'bag', brandTier: 'branded', base: 3.0, keywords: ['allens snakes alive'] },
-  { id: 'lindt', name: 'Lindt block', category: 'chocolate', unit: 'block', brandTier: 'branded', base: 6.5, keywords: ['lindt block'] },
+  { id: 'cadbury', name: 'Cadbury Dairy Milk 180g', category: 'snacks', unit: 'block', brandTier: 'branded', base: 6.0, keywords: ['cadbury dairy milk 180g'] },
+  { id: 'kitkat', name: 'KitKat 4 finger', category: 'snacks', unit: 'bar', brandTier: 'branded', base: 2.2, keywords: ['kitkat 4 finger'] },
+  { id: 'snickers', name: 'Snickers bar', category: 'snacks', unit: 'bar', brandTier: 'branded', base: 2.0, keywords: ['snickers bar'] },
+  { id: 'snakes', name: "Allen's Snakes Alive", category: 'snacks', unit: 'bag', brandTier: 'branded', base: 3.0, keywords: ['allens snakes alive'] },
+  { id: 'lindt', name: 'Lindt block', category: 'snacks', unit: 'block', brandTier: 'branded', base: 6.5, keywords: ['lindt block'] },
 
   { id: 'milk', name: 'Full cream milk 2L', category: 'staples', unit: '2L', brandTier: 'private_label', base: 3.3, keywords: ['full cream milk 2l'] },
   { id: 'bread', name: 'White bread loaf', category: 'staples', unit: 'loaf', brandTier: 'private_label', base: 2.9, keywords: ['white bread 650g'] },

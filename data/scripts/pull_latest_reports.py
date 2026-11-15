@@ -33,22 +33,30 @@ import re
 import subprocess
 import sys
 
-DEFAULT_BUCKET = "costofliving-au-data-207208119513"
-DEFAULT_REGION = "ap-southeast-2"
+# Env first, literals only as the fallback: server/config.js is the canonical
+# copy of these, and this script used to be a third place the bucket name was
+# spelled out. Keep them in step by exporting DATA_BUCKET / DATA_PREFIX /
+# AWS_REGION (or sourcing .env) rather than editing both.
+DEFAULT_BUCKET = os.environ.get("DATA_BUCKET") or "costofliving-au-data-207208119513"
+DEFAULT_REGION = os.environ.get("AWS_REGION") or "ap-southeast-2"
+DEFAULT_PREFIX = os.environ.get("DATA_PREFIX") or "reports/supermarkets"
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "out")
 
 # S3 prefix the Lambda writes to (infra/terraform/variables.tf) and the
 # filename stem data/out already uses for that retailer.
-RETAILERS = {
-    "woolworths": {
-        "prefix": "reports/supermarkets/woolworths/fruitAndVeg",
-        "stem": "woolworths_fruit-veg",
+# One entry per crawled category (server/data/categories.js slugs) — the
+# meat prefixes are written by lambda_meat.tf.
+CATEGORIES = {
+    "fruitAndVeg": {
+        "woolworths": {"prefix": f"{DEFAULT_PREFIX}/woolworths/fruitAndVeg", "stem": "woolworths_fruit-veg"},
+        "coles": {"prefix": f"{DEFAULT_PREFIX}/coles/fruitAndVeg", "stem": "coles_fruit-vegetables"},
     },
-    "coles": {
-        "prefix": "reports/supermarkets/coles/fruitAndVeg",
-        "stem": "coles_fruit-vegetables",
+    "meatAndPoultry": {
+        "woolworths": {"prefix": f"{DEFAULT_PREFIX}/woolworths/meatAndPoultry", "stem": "woolworths_poultry-meat-seafood"},
+        "coles": {"prefix": f"{DEFAULT_PREFIX}/coles/meatAndPoultry", "stem": "coles_meat-seafood"},
     },
 }
+RETAILERS = sorted({r for c in CATEGORIES.values() for r in c})
 
 ARTEFACTS = [".csv", ".cheapest-by-subcategory.csv", ".manifest.json"]
 
@@ -148,6 +156,8 @@ def main():
     ap.add_argument("--region", default=os.environ.get("AWS_REGION", DEFAULT_REGION))
     ap.add_argument("--retailer", choices=sorted(RETAILERS), action="append",
                     help="only this retailer (repeatable); default: all")
+    ap.add_argument("--category", choices=sorted(CATEGORIES), action="append",
+                    help="only this crawled category (repeatable); default: all")
     ap.add_argument("--allow-partial", action="store_true",
                     help="accept the newest run even if it has no _SUCCESS marker")
     ap.add_argument("--keep-old", action="store_true",
@@ -157,8 +167,9 @@ def main():
 
     os.makedirs(OUT_DIR, exist_ok=True)
     ok = True
-    for retailer in args.retailer or sorted(RETAILERS):
-        ok = pull(retailer, RETAILERS[retailer], args) and ok
+    for category in args.category or sorted(CATEGORIES):
+        for retailer in args.retailer or RETAILERS:
+            ok = pull(f"{retailer}/{category}", CATEGORIES[category][retailer], args) and ok
     if not args.dry_run and ok:
         print("done. Restart the server or POST /api/reload to pick up the new files.")
     sys.exit(0 if ok else 1)

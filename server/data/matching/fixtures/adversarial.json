@@ -1,0 +1,216 @@
+{
+  "_comment": [
+    "The ~60 cases that must not regress, chosen to hurt rather than to cover.",
+    "Every row is a real product_name from the 16 Sep 2026 captures.",
+    "",
+    "This is deliberately NOT the full golden file. The full file is all 921",
+    "distinct names, and it cannot be written until the lexicon has fixed its own",
+    "vocabulary (is the token pink-lady or pink_lady, is the group mushrooms or",
+    "mushroom) — written earlier it is a guess that gets rewritten wholesale, and",
+    "the diff that makes it a review surface becomes noise. Generate it from the",
+    "finished lexicon, review it by eye, freeze it.",
+    "",
+    "`key` is the expected match_key, or null where the matcher must REFUSE to",
+    "produce one. A null here is an assertion, not a gap."
+  ],
+
+  "cases": [
+    { "why": "the flagship: same variety, both retailers, 3 W SKUs and 4 C SKUs",
+      "rows": [
+        { "retailer": "woolworths", "name": "Fresh Pink Lady Apples", "sub": "APPLE", "size": "each", "soldBy": "each", "key": "apples:pink-lady" },
+        { "retailer": "woolworths", "name": "Woolworths Fresh Pink Lady Apples Punnet", "brand": "Woolworths", "sub": "APPLE", "size": "1kg", "soldBy": "pack", "key": "apples:pink-lady" },
+        { "retailer": "coles", "name": "Pink Lady Apples", "brand": "Coles", "sub": "APPLES", "size": "1kg", "soldBy": "pack", "key": "apples:pink-lady" },
+        { "retailer": "coles", "name": "Pink Lady Apples Medium", "brand": "Coles", "sub": "APPLES", "size": "approx. 200g each", "soldBy": "weight", "key": "apples:pink-lady" }
+      ]
+    },
+
+    { "why": "implied head noun — the word 'apple' never appears; the group must come from the subcategory. ALSO the per-each trap: 6-pack of snack apples must never price-compare to one loose apple",
+      "rows": [
+        { "retailer": "coles", "name": "Grab N Glow Pink Lady", "brand": "Fresh", "sub": "APPLES", "size": "6 Pack", "soldBy": "pack", "key": "apples:pink-lady", "multipack": 6 }
+      ]
+    },
+
+    { "why": "organic: W says it in the name, C in the brand column. Both must reach the same key",
+      "rows": [
+        { "retailer": "woolworths", "name": "Macro Organic Pink Lady Apple Punnet", "brand": "Macro", "sub": "ORGANICS", "size": "1kg", "soldBy": "pack", "organic": true, "key": "apples:pink-lady:organic" },
+        { "retailer": "coles", "name": "Pink Lady Apple", "brand": "Coles Organic", "sub": "FRUITS", "size": "1kg", "soldBy": "pack", "organic": true, "key": "apples:pink-lady:organic" },
+        { "retailer": "woolworths", "name": "Macro Organic Beetroot Punnet", "brand": "Macro", "sub": "ORGANICS", "size": "1kg", "soldBy": "pack", "organic": true, "key": "root-veg:beetroot:organic" },
+        { "retailer": "woolworths", "name": "Macro Organic Carrots", "brand": "Macro", "sub": "ORGANICS", "size": "1kg", "soldBy": "pack", "organic": true, "key": "carrots:carrot:organic" }
+      ]
+    },
+
+    { "why": "descriptor asymmetry — each retailer adds a DIFFERENT adjective, so neither key contains the other",
+      "rows": [
+        { "retailer": "woolworths", "name": "Woolworths Jalapeno Chilli Hot", "brand": "Woolworths", "sub": "CHILLIES", "size": "each", "soldBy": "each", "key": "chillies:jalapeno" },
+        { "retailer": "coles", "name": "Jalapeno Chilli", "brand": "Coles", "sub": "CHILLIES", "size": "each", "soldBy": "each", "key": "chillies:jalapeno" },
+        { "retailer": "woolworths", "name": "Mushroom Portobello Flat Large Loose", "sub": "MUSHROOM", "size": "approx. 100g", "soldBy": "weight", "key": "mushrooms:portobello" },
+        { "retailer": "coles", "name": "Portobello Brown Mushrooms", "brand": "Coles", "sub": "BROWN MUSHROOMS", "size": "approx. 100g", "soldBy": "weight", "key": "mushrooms:portobello" }
+      ]
+    },
+
+    { "why": "most-specific variety wins without hand ordering",
+      "rows": [
+        { "retailer": "woolworths", "name": "Apple Cosmic Crisp Md", "sub": "APPLE", "size": "each", "soldBy": "each", "key": "apples:cosmic-crisp" },
+        { "retailer": "woolworths", "name": "Fresh Granny Smith Apples", "sub": "APPLE", "size": "each", "soldBy": "each", "key": "apples:granny-smith" },
+        { "retailer": "coles", "name": "Apple Granny Smith Medium", "brand": "Coles", "sub": "APPLES", "size": "approx. 180g each", "soldBy": "weight", "key": "apples:granny-smith" },
+        { "retailer": "woolworths", "name": "Royal Gala Apples 1kg", "sub": "APPLE", "size": "1 each", "soldBy": "each", "key": "apples:royal-gala" },
+        { "retailer": "coles", "name": "Baby Cos Lettuce", "brand": "Coles", "sub": "LETTUCE", "size": "each", "soldBy": "each", "key": "lettuce:baby-cos" },
+        { "retailer": "woolworths", "name": "Woolworths Baby Cos Lettuce", "brand": "Woolworths", "sub": "LETTUCE", "size": "each", "soldBy": "each", "key": "lettuce:baby-cos" }
+      ]
+    },
+
+    { "why": "cultivar lives in the BRAND column at Woolworths, so the lexicon must read brand too",
+      "rows": [
+        { "retailer": "woolworths", "name": "Bravo Apple Punnet", "brand": "Bravo", "sub": "APPLE", "size": "750g", "soldBy": "pack", "key": "apples:bravo" },
+        { "retailer": "coles", "name": "Bravo Apples", "brand": "Coles", "sub": "APPLES", "size": "1kg", "soldBy": "pack", "key": "apples:bravo" },
+        { "retailer": "woolworths", "name": "Jazz Apple Snacker", "brand": "Jazz", "sub": "APPLE", "size": "600g", "soldBy": "pack", "key": "apples:jazz" },
+        { "retailer": "coles", "name": "Jazz Apples", "brand": "Coles", "sub": "APPLES", "size": "1kg", "soldBy": "pack", "key": "apples:jazz" }
+      ]
+    },
+
+    { "why": "both retailers' odd-grade lines collapse to one imperfect token and stay separate from the regular line",
+      "rows": [
+        { "retailer": "woolworths", "name": "The Odd Bunch Carrots", "brand": "The Odd Bunch", "sub": "CARROT", "size": "1kg", "soldBy": "pack", "key": "carrots:carrot:imperfect" },
+        { "retailer": "coles", "name": "I'm Perfect Carrots", "brand": "Coles", "sub": "CARROTS", "size": "1kg", "soldBy": "pack", "key": "carrots:carrot:imperfect" }
+      ]
+    },
+
+    { "why": "HAND-SET ALIASES (aliases.js) — one retailer names the default cultivar, the other implies it. Both must land on one key",
+      "rows": [
+        { "retailer": "woolworths", "name": "Cavendish Bananas", "sub": "BANANA", "size": "each", "soldBy": "each", "key": "bananas:banana" },
+        { "retailer": "coles", "name": "Bananas", "brand": "Coles", "sub": "BANANA", "size": "approx. 170g", "soldBy": "weight", "key": "bananas:banana" },
+        { "retailer": "woolworths", "name": "Cabbage Green Whole", "sub": "CABBAGE", "size": "each", "soldBy": "each", "key": "brassicas:cabbage" },
+        { "retailer": "coles", "name": "Cabbage Whole", "brand": "Coles", "sub": "CABBAGE", "size": "each", "soldBy": "each", "key": "brassicas:cabbage" },
+        { "retailer": "coles", "name": "Red Cayanne Chillies", "brand": "Coles", "sub": "CHILLIES", "size": "50g", "soldBy": "pack", "key": "chillies:cayenne-red" },
+        { "retailer": "woolworths", "name": "Woolworths Red Cayenne Chilli", "brand": "Woolworths", "sub": "CHILLIES", "size": "50g", "soldBy": "pack", "key": "chillies:cayenne-red" },
+        { "retailer": "woolworths", "name": "Cabbage Red Whole", "sub": "CABBAGE", "size": "each", "soldBy": "each", "key": "brassicas:red-cabbage" }
+      ]
+    },
+
+    { "why": "PINEAPPLE — whole fruit matches whole fruit; cut and value-added lines are excluded, however much the name says pineapple",
+      "rows": [
+        { "retailer": "coles", "name": "Topless Pineapple", "brand": "Coles", "sub": "PINEAPPLES", "size": "each", "soldBy": "each", "key": "tropical-fruit:pineapple" },
+        { "retailer": "woolworths", "name": "Pineapple Naturally Sweet Whole", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:pineapple", "portion": "whole" },
+        { "retailer": "coles", "name": "Cut Fruit Pineapple", "brand": "Coles", "sub": "PINEAPPLES", "size": "350g", "soldBy": "pack", "key": null },
+        { "retailer": "coles", "name": "Diced Melon & Pineapple Mix", "brand": "Coles", "sub": "PINEAPPLES", "size": "600g", "soldBy": "pack", "key": null }
+      ]
+    },
+
+    { "why": "DRINKING COCONUT — a young green drinking coconut is its own product, and the two retailers name it very differently",
+      "rows": [
+        { "retailer": "coles", "name": "Drinking Coconut", "brand": "Coles", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:drinking-coconut" },
+        { "retailer": "woolworths", "name": "Coco Q Green Drinking Coconut For Drinking", "brand": "Coco Q", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:drinking-coconut" },
+        { "retailer": "coles", "name": "Coconut Whole", "brand": "Coles", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:coconut" },
+        { "retailer": "woolworths", "name": "Coconut Fresh", "brand": "Woolworths", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:coconut" }
+      ]
+    },
+
+    { "why": "GOLD KIWIFRUIT — SunGold is Zespri's trademarked gold kiwifruit; Coles sells the same fruit as plain Gold. Three spellings, one slug",
+      "rows": [
+        { "retailer": "coles", "name": "Gold Kiwifruit", "brand": "Coles", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:gold-kiwifruit" },
+        { "retailer": "woolworths", "name": "Sungold Kiwifruit Punnet", "brand": "Kiwifruit", "sub": "TROPICAL FRUIT", "size": "500g", "soldBy": "pack", "key": "tropical-fruit:gold-kiwifruit" },
+        { "retailer": "woolworths", "name": "Zespri SunGold Kiwifruit", "brand": "Zespri", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:gold-kiwifruit" },
+        { "retailer": "coles", "name": "Green Kiwifruit", "brand": "Coles", "sub": "TROPICAL FRUIT", "size": "each", "soldBy": "each", "key": "tropical-fruit:green-kiwifruit" }
+      ]
+    },
+
+    { "why": "TOMATOES — vine-ripened cherry and colour-stated cherry are still cherry, but a bare vine tomato must keep its own key",
+      "rows": [
+        { "retailer": "coles", "name": "Tomatoes Cherry Vine Ripened", "brand": "Coles", "sub": "TOMATOES", "size": "200g", "soldBy": "pack", "key": "tomatoes:cherry" },
+        { "retailer": "woolworths", "name": "Cherry Tomatoes Red Loose", "sub": "TOMATO", "size": "approx. 200g", "soldBy": "weight", "key": "tomatoes:cherry" },
+        { "retailer": "coles", "name": "Vine Ripened Tomatoes", "brand": "Coles", "sub": "TOMATOES", "size": "500g", "soldBy": "pack", "key": "tomatoes:vine" },
+        { "retailer": "coles", "name": "Gourmet Field Tomatoes", "brand": "Coles", "sub": "TOMATOES", "size": "1Kg", "soldBy": "pack", "key": "tomatoes:gourmet" },
+        { "retailer": "woolworths", "name": "Woolworths Gourmet Tomatoes Punnet", "brand": "Woolworths", "sub": "TOMATO", "size": "1kg", "soldBy": "pack", "key": "tomatoes:gourmet" },
+        { "retailer": "coles", "name": "Cocktail Truss Tomatoes", "brand": "Coles", "sub": "TOMATOES", "size": "250g", "soldBy": "pack", "key": "tomatoes:cocktail-truss" }
+      ]
+    },
+
+    { "why": "VETO — a dish is not the produce it is made from. These must yield NO key at all",
+      "rows": [
+        { "retailer": "coles", "name": "Potato Salad", "brand": "Coles", "sub": "VEGETABLES", "size": "250g", "soldBy": "pack", "key": null },
+        { "retailer": "coles", "name": "Beetroot Slaw", "brand": "Coles", "sub": "SALADS", "size": "300g", "soldBy": "pack", "key": null },
+        { "retailer": "woolworths", "name": "Woolworths Beetroot & Feta Salad Bowl", "brand": "Woolworths", "sub": "SALAD", "size": "200g", "soldBy": "pack", "key": null },
+        { "retailer": "coles", "name": "Dressings Berry Balsamic", "brand": "Coles", "sub": "VEGETABLES", "size": "250ml", "soldBy": "pack", "key": null },
+        { "retailer": "woolworths", "name": "Apple Slices", "brand": "Woolworths", "sub": "VALUE ADD VEG", "size": "150g", "soldBy": "pack", "key": null }
+      ]
+    },
+
+    { "why": "non-produce sharing the shelf in Coles' crawl only — never matched, and never counted as a matching failure",
+      "rows": [
+        { "retailer": "coles", "name": "Bouquet Mixed Chrysanthemum Pink", "brand": "Coles", "sub": "VEGETABLES", "size": "each", "soldBy": "each", "key": null },
+        { "retailer": "coles", "name": "Walnuts In Shell", "brand": "Coles", "sub": "VEGETABLES", "size": "500g", "soldBy": "pack", "key": null }
+      ]
+    },
+
+    { "why": "VETO must run even when the retailer's own subcategory says produce — ~87% of rows resolve by subcategory and used to skip the veto entirely",
+      "rows": [
+        { "retailer": "coles", "name": "Mushroom Dry Shiitake", "brand": "Coles", "sub": "BROWN MUSHROOMS", "size": "20g", "soldBy": "pack", "key": null },
+        { "retailer": "woolworths", "name": "Woolworths White Cup Sliced Mushroom Punnet", "brand": "Woolworths", "sub": "MUSHROOM", "size": "200g", "soldBy": "pack", "key": null },
+        { "retailer": "coles", "name": "Gourmet Garden Paste Coriander", "brand": "Gourmet Garden", "sub": "HERBS", "size": "80g", "soldBy": "pack", "key": null },
+        { "retailer": "woolworths", "name": "Golden Palm Medjool Dates Roll With Coconut Punnet", "brand": "Golden Palm", "sub": "DATES", "size": "225g", "soldBy": "pack", "key": null },
+        { "retailer": "coles", "name": "Vegetables Baby Potatoes Herb Butter", "brand": "Coles", "sub": "BABY POTATOES", "size": "400g", "soldBy": "pack", "key": null }
+      ]
+    },
+
+    { "why": "the residual rule: an unexplained word in the name means the lexicon cannot read the distinction, so no key. But the group's own head noun and plain decoration are NOT unexplained",
+      "rows": [
+        { "retailer": "woolworths", "name": "Honeydew Melon Whole", "sub": "MELONS", "size": "each", "soldBy": "each", "key": "melons:honeydew" },
+        { "retailer": "coles", "name": "Honeydew Melon Whole", "brand": "Coles", "sub": "MELONS", "size": "each", "soldBy": "each", "key": "melons:honeydew" },
+        { "retailer": "woolworths", "name": "Woolworths Tomato Grape Punnet", "brand": "Woolworths", "sub": "TOMATO", "size": "200g", "soldBy": "pack", "key": "tomatoes:grape" },
+        { "retailer": "coles", "name": "Glasshouse Grape Tomatoes", "brand": "Coles", "sub": "TOMATOES", "size": "200g", "soldBy": "pack", "key": "tomatoes:grape" },
+        { "retailer": "woolworths", "name": "Woolworths Truss Cocktail Tomato Punnet", "brand": "Woolworths", "sub": "TOMATO", "size": "250g", "soldBy": "pack", "key": "tomatoes:cocktail-truss" },
+        { "retailer": "coles", "name": "Tomatoes Greenhouse Truss", "brand": "Coles", "sub": "TOMATOES", "size": "approx. 130g", "soldBy": "weight", "key": "tomatoes:truss" },
+        { "retailer": "woolworths", "name": "Garlic Heads 3 pack", "brand": "Woolworths", "sub": "GARLIC", "size": "3 Pack", "soldBy": "pack", "key": "garlic:head" },
+        { "retailer": "coles", "name": "Australian Prepack Garlic Cloves", "brand": "Coles", "sub": "GARLIC", "size": "70g", "soldBy": "pack", "key": "garlic:clove" }
+      ]
+    },
+
+    { "why": "a name naming two produce groups is a mix, not a coin toss",
+      "rows": [
+        { "retailer": "coles", "name": "Diced Melon & Pineapple Mix", "brand": "Coles", "sub": "VEGETABLES", "size": "400g", "soldBy": "pack", "key": null }
+      ]
+    },
+
+    { "why": "halves and quarters are still the produce (portion, not veto) — they may match for browsing but never price-compare to the whole",
+      "rows": [
+        { "retailer": "woolworths", "name": "Fresh Rockmelon Half", "sub": "MELONS", "size": "each", "soldBy": "each", "key": "melons:rockmelon", "portion": "half" },
+        { "retailer": "coles", "name": "Rockmelon Whole", "brand": "Coles", "sub": "MELONS", "size": "each", "soldBy": "each", "key": "melons:rockmelon", "portion": "whole" },
+        { "retailer": "woolworths", "name": "Woolworths Green Cabbage Quarter", "brand": "Woolworths", "sub": "CABBAGE", "size": "each", "soldBy": "each", "key": "brassicas:cabbage", "portion": "quarter" }
+      ]
+    },
+
+    { "why": "potato varieties — the group with the most cross-retailer assortment",
+      "rows": [
+        { "retailer": "woolworths", "name": "Woolworths Brushed Potatoes Bag", "brand": "Woolworths", "sub": "POTATO", "size": "2kg", "soldBy": "pack", "key": "potatoes:brushed" },
+        { "retailer": "coles", "name": "Brushed Potatoes", "brand": "Coles", "sub": "BRUSHED POTATOES", "size": "2kg", "soldBy": "pack", "key": "potatoes:brushed" },
+        { "retailer": "woolworths", "name": "Potato Red Washed", "sub": "POTATO", "size": "each", "soldBy": "weight", "key": "potatoes:red-washed" },
+        { "retailer": "coles", "name": "Potatoes Washed", "brand": "Coles", "sub": "WASHED POTATOES", "size": "2kg", "soldBy": "pack", "key": "potatoes:washed" },
+        { "retailer": "coles", "name": "Baby Washed Potatoes", "brand": "Coles", "sub": "BABY POTATOES", "size": "1.5kg", "soldBy": "pack", "key": "potatoes:baby-washed" }
+      ]
+    },
+
+    { "why": "citrus — orange varieties are distinct products, not one 'oranges' price",
+      "rows": [
+        { "retailer": "woolworths", "name": "Navel Orange", "sub": "CITRUS", "size": "each", "soldBy": "each", "key": "citrus:navel-orange" },
+        { "retailer": "coles", "name": "Navel Oranges", "brand": "Coles", "sub": "ORANGES", "size": "each", "soldBy": "each", "key": "citrus:navel-orange" },
+        { "retailer": "woolworths", "name": "Blood Orange", "sub": "CITRUS", "size": "each", "soldBy": "each", "key": "citrus:blood-orange" },
+        { "retailer": "coles", "name": "Blood Oranges", "brand": "Coles", "sub": "ORANGES", "size": "each", "soldBy": "each", "key": "citrus:blood-orange" },
+        { "retailer": "woolworths", "name": "Cara Cara Oranges", "sub": "CITRUS", "size": "2Kg", "soldBy": "pack", "key": "citrus:cara-cara-orange" },
+        { "retailer": "coles", "name": "Cara Cara Oranges", "brand": "Coles", "sub": "ORANGES", "size": "2kg", "soldBy": "pack", "key": "citrus:cara-cara-orange" }
+      ]
+    },
+
+    { "why": "a small-fruit lunchbox line is its own product, not the plain fruit",
+      "rows": [
+        { "retailer": "woolworths", "name": "Bananas Kids", "sub": "BANANA", "size": "each", "soldBy": "each", "key": "bananas:kids" },
+        { "retailer": "woolworths", "name": "Woolworths Beanette Pre Pack Punnet", "brand": "Woolworths", "sub": "PEAS / BEANS", "size": "200g", "soldBy": "pack", "key": "peas-beans:beanette" }
+      ]
+    },
+
+    { "why": "variety genuinely unknown -> NO key, so group-only. An honest gap and the lexicon's own to-do list; it must not guess",
+      "rows": [
+        { "retailer": "woolworths", "name": "Cauli Blossom Fioretto", "sub": "CABBAGE", "size": "each", "soldBy": "each", "key": null }
+      ]
+    }
+  ]
+}

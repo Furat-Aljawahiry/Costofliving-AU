@@ -29,5 +29,13 @@ export const api = {
     return get(`/search?${p}`)
   },
   product: (retailer, sku) => get(`/products/${encodeURIComponent(retailer)}/${encodeURIComponent(sku)}`),
-  cheapest: () => get('/cheapest'),
+  // One row per item (same retailer, any size) with every size's latest price.
+  // `category` is a server category slug (client/src/lib/categories.js CRAWLED).
+  items: ({ retailer, category } = {}) => {
+    const p = new URLSearchParams()
+    if (retailer) p.set('retailer', retailer)
+    if (category) p.set('category', category)
+    return get(`/items${p.size ? `?${p}` : ''}`)
+  },
+  cheapest: (category) => get(`/cheapest${category ? `?category=${encodeURIComponent(category)}` : ''}`),
 }

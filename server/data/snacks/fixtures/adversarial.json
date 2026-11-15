@@ -1,0 +1,600 @@
+[
+  {
+    "retailer": "coles",
+    "name": "Tim Tam Chocolate Biscuits Original",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "200g",
+      "subcategory": "Chocolate Biscuits CHOCOLATE BISCUITS"
+    },
+    "key": "snack:arnotts:biscuit:chocolate.tim_tam",
+    "count": null,
+    "singleBag": false,
+    "note": "word order differs; Original is the default flavour (ruling 4)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Arnott's Tim Tam Original Chocolate Biscuits",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "200g",
+      "subcategory": "BISCUITS - SWEET BISCUITS - SWEET"
+    },
+    "key": "snack:arnotts:biscuit:chocolate.tim_tam",
+    "count": null,
+    "singleBag": false,
+    "note": "brand repeated in the name at Woolworths, cut (ruling 2)"
+  },
+  {
+    "retailer": "coles",
+    "name": "Tim Tam Chocolate Biscuits Double Coat",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "200g",
+      "subcategory": "Chocolate Biscuits CHOCOLATE BISCUITS"
+    },
+    "key": "snack:arnotts:biscuit:chocolate.coat.double.tim_tam",
+    "count": null,
+    "singleBag": false,
+    "note": "NOT the Original. Probably Woolworths' \"Double Chocolate\" — kept apart until confirmed (open question)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Arnott's Tim Tam Double Chocolate Biscuits",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "200g",
+      "subcategory": "BISCUITS - SWEET BISCUITS - SWEET"
+    },
+    "key": "snack:arnotts:biscuit:chocolate.double.tim_tam",
+    "count": null,
+    "singleBag": false,
+    "note": "see Double Coat"
+  },
+  {
+    "retailer": "coles",
+    "name": "Shapes Original Barbecue Cracker Biscuits",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "175g",
+      "subcategory": "Flavoured Snacks FLAVOURED SNACKS"
+    },
+    "key": "snack:arnotts:cracker:barbecue.shape",
+    "count": null,
+    "singleBag": false,
+    "note": "\"Original\" is the Original Shapes range = plain Shapes (ruling 4)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Arnott's Shapes Barbecue Cracker Biscuits",
+    "ctx": {
+      "brand": "Arnott's",
+      "packageSize": "175g",
+      "subcategory": "BISCUITS - SAVOURY BISCUITS - SAVOURY"
+    },
+    "key": "snack:arnotts:cracker:barbecue.shape",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Shapes Original Barbecue 175g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Mini Milk Chocolate Share Pack 11 Pieces",
+    "ctx": {
+      "brand": "KitKat",
+      "packageSize": "154g",
+      "subcategory": "Chocolate Multipacks SHAREPACKS"
+    },
+    "key": "snack:kitkat:confectionery:plain",
+    "count": 11,
+    "singleBag": false,
+    "note": "11 pieces = 11 pack; milk chocolate is the confectionery default; mini describes the pieces of a multipack (rulings 5, 7)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "KitKat Milk Chocolate Mini Bars",
+    "ctx": {
+      "brand": "KitKat",
+      "packageSize": "154g 11 pack",
+      "subcategory": "CONFEC PORTION PACKS - CHOCOLATE & SUGAR CONFEC PORTION PACKS - CHOCOLATE & SUGAR"
+    },
+    "key": "snack:kitkat:confectionery:plain",
+    "count": 11,
+    "singleBag": false,
+    "note": "≡ Coles KitKat Mini Share Pack 11 Pieces 154g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Kit Kat Chunky Strawberry Bar",
+    "ctx": {
+      "brand": "Nestle",
+      "packageSize": "45g",
+      "subcategory": "Chocolate Bars BARS"
+    },
+    "key": "snack:kitkat:confectionery:chunky.strawberry",
+    "count": null,
+    "singleBag": false,
+    "note": "brand column says Nestle; the name opens with the sub-brand Kit Kat (ruling 3)"
+  },
+  {
+    "retailer": "coles",
+    "name": "Chocolate Party Share Bag 12 Pieces",
+    "ctx": {
+      "brand": "Snickers",
+      "packageSize": "180g",
+      "subcategory": "Chocolate Multipacks SHAREPACKS"
+    },
+    "key": "snack:snickers:confectionery:plain",
+    "count": 12,
+    "singleBag": false,
+    "note": "Snickers; share bag WITH a count is a multipack, not a single bag"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Snickers Milk Chocolate Fun Size Bars",
+    "ctx": {
+      "brand": "Snickers",
+      "packageSize": "180g 12 pack",
+      "subcategory": "CONFEC PORTION PACKS - CHOCOLATE & SUGAR CONFEC PORTION PACKS - CHOCOLATE & SUGAR"
+    },
+    "key": "snack:snickers:confectionery:plain",
+    "count": 12,
+    "singleBag": false,
+    "note": "fun size describes the pieces of a multipack (ruling 7)"
+  },
+  {
+    "retailer": "coles",
+    "name": "Crinkle Cut Chips Lunchbox Multipack 20 Pack",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "380g",
+      "subcategory": "Chips Multi Pack MULTI PACKS"
+    },
+    "key": "snack:smiths:chip:crinkle_cut",
+    "count": 20,
+    "singleBag": false,
+    "note": "a 20-pack multipack: same key as the 380g party bag, but refused at the pack check (ruling 9)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Smith's Crinkle Cut Potato Chips Party Bag Original",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "380g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:smiths:chip:crinkle_cut",
+    "count": null,
+    "singleBag": true,
+    "note": "a party bag is ONE bag (singleBag) — never the 20-pack of the same weight"
+  },
+  {
+    "retailer": "coles",
+    "name": "Crinkle Cut Salt And Vinegar Potato Chips",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "170g",
+      "subcategory": "Chips Sharing MAINSTREAM POTATO"
+    },
+    "key": "snack:smiths:chip:crinkle_cut.salt_vinegar",
+    "count": null,
+    "singleBag": false,
+    "note": "\"&\" = \"and\"; potato is redundant on a chip (ruling 6)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Smith's Crinkle Cut Chips Salt & Vinegar",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "60g",
+      "subcategory": "CHIPS - SINGLE SERVE CHIPS - SINGLE SERVE"
+    },
+    "key": "snack:smiths:chip:crinkle_cut.salt_vinegar",
+    "count": null,
+    "singleBag": false,
+    "note": "same key as Coles 170g, but 60g: shown, not compared"
+  },
+  {
+    "retailer": "coles",
+    "name": "Lindor Milk Chocolate Block",
+    "ctx": {
+      "brand": "Lindt",
+      "packageSize": "100g",
+      "subcategory": "Chocolate Blocks BLOCK CHOCOLATE"
+    },
+    "key": "snack:lindt:confectionery:lindor",
+    "count": null,
+    "singleBag": false,
+    "note": "Coles brand column is \"Lindt Lindor\": brand lindt, line lindor (ruling 3)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Lindt Lindor Milk Chocolate Block",
+    "ctx": {
+      "brand": "Lindt",
+      "packageSize": "100g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:lindt:confectionery:lindor",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Lindor Milk Chocolate Block 100g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Kids Watermelon Lollies",
+    "ctx": {
+      "brand": "Sour Patch",
+      "packageSize": "190g",
+      "subcategory": "Lollies SUGAR"
+    },
+    "key": "snack:sourpatchkids:lolly:watermelon",
+    "count": null,
+    "singleBag": false,
+    "note": "Coles brand \"Sour Patch\" = Sour Patch Kids; \"Kids\" is a brand word (ruling 3)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Sour Patch Kids Watermelon Lollies",
+    "ctx": {
+      "brand": "Sour Patch Kids",
+      "packageSize": "190g",
+      "subcategory": "CONFEC SHARING - SUGAR CONFEC SHARING - SUGAR"
+    },
+    "key": "snack:sourpatchkids:lolly:watermelon",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Kids Watermelon Lollies 190g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Sweet Chilli & Sour Cream Deli Style Crackers",
+    "ctx": {
+      "brand": "Red Rock Deli",
+      "packageSize": "135g",
+      "subcategory": "Flavoured Snacks FLAVOURED SNACKS"
+    },
+    "key": "snack:redrockdeli:cracker:cream.sour.style.sweet_chilli",
+    "count": null,
+    "singleBag": false,
+    "note": "\"Deli\" is a word of the brand Red Rock Deli (ruling 3)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Red Rock Deli Style Crackers Sweet Chilli & Sour Cream",
+    "ctx": {
+      "brand": "Red Rock Deli",
+      "packageSize": "135g",
+      "subcategory": "BISCUITS - SAVOURY BISCUITS - SAVOURY"
+    },
+    "key": "snack:redrockdeli:cracker:cream.sour.style.sweet_chilli",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Deli Style Crackers 135g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Roses Tin",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "485g",
+      "subcategory": "Boxed Chocolate & gifts EVERYDAY"
+    },
+    "key": "snack:cadbury:confectionery:rose",
+    "count": null,
+    "singleBag": false,
+    "note": "tin is packaging; chocolate is the confectionery default (rulings 5, 8)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Cadbury Roses Chocolate Tin",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "485g",
+      "subcategory": "CONFEC - GIFTING CONFEC - GIFTING"
+    },
+    "key": "snack:cadbury:confectionery:rose",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Roses Tin 485g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Dairy Milk Caramello Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "180g",
+      "subcategory": "Chocolate Blocks BLOCK CHOCOLATE"
+    },
+    "key": "snack:cadbury:confectionery:caramello",
+    "count": null,
+    "singleBag": false,
+    "note": "Dairy Milk is Cadbury's default milk chocolate (ruling 5)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Cadbury Dairy Milk Caramel Chocolate Caramello Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "180g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:cadbury:confectionery:caramello",
+    "count": null,
+    "singleBag": false,
+    "note": "caramel is redundant with caramello"
+  },
+  {
+    "retailer": "coles",
+    "name": "Original Crinkle Cut Chips",
+    "ctx": {
+      "brand": "Coles Simply",
+      "packageSize": "175g",
+      "subcategory": "Chips Sharing MAINSTREAM POTATO"
+    },
+    "key": "snack:house-coles:chip:crinkle_cut",
+    "count": null,
+    "singleBag": false,
+    "note": "Coles own label: keyed house-coles, never matches Woolworths (ruling 1)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Woolworths Crinkle Cut Chips Original Crinkle Cut Original",
+    "ctx": {
+      "brand": "Woolworths",
+      "packageSize": "175g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:house-woolworths:chip:crinkle_cut",
+    "count": null,
+    "singleBag": false,
+    "note": "Woolworths own label, house-woolworths; repeated words collapse"
+  },
+  {
+    "retailer": "coles",
+    "name": "Scoops Mexican Cheese",
+    "ctx": {
+      "brand": "Doritos",
+      "packageSize": "120g",
+      "subcategory": "Corn Chips & Salsa CORN & DIPS"
+    },
+    "key": "snack:doritos:chip:cheese.mexican.scoop",
+    "count": null,
+    "singleBag": false,
+    "note": "corn is redundant on a chip; form from the subcategory"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Doritos Scoops Corn Chips Mexican Cheese",
+    "ctx": {
+      "brand": "Doritos",
+      "packageSize": "120g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:doritos:chip:cheese.mexican.scoop",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Scoops Mexican Cheese 120g"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Cadbury Dairy Milk Oreo Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "162g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:cadbury:confectionery:oreo",
+    "count": null,
+    "singleBag": false,
+    "note": "Oreo is a flavour of the block, kept"
+  },
+  {
+    "retailer": "coles",
+    "name": "Crackers Sour Cream & Onion",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "160g",
+      "subcategory": "Flavoured Snacks FLAVOURED SNACKS"
+    },
+    "key": "snack:smiths:cracker:sour_cream_onion",
+    "count": null,
+    "singleBag": false,
+    "note": "Smith's CRACKERS: form cracker. Never the chips of the same flavour"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Smith's Crinkle Cut Sour Cream & Onion Potato Chips",
+    "ctx": {
+      "brand": "Smith's",
+      "packageSize": "170g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:smiths:chip:crinkle_cut.sour_cream_onion",
+    "count": null,
+    "singleBag": false,
+    "note": "form chip — Smith's makes both"
+  },
+  {
+    "retailer": "coles",
+    "name": "Protein Bars Cinnamon Scroll",
+    "ctx": {
+      "brand": "Carman's",
+      "packageSize": "200g",
+      "subcategory": "Muesli Bars & Fruit Snacks NUT BARS"
+    },
+    "key": "snack:carmans:muesli_bar:cinnamon.protein.scroll",
+    "count": null,
+    "singleBag": false,
+    "note": "Coles states the weight only; Woolworths the count only. Same key; the pack check compares 200g with the weight implied by Woolworths' per-100g price"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Carman's Protein Bar Cinnamon Scroll",
+    "ctx": {
+      "brand": "Carman's",
+      "packageSize": "5 pack",
+      "subcategory": "MUESLI BARS MUESLI BARS"
+    },
+    "key": "snack:carmans:muesli_bar:cinnamon.protein.scroll",
+    "count": 5,
+    "singleBag": false,
+    "note": "5 pack, weight implied from $/100g"
+  },
+  {
+    "retailer": "coles",
+    "name": "Dairy Milk Hazelnut Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "340g",
+      "subcategory": "Chocolate Blocks BLOCK CHOCOLATE"
+    },
+    "key": "snack:cadbury:confectionery:hazelnut",
+    "count": null,
+    "singleBag": false,
+    "note": "flavour kept"
+  },
+  {
+    "retailer": "coles",
+    "name": "Dairy Milk Fruit & Nut Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "340g",
+      "subcategory": "Chocolate Blocks BLOCK CHOCOLATE"
+    },
+    "key": "snack:cadbury:confectionery:fruit_nut",
+    "count": null,
+    "singleBag": false,
+    "note": "fruit and nut is one flavour token"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Lindt Excellence Dark Chocolate 70% Cocoa Block",
+    "ctx": {
+      "brand": "Lindt",
+      "packageSize": "100g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:lindt:confectionery:70pct.cocoa.dark.excellence",
+    "count": null,
+    "singleBag": false,
+    "note": "cocoa percentage is part of the product"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Lindt Excellence Dark Chocolate 85% Cocoa Block",
+    "ctx": {
+      "brand": "Lindt",
+      "packageSize": "100g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:lindt:confectionery:85pct.cocoa.dark.excellence",
+    "count": null,
+    "singleBag": false,
+    "note": "never the 70%"
+  },
+  {
+    "retailer": "coles",
+    "name": "Lollies Snakes Alive Lolly Bag",
+    "ctx": {
+      "brand": "Allen's",
+      "packageSize": "200g",
+      "subcategory": "Lollies SUGAR"
+    },
+    "key": "snack:allens:lolly:alive.snake",
+    "count": null,
+    "singleBag": false,
+    "note": "lolly, lollies and bag are form and packaging"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Allen's Snakes Alive Lollies",
+    "ctx": {
+      "brand": "Allen's",
+      "packageSize": "200g",
+      "subcategory": "CONFEC SHARING - SUGAR CONFEC SHARING - SUGAR"
+    },
+    "key": "snack:allens:lolly:alive.snake",
+    "count": null,
+    "singleBag": false,
+    "note": "≡ Coles Lollies Snakes Alive Lolly Bag 200g"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Doritos Medium Salsa",
+    "ctx": {
+      "brand": "Doritos",
+      "packageSize": "300g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:doritos:dip:medium",
+    "count": null,
+    "singleBag": false,
+    "note": "medium is a heat level, not a size: kept. Salsa is form dip, not chip"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Doritos Hot Salsa",
+    "ctx": {
+      "brand": "Doritos",
+      "packageSize": "300g",
+      "subcategory": "CHIPS - SHARING CHIPS - SHARING"
+    },
+    "key": "snack:doritos:dip:hot",
+    "count": null,
+    "singleBag": false,
+    "note": "never the medium"
+  },
+  {
+    "retailer": "coles",
+    "name": "Dairy Milk Snack Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "180g",
+      "subcategory": "Chocolate Blocks BLOCK CHOCOLATE"
+    },
+    "key": "snack:cadbury:confectionery:snack",
+    "count": null,
+    "singleBag": false,
+    "note": "Cadbury Snack is its own block (mixed centres): \"snack\" is kept in confectionery. Never plain Dairy Milk 180g (22 Oct review)"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "Cadbury Dairy Milk Chocolate Block",
+    "ctx": {
+      "brand": "Cadbury",
+      "packageSize": "180g",
+      "subcategory": "CONFEC SHARING - CHOCOLATE BLOCKS CONFEC SHARING - CHOCOLATE BLOCKS"
+    },
+    "key": "snack:cadbury:confectionery:plain",
+    "count": null,
+    "singleBag": false,
+    "note": "plain Dairy Milk: chocolate, milk and Dairy Milk are the confectionery default; never the Snack block"
+  },
+  {
+    "retailer": "coles",
+    "name": "Grape Spark Sugar Free Chewing Gum",
+    "ctx": {
+      "brand": "5 Gum",
+      "packageSize": "27g",
+      "subcategory": "Gum GUMS"
+    },
+    "key": "snack:5gum:refresh:chewing.grape.spark.sugar_free",
+    "count": null,
+    "singleBag": false,
+    "note": "Coles spells the brand \"5 Gum\": gum is a brand word at both retailers"
+  },
+  {
+    "retailer": "woolworths",
+    "name": "5Gum Grape Spark Sugar Free Chewing Gum",
+    "ctx": {
+      "brand": "5Gum",
+      "packageSize": "27g",
+      "subcategory": "CONFEC ON THE GO - REFRESH & LOZENGE CONFEC ON THE GO - REFRESH & LOZENGE"
+    },
+    "key": "snack:5gum:refresh:chewing.grape.spark.sugar_free",
+    "count": null,
+    "singleBag": false,
+    "note": "Woolworths spells it \"5Gum\"; form refresh from REFRESH & LOZENGE, not confec"
+  }
+]

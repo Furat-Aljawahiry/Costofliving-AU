@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1",
+  "dataset": "woolworths.products",
+  "run_id": "20261021063033-aeec4004",
+  "retailer": "woolworths",
+  "started_at_utc": "2026-10-21T06:30:33Z",
+  "finished_at_utc": "2026-10-21T06:31:34Z",
+  "status": "complete",
+  "capture_context": {
+    "postcode": "2000",
+    "price_basis": "online",
+    "egress": "proxy",
+    "egress_country": "au",
+    "exit_ip": "125.63.8.210",
+    "store_id": "1101",
+    "store_ids_seen": {
+      "1101": 660
+    }
+  },
+  "requested_nodes": [
+    {
+      "node_id": "1_D5A2236",
+      "name": "Poultry, Meat & Seafood"
+    }
+  ],
+  "counts": {
+    "total_reported": 612,
+    "pages_fetched": 17,
+    "tiles_seen": 660,
+    "sponsored_tiles": 51,
+    "sponsored_duplicates_dropped": 48,
+    "market_products_skipped": 0,
+    "proxy_rotations": 0,
+    "rows_written": 612,
+    "rows_with_price": 566,
+    "rows_with_warnings": 109
+  },
+  "errors": [],
+  "cheapest_by_subcategory": {
+    "rows_written": 32,
+    "subcategories": 29,
+    "groups_with_no_candidate": 1,
+    "rows_without_subcategory": 4,
+    "on_special": 3,
+    "selection_rule": "min_unit_price_within_sap_subcategory_excl_organic_prepared",
+    "produce_rows": 2,
+    "canonical_groups": 5,
+    "rows_by_group_kind": {
+      "non_produce": 3,
+      "prepared": 6,
+      "produce": 2,
+      "unmapped": 21
+    },
+    "rows_by_group_source": {
+      "product_name": 8,
+      "subcategory": 24
+    },
+    "rescued_by_product_name": 2,
+    "unmapped_subcategories": [
+      "BEEF CASE READY",
+      "BEEF MINCE CASE READY",
+      "BURGERS",
+      "CHILLED SEAFOOD",
+      "CONTINENTAL",
+      "CRUMBED",
+      "CRUSTACEANS / MOLLUSCS",
+      "DAIRY - SMALLGOODS",
+      "DELI CRUMBED",
+      "FISH",
+      "FREE RANGE",
+      "FRESH POULTRY",
+      "FROZEN SEAFOOD SELF SERVE",
+      "GAME",
+      "LAMB CASE READY",
+      "PORK CASE READY",
+      "PRAWNS",
+      "SALMON",
+      "SAUSAGES",
+      "SEAFOOD ENTERTAINING",
+      "SERVICED POULTRY",
+      "SLICED & SHAVED MEATS",
+      "SMALLGOODS BULK",
+      "SMALLGOODS MEAT",
+      "TURKEY"
+    ]
+  },
+  "drift": {
+    "window": 7,
+    "trailing_runs": [
+      "20261020183033-d48d6963",
+      "20261020063033-66f5d4bb",
+      "20261019183033-4f752589",
+      "20261019063033-852c7d78",
+      "20261018183033-8f87ef06",
+      "20261018063033-422b36cd",
+      "20261018040100-17fe4556"
+    ],
+    "trailing_median": 611.0,
+    "store_id": "1101",
+    "trailing_store_id": "1101",
+    "store_baseline": "pinned",
+    "threshold_pct": 10.0,
+    "pct": 0.16,
+    "store_changed": false,
+    "alarm": false,
+    "status": "ok"
+  }
+}

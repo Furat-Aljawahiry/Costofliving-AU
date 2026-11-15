@@ -57,3 +57,23 @@ output "combined_output_path" {
   description = "Where the union of both retailers' Fruit & Veg rows lands. Empty when combined_output_prefix is unset"
   value       = var.combined_output_prefix == "" ? "" : "s3://${aws_s3_bucket.data.id}/${var.combined_output_prefix}/"
 }
+
+output "meat_category_function" {
+  description = "The combined Meat, Poultry & Seafood crawler (both retailers)"
+  value       = aws_lambda_function.meat_category.function_name
+}
+
+output "meat_invoke_command" {
+  description = "Run one meat capture by hand"
+  value       = "aws lambda invoke --function-name ${aws_lambda_function.meat_category.function_name} --cli-read-timeout 700 --region ${var.aws_region} out.json && cat out.json"
+}
+
+output "snacks_category_function" {
+  description = "The Snacks & Confectionery crawler (one retailer per scheduled run)"
+  value       = aws_lambda_function.snacks_category.function_name
+}
+
+output "snacks_invoke_command" {
+  description = "Run one retailer's snack capture by hand (swap woolworths for coles)"
+  value       = "aws lambda invoke --function-name ${aws_lambda_function.snacks_category.function_name} --cli-binary-format raw-in-base64-out --payload '{\"retailer\":\"woolworths\"}' --cli-read-timeout 950 --region ${var.aws_region} out.json && cat out.json"
+}

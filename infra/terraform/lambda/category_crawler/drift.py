@@ -32,6 +32,10 @@ DEFAULT_THRESHOLD_PCT = 10.0
 # blocked runs must not turn the check off by finding no history at all.
 MAX_DAYS_BACK = 21
 
+# A run that fetched at least this share of what the API said it had is close
+# enough to be a baseline. See `_admissible` for why this exists at all.
+MIN_COVERAGE = 0.95
+
 _RUN_ID_RE = re.compile(r"^(\d{14}-[0-9a-f]+)\.")
 
 
@@ -170,14 +174,39 @@ def _manifest_summary(m: dict) -> dict:
     }
 
 
-def s3_history_reader(client, bucket: str):
-    """Return `history(prefix, window)` reading trailing complete runs from S3.
+def _admissible(m: dict) -> bool:
+    """Is this manifest a fair baseline to compare a new run against?
 
-    Walks dt= day prefixes newest first, and within each day takes only runs
-    that earned `_SUCCESS` — the same rule every other consumer applies, so
-    the baseline is built from exactly the runs the site is showing. Needs
-    s3:ListBucket on the bucket (scoped to the prefix) and s3:GetObject on
-    the prefix — the crawler roles are otherwise write-only.
+    This used to be `_SUCCESS exists`, and that turned out to be a trap. A run
+    is only marked complete when rows_written == total_reported exactly, so a
+    retailer that keeps landing a handful of rows short earns no `_SUCCESS` at
+    all — Woolworths wrote none between 23 Sep and 25 Sep 2026 while still
+    capturing 469 of 473 products twice a day. Under the old rule the trailing
+    window emptied out, `assess` fell through to `no_history`, and the drift
+    check quietly stopped checking precisely when it was most needed.
+
+    A 99.2% run is a perfectly good baseline for a product count. A run that
+    died on page 3 is not. Coverage is the honest line between them.
+    """
+    if m.get("status") == "complete":
+        return True
+    counts = m.get("counts") or {}
+    total, written = counts.get("total_reported"), counts.get("rows_written")
+    if not total or written is None:
+        return False
+    # Page errors mean the gap is unexplained; a clean short run is just short.
+    if m.get("errors"):
+        return False
+    return (written / total) >= MIN_COVERAGE
+
+
+def s3_history_reader(client, bucket: str):
+    """Return `history(prefix, window)` reading trailing baseline runs from S3.
+
+    Walks dt= day prefixes newest first, and within each day takes the runs
+    `_admissible` accepts — complete, or short but clean. Needs s3:ListBucket
+    on the bucket (scoped to the prefix) and s3:GetObject on the prefix — the
+    crawler roles are otherwise write-only.
     """
 
     def list_days(prefix: str) -> list[str]:
@@ -219,10 +248,13 @@ def s3_history_reader(client, bucket: str):
             names = list_names(day_prefix)
             run_ids = sorted({m.group(1) for n in names if (m := _RUN_ID_RE.match(n))}, reverse=True)
             for run_id in run_ids:
-                if f"{run_id}._SUCCESS" not in names or f"{run_id}.manifest.json" not in names:
+                if f"{run_id}.manifest.json" not in names:
                     continue
                 obj = client.get_object(Bucket=bucket, Key=f"{day_prefix}{run_id}.manifest.json")
-                out.append(_manifest_summary(json.loads(obj["Body"].read())))
+                manifest = json.loads(obj["Body"].read())
+                if not _admissible(manifest):
+                    continue
+                out.append(_manifest_summary(manifest))
                 if len(out) >= window:
                     return out
         return out

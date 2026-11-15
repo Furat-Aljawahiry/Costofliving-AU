@@ -232,10 +232,171 @@ variable "fruitveg_proxy_required" {
   default     = true
 }
 
+# --------------------------------------------------------------- meat, poultry & seafood (both retailers)
+
+# Same code and same shape as the Fruit & Veg function (lambda_meat.tf), its
+# own prefixes. Targets verified by the 18 Oct discovery crawl
+# (data/MEAT_DISCOVERY.md): Woolworths 606 products, Coles 572.
+
+variable "meat_woolworths_output_prefix" {
+  description = "S3 key prefix for Woolworths meat, poultry & seafood runs. The server maps the path segment to its category (server/data/categories.js)."
+  type        = string
+  default     = "reports/supermarkets/woolworths/meatAndPoultry"
+}
+
+variable "meat_coles_output_prefix" {
+  description = "S3 key prefix for Coles meat & seafood runs."
+  type        = string
+  default     = "reports/supermarkets/coles/meatAndPoultry"
+}
+
+variable "meat_woolworths_category_id" {
+  description = "Woolworths browse node id for Poultry, Meat & Seafood (from GET /apis/ui/PiesCategoriesWithSpecials)."
+  type        = string
+  default     = "1_D5A2236"
+}
+
+variable "meat_woolworths_category_url" {
+  type    = string
+  default = "/shop/browse/poultry-meat-seafood"
+}
+
+variable "meat_woolworths_category_name" {
+  type    = string
+  default = "Poultry, Meat & Seafood"
+}
+
+variable "meat_coles_category_id" {
+  description = "Coles browse slug; the path is the identifier."
+  type        = string
+  default     = "meat-seafood"
+}
+
+variable "meat_coles_category_url" {
+  type    = string
+  default = "/browse/meat-seafood"
+}
+
+variable "meat_coles_category_name" {
+  type    = string
+  default = "Meat & Seafood"
+}
+
+variable "meat_retailers" {
+  description = "Retailers the meat function crawls, in crawl order."
+  type        = list(string)
+  default     = ["woolworths", "coles"]
+}
+
+variable "meat_timeout" {
+  description = "Lambda timeout in seconds. 17 Woolworths + 12 Coles pages, sequential, through the proxy — the same budget as Fruit & Veg."
+  type        = number
+  default     = 600
+}
+
+variable "meat_schedule_enabled" {
+  description = "Whether the twice-daily meat schedule is enabled."
+  type        = bool
+  default     = true
+}
+
+variable "meat_proxy_enabled" {
+  description = "Whether the meat function reads the shared proxy secret. Coles blocked the direct discovery crawl after one pass; leave this on."
+  type        = bool
+  default     = true
+}
+
+variable "meat_proxy_required" {
+  description = "Fail rather than crawl direct from the AWS address when no proxy is configured."
+  type        = bool
+  default     = true
+}
+
 # --------------------------------------------------------------- alerting
 
 variable "alert_email" {
   description = "Address every alarm in the stack emails (alerting.tf). Empty creates the topic with no subscription. The address must click AWS's confirmation email before anything is delivered."
   type        = string
   default     = ""
+}
+
+# --------------------------------------------------------------- snacks & confectionery (both retailers)
+
+# Same code and same shape as the Meat function (lambda_snacks.tf), its own
+# prefixes. Targets verified by the 22 Oct discovery crawl
+# (data/SNACKS_DISCOVERY.md): Woolworths 2,751 listed (1,810 after marketplace
+# sellers are skipped), Coles 1,710.
+
+variable "snacks_woolworths_output_prefix" {
+  description = "S3 key prefix for Woolworths snacks & confectionery runs. The server maps the path segment to its category (server/data/categories.js)."
+  type        = string
+  default     = "reports/supermarkets/woolworths/snacks"
+}
+
+variable "snacks_coles_output_prefix" {
+  description = "S3 key prefix for Coles chips, chocolates & snacks runs."
+  type        = string
+  default     = "reports/supermarkets/coles/snacks"
+}
+
+variable "snacks_woolworths_category_id" {
+  description = "Woolworths browse node id for Snacks & Confectionery (from GET /apis/ui/PiesCategoriesWithSpecials)."
+  type        = string
+  default     = "1_717445A"
+}
+
+variable "snacks_woolworths_category_url" {
+  type    = string
+  default = "/shop/browse/snacks-confectionery"
+}
+
+variable "snacks_woolworths_category_name" {
+  type    = string
+  default = "Snacks & Confectionery"
+}
+
+variable "snacks_coles_category_id" {
+  description = "Coles browse slug; the path is the identifier. Top-level, and it holds Coles' biscuits and crackers too."
+  type        = string
+  default     = "chips-chocolates-snacks"
+}
+
+variable "snacks_coles_category_url" {
+  type    = string
+  default = "/browse/chips-chocolates-snacks"
+}
+
+variable "snacks_coles_category_name" {
+  type    = string
+  default = "Chips, Chocolates & Snacks"
+}
+
+variable "snacks_retailers" {
+  description = "Retailers a hand-run invoke with no event crawls. The schedules pass one retailer each (lambda_snacks.tf)."
+  type        = list(string)
+  default     = ["woolworths", "coles"]
+}
+
+variable "snacks_timeout" {
+  description = "Lambda timeout in seconds, for ONE retailer per scheduled invocation: 77 Woolworths or 37 Coles pages through the proxy. A hand-run invoke of both retailers needs the full 900."
+  type        = number
+  default     = 900
+}
+
+variable "snacks_schedule_enabled" {
+  description = "Whether the twice-daily snack schedules are enabled."
+  type        = bool
+  default     = true
+}
+
+variable "snacks_proxy_enabled" {
+  description = "Whether the snack function reads the shared proxy secret. Both retailers block direct AWS egress; leave this on."
+  type        = bool
+  default     = true
+}
+
+variable "snacks_proxy_required" {
+  description = "Fail rather than crawl direct from the AWS address when no proxy is configured."
+  type        = bool
+  default     = true
 }

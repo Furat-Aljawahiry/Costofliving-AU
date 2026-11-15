@@ -15,6 +15,13 @@ export function periodDate(p) {
   return new Date(Date.UTC(Number(m[1]), Number(m[2]) * 3, 0));
 }
 
+// "2026-Q2" -> Date at the start of the quarter (the left edge of a highlighted band).
+export function periodStart(p) {
+  const m = /^(\d{4})-Q([1-4])$/.exec(p);
+  if (!m) return new Date(p);
+  return new Date(Date.UTC(Number(m[1]), (Number(m[2]) - 1) * 3, 1));
+}
+
 // Latest non-null point of a series -> { i, period, index, yoy }
 export function latest(series, periods) {
   for (let i = series.index.length - 1; i >= 0; i--) {

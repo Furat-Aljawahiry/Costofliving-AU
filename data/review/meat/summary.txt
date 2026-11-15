@@ -1,0 +1,89 @@
+MEAT, POULTRY & SEAFOOD — MATCH REVIEW
+========================================
+
+data dir     C:\Users\furat\Documents\GitHub\costofliving-au\data\out
+products     1242  (coles 575, woolworths 667)
+captured     2026-10-19T06:31, 2026-10-19T18:31, 2026-10-20T18:31, 2026-10-21T06:30, 2026-10-21T06:31, 2026-10-21T18:30, 2026-10-21T18:31
+
+MATCHING
+  match keys at both retailers   184
+  SKU pairs under those keys     600
+    comparable (per kg, ≤1.5× pack size)   264
+    shown, not compared            336
+  coles        292 of 575 products have a same-key counterpart (51%)
+  woolworths   273 of 667 products have a same-key counterpart (41%)
+
+WHY THE REST ARE NOT MATCHED
+  ATTR_MISMATCH        298   same species and cut at the other retailer, but an attribute or flavour differs — the bucket to read first for missed matches
+  ONLY_AT_COLES        97    no Woolworths product with this species and cut
+  ONLY_AT_WOOLWORTHS   100   no Coles product with this species and cut
+  UNPARSED             28    the name has words the lexicon does not know, or no species/cut — refused rather than guessed
+  OUT_OF_SCOPE         154   deli counter, smallgoods, ready meals, sauces — captured, deliberately not matched
+
+NOT-COMPARED REASONS (matched pairs)
+  193   N vs N — pack sizes differ (N), and bulk packs are priced differently per kg; both shown, 
+  64    no per-kg price on one side (sold per pack or each with no weight) — not compared
+  40    not in woolworths's latest capture — last seen N-N-N
+  19    this line was listed as unavailable at capture
+  14    this line is not in coles's latest capture
+  2     rejected by review (N-N-N): Coles Finest "Rib Eye Steak approx. N" at $N/kg. Coles names i
+  2     rejected by review (N-N-N): El-Amin's "Halal Chicken Portions Family Pack approx. N" at $N
+  2     this listing's per-kg price disagrees with its price ÷ weight by N — not compared
+
+BY SPECIES  (products / with a same-key counterpart)
+  chicken                311   175
+  beef                   270   152
+  pork                   182   54
+  salmon                 95    64
+  lamb                   94    42
+  prawn                  63    12
+  (none)                 56    0
+  turkey                 24    6
+  unspecified            20    10
+  kangaroo               18    15
+  duck                   18    8
+  mussel                 12    6
+  barramundi             11    4
+  beef+pork              8     3
+  trout                  6     4
+  oyster                 6     0
+  marinara               5     2
+  snapper                4     0
+  tuna                   4     2
+  chicken+pork           3     0
+  basa                   3     2
+  veal                   3     0
+  surimi                 3     2
+  squid                  3     0
+  whiting                2     0
+  pork+turkey            2     0
+  crab                   2     2
+  lobster                2     0
+  cod                    1     0
+  shark                  1     0
+  beef+lamb              1     0
+  octopus                1     0
+  herring                1     0
+  quail                  1     0
+  pork+prawn             1     0
+  hoki                   1     0
+  flathead               1     0
+  scallop                1     0
+  pork+veal              1     0
+  bug                    1     0
+
+KIND x RETAILER
+  coles        {"meat_prepared":137,"meat":359,"out_of_scope":66,"unparsed":13}
+  woolworths   {"out_of_scope":88,"meat":400,"meat_prepared":164,"unparsed":15}
+
+HOW THE WEIGHT WAS STATED  (pricing mode x retailer)
+  coles        {"fixed":426,"variable-pack":148,"count-only":1}
+  woolworths   {"per-kg":75,"fixed":441,"variable-pack":133,"count-only":18}
+
+WEIGHT / PRICE FLAGS  (per kg recomputed from price ÷ the weight the price was set on)
+  coles        {"ok":571,"CUP_MISMATCH":2,"NO_KG_PRICE":1,"CUP_DRIFT":1}
+  woolworths   {"ok":566,"NO_KG_PRICE":100,"CUP_DRIFT":1}
+
+SIZE TIERS (label only)
+  coles        {"L":115,"M":248,"S":180,"Bulk":31,"none":1}
+  woolworths   {"counter":75,"M":264,"L":122,"S":153,"Bulk":35,"none":18}

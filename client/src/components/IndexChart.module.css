@@ -10,6 +10,8 @@
 .handover { stroke-width: 1.5; stroke-dasharray: 6 6; }
 .handoverLabel { font-family: var(--mono); font-size: 10px; }
 .cursor { stroke-width: 1; opacity: 0.5; }
+.band { opacity: 0.16; }
+.bandLabel { font-family: var(--mono); font-size: 10px; font-weight: 700; }
 .source { font-family: var(--mono); font-size: 10px; line-height: 1.5; }
 .tooltip {
   position: absolute; top: 8%; transform: translate(14px, 0); width: 280px; padding: 12px;
@@ -27,6 +29,8 @@
 .light .axisLabel, .light .source, .light .handoverLabel { fill: var(--muted); color: var(--muted); }
 .light .endLabel { fill: var(--ink); }
 .light .handover, .light .cursor { stroke: var(--ink); }
+.light .band { fill: var(--accent); }
+.light .bandLabel { fill: var(--accent); }
 
 /* Dark: the home basket band */
 .dark { color: var(--paper-2); }
@@ -34,6 +38,8 @@
 .dark .axisLabel, .dark .source, .dark .handoverLabel { fill: rgba(255, 253, 247, 0.6); color: rgba(255, 253, 247, 0.6); }
 .dark .endLabel { fill: var(--paper-2); }
 .dark .handover, .dark .cursor { stroke: var(--ticket); }
+.dark .band { fill: var(--ticket); }
+.dark .bandLabel { fill: var(--ticket); }
 .dark .tooltip { border-color: var(--ticket); }
 .dark .chip { border-color: var(--paper-2); color: var(--paper-2); background: repeating-linear-gradient(-45deg, transparent 0 4px, rgba(255, 253, 247, 0.12) 4px 8px); }
 

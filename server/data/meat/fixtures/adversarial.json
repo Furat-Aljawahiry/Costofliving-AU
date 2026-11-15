@@ -1,0 +1,1536 @@
+[
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths RSPCA Approved Chicken Thigh Fillets Skinless",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "FRESH POULTRY FRESH POULTRY"
+  },
+  "key": "meat:chicken:fillet-thigh",
+  "kind": "meat",
+  "note": "fillet defaults to skinless: 'Skinless' must not split it from plain thigh fillets"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Chicken Thigh Fillets Small Pack",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Thigh Fillets THIGH FILLET"
+  },
+  "key": "meat:chicken:fillet-thigh",
+  "kind": "meat",
+  "note": "Coles; pack size words are not part of the key"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths RSPCA Approved Chicken Thigh Cutlets",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "DELI SERVICE",
+   "subcategory": "SERVICED POULTRY SERVICED POULTRY"
+  },
+  "key": "meat:chicken:cutlet-thigh",
+  "kind": "meat",
+  "note": "cutlet is bone-in thigh: never a thigh fillet"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths RSPCA Approved Chicken Thigh Skinless Cutlets Bone In",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "FRESH POULTRY FRESH POULTRY"
+  },
+  "key": "meat:chicken:cutlet-thigh:skinless",
+  "kind": "meat",
+  "note": "skinless cutlet differs from a skin-on cutlet; 'bone in' is the cutlet default"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths RSPCA Approved Chicken Drumsticks",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "DELI SERVICE",
+   "subcategory": "SERVICED POULTRY SERVICED POULTRY"
+  },
+  "key": "meat:chicken:drumstick",
+  "kind": "meat",
+  "note": "drumstick"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Lovely Legs",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Drumsticks & Maryland BONE IN PORTIONS"
+  },
+  "key": "meat:chicken:lovely_legs",
+  "kind": "meat",
+  "note": "lovely legs are trimmed drumsticks: a different cut"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Wing Nibbles",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Chicken Wings WINGS"
+  },
+  "key": "meat:chicken:wing_nibble",
+  "kind": "meat",
+  "note": "nibbles are not wings"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths RSPCA Approved Chicken Wings Three Joint",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "DELI SERVICE",
+   "subcategory": "SERVICED POULTRY SERVICED POULTRY"
+  },
+  "key": "meat:chicken:wing",
+  "kind": "meat",
+  "note": "three-joint = whole wing"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken V Wings",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Chicken Wings WINGS"
+  },
+  "key": "meat:chicken:v_wing",
+  "kind": "meat",
+  "note": "V wings are their own cut"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Chicken Wing Tips",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Chicken Offal OFFAL"
+  },
+  "key": "meat:chicken:wing_tip",
+  "kind": "meat",
+  "note": "wing tips are their own cut"
+ },
+ {
+  "retailer": "coles",
+  "name": "Free Range Organic Chicken Breast Fillets Skin Off",
+  "ctx": {
+   "brand": "Inglewood Farms",
+   "isOrganic": true,
+   "retailerCategory": "Organic Meat",
+   "subcategory": "Organic Poultry POULTRY"
+  },
+  "key": "meat:chicken:breast-fillet:free_range:organic",
+  "kind": "meat",
+  "note": "organic chicken is free range: keys with Macro Organic"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Macro Organic Chicken Breast Fillet",
+  "ctx": {
+   "brand": "Macro",
+   "isOrganic": true,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "FRESH POULTRY FRESH POULTRY"
+  },
+  "key": "meat:chicken:breast-fillet:free_range:organic",
+  "kind": "meat",
+  "note": "organic implies free range"
+ },
+ {
+  "retailer": "coles",
+  "name": "Chicken Thigh Fillets",
+  "ctx": {
+   "brand": "The Bare Bird",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Free Range Chicken FREE RANGE"
+  },
+  "key": "meat:chicken:fillet-thigh:free_range",
+  "kind": "meat",
+  "note": "The Bare Bird at Coles: brand implies free range"
+ },
+ {
+  "retailer": "coles",
+  "name": "Boneless Butterflied Chicken",
+  "ctx": {
+   "brand": "The Bare Bird",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Free Range Chicken FREE RANGE"
+  },
+  "key": "meat:chicken:butterflied-whole:boneless:free_range",
+  "kind": "meat",
+  "note": "The Bare Bird; whole boneless = butterflied"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Whole Boneless Herb & Garlic",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Chicken Wings WHOLE CHICKENS"
+  },
+  "key": "meat:chicken:butterflied-whole:boneless:f-garlic_herb",
+  "kind": "meat_prepared",
+  "note": "prepared: never a plain butterflied chicken"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths 12 Pack Honey Soy Chicken Kebabs",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "VALUE ADDED POULTRY VALUE ADDED POULTRY"
+  },
+  "key": "meat:chicken:kebab:f-honey_soy",
+  "kind": "meat_prepared",
+  "note": "flavour in the key; pack count is not"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Kebabs Honey & Soy",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Kebabs & Bites VALUE ADDED"
+  },
+  "key": "meat:chicken:kebab:f-honey_soy",
+  "kind": "meat_prepared",
+  "note": "'Honey & Soy' = 'Honey Soy'"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths 6 Pack Hoisin Chicken Kebabs",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "VALUE ADDED POULTRY VALUE ADDED POULTRY"
+  },
+  "key": "meat:chicken:kebab:f-hoisin",
+  "kind": "meat_prepared",
+  "note": "hoisin is not honey soy"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Tenders",
+  "ctx": {
+   "brand": "Coles Simply",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Breast Fillets CRUMBED"
+  },
+  "key": "meat:chicken:tender:f-crumbed",
+  "kind": "meat_prepared",
+  "note": "CRUMBED subcategory: crumbed even though the name does not say"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Chicken Tenders",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "CRUMBED CRUMBED"
+  },
+  "key": "meat:chicken:tender:f-crumbed",
+  "kind": "meat_prepared",
+  "note": "crumbed (subcategory)"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Tenderloins",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Diced, Stir-Fry & Tenders BONELESS"
+  },
+  "key": "meat:chicken:tenderloin",
+  "kind": "meat",
+  "note": "tenderloin is raw, not 'tenders'"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Breast Schnitzel Plain Crumb",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Breast Fillets CRUMBED"
+  },
+  "key": "meat:chicken:breast-schnitzel",
+  "kind": "meat",
+  "note": "schnitzel is crumbed by definition"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Breast Schnitzel Garlic & Herb Crumb",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Breast Fillets CRUMBED"
+  },
+  "key": "meat:chicken:breast-schnitzel:f-garlic_herb",
+  "kind": "meat_prepared",
+  "note": "flavoured schnitzel"
+ },
+ {
+  "retailer": "coles",
+  "name": "No Added Hormone Beef Regular Mince",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef & Veal Mince BEEF MINCE"
+  },
+  "key": "meat:beef:mince:grade_regular",
+  "kind": "meat",
+  "note": "3-star / regular band"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Beef Mince",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF MINCE CASE READY BEEF MINCE CASE READY"
+  },
+  "key": "meat:beef:mince:grade_regular",
+  "kind": "meat",
+  "note": "unstated grade = regular"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Lean Beef Mince",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF MINCE CASE READY BEEF MINCE CASE READY"
+  },
+  "key": "meat:beef:mince:grade_lean",
+  "kind": "meat",
+  "note": "lean = 4 star"
+ },
+ {
+  "retailer": "coles",
+  "name": "Grass-fed Premium Beef Mince",
+  "ctx": {
+   "brand": "Cleaver's Organic",
+   "isOrganic": true,
+   "retailerCategory": "Organic Meat",
+   "subcategory": "Organic Beef BEEF"
+  },
+  "key": "meat:beef:mince:grade_lean:grass_fed:organic",
+  "kind": "meat",
+  "note": "Cleaver's 'Premium' = 4-star band; organic brand implies grass fed"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Heart Smart Extra Lean Beef Mince",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF MINCE CASE READY BEEF MINCE CASE READY"
+  },
+  "key": "meat:beef:mince:grade_extra_lean",
+  "kind": "meat",
+  "note": "heart smart = extra lean = 5 star"
+ },
+ {
+  "retailer": "coles",
+  "name": "5 Star Extra Lean Pork Mince",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Pork",
+   "subcategory": "Pork Mince PORK MINCE"
+  },
+  "key": "meat:pork:mince:grade_extra_lean",
+  "kind": "meat",
+  "note": "5 star pork"
+ },
+ {
+  "retailer": "coles",
+  "name": "Pork & Beef 3 Star Regular Mince Bolognese",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Pork",
+   "subcategory": "Pork Mince PORK MINCE"
+  },
+  "key": "meat:beef+pork:mince:grade_regular",
+  "kind": "meat",
+  "note": "mixed species: only ever matches the same mix"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Pork & Beef Mince",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "PORK CASE READY PORK CASE READY"
+  },
+  "key": "meat:beef+pork:mince:grade_regular",
+  "kind": "meat",
+  "note": "mixed species"
+ },
+ {
+  "retailer": "coles",
+  "name": "Kangaroo Mince",
+  "ctx": {
+   "brand": "K-Roo",
+   "isOrganic": false,
+   "retailerCategory": "Mince",
+   "subcategory": "Kangaroo & Wallaby Mince KANGAROO MINCE"
+  },
+  "key": "meat:kangaroo:mince",
+  "kind": "meat",
+  "note": "kangaroo mince has no fat band"
+ },
+ {
+  "retailer": "coles",
+  "name": "Graze Grassfed Beef New York Strip Steak",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Steaks GRASS FED"
+  },
+  "key": "meat:beef:porterhouse:grass_fed",
+  "kind": "meat",
+  "note": "New York strip = porterhouse; Graze = grass fed"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Australian Beef Sirloin Sharing Steak",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF CASE READY BEEF CASE READY"
+  },
+  "key": "meat:beef:porterhouse:sharing",
+  "kind": "meat",
+  "note": "sirloin = porterhouse, but a sharing steak is its own thing"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Beef Scotch Fillet Steak",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF CASE READY BEEF CASE READY"
+  },
+  "key": "meat:beef:scotch",
+  "kind": "meat",
+  "note": "scotch fillet"
+ },
+ {
+  "retailer": "coles",
+  "name": "Beef Scotch Steak Fillet 2 Pack",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Steaks BEEF GRILLING STEAKS"
+  },
+  "key": "meat:beef:scotch",
+  "kind": "meat",
+  "note": "word order and 'steak' do not matter"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Australian Beef Rib Eye Bone Sharing Steak",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF CASE READY BEEF CASE READY"
+  },
+  "key": "meat:beef:scotch:bone_in:sharing",
+  "kind": "meat",
+  "note": "rib eye on the bone is not a scotch fillet"
+ },
+ {
+  "retailer": "coles",
+  "name": "Graze Grassfed Beef Fillet Steak",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Steaks GRASS FED"
+  },
+  "key": "meat:beef:eye_fillet:grass_fed",
+  "kind": "meat",
+  "note": "beef fillet steak = eye fillet"
+ },
+ {
+  "retailer": "coles",
+  "name": "No Added Hormone Beef Quick Cook Scotch Fillet Steak",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Steaks BEEF GRILLING STEAKS"
+  },
+  "key": "meat:beef:scotch:thin_cut",
+  "kind": "meat",
+  "note": "quick cook = thin cut"
+ },
+ {
+  "retailer": "coles",
+  "name": "No Added Hormone Beef Short Rib Fingers",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Roasts BEEF ROAST"
+  },
+  "key": "meat:beef:short_rib:boneless",
+  "kind": "meat",
+  "note": "rib fingers are boneless: not short ribs"
+ },
+ {
+  "retailer": "coles",
+  "name": "Beef Slow Cook Short Ribs",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Roasts BEEF ROAST"
+  },
+  "key": "meat:beef:short_rib",
+  "kind": "meat",
+  "note": "'Slow Cook' is a cooking suggestion, not a prepared line"
+ },
+ {
+  "retailer": "coles",
+  "name": "Slow Cooked Lamb Shanks",
+  "ctx": {
+   "brand": "Coles Made Easy",
+   "isOrganic": false,
+   "retailerCategory": "Coles Made Easy Range",
+   "subcategory": "Slow Cook SLOW COOK"
+  },
+  "key": "meat:lamb:shank:f-slow_cooked",
+  "kind": "meat_prepared",
+  "note": "'Slow Cooked' is a cooked ready meal"
+ },
+ {
+  "retailer": "coles",
+  "name": "No Added Hormone Beef Marrow Bones",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Bones & Offal BEEF OFFAL"
+  },
+  "key": "meat:beef:bone-marrow",
+  "kind": "meat",
+  "note": "marrow bones are not soup bones"
+ },
+ {
+  "retailer": "coles",
+  "name": "Diced Casserole",
+  "ctx": {
+   "brand": "Drovers",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Stir Fry & Diced Beef BEEF STIR FRY/DICED"
+  },
+  "key": "meat:beef:diced",
+  "kind": "meat",
+  "note": "no species word: taken from the Coles category (Beef & Veal)"
+ },
+ {
+  "retailer": "coles",
+  "name": "Lamb Fry",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Lamb",
+   "subcategory": "Lamb Offal LAMB OFFAL"
+  },
+  "key": "meat:lamb:liver",
+  "kind": "meat",
+  "note": "lamb fry = lamb liver"
+ },
+ {
+  "retailer": "coles",
+  "name": "Lamb Whole Leg Roast",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Lamb",
+   "subcategory": "Lamb Roasts LAMB ROAST"
+  },
+  "key": "meat:lamb:leg-roast",
+  "kind": "meat",
+  "note": "a whole leg is the default leg"
+ },
+ {
+  "retailer": "coles",
+  "name": "Lamb Shoulder Roast On The Bone",
+  "ctx": {
+   "brand": "El- Amin's",
+   "isOrganic": false,
+   "retailerCategory": "Halal",
+   "subcategory": "Halal Lamb HALAL"
+  },
+  "key": "meat:lamb:roast-shoulder",
+  "kind": "meat",
+  "note": "on the bone is the shoulder-roast default"
+ },
+ {
+  "retailer": "coles",
+  "name": "Lamb Boneless Shoulder Roast",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Lamb",
+   "subcategory": "Lamb Roasts LAMB ROAST"
+  },
+  "key": "meat:lamb:roast-shoulder:boneless",
+  "kind": "meat",
+  "note": "boneless shoulder is not the default"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Pork Rashers",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "PORK CASE READY PORK CASE READY"
+  },
+  "key": "meat:pork:belly-slice",
+  "kind": "meat",
+  "note": "Woolworths pork rashers = belly slices"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Pork Fillet Heart Smart",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "PORK CASE READY PORK CASE READY"
+  },
+  "key": "meat:pork:fillet",
+  "kind": "meat",
+  "note": "heart smart on a fillet is a label, not a grade"
+ },
+ {
+  "retailer": "coles",
+  "name": "BBQ Sausages 8 Pack",
+  "ctx": {
+   "brand": "Coles Simply",
+   "isOrganic": false,
+   "retailerCategory": "Bbq, Sausages & Burgers",
+   "subcategory": "Sausages SAUSAGES"
+  },
+  "key": "meat:unspecified:sausage:f-bbq",
+  "kind": "meat_prepared",
+  "note": "no species: unspecified, only matches unspecified"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Market Value 8 Pack Thin BBQ Sausages",
+  "ctx": {
+   "brand": "Market Value",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "SAUSAGES SAUSAGES"
+  },
+  "key": "meat:unspecified:sausage:f-bbq",
+  "kind": "meat_prepared",
+  "note": "thin is the sausage default"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths 6 Pack Country Style Pork Sausages",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "SAUSAGES SAUSAGES"
+  },
+  "key": "meat:pork:sausage:f-country_style",
+  "kind": "meat_prepared",
+  "note": "country style is a flavour"
+ },
+ {
+  "retailer": "coles",
+  "name": "Wagyu Burger 2 Pack",
+  "ctx": {
+   "brand": "Grill'd",
+   "isOrganic": false,
+   "retailerCategory": "Bbq, Sausages & Burgers",
+   "subcategory": "Burgers & Rissoles BURGERS/RISSOLE/HSTK"
+  },
+  "key": "meat:beef:burger:wagyu",
+  "kind": "meat",
+  "note": "wagyu implies beef"
+ },
+ {
+  "retailer": "coles",
+  "name": "Tasmanian Salmon Portions Skin On 2 Pack",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood SALMON SKIN-ON PPS"
+  },
+  "key": "meat:salmon:portion:skin_on",
+  "kind": "meat",
+  "note": "fish fillet/portion/steak are one cut"
+ },
+ {
+  "retailer": "coles",
+  "name": "Premium Tasmanian Salmon Steak Skin On 200g",
+  "ctx": {
+   "brand": "Huon",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood SALMON SKIN-ON PPS"
+  },
+  "key": "meat:salmon:portion:skin_on",
+  "kind": "meat",
+  "note": "salmon steak = portion; name weight removed"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Tassal 2 Pack Atlantic Salmon Skin Off",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": "meat:salmon:portion:skinless",
+  "kind": "meat",
+  "note": "skin off = skinless"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Frozen Salmon Fillets Skin On",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "FROZEN SEAFOOD SELF SERVE FROZEN SEAFOOD SELF SERVE"
+  },
+  "key": "meat:salmon:portion:frozen:skin_on",
+  "kind": "meat",
+  "note": "frozen is never fresh"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Ocean Chef Patagonian Coho Salmon Portions Skinless",
+  "ctx": {
+   "brand": "Ocean Chef",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "FROZEN SEAFOOD SELF SERVE FROZEN SEAFOOD SELF SERVE"
+  },
+  "key": "meat:salmon:portion:coho:frozen:skinless",
+  "kind": "meat",
+  "note": "coho is a different species"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Tassal Cooked & Smoked Salmon Natural",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "SEAFOOD ENTERTAINING SEAFOOD ENTERTAINING"
+  },
+  "key": "meat:salmon:hot_smoked",
+  "kind": "meat",
+  "note": "cooked & smoked = hot smoked"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Mowi Norwegian Cold Smoked Salmon",
+  "ctx": {
+   "brand": "Mowi",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "SEAFOOD ENTERTAINING SEAFOOD ENTERTAINING"
+  },
+  "key": "meat:salmon:smoked:norwegian",
+  "kind": "meat",
+  "note": "Norwegian origin kept"
+ },
+ {
+  "retailer": "coles",
+  "name": "Tasmanian Smoked Salmon",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Smoked And Cured Fish SALMON DY"
+  },
+  "key": "meat:salmon:smoked",
+  "kind": "meat",
+  "note": "cold smoked is the default smoked salmon"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Diced Tasmanian Salmon Skin Off",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": "meat:salmon:diced",
+  "kind": "meat",
+  "note": "diced fish is skinless anyway"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Raw Prawn Meat",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": "meat:prawn:peeled:raw",
+  "kind": "meat",
+  "note": "prawn meat = peeled, tail off"
+ },
+ {
+  "retailer": "coles",
+  "name": "Prawns Raw Peeled",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood PRAWNS RAW PPS"
+  },
+  "key": "meat:prawn:peeled:raw",
+  "kind": "meat",
+  "note": "peeled defaults to tail off"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Raw Prawns Deveined Tail On",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "FROZEN SEAFOOD SELF SERVE FROZEN SEAFOOD SELF SERVE"
+  },
+  "key": "meat:prawn:peeled:frozen:raw:tail_on",
+  "kind": "meat",
+  "note": "tail on = peeled tail-on; deveined ignored"
+ },
+ {
+  "retailer": "coles",
+  "name": "Jumbo Raw Prawn Cutlets",
+  "ctx": {
+   "brand": "KB",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood PRAWNS RAW PPS"
+  },
+  "key": "meat:prawn:cutlet:jumbo:raw",
+  "kind": "meat",
+  "note": "cutlets are their own shape"
+ },
+ {
+  "retailer": "coles",
+  "name": "Frozen Cooked Extra Large Black Tiger Prawns",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Deli Prawns PRAWN WHLE CKD FZN"
+  },
+  "key": "meat:prawn:whole:cooked:frozen:tiger:x_large",
+  "kind": "meat",
+  "note": "black tiger = tiger; grade kept"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Frozen Cooked Extra Large Tiger Prawns Carton",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD",
+   "subcategory": "PRAWNS PRAWNS"
+  },
+  "key": "meat:prawn:whole:cooked:frozen:tiger:x_large",
+  "kind": "meat",
+  "note": "carton is packaging"
+ },
+ {
+  "retailer": "coles",
+  "name": "Thawed Cooked Prawn Plate Small",
+  "ctx": {
+   "brand": "Coles Deli",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Deli Prawns PRAWNS VADDED DL"
+  },
+  "key": "meat:prawn:whole:cooked:small:thawed",
+  "kind": "meat",
+  "note": "thawed is not frozen"
+ },
+ {
+  "retailer": "coles",
+  "name": "Premium Blue Swimmer Crab Meat",
+  "ctx": {
+   "brand": "Ocean Blue",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Smoked And Cured Fish OTHER FISH DY"
+  },
+  "key": "meat:crab:meat",
+  "kind": "meat",
+  "note": "blue swimmer is the only crab meat"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Talley's Chilled Mussels Marinated Garlic",
+  "ctx": {
+   "brand": "Talley's",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "SEAFOOD ENTERTAINING SEAFOOD ENTERTAINING"
+  },
+  "key": "meat:mussel:whole:f-garlic",
+  "kind": "meat_prepared",
+  "note": "'marinated' next to a flavour adds nothing"
+ },
+ {
+  "retailer": "coles",
+  "name": "Mussels Garlic",
+  "ctx": {
+   "brand": "Talley's",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Smoked And Cured Fish MUSSELS DY"
+  },
+  "key": "meat:mussel:whole:f-garlic",
+  "kind": "meat_prepared",
+  "note": "Talley's at Coles"
+ },
+ {
+  "retailer": "coles",
+  "name": "Cooked Duck Breasts Peking Flavoured",
+  "ctx": {
+   "brand": "Luv A Duck",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Duck GAME"
+  },
+  "key": "meat:duck:breast:f-peking:f-slow_cooked",
+  "kind": "meat_prepared",
+  "note": "cooked meat = slow cooked; 'flavoured' adds nothing"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Luv-A-Duck Peking Duck Breasts Slow Cooked",
+  "ctx": {
+   "brand": "Luv-A-Duck",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "GAME GAME"
+  },
+  "key": "meat:duck:breast:f-peking:f-slow_cooked",
+  "kind": "meat_prepared",
+  "note": "same product at Woolworths"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths BBQ Chicken Wing Nibbles Honey Soy",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "VALUE ADDED POULTRY VALUE ADDED POULTRY"
+  },
+  "key": "meat:chicken:wing_nibble:f-honey_soy",
+  "kind": "meat_prepared",
+  "note": "Woolworths' BBQ range word is generic next to a flavour"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths BBQ Chicken Wing Nibbles",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "VALUE ADDED POULTRY VALUE ADDED POULTRY"
+  },
+  "key": "meat:chicken:wing_nibble:f-bbq",
+  "kind": "meat_prepared",
+  "note": "on its own, BBQ is the flavour"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Leg Ham Shaved From The Deli",
+  "ctx": {
+   "brand": "",
+   "isOrganic": false,
+   "retailerCategory": "DELI SERVICE",
+   "subcategory": "SLICED & SHAVED MEATS SLICED & SHAVED MEATS"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "deli counter: out of scope"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Bertocchi Mortadella Plain Sliced From The Deli",
+  "ctx": {
+   "brand": "Bertocchi",
+   "isOrganic": false,
+   "retailerCategory": "DELI SERVICE",
+   "subcategory": "SLICED & SHAVED MEATS SLICED & SHAVED MEATS"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "smallgoods: out of scope"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Gourmet Chef Thai Red Curry Sauce",
+  "ctx": {
+   "brand": "Gourmet Chef",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "a sauce: out of scope"
+ },
+ {
+  "retailer": "coles",
+  "name": "Slow Cooked Beef In Red Wine Sauce",
+  "ctx": {
+   "brand": "Coles Made Easy",
+   "isOrganic": false,
+   "retailerCategory": "Coles Made Easy Range",
+   "subcategory": "Slow Cook SLOW COOK"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "ready meal with no cut: out of scope"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Free Range Chicken Mango & Coconut",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Free Range Chicken FREE RANGE"
+  },
+  "key": null,
+  "kind": "unparsed",
+  "note": "no cut named: refused"
+ },
+ {
+  "retailer": "coles",
+  "name": "Chicken Boneless",
+  "ctx": {
+   "brand": "El-Amin's",
+   "isOrganic": false,
+   "retailerCategory": "Halal",
+   "subcategory": "Halal Chicken HALAL"
+  },
+  "key": null,
+  "kind": "unparsed",
+  "note": "no cut named: refused"
+ },
+ {
+  "retailer": "coles",
+  "name": "Limited Edition 4 Pack",
+  "ctx": {
+   "brand": "Grill'd",
+   "isOrganic": false,
+   "retailerCategory": "Bbq, Sausages & Burgers",
+   "subcategory": "Burgers & Rissoles BURGERS/RISSOLE/HSTK"
+  },
+  "key": null,
+  "kind": "unparsed",
+  "note": "no species, no cut: refused"
+ },
+ {
+  "retailer": "coles",
+  "name": "Honey Soy Wing Nibbles",
+  "ctx": {
+   "brand": "Coles Made Easy",
+   "isOrganic": false,
+   "retailerCategory": "Coles Made Easy Range",
+   "subcategory": "Slow Cook SLOW COOK"
+  },
+  "key": "meat:chicken:wing_nibble:f-honey_soy:f-slow_cooked",
+  "kind": "meat_prepared",
+  "note": "review finding 1: Coles Made Easy (Slow Cook subcategory) is cooked, never raw nibbles"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Lamb Forequarter Chops 4-6 Pieces",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "LAMB CASE READY LAMB CASE READY"
+  },
+  "key": "meat:lamb:chop-forequarter",
+  "kind": "meat",
+  "note": "review finding 4: '4-6 Pieces' is a count, not the cut 'portion'"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Lamb Midloins Chops 3 - 6 Pieces",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "LAMB CASE READY LAMB CASE READY"
+  },
+  "key": "meat:lamb:chop-loin",
+  "kind": "meat",
+  "note": "review finding 4: midloin = loin; piece count stripped"
+ },
+ {
+  "retailer": "coles",
+  "name": "Lamb Loin Chops (11x5)",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Lamb",
+   "subcategory": "Lamb Chops LAMB CHOPS"
+  },
+  "key": "meat:lamb:chop-loin",
+  "kind": "meat",
+  "note": "Coles trim spec stripped"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Pork Belly Thinly Sliced",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "PORK CASE READY PORK CASE READY"
+  },
+  "key": "meat:pork:belly-slice:thin_cut",
+  "kind": "meat",
+  "note": "review finding 5: thinly sliced keeps the slice"
+ },
+ {
+  "retailer": "coles",
+  "name": "Quick Cook Belly Slices",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Pork",
+   "subcategory": "Pork Ribs PORK RIBS"
+  },
+  "key": "meat:pork:belly-slice:thin_cut",
+  "kind": "meat",
+  "note": "same product at Coles"
+ },
+ {
+  "retailer": "coles",
+  "name": "RSPCA Approved Chicken Southern Fried Thigh Burger",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Poultry",
+   "subcategory": "Crumbed Chicken CRUMBED"
+  },
+  "key": "meat:chicken:burger-thigh:f-crumbed:f-southern_fried",
+  "kind": "meat_prepared",
+  "note": "review finding 9: a thigh burger"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Southern Fried Chicken Thigh Fillet Burgers",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "CRUMBED CRUMBED"
+  },
+  "key": "meat:chicken:burger-thigh:f-crumbed:f-southern_fried",
+  "kind": "meat_prepared",
+  "note": "review finding 9: 'thigh fillet burger' = thigh burger"
+ },
+ {
+  "retailer": "coles",
+  "name": "Salmon Family Bundle",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood SALMON SKIN-ON PPS"
+  },
+  "key": "meat:salmon:bundle",
+  "kind": "meat",
+  "note": "review finding 12: Tassal bundle is a product, not out of scope"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Tassal Salmon Family Bundle",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": "meat:salmon:bundle",
+  "kind": "meat",
+  "note": "same product at Woolworths"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Primo Corned Beef Silverside",
+  "ctx": {
+   "brand": "Primo",
+   "isOrganic": false,
+   "retailerCategory": "DELI CONVENIENCE",
+   "subcategory": "SMALLGOODS MEAT SMALLGOODS MEAT"
+  },
+  "key": "meat:beef:corned-silverside:deli_cooked",
+  "kind": "meat",
+  "note": "review finding 10: a cooked deli smallgood, not the raw corned silverside"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Gourmet Chef Marinara Sauce",
+  "ctx": {
+   "brand": "Gourmet Chef",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "review finding 8: a pasta sauce is not seafood marinara"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Slow Cooked Beef Brisket With Bourbon BBQ Sauce",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "VALUE ADDED PROTEIN VALUE ADDED PROTEIN"
+  },
+  "key": null,
+  "kind": "out_of_scope",
+  "note": "a name ending in 'sauce' is a ready meal"
+ },
+ {
+  "retailer": "coles",
+  "name": "Sliced Smoked Ocean Trout",
+  "ctx": {
+   "brand": "Ocean Blue",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Smoked And Cured Fish TROUT DY"
+  },
+  "key": "meat:trout:smoked",
+  "kind": "meat",
+  "note": "ocean trout is trout"
+ },
+ {
+  "retailer": "coles",
+  "name": "Grass-fed Beef Meatballs",
+  "ctx": {
+   "brand": "Cleaver's Organic",
+   "isOrganic": true,
+   "retailerCategory": "Organic Meat",
+   "subcategory": "Organic Sausages & Meatballs SMALLGOODS"
+  },
+  "key": "meat:beef:meatball:grass_fed:organic",
+  "kind": "meat",
+  "note": "re-check: Coles sap SMALLGOODS shelf holds raw Cleaver's lines — not deli_cooked"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Macro Organic Classic Beef Meatballs",
+  "ctx": {
+   "brand": "Macro",
+   "isOrganic": true,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "ORGANIC MEAT ORGANIC MEAT"
+  },
+  "key": "meat:beef:meatball:grass_fed:organic",
+  "kind": "meat",
+  "note": "same product at Woolworths"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Smoked Pork Bones",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "DELI CONVENIENCE",
+   "subcategory": "SMALLGOODS MEAT SMALLGOODS MEAT"
+  },
+  "key": "meat:pork:bone-smoked",
+  "kind": "meat",
+  "note": "re-check: smoked bones on the Woolworths smallgoods shelf are raw"
+ },
+ {
+  "retailer": "coles",
+  "name": "Pork Bones Smoked",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Ham",
+   "subcategory": "Ham Portions HAM PORTIONS"
+  },
+  "key": "meat:pork:bone-smoked",
+  "kind": "meat",
+  "note": "same product at Coles"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Smoked Pork Hock",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "DELI CONVENIENCE",
+   "subcategory": "SMALLGOODS MEAT SMALLGOODS MEAT"
+  },
+  "key": "meat:pork:hock-smoked",
+  "kind": "meat",
+  "note": "re-check: smoked hock is raw"
+ },
+ {
+  "retailer": "coles",
+  "name": "Brothers Gourmet Leg Ham Portion",
+  "ctx": {
+   "brand": "Bertocchi",
+   "isOrganic": false,
+   "retailerCategory": "Ready to Eat Protein",
+   "subcategory": "Ham HAM LEGS"
+  },
+  "key": "meat:pork:ham-leg-portion",
+  "kind": "meat",
+  "note": "re-check: ham under Coles 'Ready to Eat' is not a slow-cooked meal"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "D'Orsogna Natural Leg Ham Portion",
+  "ctx": {
+   "brand": "D'Orsogna",
+   "isOrganic": false,
+   "retailerCategory": "DELI CONVENIENCE",
+   "subcategory": "SMALLGOODS MEAT SMALLGOODS MEAT"
+  },
+  "key": "meat:pork:ham-leg-portion",
+  "kind": "meat",
+  "note": "same product type at Woolworths"
+ },
+ {
+  "retailer": "coles",
+  "name": "Graze Grassfed Beef Diced Steak",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Graze Beef BEEF STIR FRY/DICED"
+  },
+  "key": "meat:beef:diced:grass_fed",
+  "kind": "meat",
+  "note": "\"Diced Steak\" is diced beef (Graze = Macro Grass Fed Diced Beef, $26/kg both)"
+ },
+ {
+  "retailer": "coles",
+  "name": "Cumberland Sausages",
+  "ctx": {
+   "brand": "British",
+   "isOrganic": false,
+   "retailerCategory": "Bbq, Sausages & Burgers",
+   "subcategory": "Sausages SAUSAGES"
+  },
+  "key": "meat:pork:sausage:f-cumberland",
+  "kind": "meat_prepared",
+  "note": "Cumberland is a pork sausage: never `unspecified`"
+ },
+ {
+  "retailer": "coles",
+  "name": "New Zealand King Salmon Manuka Wood Smoked Slices",
+  "ctx": {
+   "brand": "Regal",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Smoked And Cured Fish SALMON DY"
+  },
+  "key": "meat:salmon:smoked:king:f-manuka",
+  "kind": "meat_prepared",
+  "note": "\"Manuka Wood\": the wood is the flavour, not a second one"
+ },
+ {
+  "retailer": "coles",
+  "name": "Salmon Portions Mustard And Dill",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "Seafood",
+   "subcategory": "Prepacked Seafood SALMON V-ADDED PPS"
+  },
+  "key": "meat:salmon:portion:f-mustard_dill",
+  "kind": "meat_prepared",
+  "note": "the Coles side of the mustard & dill pair: same 300g, same $73.33/kg as Tassal"
+ },
+ {
+  "retailer": "coles",
+  "name": "Beef Scotch Fillet Thin Cut",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Beef & Veal",
+   "subcategory": "Beef Steaks BEEF GRILLING STEAKS"
+  },
+  "key": "meat:beef:scotch:thin_cut",
+  "kind": "meat",
+  "note": "Coles side of the thin scotch pair, $52.50/kg both"
+ },
+ {
+  "retailer": "coles",
+  "name": "Free Range Pork Loin Medallions",
+  "ctx": {
+   "brand": "Coles",
+   "isOrganic": false,
+   "retailerCategory": "Pork",
+   "subcategory": "Free Range Pork FREE RANGE/BARN BRED"
+  },
+  "key": "meat:pork:medallion:free_range",
+  "kind": "meat",
+  "note": "pork medallions are loin: \"Loin Medallions\" = \"Medallion\""
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Tassal 2 Pack Tassie Salmon Mustard & Dill",
+  "ctx": {
+   "brand": "Tassal",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "CHILLED SEAFOOD CHILLED SEAFOOD"
+  },
+  "key": "meat:salmon:portion:f-mustard_dill",
+  "kind": "meat_prepared",
+  "note": "\"Mustard & Dill\" = \"Mustard And Dill\": norm() drops \"&\", so the compound phrase must not need it (22 Oct review)"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Talley's Chilled Mussels Marinated Plain",
+  "ctx": {
+   "brand": "Talley's",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "SEAFOOD ENTERTAINING SEAFOOD ENTERTAINING"
+  },
+  "key": "meat:mussel:whole",
+  "kind": "meat",
+  "note": "Talley's \"Marinated Plain\" is plain: matches Coles \"Mussels Natural\" (Talley's, 375g)"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Macro Organic Australian Extra Lean Stir Fry Beef",
+  "ctx": {
+   "brand": "Macro",
+   "isOrganic": true,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "ORGANIC MEAT ORGANIC MEAT"
+  },
+  "key": "meat:beef:stir_fry:grass_fed:organic",
+  "kind": "meat",
+  "note": "\"Extra Lean\" on stir fry is a label, like on a fillet: matches Coles organic stir fry ($34.44/kg both)"
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Canon Foods Crumbed Chicken Breast Tenders",
+  "ctx": {
+   "brand": "Canon Foods",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "CRUMBED CRUMBED"
+  },
+  "key": "meat:chicken:tender:f-crumbed",
+  "kind": "meat_prepared",
+  "note": "tenders are breast meat: \"Breast Tenders\" = \"Tenders\""
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Regal Manuka Cold Smoked Salmon Slices",
+  "ctx": {
+   "brand": "Regal",
+   "isOrganic": false,
+   "retailerCategory": "SEAFOOD CONVENIENCE",
+   "subcategory": "SEAFOOD ENTERTAINING SEAFOOD ENTERTAINING"
+  },
+  "key": "meat:salmon:smoked:king:f-manuka",
+  "kind": "meat_prepared",
+  "note": "Regal sells only king salmon; \"Manuka Cold Smoked\" = Coles' Regal \"Manuka Wood Smoked\""
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Boneless Lamb Shoulder Rolled",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "LAMB CASE READY LAMB CASE READY"
+  },
+  "key": "meat:lamb:roast-shoulder:boneless",
+  "kind": "meat",
+  "note": "a whole lamb shoulder is the roast: \"Shoulder Rolled\" = \"Shoulder Roast\""
+ },
+ {
+  "retailer": "woolworths",
+  "name": "Woolworths Beef Scotch Fillet Thin Slice",
+  "ctx": {
+   "brand": "Woolworths",
+   "isOrganic": false,
+   "retailerCategory": "MEAT CONVENIENCE",
+   "subcategory": "BEEF CASE READY BEEF CASE READY"
+  },
+  "key": "meat:beef:scotch:thin_cut",
+  "kind": "meat",
+  "note": "\"Thin Slice\" scotch is the thin-cut steak: the slice adds nothing to a steak cut"
+ }
+]

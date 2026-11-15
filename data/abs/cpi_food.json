@@ -1284,15 +1284,8 @@
    "lines": [
     "115501"
    ],
-   "match": "shared",
-   "note": "ABS groups snacks and confectionery together, so this line is shared with Chocolate & candy."
-  },
-  "chocolate": {
-   "lines": [
-    "115501"
-   ],
-   "match": "shared",
-   "note": "ABS groups snacks and confectionery together, so this line is shared with Snacks."
+   "match": "exact",
+   "note": "ABS “Snacks and confectionery” — chips, biscuits, chocolate and lollies are one ABS group, as they are one aisle here."
   },
   "canned": {
    "lines": [

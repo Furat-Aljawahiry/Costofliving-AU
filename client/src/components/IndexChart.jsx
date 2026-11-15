@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NotWired from "./NotWired";
-import { periodLabel, periodDate, fmtYoy } from "../lib/abs";
+import { periodLabel, periodDate, periodStart, fmtYoy } from "../lib/abs";
 import { fmtDate } from "../lib/format";
 import styles from "./IndexChart.module.css";
 
@@ -12,8 +12,10 @@ import styles from "./IndexChart.module.css";
  * Plain SVG, same conventions as the product-page PriceChart.
  *
  * lines: [{ key, label, index: number[], yoy: number[], colour, width, dash }]
+ * highlight: { from: "2022-Q1", to: "2022-Q3", label } shades those quarters (inclusive) —
+ * how a "Did you know?" fact points at the stretch of the line it is talking about.
  */
-export default function IndexChart({ periods, lines, tone = "light", handover, source, notWired, height = 260 }) {
+export default function IndexChart({ periods, lines, tone = "light", handover, highlight, source, notWired, height = 260 }) {
   const [hover, setHover] = useState(null);
   const W = 1200, H = 430, padL = 52, padR = 24, padT = 28, padB = 44;
   if (!periods?.length || !lines?.length) return <NotWired label="No index series" minHeight={height} />;
@@ -37,6 +39,15 @@ export default function IndexChart({ periods, lines, tone = "light", handover, s
     .filter(Boolean).join(" ");
   const lastI = periods.length - 1;
   const hx = handover ? x(new Date(handover.at).getTime()) : null;
+  // Band edges: start of the first quarter to the end of the last, clamped to the plot.
+  const band = highlight ? (() => {
+    const bx0 = Math.max(padL, x(periodStart(highlight.from).getTime()));
+    const bx1 = Math.min(W - padR, x(periodDate(highlight.to).getTime()));
+    return bx1 > bx0 ? { x: bx0, w: bx1 - bx0 } : null;
+  })() : null;
+  // The label sits inside the band when it fits, otherwise just to its right.
+  const bandLabelW = highlight?.label ? highlight.label.length * 6.5 + 12 : 0;
+  const bandLabelInside = band && band.w >= bandLabelW;
   const onMove = (e) => {
     const r = e.currentTarget.getBoundingClientRect();
     const mx = ((e.clientX - r.left) / r.width) * W;
@@ -58,6 +69,16 @@ export default function IndexChart({ periods, lines, tone = "light", handover, s
       <div className={styles.plotWrap}>
         <svg viewBox={`0 0 ${W} ${H}`} className={styles.plot} onMouseMove={onMove} onMouseLeave={() => setHover(null)}>
           <text x={4} y={14} className={styles.axisLabel}>2014 = 100</text>
+          {band && (
+            <g>
+              <rect x={band.x} y={padT} width={band.w} height={H - padT - padB} className={styles.band} />
+              {highlight.label && (
+                <text x={bandLabelInside ? band.x + 6 : band.x + band.w + 6} y={padT + 12} className={styles.bandLabel}>
+                  {highlight.label}
+                </text>
+              )}
+            </g>
+          )}
           {gridVals.map((g) => (
             <g key={g}>
               <line x1={padL} x2={W - padR} y1={y(g)} y2={y(g)} className={styles.grid} />

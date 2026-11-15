@@ -27,6 +27,13 @@ locals {
   crawler_read_prefixes = compact([
     var.woolworths_output_prefix,
     var.coles_output_prefix,
+    # Meat (lambda_meat.tf). Each run reads only its own prefix's history; one
+    # shared policy is simply less to keep in step than one per function.
+    var.meat_woolworths_output_prefix,
+    var.meat_coles_output_prefix,
+    # Snacks (lambda_snacks.tf).
+    var.snacks_woolworths_output_prefix,
+    var.snacks_coles_output_prefix,
   ])
 }
 

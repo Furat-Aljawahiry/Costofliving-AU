@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import NotWired from "../components/NotWired";
 import IndexChart from "../components/IndexChart";
 import { STORE_LABEL, STORE_COLOUR, money, formatUnitBasis, fmtDate, pct } from "../lib/format";
-import { CATEGORY_COPY } from "../lib/categories";
+import { CATEGORY_COPY, CRAWLED } from "../lib/categories";
 import { buildWall, groupLabel } from "../lib/cheapest";
 import { periodLabel, latest, fmtYoy, CAPTURES_START } from "../lib/abs";
 import styles from "./Home.module.css";
@@ -26,12 +26,11 @@ const TILE_ART = {
   meat:       { field: "#e9b7a8", image: "cat-meat.png" },
   canned:     { field: "#d7c9a7", image: "cat-canned.png" },
   snacks:     { field: "#f0cf72", image: "cat-snacks.png" },
-  chocolate:  { field: "#bfa58e", image: "cat-chocolate.png" },
   staples:    { field: "#c5d8d9", image: "cat-staples.png" },
 };
 const BENTO_ROWS = [
   { height: 470, tiles: [{ id: "vegetables", span: 760 }, { id: "meat", span: null }] },
-  { height: 400, tiles: [{ id: "canned", span: null }, { id: "snacks", span: 500 }, { id: "chocolate", span: null }] },
+  { height: 400, tiles: [{ id: "canned", span: 560 }, { id: "snacks", span: null }] },
   { height: 360, tiles: [{ id: "staples", span: null }] },
 ];
 
@@ -55,7 +54,7 @@ export default function Home({ status }) {
 
   useEffect(() => {
     let alive = true;
-    api.cheapest().then((c) => alive && setCheapest(c)).catch(() => alive && setCheapest([]));
+    api.cheapest("fruitAndVeg").then((c) => alive && setCheapest(c)).catch(() => alive && setCheapest([]));
     api.history().then((h) => alive && setHistory(h)).catch(() => alive && setHistory(false));
     return () => { alive = false; };
   }, []);
@@ -168,14 +167,15 @@ export default function Home({ status }) {
       <section className={styles.categories}>
         <div className={styles.sectionHeading}>
           <h2 className={styles.h2}>What are you paying for?</h2>
-          <p className={styles.sectionBlurb}>Six aisles. Thousands of weekly observations. Start where your grocery bill hurts.</p>
+          <p className={styles.sectionBlurb}>Five aisles. Thousands of weekly observations. Start where your grocery bill hurts.</p>
         </div>
         <div className={styles.bento}>
           {BENTO_ROWS.map((row, ri) => (
             <div className={styles.bentoRow} key={ri} style={{ height: row.height }}>
               {row.tiles.map(({ id, span }) => {
                 const art = TILE_ART[id], copy = CATEGORY_COPY[id];
-                const measured = id === "vegetables";
+                const measured = !!CRAWLED[id];
+                const skuCount = status?.productsByCategory?.[CRAWLED[id]];
                 const abs = tileAbs(id);
                 return (
                   <a key={id} href={`#/category/${id}`} className={styles.tile}
@@ -190,8 +190,10 @@ export default function Home({ status }) {
                       </div>
                       <p className={styles.tileBlurb}>{copy.blurb}</p>
                       <div className={styles.tileFoot}>
-                        {measured && status
-                          ? <span className={styles.tileMeasured}>✓ {status.productCount.toLocaleString()} SKUs MEASURED</span>
+                        {measured && skuCount
+                          ? <span className={styles.tileMeasured}>✓ {skuCount.toLocaleString()} SKUs MEASURED</span>
+                          : measured && status
+                          ? <NotWired inline label="IN REVIEW" needs="crawled, not yet published — the match lists are being reviewed" />
                           : <NotWired inline label="NO CRAWL YET" needs="a Lambda category target for this aisle" />}
                         <NotWired inline label="CHEAPEST AT —" needs="cross-retailer basket matching" />
                       </div>
