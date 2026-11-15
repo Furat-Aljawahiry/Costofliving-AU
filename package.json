@@ -17,7 +17,8 @@
     "fetch-abs": "node server/scripts/fetch-abs.mjs",
     "test:server": "node --test \"server/*.test.mjs\" \"server/scripts/*.test.mjs\" \"server/data/*.test.mjs\" \"server/data/matching/*.test.mjs\" \"server/data/meat/*.test.mjs\" \"server/data/snacks/*.test.mjs\" \"server/data/season/*.test.mjs\"",
     "matching-report": "node server/scripts/matching-report.mjs",
-    "produce-names-report": "node server/scripts/produce-names-report.mjs"
+    "produce-names-report": "node server/scripts/produce-names-report.mjs",
+    "unmatched-report": "node server/scripts/unmatched-by-subcategory.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

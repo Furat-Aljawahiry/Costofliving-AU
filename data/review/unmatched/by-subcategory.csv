@@ -1,0 +1,235 @@
+domain,subcategory,retailers,rows,compared,compared_pct,no_match,not_compared,blocked,top_reason,top_reason_rows
+produce,ORGANICS,woolworths,91,8,8.8%,7,76,83,"we cannot yet tell which variety this is, so it is not compared",23
+meat,FRESH POULTRY,woolworths,85,24,28.2%,8,53,61,this line is not in woolworths's latest capture,18
+meat,HALAL,coles+woolworths,72,15,20.8%,36,21,57,no match key — the lexicon could not key this row,21
+meat,SMALLGOODS MEAT,woolworths,58,2,3.4%,41,15,56,no match key — the lexicon could not key this row,21
+produce,SALAD,woolworths,53,0,0.0%,53,0,53,no match key — the lexicon could not key this row,53
+produce,VALUE ADD VEG,woolworths,48,0,0.0%,48,0,48,no match key — the lexicon could not key this row,48
+meat,FROZEN SEAFOOD SELF SERVE,woolworths,47,2,4.3%,7,38,45,no counterpart under this key,6
+meat,CRUMBED,coles+woolworths,58,17,29.3%,11,30,41,no counterpart under this key,6
+produce,SALADS,coles,40,0,0.0%,40,0,40,no match key — the lexicon could not key this row,40
+meat,SLICED & SHAVED MEATS,woolworths,40,0,0.0%,40,0,40,no match key — the lexicon could not key this row,40
+meat,CHILLED SEAFOOD,woolworths,55,16,29.1%,10,29,39,no match key — the lexicon could not key this row,8
+meat,DAIRY - SMALLGOODS,woolworths,38,0,0.0%,38,0,38,no counterpart under this key,36
+meat,VALUE ADDED POULTRY,woolworths,39,4,10.3%,6,29,35,no counterpart under this key,4
+meat,VALUE ADDED PROTEIN,woolworths,36,2,5.6%,20,14,34,no match key — the lexicon could not key this row,14
+meat,BEEF CASE READY,woolworths,58,26,44.8%,5,27,32,no counterpart under this key,5
+produce,HERBS,coles,34,4,11.8%,11,19,30,"we cannot yet tell which variety this is, so it is not compared",17
+produce,VEGETABLES,coles,36,6,16.7%,2,28,30,"we cannot yet tell which variety this is, so it is not compared",4
+meat,SAUSAGES,coles+woolworths,60,33,55.0%,4,23,27,no match key — the lexicon could not key this row,3
+produce,SNACKS,coles,27,0,0.0%,27,0,27,no match key — the lexicon could not key this row,27
+meat,SEAFOOD ENTERTAINING,woolworths,42,16,38.1%,7,19,26,no match key — the lexicon could not key this row,5
+produce,TROPICAL FRUIT,woolworths,32,7,21.9%,1,24,25,"we cannot yet tell which variety this is, so it is not compared",13
+meat,FREE RANGE,coles+woolworths,60,36,60.0%,6,18,24,no counterpart under this key,5
+meat,GAME,coles+woolworths,33,9,27.3%,14,10,24,no match key — the lexicon could not key this row,11
+produce,CONDIMENTS & HERBS,woolworths,23,0,0.0%,20,3,23,no match key — the lexicon could not key this row,20
+produce,LEAF,coles,22,0,0.0%,14,8,22,no match key — the lexicon could not key this row,14
+produce,APPLE,woolworths,26,5,19.2%,0,21,21,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure",4
+produce,TOMATO,woolworths,27,6,22.2%,0,21,21,"we cannot yet tell which variety this is, so it is not compared",13
+produce,LEAFY VEG,woolworths,21,1,4.8%,2,18,20,"we cannot yet tell which variety this is, so it is not compared",14
+produce,DELI - STYLE SALAD,coles,19,0,0.0%,19,0,19,no match key — the lexicon could not key this row,19
+meat,PRAWNS,woolworths,20,1,5.0%,1,18,19,no cooked:thawed:tiger:x_large at coles in the latest capture,2
+meat,SLOW COOK,coles,19,0,0.0%,12,7,19,no match key — the lexicon could not key this row,9
+meat,KOSHER,coles,18,0,0.0%,18,0,18,no match key — the lexicon could not key this row,17
+produce,POTATO,woolworths,23,5,21.7%,0,18,18,"we cannot yet tell which variety this is, so it is not compared",9
+produce,PREPARED VEGETABLES,coles,18,0,0.0%,16,2,18,no match key — the lexicon could not key this row,16
+meat,SERVICED POULTRY,woolworths,26,8,30.8%,1,17,18,this line is not in woolworths's latest capture,11
+produce,STONE FRUIT,woolworths,17,0,0.0%,0,17,17,"we cannot yet tell which variety this is, so it is not compared",13
+produce,PUMPKIN,coles+woolworths,16,0,0.0%,4,12,16,"we cannot yet tell which variety this is, so it is not compared",8
+produce,CITRUS,woolworths,17,2,11.8%,0,15,15,the capture recorded no unit price for one side,5
+meat,SMALLGOODS BULK,woolworths,15,0,0.0%,15,0,15,no match key — the lexicon could not key this row,15
+produce,BRASSICA VEG,woolworths,20,6,30.0%,0,14,14,"we cannot yet tell which variety this is, so it is not compared",5
+produce,MANGOES,coles+woolworths,16,2,12.5%,0,14,14,"we cannot yet tell which variety this is, so it is not compared",10
+produce,HERB,woolworths,17,4,23.5%,0,13,13,"we cannot yet tell which variety this is, so it is not compared",5
+meat,LAMB CASE READY,woolworths,25,12,48.0%,2,11,13,no counterpart under this key,2
+produce,MANDARIN,woolworths,14,1,7.1%,0,13,13,"we cannot yet tell which variety this is, so it is not compared",4
+produce,PEAR,woolworths,14,1,7.1%,0,13,13,"we cannot yet tell which variety this is, so it is not compared",5
+meat,POULTRY,coles,16,3,18.8%,3,10,13,no free_range:organic at woolworths in the latest capture,3
+meat,BURGERS,woolworths,19,7,36.8%,2,10,12,no counterpart under this key,2
+produce,NATOORA,coles,14,2,14.3%,3,9,12,no match key — the lexicon could not key this row,3
+meat,BEEF GRILLING STEAKS,coles,19,8,42.1%,6,5,11,no counterpart under this key,4
+meat,BURGERS/RISSOLE/HSTK,coles,19,8,42.1%,4,7,11,no counterpart under this key,3
+produce,ONION,coles+woolworths,17,6,35.3%,0,11,11,"we cannot yet tell which variety this is, so it is not compared",3
+meat,VALUE ADDED,coles+woolworths,15,4,26.7%,2,9,11,no counterpart under this key,1
+produce,FLORAL,coles,10,0,0.0%,10,0,10,no match key — the lexicon could not key this row,10
+produce,FRUIT,coles,10,0,0.0%,8,2,10,no match key — the lexicon could not key this row,8
+produce,GRAPES,woolworths,10,0,0.0%,0,10,10,"we cannot yet tell which variety this is, so it is not compared",4
+produce,MUSHROOM,woolworths,16,6,37.5%,5,5,10,no match key — the lexicon could not key this row,5
+meat,PORK CASE READY,woolworths,24,14,58.3%,2,8,10,no plain at coles in the latest capture,3
+produce,ROOT VEG (INC OTHERS),woolworths,12,2,16.7%,0,10,10,"we cannot yet tell which variety this is, so it is not compared",5
+meat,TURKEY,coles+woolworths,14,4,28.6%,8,2,10,no counterpart under this key,5
+produce,VALUE ADD FRUIT,woolworths,10,0,0.0%,10,0,10,no match key — the lexicon could not key this row,10
+meat,VALUE MEATS,coles,13,3,23.1%,4,6,10,no match key — the lexicon could not key this row,3
+produce,CAPSICUM,woolworths,9,0,0.0%,0,9,9,"we cannot yet tell which variety this is, so it is not compared",5
+meat,CRUSTACEANS / MOLLUSCS,woolworths,9,0,0.0%,9,0,9,no counterpart under this key,9
+meat,EASY MEALS,coles,9,0,0.0%,8,1,9,no match key — the lexicon could not key this row,7
+produce,MELONS,coles+woolworths,15,6,40.0%,2,7,9,"we cannot yet tell which variety this is, so it is not compared",4
+meat,SALMON DY,coles,25,16,64.0%,3,6,9,no match key — the lexicon could not key this row,2
+meat,(unfiled),woolworths,8,0,0.0%,4,4,8,no counterpart under this key,2
+produce,CAPSICUMS,coles,8,0,0.0%,0,8,8,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",2
+produce,CHILLIES,coles+woolworths,16,8,50.0%,0,8,8,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure",4
+meat,LAMB ROAST,coles,10,2,20.0%,3,5,8,no counterpart under this key,3
+produce,TOMATOES P/P,coles,13,5,38.5%,0,8,8,"we cannot yet tell which variety this is, so it is not compared",6
+meat,BEEF ROAST,coles,12,5,41.7%,4,3,7,no counterpart under this key,4
+produce,CABBAGE,coles,9,2,22.2%,0,7,7,"we cannot yet tell which variety this is, so it is not compared",3
+meat,COOKED POULTRY,coles,7,0,0.0%,3,4,7,no f roasted:f slow_cooked at woolworths in the latest capture,2
+produce,CUCUMBER,woolworths,9,2,22.2%,0,7,7,"we cannot yet tell which variety this is, so it is not compared",3
+produce,DECORATIVE LETTUCE,coles,8,1,12.5%,0,7,7,"we cannot yet tell which variety this is, so it is not compared",6
+meat,HAM PORTIONS,coles,8,1,12.5%,3,4,7,no plain at woolworths in the latest capture,2
+produce,LETTUCE,woolworths,8,1,12.5%,0,7,7,"we cannot yet tell which variety this is, so it is not compared",5
+produce,MANDARINS,coles,8,1,12.5%,0,7,7,"we cannot yet tell which variety this is, so it is not compared",3
+produce,SAUCES,coles,7,0,0.0%,7,0,7,no match key — the lexicon could not key this row,7
+produce,ASPARAGUS,coles+woolworths,6,0,0.0%,0,6,6,priced per each but one listing is a single piece and the other a bunch,1
+produce,BUNCH,coles,9,3,33.3%,0,6,6,priced per each but one listing is a bunch and the other a single piece,2
+meat,DELI CRUMBED,woolworths,6,0,0.0%,6,0,6,no match key — the lexicon could not key this row,6
+meat,ENTERTAINING,coles,6,0,0.0%,6,0,6,no counterpart under this key,3
+meat,HAM LEGS,coles,7,1,14.3%,2,4,6,no counterpart under this key,2
+produce,ORANGES,coles,6,0,0.0%,0,6,6,no juicing orange at woolworths in the latest capture,1
+meat,PORK VALUE ADDED,coles,6,0,0.0%,1,5,6,no f smokey at woolworths in the latest capture,1
+produce,STRAWBERRY,woolworths,7,1,14.3%,0,6,6,the capture recorded no unit price for one side,3
+produce,WASHED POTATOES,coles,10,4,40.0%,1,5,6,"we cannot yet tell which variety this is, so it is not compared",4
+produce,ALMONDS,coles,5,0,0.0%,5,0,5,no match key — the lexicon could not key this row,5
+produce,BANANA,woolworths,5,0,0.0%,0,5,5,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure",2
+meat,BEEF VALUE ADDED,coles,6,1,16.7%,0,5,5,no f butter:f pepper:f thyme at woolworths in the latest capture,1
+produce,CASHEWS,coles,5,0,0.0%,5,0,5,no match key — the lexicon could not key this row,5
+meat,CFC ITEMS RANGE,coles,5,0,0.0%,3,2,5,no counterpart under this key,2
+produce,FRUITS,coles,8,3,37.5%,0,5,5,the capture recorded no unit price for one side,3
+meat,GRAZE,coles,6,1,16.7%,2,3,5,no counterpart under this key,2
+meat,LAMB STEAK,coles,6,1,16.7%,4,1,5,no counterpart under this key,4
+meat,PASTRY,coles,5,0,0.0%,5,0,5,no match key — the lexicon could not key this row,5
+produce,PEAS / BEANS,woolworths,7,2,28.6%,1,4,5,no beanette at coles in the latest capture,1
+produce,PREPACKED GRAPES,coles,5,0,0.0%,0,5,5,"we cannot yet tell which variety this is, so it is not compared",4
+produce,RUBUS AND OTHER BERRY,woolworths,5,0,0.0%,1,4,5,"we cannot yet tell which variety this is, so it is not compared",3
+produce,APPLES,coles,13,9,69.2%,0,4,4,6-pack vs single — pack sizes differ,1
+produce,ASIAN VEGETABLES,coles,4,0,0.0%,0,4,4,"we cannot yet tell which variety this is, so it is not compared",4
+produce,AVOCADOS,coles+woolworths,8,4,50.0%,0,4,4,"we cannot yet tell which variety this is, so it is not compared",2
+meat,BEEF CASSEROLE STEAK,coles,5,1,20.0%,3,1,4,no counterpart under this key,2
+produce,BERRIES,coles,7,3,42.9%,0,4,4,no raspberry at woolworths in the latest capture,1
+produce,CELERY,coles+woolworths,6,2,33.3%,0,4,4,no trimmed at woolworths in the latest capture,1
+produce,CHERRIES,coles+woolworths,6,2,33.3%,0,4,4,"we cannot yet tell which variety this is, so it is not compared",2
+meat,COLES FINEST,coles,8,4,50.0%,2,2,4,no counterpart under this key,2
+produce,EXOTIC MUSHROOMS,coles,4,0,0.0%,2,2,4,no match key — the lexicon could not key this row,2
+meat,FINEST,coles,4,0,0.0%,3,1,4,no counterpart under this key,3
+meat,FISH,woolworths,4,0,0.0%,3,1,4,no match key — the lexicon could not key this row,2
+meat,FREE RANGE/BARN BRED,coles,5,1,20.0%,0,4,4,no free_range at woolworths in the latest capture,3
+produce,FRESH DATES,woolworths,7,3,42.9%,2,2,4,no match key — the lexicon could not key this row,2
+meat,FRESH FISH DL,coles,4,0,0.0%,2,2,4,no counterpart under this key,1
+meat,HAM SHOULDER,coles,4,0,0.0%,2,2,4,this line was listed as unavailable at capture,1
+meat,MEAT BALLS,coles,4,0,0.0%,2,2,4,no counterpart under this key,2
+meat,ORGANIC MEAT,woolworths,12,8,66.7%,1,3,4,no grass_fed:organic:f rosemary_mint at coles in the latest capture,1
+produce,PEARS,coles,7,3,42.9%,0,4,4,the capture recorded no unit price for one side,2
+meat,PORK CHOPS,coles,4,0,0.0%,2,2,4,no counterpart under this key,2
+meat,PORK ROAST,coles,8,4,50.0%,3,1,4,no counterpart under this key,3
+meat,PORK STEAKS,coles,8,4,50.0%,2,2,4,no counterpart under this key,2
+produce,ROOT VEG,coles,4,0,0.0%,0,4,4,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",3
+produce,SOFT DRIED FRUIT,coles,4,0,0.0%,4,0,4,no match key — the lexicon could not key this row,4
+produce,VALUE ADDED,coles,5,1,20.0%,3,1,4,no match key — the lexicon could not key this row,3
+meat,WHOLE CHICKENS,coles,7,3,42.9%,2,2,4,no match key — the lexicon could not key this row,2
+produce,BABY POTATOES,coles,3,0,0.0%,0,3,3,"we cannot yet tell which variety this is, so it is not compared",3
+produce,BLUEBERRY,woolworths,4,1,25.0%,0,3,3,captured 132 h apart — not a like-for-like comparison,1
+produce,CARROT,woolworths,6,3,50.0%,0,3,3,"we cannot yet tell which variety this is, so it is not compared",2
+produce,CHRISTMAS,coles,3,0,0.0%,3,0,3,no match key — the lexicon could not key this row,3
+produce,CONTINENTAL VEG,woolworths,3,0,0.0%,0,3,3,no eggplant at coles in the latest capture,2
+produce,GARLIC,coles+woolworths,7,4,57.1%,0,3,3,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",1
+meat,KANGAROO STEAK,coles,5,2,40.0%,1,2,3,this line is not in coles's latest capture,1
+produce,MACADAMIA,coles,3,0,0.0%,3,0,3,no match key — the lexicon could not key this row,3
+produce,MIXED,coles,3,0,0.0%,3,0,3,no match key — the lexicon could not key this row,3
+produce,MIXED FRUIT & NUT,coles,3,0,0.0%,3,0,3,no match key — the lexicon could not key this row,3
+produce,PASSIONFRUIT,coles,3,0,0.0%,0,3,3,the capture recorded no unit price for one side,3
+meat,PORK RIBS,coles,4,1,25.0%,1,2,3,no f bbq at woolworths in the latest capture,1
+meat,PRAWNS V-ADDED PPS,coles,5,2,40.0%,1,2,3,no f crumbed:f panko at woolworths in the latest capture,1
+produce,READY MEALS PRE PACKED,woolworths,3,0,0.0%,3,0,3,no match key — the lexicon could not key this row,3
+produce,RED POTATOES,coles,3,0,0.0%,0,3,3,"we cannot yet tell which variety this is, so it is not compared",3
+meat,SALMON SKIN-ON PPS,coles,9,6,66.7%,0,3,3,not in woolworths's latest capture — last seen 2026-11-14,1
+produce,SWEET CORN,woolworths,4,1,25.0%,0,3,3,"we cannot yet tell which variety this is, so it is not compared",2
+produce,TOMATOES,coles,6,3,50.0%,0,3,3,"we cannot yet tell which variety this is, so it is not compared",3
+meat,TROUT DY,coles,3,0,0.0%,0,3,3,"100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared",2
+produce,WHITE MUSHROOMS,coles,6,3,50.0%,2,1,3,no match key — the lexicon could not key this row,2
+produce,ZUCCHINI,coles+woolworths,5,2,40.0%,0,3,3,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure",2
+produce,BABY BROCCOLI,coles,2,0,0.0%,0,2,2,priced per each but one listing is a single piece and the other a bunch,1
+produce,BEANS,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",2
+meat,BEEF,coles,8,6,75.0%,0,2,2,no grass_fed:organic:thin_cut at woolworths in the latest capture,1
+meat,BEEF STIR FRY/DICED,coles,6,4,66.7%,0,2,2,no per-kg price on one side (sold per pack or each with no weight) — not compared,2
+meat,BREAST FILLET,coles,4,2,50.0%,0,2,2,"2kg vs 650g — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared",2
+produce,BROWN MUSHROOMS,coles,3,1,33.3%,1,1,2,no mushroom at woolworths in the latest capture,1
+meat,CONDIMENTS,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,2
+meat,COOKED PORK,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,1
+produce,CUCUMBERS,coles,4,2,50.0%,0,2,2,not in woolworths's latest capture — last seen 2026-11-06,1
+produce,EGGPLANT,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",1
+meat,FROZEN OTHER FZN,coles,3,1,33.3%,0,2,2,no frozen at woolworths in the latest capture,1
+produce,GRAPEFRUIT,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",2
+produce,IM PERFECT CITRUS,coles,2,0,0.0%,0,2,2,the capture recorded no unit price for one side,2
+meat,KANGAROO BBQ,coles,3,1,33.3%,2,0,2,no counterpart under this key,2
+meat,KEBABS/SHASLICKS,coles,2,0,0.0%,2,0,2,no counterpart under this key,2
+meat,LAMB,coles,2,0,0.0%,1,1,2,no counterpart under this key,1
+produce,LEMONS,coles,3,1,33.3%,0,2,2,4-pack vs single — pack sizes differ,1
+meat,MUSSELS DY,coles,4,2,50.0%,0,2,2,not in woolworths's latest capture — last seen 2026-11-10,2
+produce,OTHER CITRUS,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,2
+meat,OTHER FISH DY,coles,4,2,50.0%,2,0,2,no match key — the lexicon could not key this row,2
+meat,OTHER PPS,coles,2,0,0.0%,1,1,2,no counterpart under this key,1
+produce,PAPAW,coles,2,0,0.0%,0,2,2,no papaya at woolworths in the latest capture,2
+produce,PEACHES,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",2
+produce,PEANUTS,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,2
+produce,PISTACHIO,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,2
+produce,POMEGRANATES,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",1
+meat,PORK MINCE,coles,5,3,60.0%,0,2,2,"1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared",1
+meat,PRAWNS VADDED DL,coles,2,0,0.0%,1,1,2,no cooked:small:thawed at woolworths in the latest capture,1
+meat,PRAWNS WHOLE RAW DL,coles,3,1,33.3%,0,2,2,no banana:frozen:raw at woolworths in the latest capture,1
+meat,SALMON V-ADDED PPS,coles,3,1,33.3%,0,2,2,no f korean at woolworths in the latest capture,1
+meat,SMALLGOODS,coles,4,2,50.0%,2,0,2,no match key — the lexicon could not key this row,1
+produce,SPROUTS,coles,3,1,33.3%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",2
+produce,SWEET POTATO,woolworths,2,0,0.0%,0,2,2,no gold at coles in the latest capture,2
+produce,SWEET POTATOES,coles,2,0,0.0%,0,2,2,no sweet potato at woolworths in the latest capture,1
+produce,SWEETCORN,coles,3,1,33.3%,0,2,2,no cobette at woolworths in the latest capture,1
+produce,TROPICALS,coles,2,0,0.0%,0,2,2,"we cannot yet tell which variety this is, so it is not compared",2
+produce,WALNUTS,coles,2,0,0.0%,2,0,2,no match key — the lexicon could not key this row,2
+produce,APRICOTS,coles,1,0,0.0%,0,1,1,the capture recorded no unit price for one side,1
+meat,BBQ PACKS,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+meat,BEEF MINCE CASE READY,woolworths,8,7,87.5%,0,1,1,no grade_lean:grass_fed at coles in the latest capture,1
+meat,BEEF OFFAL,coles,3,2,66.7%,1,0,1,no counterpart under this key,1
+meat,BEEF SEASONAL,coles,1,0,0.0%,0,1,1,no bone_in:tomahawk_bone at woolworths in the latest capture,1
+produce,BLACK GRAPES,coles,1,0,0.0%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+meat,BONE IN PORTIONS,coles,4,3,75.0%,0,1,1,no plain at woolworths in the latest capture,1
+produce,BRAZIL,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+produce,BROCCOLI,coles,1,0,0.0%,0,1,1,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",1
+produce,BRUSHED POTATOES,coles,3,2,66.7%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+produce,BRUSSEL SPROUTS,coles,2,1,50.0%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+produce,CARROTS,coles,5,4,80.0%,0,1,1,no snacking at woolworths in the latest capture,1
+meat,CONTINENTAL,woolworths,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+meat,CONVENIENCE,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+meat,COOKED LAMB,coles,1,0,0.0%,0,1,1,no f slow_cooked at woolworths in the latest capture,1
+meat,CRUMBED FISH PPS,coles,1,0,0.0%,0,1,1,no f crumbed at woolworths in the latest capture,1
+produce,DRIED FRUIT,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+meat,GRASS FED,coles,6,5,83.3%,0,1,1,this line was listed as unavailable at capture,1
+meat,HERRINGS DY,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,HOT SMOKED DY,coles,5,4,80.0%,0,1,1,no king at woolworths in the latest capture,1
+meat,KANGAROO FILLET,coles,1,0,0.0%,0,1,1,this line was listed as unavailable at capture,1
+produce,KIWI FRUIT,coles,4,3,75.0%,0,1,1,6-pack vs single — pack sizes differ,1
+meat,LAMB BREAST/FLAP,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,LAMB CHOPS,coles,6,5,83.3%,0,1,1,this listing's per-kg price disagrees with its price ÷ weight by 99900% — not compared,1
+meat,LAMB OFFAL,coles,2,1,50.0%,1,0,1,no counterpart under this key,1
+meat,LAMB SEASONAL,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,LAMB SHANKS,coles,2,1,50.0%,1,0,1,no counterpart under this key,1
+produce,LIMES,coles,2,1,50.0%,0,1,1,no blood lime at woolworths in the latest capture,1
+meat,MINCE,coles,2,1,50.0%,1,0,1,no counterpart under this key,1
+meat,MUSSELS DL,coles,1,0,0.0%,0,1,1,no blue at woolworths in the latest capture,1
+produce,NECTARINES,coles,1,0,0.0%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+meat,OCTOPUS DY,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,OFFAL,coles,4,3,75.0%,0,1,1,this line was listed as unavailable at capture,1
+meat,OTHER,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+produce,OTHER BANANAS,coles,1,0,0.0%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+produce,PECAN,coles,1,0,0.0%,1,0,1,no match key — the lexicon could not key this row,1
+produce,PINEAPPLES,coles,3,2,66.7%,0,1,1,"we cannot yet tell which variety this is, so it is not compared",1
+meat,PORK STIRFRY/DICED,coles,1,0,0.0%,0,1,1,this line is not in coles's latest capture,1
+meat,PRAWN WHLE CKD FZN,coles,2,1,50.0%,0,1,1,"1kg vs 3kg — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared",1
+produce,PRE PACK BANANAS,coles,1,0,0.0%,0,1,1,no mini at woolworths in the latest capture,1
+produce,RED GRAPES,coles,1,0,0.0%,0,1,1,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",1
+produce,REGULAR BANANAS,coles,1,0,0.0%,0,1,1,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",1
+meat,SALMON,woolworths,2,1,50.0%,0,1,1,no plain at coles in the latest capture,1
+meat,SALMON PPS,coles,1,0,0.0%,0,1,1,no skin_on:sockeye at woolworths in the latest capture,1
+meat,SHELFISH PPS,coles,1,0,0.0%,0,1,1,no cooked at woolworths in the latest capture,1
+meat,SKINLESS/CHEVAPCHICH,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,VEAL,coles,1,0,0.0%,1,0,1,no counterpart under this key,1
+meat,WHITE FISH PPS,coles,4,3,75.0%,0,1,1,no plain at woolworths in the latest capture,1
+produce,WHITE GRAPES,coles,1,0,0.0%,0,1,1,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure",1
+meat,WINGS,coles,3,2,66.7%,1,0,1,no counterpart under this key,1

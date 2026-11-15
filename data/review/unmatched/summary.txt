@@ -1,0 +1,506 @@
+UNCOMPARED SHELF ROWS — SUMMARY
+===============================
+
+generated  2026-11-15T04:51:30.610Z
+
+shelf rows                 2630
+  price-compared            616  23.4%
+  matched, not compared    1193  45.4%
+  no counterpart at all     821  31.2%
+
+BY DOMAIN
+  meat        1444 rows     429 compared    29.7%
+  produce     1186 rows     187 compared    15.8%
+
+EVERY REASON A PAIRED ROW WAS NOT COMPARED
+    279  we cannot yet tell which variety this is, so it is not compared
+     57  the capture recorded no unit price for one side
+     56  this line is not in woolworths's latest capture
+     39  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+     30  no per-kg price on one side (sold per pack or each with no weight) — not compared
+     22  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+     17  listed as unavailable at capture
+     14  this line was listed as unavailable at capture
+     14  no  at coles in the latest capture
+      9  no plain at woolworths in the latest capture
+      8  no  at woolworths in the latest capture
+      7  this line is not in coles's latest capture
+      7  1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      7  no plain at coles in the latest capture
+      6  priced per each but one listing is a single piece and the other a bunch
+      6  priced per each but one listing is a bunch and the other a single piece
+      6  not in coles's latest capture — last seen 2026-11-14
+      5  not in woolworths's latest capture — last seen 2026-11-12
+      5  no free_range at woolworths in the latest capture
+      5  no free_range at coles in the latest capture
+      5  no frozen at coles in the latest capture
+      5  no frozen:skin_on at coles in the latest capture
+      5  no grass_fed at coles in the latest capture
+      5  no norwegian at coles in the latest capture
+      4  no mini at woolworths in the latest capture
+      4  no baby at woolworths in the latest capture
+      4  whole vs half — different portion
+      4  no f slow_cooked at woolworths in the latest capture
+      4  not in woolworths's latest capture — last seen 2026-11-11
+      4  captured 192 h apart — not a like-for-like comparison
+      4  captured 60 h apart — not a like-for-like comparison
+      4  no skinless at coles in the latest capture
+      4  no angus at coles in the latest capture
+      4  300g vs 600g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      4  no thick_cut at coles in the latest capture
+      3  no baby spinach at woolworths in the latest capture
+      3  not in woolworths's latest capture — last seen 2026-11-06
+      3  half vs whole — different portion
+      3  no wagyu at woolworths in the latest capture
+      3  not in woolworths's latest capture — last seen 2026-11-10
+      3  no free_range:organic at woolworths in the latest capture
+      3  no grass_fed at woolworths in the latest capture
+      3  captured 132 h apart — not a like-for-like comparison
+      3  no cabbage at coles in the latest capture
+      3  no eggplant at coles in the latest capture
+      3  no solanato at coles in the latest capture
+      3  no frozen:raw at coles in the latest capture
+      3  no f bbq at coles in the latest capture
+      3  no f smokey at coles in the latest capture
+      3  1kg vs 600g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+      2  4-pack vs single — pack sizes differ
+      2  6-pack vs single — pack sizes differ
+      2  no trimmed at woolworths in the latest capture
+      2  no rocket at woolworths in the latest capture
+      2  no papaya at woolworths in the latest capture
+      2  no mushroom at woolworths in the latest capture
+      2  no watermelon at woolworths in the latest capture
+      2  no snacking at woolworths in the latest capture
+      2  no spinach at woolworths in the latest capture
+      2  not in woolworths's latest capture — last seen 2026-11-09
+      2  not in woolworths's latest capture — last seen 2026-10-01
+      2  no baby broccoli at woolworths in the latest capture
+      2  not in woolworths's latest capture — last seen 2026-10-28
+      2  no f korean at woolworths in the latest capture
+      2  not in woolworths's latest capture — last seen 2026-11-14
+      2  no f smokey at woolworths in the latest capture
+      2  2kg vs 650g — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared
+      2  no f crumbed at woolworths in the latest capture
+      2  100g vs 300g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+      2  600g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      2  1kg vs 180g — pack sizes differ (5.6×), and bulk packs are priced differently per kg; both shown, not compared
+      2  no f roasted:f slow_cooked at woolworths in the latest capture
+      2  no thin_cut at woolworths in the latest capture
+      2  2.2kg vs 1.4kg — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      2  no frozen at woolworths in the latest capture
+      2  no f crumbed:f southern_fried at woolworths in the latest capture
+      2  no red at woolworths in the latest capture
+      2  no mango at woolworths in the latest capture
+      2  1kg vs 3kg — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+      2  no gold at coles in the latest capture
+      2  no white washed at coles in the latest capture
+      2  no kanzi at coles in the latest capture
+      2  no amorette at coles in the latest capture
+      2  no red washed at coles in the latest capture
+      2  quarter vs half — different portion
+      2  no green bean at coles in the latest capture
+      2  no corella at coles in the latest capture
+      2  no sweet potato at coles in the latest capture
+      2  no apple at coles in the latest capture
+      2  no kale at coles in the latest capture
+      2  no mandarin at coles in the latest capture
+      2  no delite at coles in the latest capture
+      2  no envy at coles in the latest capture
+      2  no mini at coles in the latest capture
+      2  no heart at coles in the latest capture
+      2  no cosmic crisp at coles in the latest capture
+      2  no pawpaw at coles in the latest capture
+      2  no fuji at coles in the latest capture
+      2  no valencia orange at coles in the latest capture
+      2  no lychee at coles in the latest capture
+      2  no f garlic_herb at coles in the latest capture
+      2  no f crumbed:f southern_fried at coles in the latest capture
+      2  no f marinated at coles in the latest capture
+      2  no deli_cooked at coles in the latest capture
+      2  no frozen:raw:tail_on at coles in the latest capture
+      2  900g vs 2kg — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+      2  no cooked:thawed:tiger:x_large at coles in the latest capture
+      2  no sharing at coles in the latest capture
+      2  no f teriyaki at coles in the latest capture
+      2  no lean at coles in the latest capture
+      2  no f mexican:f slow_cooked at coles in the latest capture
+      2  no f butter:f crusted:f herb:f lemon at coles in the latest capture
+      2  no frozen:large:raw at coles in the latest capture
+      2  no f hoisin at coles in the latest capture
+      2  no f lime:f sweet_chilli at coles in the latest capture
+      2  1.45kg vs 700g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no capsicum at woolworths in the latest capture
+      1  no raspberry at woolworths in the latest capture
+      1  no blood lime at woolworths in the latest capture
+      1  no mini red cabbage at woolworths in the latest capture
+      1  no mini drumhead cabbage at woolworths in the latest capture
+      1  no mini savoy cabbage at woolworths in the latest capture
+      1  no juicing orange at woolworths in the latest capture
+      1  no orange at woolworths in the latest capture
+      1  no murcott at woolworths in the latest capture
+      1  no fennel at woolworths in the latest capture
+      1  no medjool at woolworths in the latest capture
+      1  no continental parsley at woolworths in the latest capture
+      1  no kent at woolworths in the latest capture
+      1  no baby beetroot at woolworths in the latest capture
+      1  no sweet potato at woolworths in the latest capture
+      1  not in woolworths's latest capture — last seen 2026-10-12
+      1  no mixed at woolworths in the latest capture
+      1  5-pack vs single — pack sizes differ
+      1  no cobette at woolworths in the latest capture
+      1  no gold at woolworths in the latest capture
+      1  no wombok at woolworths in the latest capture
+      1  no pomegranate at woolworths in the latest capture
+      1  no basil at woolworths in the latest capture
+      1  no watercress at woolworths in the latest capture
+      1  2-pack vs single — pack sizes differ
+      1  no spring at woolworths in the latest capture
+      1  no brushed at woolworths in the latest capture
+      1  no zucchini at woolworths in the latest capture
+      1  3-pack vs single — pack sizes differ
+      1  no washed at woolworths in the latest capture
+      1  no iceberg at woolworths in the latest capture
+      1  no asparagus at woolworths in the latest capture
+      1  no orri at woolworths in the latest capture
+      1  no baby cos at woolworths in the latest capture
+      1  no onion at woolworths in the latest capture
+      1  no free_range:f rustic at woolworths in the latest capture
+      1  no f crumbed:f panko at woolworths in the latest capture
+      1  no cooked at woolworths in the latest capture
+      1  1kg vs 400g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f sesame at woolworths in the latest capture
+      1  250g vs 100g — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  500g vs 100g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no coho:pacific at woolworths in the latest capture
+      1  no grass_fed:organic:thin_cut at woolworths in the latest capture
+      1  270g vs 500g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no lean:salt_reduced at woolworths in the latest capture
+      1  420g vs 875g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f honey_soy:f slow_cooked at woolworths in the latest capture
+      1  no f garlic:f oregano at woolworths in the latest capture
+      1  no skinless:tropical:wild at woolworths in the latest capture
+      1  no crimson:skin_on at woolworths in the latest capture
+      1  1kg vs 650g — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f slow_cooked:f texan at woolworths in the latest capture
+      1  no f buffalo:f crumbed at woolworths in the latest capture
+      1  no f quinoa:f wholemeal at woolworths in the latest capture
+      1  no free_range:f crumbed:f honey:f sriracha at woolworths in the latest capture
+      1  1kg vs 590g — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no king at woolworths in the latest capture
+      1  no f char_siu at woolworths in the latest capture
+      1  no skin_on:sockeye at woolworths in the latest capture
+      1  no f lemon_herb at woolworths in the latest capture
+      1  no f infused:f smoke at woolworths in the latest capture
+      1  no f honey_soy at woolworths in the latest capture
+      1  1.05kg vs 250g — pack sizes differ (4.2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f bbq at woolworths in the latest capture
+      1  no free_range:f crumbed at woolworths in the latest capture
+      1  no f crumbed:f rosemary:f sage at woolworths in the latest capture
+      1  no f bbq:f marinated at woolworths in the latest capture
+      1  no f thyme at woolworths in the latest capture
+      1  600g vs 1kg — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f hickory at woolworths in the latest capture
+      1  this listing's per-kg price disagrees with its price ÷ weight by 99900% — not compared
+      1  170g vs 625g — pack sizes differ (3.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  950g vs 170g — pack sizes differ (5.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no bone_in:tomahawk_bone at woolworths in the latest capture
+      1  no boneless:grass_fed at woolworths in the latest capture
+      1  no f buttermilk:f crumbed:f spicy at woolworths in the latest capture
+      1  no f butter:f pepper:f thyme at woolworths in the latest capture
+      1  no f orange at woolworths in the latest capture
+      1  no f sage:f thyme at woolworths in the latest capture
+      1  not in woolworths's latest capture — last seen 2026-10-27
+      1  no boneless at woolworths in the latest capture
+      1  no f butter:f cheese:f crumbed:f filled:f garlic_herb:f slow_cooked:f topped at woolworths in the latest capture
+      1  not in woolworths's latest capture — last seen 2026-11-03
+      1  not in woolworths's latest capture — last seen 2026-11-13
+      1  no f teriyaki at woolworths in the latest capture
+      1  no f garlic at woolworths in the latest capture
+      1  1.15kg vs 590g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+      1  840g vs 250g — pack sizes differ (3.4×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no thick at woolworths in the latest capture
+      1  no blue at woolworths in the latest capture
+      1  no f soy:f sweet at woolworths in the latest capture
+      1  no boneless:f greek at woolworths in the latest capture
+      1  no f sticky at woolworths in the latest capture
+      1  400g vs 625g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f hoisin at woolworths in the latest capture
+      1  no f butter:f honey:f rosemary at woolworths in the latest capture
+      1  no f shiraz at woolworths in the latest capture
+      1  no f greek at woolworths in the latest capture
+      1  1kg vs 505g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f marinated at woolworths in the latest capture
+      1  no f crusted:f garlic at woolworths in the latest capture
+      1  no cooked:small:thawed at woolworths in the latest capture
+      1  no f bearnaise:f butter at woolworths in the latest capture
+      1  3.2kg vs 1.75kg — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no frenched at woolworths in the latest capture
+      1  not in woolworths's latest capture — last seen 2026-10-22
+      1  no f cured:f dill at woolworths in the latest capture
+      1  no f garlic_herb:f slow_cooked at woolworths in the latest capture
+      1  no f steakhouse at woolworths in the latest capture
+      1  no f garlic:f parsley at woolworths in the latest capture
+      1  no boneless:f asian at woolworths in the latest capture
+      1  no boneless:f garlic_herb at woolworths in the latest capture
+      1  no free_range:f mustard:f sweet at woolworths in the latest capture
+      1  no boneless:free_range:f italian:f rustic at woolworths in the latest capture
+      1  no f korean:f soy_garlic at woolworths in the latest capture
+      1  500g vs 800g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f cheddar:f cheese:f zucchini at woolworths in the latest capture
+      1  no angus:jumbo at woolworths in the latest capture
+      1  no f garlic:f ginger:f onion:f sticky:f sweet_chilli at woolworths in the latest capture
+      1  750g vs 375g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no grass_fed:organic at woolworths in the latest capture
+      1  no bone_in:f butter:f cafe_de_paris at woolworths in the latest capture
+      1  150g vs 300g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no banana:frozen:raw at woolworths in the latest capture
+      1  no f garlic_herb at woolworths in the latest capture
+      1  2.8kg vs 625g — pack sizes differ (4.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f souvlaki at woolworths in the latest capture
+      1  no f baharat:f spice at woolworths in the latest capture
+      1  no japnut at woolworths in the latest capture
+      1  captured 660 h apart — not a like-for-like comparison
+      1  no frozen:raw:tiger:x_large at woolworths in the latest capture
+      1  no bone_in:quarter at woolworths in the latest capture
+      1  no f beechwood at woolworths in the latest capture
+      1  single vs 6-pack — pack sizes differ
+      1  no kids at coles in the latest capture
+      1  no beanette at coles in the latest capture
+      1  no snow pea at coles in the latest capture
+      1  no navel orange at coles in the latest capture
+      1  no cos at coles in the latest capture
+      1  no shiitake at coles in the latest capture
+      1  no white at coles in the latest capture
+      1  no flat at coles in the latest capture
+      1  no persimmon at coles in the latest capture
+      1  no swiss brown at coles in the latest capture
+      1  no kiwifruit at coles in the latest capture
+      1  no roma at coles in the latest capture
+      1  no oyster at coles in the latest capture
+      1  single vs 2-pack — pack sizes differ
+      1  no ambrosia at coles in the latest capture
+      1  no lebanese at coles in the latest capture
+      1  no red cabbage at coles in the latest capture
+      1  no date at coles in the latest capture
+      1  no baby white washed at coles in the latest capture
+      1  no baby red washed at coles in the latest capture
+      1  no coriander at coles in the latest capture
+      1  no parsley at coles in the latest capture
+      1  no cobette at coles in the latest capture
+      1  no purple at coles in the latest capture
+      1  no green kiwifruit at coles in the latest capture
+      1  no stick at coles in the latest capture
+      1  no lemon at coles in the latest capture
+      1  no tangold at coles in the latest capture
+      1  no butternut at coles in the latest capture
+      1  no lemongrass at coles in the latest capture
+      1  no thai basil at coles in the latest capture
+      1  no dill at coles in the latest capture
+      1  no thyme at coles in the latest capture
+      1  no sage at coles in the latest capture
+      1  no rosemary at coles in the latest capture
+      1  no oregano at coles in the latest capture
+      1  no head at coles in the latest capture
+      1  no strawberry at coles in the latest capture
+      1  no truss at coles in the latest capture
+      1  no zucchini at coles in the latest capture
+      1  no capsicum at coles in the latest capture
+      1  no tomato at coles in the latest capture
+      1  no continental at coles in the latest capture
+      1  no cup at coles in the latest capture
+      1  no summerina at coles in the latest capture
+      1  captured 1452 h apart — not a like-for-like comparison
+      1  no green at coles in the latest capture
+      1  no silverbeet at coles in the latest capture
+      1  no choy sum at coles in the latest capture
+      1  no sebago at coles in the latest capture
+      1  no celery at coles in the latest capture
+      1  no papaya at coles in the latest capture
+      1  no plum at coles in the latest capture
+      1  no parsnip at coles in the latest capture
+      1  no mango at coles in the latest capture
+      1  no cherry at coles in the latest capture
+      1  no sundowner at coles in the latest capture
+      1  no peach at coles in the latest capture
+      1  no apricot at coles in the latest capture
+      1  no nectarine at coles in the latest capture
+      1  no grass_fed:organic:f rosemary_mint at coles in the latest capture
+      1  no f crumbed:f garlic:f roasted at coles in the latest capture
+      1  no free_range:f crumbed at coles in the latest capture
+      1  no frozen:greenshell at coles in the latest capture
+      1  no small:thawed:vannamei at coles in the latest capture
+      1  no cocktail:cooked:frozen:tail_on at coles in the latest capture
+      1  no cocktail:cooked:tail_on:thawed at coles in the latest capture
+      1  no king:large:thawed:f green at coles in the latest capture
+      1  no frozen:jumbo:raw:tail_on at coles in the latest capture
+      1  no grade_lean:grass_fed at coles in the latest capture
+      1  no f butter at coles in the latest capture
+      1  no f onion:f red:f wine at coles in the latest capture
+      1  no boneless:free_range:f moroccan at coles in the latest capture
+      1  no wagyu:f pepper at coles in the latest capture
+      1  300g vs 100g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no cooked:frozen:small at coles in the latest capture
+      1  no grade_regular:grass_fed at coles in the latest capture
+      1  no grass_fed:f rosemary_garlic at coles in the latest capture
+      1  no raw:f garlic_herb at coles in the latest capture
+      1  no cocktail at coles in the latest capture
+      1  no f chilli at coles in the latest capture
+      1  100g vs 500g — pack sizes differ (5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no cooked:jumbo:thawed:tiger at coles in the latest capture
+      1  no cooking at coles in the latest capture
+      1  875g vs 2kg — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  575g vs 1.2kg — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  475g vs 1kg — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no cooked:frozen:large:tiger at coles in the latest capture
+      1  no cooked:frozen:medium:tiger at coles in the latest capture
+      1  no f baked:f oven at coles in the latest capture
+      1  no f slow_cooked:f smokey:f sweet at coles in the latest capture
+      1  no grade_lean at coles in the latest capture
+      1  no thawed at coles in the latest capture
+      1  no cooked:frozen:large:tail_on at coles in the latest capture
+      1  650g vs 1kg — pack sizes differ (1.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  625g vs 2.8kg — pack sizes differ (4.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f pub at coles in the latest capture
+      1  no bone_in:sharing at coles in the latest capture
+      1  no f honey_rosemary at coles in the latest capture
+      1  no f smokey:f sweet at coles in the latest capture
+      1  no goldband:skin_on at coles in the latest capture
+      1  no f mustard:f sweet at coles in the latest capture
+      1  no f greek at coles in the latest capture
+      1  no banana:frozen:raw at coles in the latest capture
+      1  no f apple:f gala:f royal at coles in the latest capture
+      1  no f japanese at coles in the latest capture
+      1  no thin_cut at coles in the latest capture
+      1  no boneless:f texas at coles in the latest capture
+      1  no frozen:raw:f garlic_herb at coles in the latest capture
+      1  no f garlic_herb:f slow_cooked at coles in the latest capture
+      1  no coho:frozen:skinless at coles in the latest capture
+      1  no f bbq:f slow_cooked at coles in the latest capture
+      1  no f napolitana:f vegetables at coles in the latest capture
+      1  no f basil:f pesto at coles in the latest capture
+      1  no f capsicum:f sundried:f tomato at coles in the latest capture
+      1  no grass_fed:organic at coles in the latest capture
+      1  no f creamy:f filled:f ricotta:f spinach at coles in the latest capture
+      1  no f creamy:f fetta:f spinach at coles in the latest capture
+      1  no f noodles:f soy:f sweet:f veg at coles in the latest capture
+      1  no f butter:f garlic at coles in the latest capture
+      1  no f thai at coles in the latest capture
+      1  600g vs 1.2kg — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no boneless:f honey at coles in the latest capture
+      1  no frozen:medium:raw at coles in the latest capture
+      1  no frozen:large:raw:tail_on at coles in the latest capture
+      1  no f cheeseburger at coles in the latest capture
+      1  no f country_style at coles in the latest capture
+      1  no f japanese:f soy_garlic at coles in the latest capture
+      1  no f mexican:f smokey at coles in the latest capture
+      1  no thick_cut:f garlic:f smokey at coles in the latest capture
+      1  no f moroccan:f stuffing at coles in the latest capture
+      1  no thick_cut:f souvlaki at coles in the latest capture
+      1  no f chorizo at coles in the latest capture
+      1  no angus:f garlic:f red:f wine at coles in the latest capture
+      1  no f crispy at coles in the latest capture
+      1  no f balsamic:f onion:f rosemary at coles in the latest capture
+      1  no f caramelised:f onion at coles in the latest capture
+      1  no f char_siu at coles in the latest capture
+      1  no f portuguese:f slow_cooked at coles in the latest capture
+      1  560g vs 300g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no extra_lean:f thyme at coles in the latest capture
+      1  no norwegian:f pepper at coles in the latest capture
+      1  no f greek:f lemon_herb at coles in the latest capture
+      1  no wild:f dill:f lemon at coles in the latest capture
+      1  no high_protein:f crumbed:f southern_fried at coles in the latest capture
+      1  no high_protein:f crumbed:f pepper:f salt at coles in the latest capture
+      1  no frozen:f garlic at coles in the latest capture
+      1  no cooked:large:thawed:tiger at coles in the latest capture
+      1  no cooked:frozen:jumbo at coles in the latest capture
+      1  no cooked:medium:thawed:tiger at coles in the latest capture
+      1  400g vs 1kg — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  590g vs 1kg — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no boneless:f mango:f sweet_chilli at coles in the latest capture
+      1  no f honey_soy at coles in the latest capture
+      1  1.4kg vs 2.2kg — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f buffalo at coles in the latest capture
+      1  no cooked:frozen:jumbo:tiger at coles in the latest capture
+      1  no free_range:f portuguese at coles in the latest capture
+      1  the other listing's per-kg price disagrees with its price ÷ weight by 99900% — not compared
+      1  1.23kg vs 2.8kg — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no frozen:yellowfin at coles in the latest capture
+      1  no raw:thawed:tiger:x_large at coles in the latest capture
+      1  no jumbo:f garlic:f pepper at coles in the latest capture
+      1  no frozen:king at coles in the latest capture
+      1  no frozen:f lemon:f pepper at coles in the latest capture
+      1  no frozen:raw:tail_on:x_large at coles in the latest capture
+      1  no frozen:f mediterranean at coles in the latest capture
+      1  no f soy:f sweet at coles in the latest capture
+      1  540g vs 270g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f red:f rosemary:f slow_cooked:f tomato:f wine at coles in the latest capture
+      1  no f italian at coles in the latest capture
+      1  no f fetta:f spinach at coles in the latest capture
+      1  180g vs 500g — pack sizes differ (2.8×), and bulk packs are priced differently per kg; both shown, not compared
+      1  250g vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no skinless:f ginger:f teriyaki at coles in the latest capture
+      1  no frozen:skinless at coles in the latest capture
+      1  no slider at coles in the latest capture
+      1  no f honey at coles in the latest capture
+      1  no quarter_pound:f steakhouse at coles in the latest capture
+      1  no angus:quarter_pound at coles in the latest capture
+      1  no thick:wagyu at coles in the latest capture
+      1  no extra_lean:grass_fed at coles in the latest capture
+      1  no free_range:f zucchini at coles in the latest capture
+      1  no cooked:frozen:x_small at coles in the latest capture
+      1  375g vs 750g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no gluten_free at coles in the latest capture
+      1  no cooked:king:thawed:x_large at coles in the latest capture
+      1  no thawed:f garlic at coles in the latest capture
+      1  no cooked:frozen:medium:tail_on at coles in the latest capture
+      1  no banana:large:thawed:f green at coles in the latest capture
+      1  no raw:f butter:f chilli:f lime at coles in the latest capture
+      1  no skin_on:f butter:f lemon at coles in the latest capture
+      1  no cooked:jumbo:tail_on at coles in the latest capture
+      1  no free_range:organic at coles in the latest capture
+      1  no f honey:f hot at coles in the latest capture
+      1  625g vs 170g — pack sizes differ (3.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no skin_on:f teriyaki at coles in the latest capture
+      1  660g vs 170g — pack sizes differ (3.9×), and bulk packs are priced differently per kg; both shown, not compared
+      1  700g vs 1.2kg — pack sizes differ (1.7×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f butter:f pepper at coles in the latest capture
+      1  460g vs 260g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+      1  1.8kg vs 600g — pack sizes differ (3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  1.85kg vs 600g — pack sizes differ (3.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  280g vs 460g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  460g vs 200g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  200g vs 460g — pack sizes differ (2.3×), and bulk packs are priced differently per kg; both shown, not compared
+      1  260g vs 460g — pack sizes differ (1.8×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no skin_on at coles in the latest capture
+      1  550g vs 900g — pack sizes differ (1.6×), and bulk packs are priced differently per kg; both shown, not compared
+      1  925g vs 2kg — pack sizes differ (2.2×), and bulk packs are priced differently per kg; both shown, not compared
+      1  790g vs 2kg — pack sizes differ (2.5×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no f chilli:f wood at coles in the latest capture
+      1  1.08kg vs 2kg — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no bone_in at coles in the latest capture
+      1  no bone_in:deli_cooked:f oven:f roasted at coles in the latest capture
+      1  no f italian:f mild at coles in the latest capture
+      1  500g vs 1.2kg — pack sizes differ (2.4×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no cooked:frozen at coles in the latest capture
+
+WORST SUBCATEGORIES BY BLOCKED ROWS
+     83  ORGANICS                          produce     8.8% compared
+     61  FRESH POULTRY                     meat       28.2% compared
+     57  HALAL                             meat       20.8% compared
+     56  SMALLGOODS MEAT                   meat        3.4% compared
+     53  SALAD                             produce     0.0% compared
+     48  VALUE ADD VEG                     produce     0.0% compared
+     45  FROZEN SEAFOOD SELF SERVE         meat        4.3% compared
+     41  CRUMBED                           meat       29.3% compared
+     40  SALADS                            produce     0.0% compared
+     40  SLICED & SHAVED MEATS             meat        0.0% compared
+     39  CHILLED SEAFOOD                   meat       29.1% compared
+     38  DAIRY - SMALLGOODS                meat        0.0% compared
+     35  VALUE ADDED POULTRY               meat       10.3% compared
+     34  VALUE ADDED PROTEIN               meat        5.6% compared
+     32  BEEF CASE READY                   meat       44.8% compared
+     30  HERBS                             produce    11.8% compared
+     30  VEGETABLES                        produce    16.7% compared
+     27  SAUSAGES                          meat       55.0% compared
+     27  SNACKS                            produce     0.0% compared
+     26  SEAFOOD ENTERTAINING              meat       38.1% compared

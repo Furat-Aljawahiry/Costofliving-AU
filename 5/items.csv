@@ -1,0 +1,1000 @@
+domain,subcategory,retailer,sku,name,size,price_aud,state,match_level,match_group,match_key,reason
+produce,ALMONDS,coles,2123395,Dry Roasted Almonds 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,ALMONDS,coles,5210598,Dry Roasted Almonds 750g,750g,15.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,ALMONDS,coles,2123599,Natural Almonds 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,ALMONDS,coles,5207232,Natural Almonds 750g,750g,15.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,ALMONDS,coles,2585390,Smoked Almonds 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,APPLE,woolworths,226075,Ambrosia Apple Punnet 1kg,1kg punnet,,not-compared,group-only,apples,apples:ambrosia,no ambrosia at coles in the latest capture
+produce,APPLE,woolworths,918134,Apple Cosmic Crisp,each,1.06,not-compared,group-only,apples,apples:cosmic-crisp,no cosmic crisp at coles in the latest capture
+produce,APPLE,woolworths,120044,Apple Fuji,each,,not-compared,group-only,apples,apples:fuji,no fuji at coles in the latest capture
+produce,APPLE,woolworths,131489,Apple Red Delicious,each,1.21,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,APPLE,woolworths,155003,Apple Royal Gala,each,1.26,not-compared,strong,apples,apples:royal-gala,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,APPLE,woolworths,314347,Apple SnapDragon,each,,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,APPLE,woolworths,111017,Apple Sundowner,each,1.56,not-compared,group-only,apples,apples:sundowner,no sundowner at coles in the latest capture
+produce,APPLE,woolworths,625158,Bravo Apple Fresh,each,1.38,not-compared,strong,apples,apples:bravo,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,APPLE,woolworths,22095,Bravo Apple Punnet 750g,750g punnet,,not-compared,strong,apples,apples:bravo,the capture recorded no unit price for one side
+produce,APPLE,woolworths,918139,Cosmic Crisp Apples 1kg,1kg,,not-compared,group-only,apples,apples:cosmic-crisp,no cosmic crisp at coles in the latest capture
+produce,APPLE,woolworths,761414,Envy Apple,each,1.03,not-compared,group-only,apples,apples:envy,no envy at coles in the latest capture
+produce,APPLE,woolworths,646356,Envy Apple Punnet 1kg,1kg punnet,8.90,not-compared,group-only,apples,apples:envy,no envy at coles in the latest capture
+produce,APPLE,woolworths,130935,Fresh Granny Smith Apples,each,1.38,not-compared,strong,apples,apples:granny-smith,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,APPLE,woolworths,105919,Fresh Pink Lady Apples,each,0.86,not-compared,strong,apples,apples:pink-lady,single vs 6-pack — pack sizes differ
+produce,APPLE,woolworths,306343,Jazz Apple,each,1.49,not-compared,strong,apples,apples:jazz,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,APPLE,woolworths,381923,Kanzi Apple,each,,not-compared,group-only,apples,apples:kanzi,no kanzi at coles in the latest capture
+produce,APPLE,woolworths,785544,Kanzi Apple Punnet 1kg,1kg punnet,,not-compared,group-only,apples,apples:kanzi,no kanzi at coles in the latest capture
+produce,APPLE,woolworths,208679,The Odd Bunch Apple Prepacked 2kg,2kg prepack,9.40,not-compared,strong,apples,apples:apple:imperfect,captured 192 h apart — not a like-for-like comparison
+produce,APPLE,woolworths,175709,Woolworths Apple Fuji Punnet 1kg,1kg punnet,,not-compared,group-only,apples,apples:fuji,no fuji at coles in the latest capture
+produce,APPLE,woolworths,314020,Woolworths Apple Red Delicious Punnet 1kg,1kg punnet,6.90,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,APPLE,woolworths,588064,Woolworths Fresh Food Kids Mini Apples 5 pack,5 pack,3.90,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,APPLES,coles,4337797,Apple Envy Red approx. 200g,approx. 200g loose,1.50,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,APPLES,coles,2511678,Apples Mini Pack 1Kg,1kg,5.50,not-compared,group-only,apples,apples:mini,no mini at woolworths in the latest capture
+produce,APPLES,coles,5899410,Bravo Apples approx. 200g,approx. 200g loose,1.78,not-compared,strong,apples,apples:bravo,the capture recorded no unit price for one side
+produce,APPLES,coles,2022580,Grab N Glow Pink Lady 6 Pack,6 pack,4.90,not-compared,strong,apples,apples:pink-lady,6-pack vs single — pack sizes differ
+produce,APRICOTS,coles,4329642,Apricots Prepack 500g,500g prepack,6.90,not-compared,strong,stone-fruit,stone-fruit:apricot,the capture recorded no unit price for one side
+produce,ASIAN VEGETABLES,coles,4565907,Asian Choy Buk,each,3.00,not-compared,group-only,continental-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ASIAN VEGETABLES,coles,4569216,Asian Choy Chinese Broccoli,each,3.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ASIAN VEGETABLES,coles,4567039,Asian Choy Pak,each,3.00,not-compared,group-only,continental-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ASIAN VEGETABLES,coles,4567323,Asian Choy Sum,each,3.00,not-compared,group-only,continental-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ASPARAGUS,coles,8809049,Asparagus Entertainer Large 1 Bunch,bunch,3.50,not-compared,group-only,asparagus,asparagus:asparagus,no asparagus at woolworths in the latest capture
+produce,ASPARAGUS,coles,7124680,Baby Asparagus 1 Bunch,bunch,1.70,not-compared,group-only,asparagus,asparagus:baby,no baby at woolworths in the latest capture
+produce,ASPARAGUS,coles,4838737,Green Asparagus,each,1.70,not-compared,strong,asparagus,asparagus:green,priced per each but one listing is a single piece and the other a bunch
+produce,ASPARAGUS,woolworths,132538,Woolworths Asparagus Green Bunch,bunch,1.70,not-compared,strong,asparagus,asparagus:green,priced per each but one listing is a bunch and the other a single piece
+produce,ASPARAGUS,woolworths,365411,Woolworths Asparagus Mini,each,1.70,not-compared,group-only,asparagus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ASPARAGUS,woolworths,305235,Woolworths Green Asparagus Bunch,bunch,,not-compared,strong,asparagus,asparagus:green,the capture recorded no unit price for one side
+produce,AVOCADOS,coles,3627805,I'm Perfect Avocados 1kg,1kg,9.50,not-compared,strong,avocados,avocados:avocado:imperfect,not in woolworths's latest capture — last seen 2026-10-12
+produce,AVOCADOS,woolworths,220484,Eat Now Hass Avocado,each,2.90,not-compared,group-only,avocados,,"we cannot yet tell which variety this is, so it is not compared"
+produce,AVOCADOS,woolworths,256845,Hass Avocado Imported 1kg,1kg,8.90,not-compared,group-only,avocados,,"we cannot yet tell which variety this is, so it is not compared"
+produce,AVOCADOS,woolworths,775369,The Odd Bunch Avocado Prepacked 1kg,1kg prepack,8.50,not-compared,strong,avocados,avocados:avocado:imperfect,listed as unavailable at capture
+produce,BABY BROCCOLI,coles,5982477,Baby Broccoli 1 Bunch,bunch,2.70,not-compared,group-only,brassicas,brassicas:baby-broccoli,no baby broccoli at woolworths in the latest capture
+produce,BABY BROCCOLI,coles,4841775,Family Broccolini,each,6.00,not-compared,strong,brassicas,brassicas:broccolini,priced per each but one listing is a single piece and the other a bunch
+produce,BABY POTATOES,coles,2488496,Baby Carisma Potatoes 1kg,1kg,4.80,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BABY POTATOES,coles,2488485,Baby Potatoes White 1Kg,1kg,4.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BABY POTATOES,coles,2488500,Baby Red Royale Potatoes 1Kg,1kg,4.80,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BANANA,woolworths,133390,Banana Lady Finger,each,,not-compared,group-only,bananas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BANANA,woolworths,180148,Banana Red Tipped,each,1.28,not-compared,group-only,bananas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BANANA,woolworths,106218,Bananas Kids 5 pack,5 pack,3.90,not-compared,group-only,bananas,bananas:kids,no kids at coles in the latest capture
+produce,BANANA,woolworths,133211,Cavendish Bananas,each,0.81,not-compared,strong,bananas,bananas:banana,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,BANANA,woolworths,157649,Eat Later Cavendish Bananas,each,0.81,not-compared,strong,bananas,bananas:banana,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,BEANS,coles,4829204,Green Beans Prepacked 375g,375g prepack,5.50,not-compared,group-only,peas-beans,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BEANS,coles,6252232,Trimmed Green Beans 250g,250g,4.90,not-compared,group-only,peas-beans,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BERRIES,coles,134040,Blackberries 125g,125g,3.50,not-compared,strong,berries,berries:blackberry,not in woolworths's latest capture — last seen 2026-11-12
+produce,BERRIES,coles,5543535,Blueberries 125g,125g,,not-compared,strong,berries,berries:blueberry,the capture recorded no unit price for one side
+produce,BERRIES,coles,5707745,Premium Strawberries 350g,350g,7.30,not-compared,strong,berries,berries:strawberry,captured 660 h apart — not a like-for-like comparison
+produce,BERRIES,coles,134029,Raspberries 125g,125g,5.50,not-compared,group-only,berries,berries:raspberry,no raspberry at woolworths in the latest capture
+produce,BLACK GRAPES,coles,8134441,Grapes Seedless Black Paper approx. 850g,approx. 850g loose,13.52,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BLUEBERRY,woolworths,169792,Blueberries Punnet 125g,125g punnet,3.30,not-compared,strong,berries,berries:blueberry,captured 132 h apart — not a like-for-like comparison
+produce,BLUEBERRY,woolworths,105148,Blueberry Premium 200g,200g,6.90,not-compared,strong,berries,berries:blueberry,captured 1452 h apart — not a like-for-like comparison
+produce,BLUEBERRY,woolworths,662480,Sweetest Batch® Premium Blueberries Punnet 200g,200g punnet,5.00,not-compared,group-only,berries,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRASSICA VEG,woolworths,134923,Cabbage Green Whole,each,8.50,not-compared,group-only,brassicas,brassicas:cabbage,no cabbage at coles in the latest capture
+produce,BRASSICA VEG,woolworths,134984,Cabbage Red Whole,each,8.50,not-compared,strong,brassicas,brassicas:red-cabbage,whole vs half — different portion
+produce,BRASSICA VEG,woolworths,135029,Cabbage Savoy Whole,each,8.50,not-compared,strong,brassicas,brassicas:savoy-cabbage,whole vs half — different portion
+produce,BRASSICA VEG,woolworths,135033,Cabbage Sugarloaf Whole,each,4.90,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRASSICA VEG,woolworths,287948,Cauli Blossom Fioretto 250g,250g,,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRASSICA VEG,woolworths,134681,Fresh Broccoli,each,2.94,not-compared,strong,brassicas,brassicas:broccoli,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,BRASSICA VEG,woolworths,199771,Fresh Chokoes,each,3.17,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRASSICA VEG,woolworths,134932,Fresh Green Cabbage Half,each · half,4.25,not-compared,group-only,brassicas,brassicas:cabbage,no cabbage at coles in the latest capture
+produce,BRASSICA VEG,woolworths,127079,Fresh Red Cabbage Quarter,each · quarter,2.10,not-compared,strong,brassicas,brassicas:red-cabbage,quarter vs half — different portion
+produce,BRASSICA VEG,woolworths,135006,Fresh Savoy Cabbage Quarter,each · quarter,2.10,not-compared,strong,brassicas,brassicas:savoy-cabbage,quarter vs half — different portion
+produce,BRASSICA VEG,woolworths,134968,Green Cabbage Quarter,each · quarter,2.10,not-compared,group-only,brassicas,brassicas:cabbage,no cabbage at coles in the latest capture
+produce,BRASSICA VEG,woolworths,179060,Woolworths Baby Brussels Sprouts Punnet 300g,300g punnet,4.90,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRASSICA VEG,woolworths,187314,Woolworths Broccolini Bunch,bunch,3.70,not-compared,strong,brassicas,brassicas:broccolini,priced per each but one listing is a bunch and the other a single piece
+produce,BRASSICA VEG,woolworths,120427,Woolworths Cabbage Sugarloaf Half,each · half,,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRAZIL,coles,5973283,Brazil Nuts Natural 400g,400g,20.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,BROCCOLI,coles,407755,Broccoli Medium approx. 340g,approx. 340g loose,3.03,not-compared,strong,brassicas,brassicas:broccoli,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,BROWN MUSHROOMS,coles,4829703,Brown Mushrooms Prepacked 200g,200g prepack,5.00,not-compared,group-only,mushrooms,mushrooms:mushroom,no mushroom at woolworths in the latest capture
+produce,BROWN MUSHROOMS,coles,6467068,Mushrooms Sliced Brown 200g,200g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,BRUSHED POTATOES,coles,1022610,Potatoes Creme Royale Brushed approx. 200g,approx. 200g loose,0.86,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BRUSSEL SPROUTS,coles,9989810,Brussel Sprouts Baby 200g,200g,4.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BUNCH,coles,8685660,Beetroot Bunch,bunch,7.20,not-compared,strong,root-veg,root-veg:beetroot,priced per each but one listing is a bunch and the other a single piece
+produce,BUNCH,coles,4924034,Dutch Carrots,each,5.60,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BUNCH,coles,4910980,Fennel 1 Bunch,bunch,4.20,not-compared,strong,continental-veg,continental-veg:fennel,priced per each but one listing is a bunch and the other a single piece
+produce,BUNCH,coles,8696598,Kale Bunch Green,bunch,4.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,BUNCH,coles,408383,Silverbeet Medium,each,4.90,not-compared,strong,leafy-greens,leafy-greens:silverbeet,priced per each but one listing is a single piece and the other a bunch
+produce,BUNCH,coles,4981027,Spinach Bunch,bunch,5.90,not-compared,group-only,leafy-greens,leafy-greens:spinach,no spinach at woolworths in the latest capture
+produce,CABBAGE,coles,367016,Cabbage Half Drumhead White,each · half,4.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CABBAGE,coles,4456832,Cabbage Half Wombok,each · half,5.00,not-compared,group-only,brassicas,brassicas:wombok,no wombok at woolworths in the latest capture
+produce,CABBAGE,coles,1475874,Drumhead Cabbage Mini,each,6.90,not-compared,group-only,brassicas,brassicas:mini-drumhead-cabbage,no mini drumhead cabbage at woolworths in the latest capture
+produce,CABBAGE,coles,1473970,Mini Red Cabbage,each,6.90,not-compared,group-only,brassicas,brassicas:mini-red-cabbage,no mini red cabbage at woolworths in the latest capture
+produce,CABBAGE,coles,1476083,Mini Savoy Cabbage,each,6.90,not-compared,group-only,brassicas,brassicas:mini-savoy-cabbage,no mini savoy cabbage at woolworths in the latest capture
+produce,CABBAGE,coles,4879042,Wombok Chinese Cabbage Whole,each,7.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CABBAGE,coles,3892103,Wombok Chinese Cabbage Wombok Petite 2 Pack,2 pack,6.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUM,woolworths,135156,Capsicum Green,each,2.23,not-compared,strong,capsicums,capsicums:green,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CAPSICUM,woolworths,135324,Capsicum Yellow,each,,not-compared,strong,capsicums,capsicums:yellow,the capture recorded no unit price for one side
+produce,CAPSICUM,woolworths,78607,Mini Vine Sweet Caps Red Loose,loose,0.78,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUM,woolworths,78606,Mini Vine Sweet Caps Yellow Loose,loose,0.92,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUM,woolworths,78632,Mini Vine Sweet Capsicum Orange Loose,loose,1.01,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUM,woolworths,135306,Red Capsicum,each,2.23,not-compared,strong,capsicums,capsicums:red,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CAPSICUM,woolworths,825870,The Odd Bunch Capsicum Prepacked 1kg,1kg prepack,7.10,not-compared,group-only,capsicums,capsicums:capsicum:imperfect,no capsicum at coles in the latest capture
+produce,CAPSICUM,woolworths,135947,Woolworths 3 Colour Traffic Light Capsicums 3 pack,3 pack,,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUM,woolworths,105134,Woolworths Sweet Baby Vine Capsicum 175g,175g,3.90,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUMS,coles,3066275,Australian Baby Capsicums 350g,350g,7.90,not-compared,group-only,capsicums,capsicums:baby,no baby at woolworths in the latest capture
+produce,CAPSICUMS,coles,1328010,Capsicum 1kg,1kg,7.90,not-compared,group-only,capsicums,capsicums:capsicum,no capsicum at woolworths in the latest capture
+produce,CAPSICUMS,coles,7214862,Capsicum Green Loose approx. 220g,approx. 220g loose,1.96,not-compared,strong,capsicums,capsicums:green,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,CAPSICUMS,coles,7296299,Mini Capsicum 175g,175g,5.90,not-compared,group-only,capsicums,capsicums:mini,no mini at woolworths in the latest capture
+produce,CAPSICUMS,coles,4580208,Red Capsicum Loose approx. 220g,approx. 220g loose,2.18,not-compared,strong,capsicums,capsicums:red,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,CAPSICUMS,coles,7514130,Sweet Pointed Capsicums Red,each,3.20,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUMS,coles,4841072,Tri Colour Capsicum Prepack 500g,500g prepack,7.90,not-compared,group-only,capsicums,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CAPSICUMS,coles,7215355,Yellow Capsicum approx. 220g,approx. 220g loose,2.18,not-compared,strong,capsicums,capsicums:yellow,the capture recorded no unit price for one side
+produce,CARROT,woolworths,135344,Carrot Fresh,each,0.36,not-compared,strong,carrots,carrots:carrot,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CARROT,woolworths,139330,The Odd Bunch Crazy Carrots 5kg,5kg,8.50,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CARROT,woolworths,85794,Woolworths Snackable Snacking Carrot 250g,250g,3.00,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CARROTS,coles,6309511,Snacking Carrots 250g,250g,3.50,not-compared,group-only,carrots,carrots:snacking,no snacking at woolworths in the latest capture
+produce,CASHEWS,coles,2123500,Dry Roasted Cashews 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,CASHEWS,coles,9738456,Dry Roasted Cashews 750g,750g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,CASHEWS,coles,2222229,Nuts Cashews Natural 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,CASHEWS,coles,2123646,Roasted & Salted Cashews 400g,400g,9.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,CASHEWS,coles,5259350,Roasted And Salted Cashews 750g,750g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,CELERY,coles,4845732,Celery Bunch,bunch,4.00,not-compared,strong,celery,celery:celery,priced per each but one listing is a bunch and the other a single piece
+produce,CELERY,coles,2386281,Trimmed Celery Prepacked,prepack,4.50,not-compared,group-only,celery,celery:trimmed,no trimmed at woolworths in the latest capture
+produce,CELERY,woolworths,135918,Celery Fresh Whole,each,4.50,not-compared,strong,celery,celery:celery,priced per each but one listing is a single piece and the other a bunch
+produce,CELERY,woolworths,748851,Woolworths Celery Heart,each,4.50,not-compared,group-only,celery,celery:heart,no heart at coles in the latest capture
+produce,CHERRIES,coles,409535,Red Cherries Loose approx. 500g,approx. 500g loose,11.00,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CHERRIES,woolworths,136103,Fresh Cherries per 675g,per 675g loose,,not-compared,strong,stone-fruit,stone-fruit:cherry,the capture recorded no unit price for one side
+produce,CHERRIES,woolworths,6003273,King Size Cherries 400g,400g,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CHERRIES,woolworths,775066,The Odd Bunch Cherries Punnet 500g,500g punnet,8.90,not-compared,group-only,stone-fruit,stone-fruit:cherry:imperfect,no cherry at coles in the latest capture
+produce,CHILLIES,coles,3939058,Carolina Reaper Chillies 20g,20g,4.00,not-compared,group-only,chillies,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CHILLIES,coles,3884820,Fresh Chillies Mixed 200g,200g,6.50,not-compared,group-only,chillies,chillies:mixed,no mixed at woolworths in the latest capture
+produce,CHILLIES,coles,1501351,Green Cayenne Chillies 50g,50g,4.00,not-compared,strong,chillies,chillies:cayenne-green,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,CHILLIES,woolworths,106542,Green Cayenne Chilli,each,0.68,not-compared,strong,chillies,chillies:cayenne-green,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CHILLIES,woolworths,126772,Jalapeno Chilli,each,1.14,not-compared,strong,chillies,chillies:jalapeno,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CHILLIES,woolworths,136510,Red Cayenne Chilli,each,0.68,not-compared,strong,chillies,chillies:cayenne-red,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CHILLIES,woolworths,136341,Woolworths Bird's Eye Chilli Hot,each,0.14,not-compared,strong,chillies,chillies:birdseye,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CHILLIES,woolworths,875855,Woolworths Green Cayenne Chilli Punnet 50g,50g punnet,,not-compared,strong,chillies,chillies:cayenne-green,the capture recorded no unit price for one side
+produce,CHRISTMAS,coles,7001442,BBQ Flavoured Mixed Nuts 400g,400g,9.00,no-match,,,,no match key — the lexicon could not key this row
+produce,CHRISTMAS,coles,7001588,Crunchy Snack Medley Party Mix 400g,400g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,CHRISTMAS,coles,2504606,Walnuts In Shell 500g,500g,,no-match,,,,no match key — the lexicon could not key this row
+produce,CITRUS,woolworths,767560,Cara Cara Oranges Bag 1kg,1kg bag,3.90,not-compared,strong,citrus,citrus:cara-cara-orange,listed as unavailable at capture
+produce,CITRUS,woolworths,259345,Grapefruit Red Flesh,each,1.49,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CITRUS,woolworths,693501,Lemon Bag 500g,500g bag,6.90,not-compared,strong,citrus,citrus:lemon,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,CITRUS,woolworths,332050,Orange Blood Bag 1kg,1kg bag,4.50,not-compared,strong,citrus,citrus:blood-orange,listed as unavailable at capture
+produce,CITRUS,woolworths,779119,Orange Midknight Valencia,each,,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CITRUS,woolworths,259450,Orange Navel,each,1.49,not-compared,strong,citrus,citrus:navel-orange,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CITRUS,woolworths,751431,Orange Navel 5 pack,5 pack,,not-compared,strong,citrus,citrus:navel-orange,the capture recorded no unit price for one side
+produce,CITRUS,woolworths,256488,Orange Valencia Bag 3kg,3kg bag,8.50,not-compared,group-only,citrus,citrus:valencia-orange,no valencia orange at coles in the latest capture
+produce,CITRUS,woolworths,404525,Sweetee Honey Ball Oranges 1.5kg,1.5kg,,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CITRUS,woolworths,262398,Tangelo Minneola,each,1.10,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CITRUS,woolworths,830353,The Odd Bunch Lemon Prepacked 500g,500g prepack,,not-compared,strong,citrus,citrus:lemon:imperfect,the capture recorded no unit price for one side
+produce,CITRUS,woolworths,363764,The Odd Bunch Lemons 750g,750g,,not-compared,strong,citrus,citrus:lemon:imperfect,the capture recorded no unit price for one side
+produce,CITRUS,woolworths,830354,The Odd Bunch Lime Prepacked 500g,500g prepack,,not-compared,strong,citrus,citrus:lime:imperfect,the capture recorded no unit price for one side
+produce,CITRUS,woolworths,254080,Woolworths Navel Oranges Bag 3kg,3kg bag,9.90,not-compared,strong,citrus,citrus:navel-orange,captured 192 h apart — not a like-for-like comparison
+produce,CITRUS,woolworths,428898,Woolworths Orange Navel 5 pack,5 pack,,not-compared,strong,citrus,citrus:navel-orange,the capture recorded no unit price for one side
+produce,CONDIMENTS & HERBS,woolworths,364554,Avofresh Avocado Hint Of Lemon Tube 160g,160g,6.20,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CONDIMENTS & HERBS,woolworths,405658,Avofresh Avocado Lime & Black Pepper Tube 160g,160g,6.20,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CONDIMENTS & HERBS,woolworths,243094,Avofresh Classic Avocado Guacamole 160g,160g,6.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,820738,Avofresh Smashed Avocado 160g,160g,6.20,not-compared,group-only,avocados,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CONDIMENTS & HERBS,woolworths,185243,Galiko All Natural Garlic Minced Jar 145g,145g jar,3.00,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,185242,Galiko All Natural Ginger Minced Jar 145g,145g jar,3.00,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,781401,Gourmet Garden Basil Lightly Dried Sachet 10g,10g sachet,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948505,Gourmet Garden Cold Blend Pastes Basil 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948491,Gourmet Garden Cold Blend Pastes Garlic 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,706450,Gourmet Garden Cold Blend Pastes Garlic Value 120g,120g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,59809,Gourmet Garden Cold Blend Pastes Ginger Value 115g,115g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948525,Gourmet Garden Cold Blend Pastes Lemongrass 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,325130,Gourmet Garden Cold Blend Pastes Thai Seasoning 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,781395,Gourmet Garden Coriander Lightly Dried Sachet 8g,8g sachet,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,555398,Gourmet Garden Lightly Dried Chives 4g,4g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,476796,Gourmet Garden Mixed Herbs Lightly Dried Sachet 8g,8g sachet,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,593301,Gourmet Garden Oregano Lightly Dried 5g,5g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,781403,Gourmet Garden Parsley Lightly Dried Sachet 8g,8g sachet,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948507,Gourmet Garden Paste Chilli Mild 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948509,Gourmet Garden Paste Coriander 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,948511,Gourmet Garden Paste Ginger 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,6092922,Holy Moly Guacamole Dip 57g x 3 pack,57g x 3 pack,,no-match,,,,no match key — the lexicon could not key this row
+produce,CONDIMENTS & HERBS,woolworths,6092923,Holy Moly Smashed Avocado Dip 57g x 3 pack,57g x 3 pack,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,CONTINENTAL VEG,woolworths,174095,Eggplant Fresh,each,4.50,not-compared,group-only,continental-veg,continental-veg:eggplant,no eggplant at coles in the latest capture
+produce,CONTINENTAL VEG,woolworths,137548,Eggplant Lebanese,each,3.58,not-compared,strong,continental-veg,continental-veg:lebanese-eggplant,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CONTINENTAL VEG,woolworths,137546,Fresh Eggplant,each,2.53,not-compared,group-only,continental-veg,continental-veg:eggplant,no eggplant at coles in the latest capture
+produce,CUCUMBER,woolworths,137122,Cucumber Green,each,3.90,not-compared,strong,cucumbers,cucumbers:green,captured 192 h apart — not a like-for-like comparison
+produce,CUCUMBER,woolworths,137130,Lebanese Cucumbers,each,0.70,not-compared,strong,cucumbers,cucumbers:lebanese,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,CUCUMBER,woolworths,78633,Mini Qukes Loose,loose,0.44,not-compared,group-only,cucumbers,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CUCUMBER,woolworths,829360,The Odd Bunch Continental Cucumber,each,2.00,not-compared,group-only,cucumbers,cucumbers:continental:imperfect,no continental at coles in the latest capture
+produce,CUCUMBER,woolworths,24364,The Odd Bunch Lebanese Cucumber Punnet 750g,750g punnet,2.30,not-compared,group-only,cucumbers,cucumbers:lebanese:imperfect,no lebanese at coles in the latest capture
+produce,CUCUMBER,woolworths,841564,The Odd Bunch Mini Cucumber Punnet 450g,450g punnet,,not-compared,group-only,cucumbers,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CUCUMBER,woolworths,169067,Woolworths Qukes Baby Cucumbers Punnet 250g,250g punnet,3.00,not-compared,group-only,cucumbers,,"we cannot yet tell which variety this is, so it is not compared"
+produce,CUCUMBERS,coles,4578148,Baby Cucumbers 250g,250g,3.90,not-compared,group-only,cucumbers,cucumbers:baby,no baby at woolworths in the latest capture
+produce,CUCUMBERS,coles,4559314,Green Cucumber,each,2.50,not-compared,strong,cucumbers,cucumbers:green,not in woolworths's latest capture — last seen 2026-11-06
+produce,DECORATIVE LETTUCE,coles,2584547,Baby Gem Lettuce 3 Pack,3 pack,4.90,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DECORATIVE LETTUCE,coles,8791125,Cos Lettuce Head,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DECORATIVE LETTUCE,coles,8082971,Crunchy Cos Lettuce 1 Pack,1 pack,3.20,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DECORATIVE LETTUCE,coles,4646485,Lettuce Cos Baby Hearts 2 Pack,2 pack,3.50,not-compared,strong,lettuce,lettuce:baby-cos,2-pack vs single — pack sizes differ
+produce,DECORATIVE LETTUCE,coles,4596649,Lettuce Decorative Green Oak,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DECORATIVE LETTUCE,coles,4596456,Lettuce Decorative Oak Red,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DECORATIVE LETTUCE,coles,9135406,Symphony Lettuce Decorative,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,DELI - STYLE SALAD,coles,1461643,Beetroot Fetta And Walnut Salad 400g,400g,12.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,5504613,Classic Coleslaw Salad 400g,400g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,5503494,Classic Pasta Salad 400g,400g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,5508024,Classic Potato Salad 400g,400g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,3016302,Coleslaw Salad 250g,250g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1991851,Coleslaw Salad 800g,800g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1311877,Creamy Basil Pasta Salad 700g,700g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1504145,Lentil Salad With Extra Virgin Olive Oil 600g,600g,10.50,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1999831,Mediterranean Tomato- Capsicum & Olive Pasta Salad 350g,350g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,3016299,Pasta Salad 250g,250g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1991647,Pasta Salad 800g,800g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1461723,Pickle Slaw 300g,300g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1310375,Potato Egg & Bacon Salad 650g,650g,12.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,3016288,Potato Salad 250g,250g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1988904,Potato Salad 800g,800g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1461563,Rainbow Crunch Salad 350g,350g,12.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1874825,Sld Serv Couscous 600g,600g,10.50,no-match,,salads,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1311811,Tabbouleh Salad 250g,250g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,DELI - STYLE SALAD,coles,1311017,Tabbouleh Salad 460g,460g,12.00,no-match,,,,no match key — the lexicon could not key this row
+produce,DRIED FRUIT,coles,1083637,Dried Mango 1Kg,1kg,22.00,no-match,,dried-fruit,,no match key — the lexicon could not key this row
+produce,EGGPLANT,coles,4583261,Lebanese Eggplant approx. 90g,approx. 90g loose,0.80,not-compared,strong,continental-veg,continental-veg:lebanese-eggplant,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,EGGPLANT,coles,4583206,Purple Eggplant approx. 500g,approx. 500g loose,3.45,not-compared,group-only,continental-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,EXOTIC MUSHROOMS,coles,1597850,Dried Porcini Mushrooms 20g,20g,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,EXOTIC MUSHROOMS,coles,5429358,Exotic Oyster Mushrooms 150g,150g,7.00,not-compared,group-only,mushrooms,,"we cannot yet tell which variety this is, so it is not compared"
+produce,EXOTIC MUSHROOMS,coles,5431305,Exotic Shiitake Mushrooms Prepacked 100g,100g prepack,6.50,not-compared,group-only,mushrooms,,"we cannot yet tell which variety this is, so it is not compared"
+produce,EXOTIC MUSHROOMS,coles,3850577,Mushroom Dry Shiitake 20g,20g,3.15,no-match,,,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1801050,Arrangement Classic Rose Box,box,40.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1618654,Arrangement Gift Box,box,32.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1618053,Arrangement Joyous,each,,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1001620,Bouquet Mixed Chrysanthemum Peach,each,18.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1001616,Bouquet Mixed Chrysanthemum Pink,each,18.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1801650,Bunch Chrysanthemum Pink,bunch,12.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1862779,Bunch Chrysanthemum Purple,bunch,14.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1617990,Bunch Chrysanthemum White,bunch,12.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1001332,Potted Calandiva,each,15.00,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FLORAL,coles,1617855,Potted Mini Poinsettia,each,,no-match,,floral,,no match key — the lexicon could not key this row
+produce,FRESH DATES,woolworths,774692,Fresh Medjool Dates Punnet 225g,225g punnet,,not-compared,strong,dates,dates:medjool,the capture recorded no unit price for one side
+produce,FRESH DATES,woolworths,774699,Golden Palm Medjool Dates Roll With Coconut Punnet 225g,225g punnet,8.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRESH DATES,woolworths,670109,Pitted Medjool Dates Snack 340g,340g,12.50,not-compared,group-only,dates,,"we cannot yet tell which variety this is, so it is not compared"
+produce,FRESH DATES,woolworths,139706,Woolworths Peanuts Boiled 500g,500g,,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,1640722,Apple Slices 400g,400g,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,7864380,Cut Fruit Pineapple 350g,350g,7.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,7864336,Cut Fruit Watermelon 350g,350g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,8851679,Diced Melon & Pineapple Mix 600g,600g,11.00,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,8851646,Fruit Salad Selection 550g,550g,11.00,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,8770908,Potato & Egg Bacon 350g,350g,6.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,FRUIT,coles,7537271,Rockmelon Slices 700g,700g,9.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,7864358,Seasonal Fruit Salad 350g,350g,7.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,8770894,Summer Fruit Salad Medley 350g,350g,7.50,no-match,,,,no match key — the lexicon could not key this row
+produce,FRUIT,coles,7536858,Watermelon 750g,750g,8.50,not-compared,group-only,melons,melons:watermelon,no watermelon at woolworths in the latest capture
+produce,FRUITS,coles,2823342,Medjool Dates 227g,227g,7.90,not-compared,group-only,dates,dates:medjool:organic,no medjool at woolworths in the latest capture
+produce,FRUITS,coles,4352291,Oranges approx. 200g,approx. 200g loose,1.38,not-compared,strong,citrus,citrus:orange:organic,the capture recorded no unit price for one side
+produce,FRUITS,coles,1039770,Organic Banana approx. 170g,approx. 170g loose,1.17,not-compared,strong,bananas,bananas:banana:organic,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,FRUITS,coles,6917539,Organic Mandarins Prepacked 500g,500g prepack,5.90,not-compared,strong,mandarins,mandarins:mandarin:organic,the capture recorded no unit price for one side
+produce,FRUITS,coles,5048810,Organic Strawberries 250g,250g,,not-compared,strong,berries,berries:strawberry:organic,the capture recorded no unit price for one side
+produce,GARLIC,coles,6105715,Australian Garlic Loose approx. 60g,approx. 60g loose,1.98,not-compared,strong,garlic,garlic:garlic,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,GARLIC,woolworths,713429,Garlic Head,each,1.88,not-compared,group-only,garlic,garlic:head,no head at coles in the latest capture
+produce,GARLIC,woolworths,810795,Garlic Heads 3 pack,3 pack,4.20,not-compared,group-only,garlic,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPEFRUIT,coles,5323153,Large Grapefruit Ruby Red approx. 380g,approx. 380g loose,2.09,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPEFRUIT,coles,1866929,Sweet Jackson Grapefruit 750g,750g,,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPES,woolworths,6000566,Applause White Grapes 400g,400g,,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPES,woolworths,405774,Black Seedless Grapes Bag Approx. 950g,950g bag,,not-compared,strong,grapes,grapes:black-seedless,the capture recorded no unit price for one side
+produce,GRAPES,woolworths,245327,Candy Snaps Red Seedless Grapes 400g,400g,,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPES,woolworths,405838,Red Seedless Grapes Bag Approx. 900g,900g bag,12.90,not-compared,strong,grapes,grapes:red-seedless,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,GRAPES,woolworths,6054920,Seedless Mixed Grapes 500g,500g,,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPES,woolworths,6050688,Seedless White Grapes 500g,500g,,not-compared,strong,grapes,grapes:white-seedless,the capture recorded no unit price for one side
+produce,GRAPES,woolworths,138801,White Seedless Grapes Bag Approx. 900g,900g bag,8.91,not-compared,strong,grapes,grapes:white-seedless,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,GRAPES,woolworths,855216,Woolworths Black Seedless Grapes Bunch,bunch,11.61,not-compared,strong,grapes,grapes:black-seedless,the capture recorded no unit price for one side
+produce,GRAPES,woolworths,855186,Woolworths Green Seedless Grapes Bunch,bunch,13.41,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,GRAPES,woolworths,855246,Woolworths Red Seedless Grapes Bunch,bunch,11.61,not-compared,strong,grapes,grapes:red-seedless,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,HERB,woolworths,707375,Woolworths Bay Leaf Fresh Herb 10g,10g,3.30,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERB,woolworths,707374,Woolworths Chives Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,strong,herbs,herbs:chive,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,HERB,woolworths,707361,Woolworths Curry Leaf Fresh Herb Punnet 5g,5g punnet,,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERB,woolworths,707365,Woolworths Dill Fresh Herb 15g,15g,3.30,not-compared,group-only,herbs,herbs:dill,no dill at coles in the latest capture
+produce,HERB,woolworths,133621,Woolworths Green Basil Bunch,bunch,3.30,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERB,woolworths,707364,Woolworths Green Basil Punnet 15g,15g punnet,3.30,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERB,woolworths,707373,Woolworths Kaffir Lime Leaf Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERB,woolworths,707362,Woolworths Lemongrass Fresh Herb Punnet 30g,30g punnet,3.30,not-compared,group-only,herbs,herbs:lemongrass,no lemongrass at coles in the latest capture
+produce,HERB,woolworths,707371,Woolworths Oregano Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,group-only,herbs,herbs:oregano,no oregano at coles in the latest capture
+produce,HERB,woolworths,707370,Woolworths Rosemary Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,group-only,herbs,herbs:rosemary,no rosemary at coles in the latest capture
+produce,HERB,woolworths,707369,Woolworths Sage Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,group-only,herbs,herbs:sage,no sage at coles in the latest capture
+produce,HERB,woolworths,707363,Woolworths Thai Basil Punnet 15g,15g punnet,3.30,not-compared,group-only,herbs,herbs:thai-basil,no thai basil at coles in the latest capture
+produce,HERB,woolworths,707367,Woolworths Thyme Fresh Herb Punnet 10g,10g punnet,3.30,not-compared,group-only,herbs,herbs:thyme,no thyme at coles in the latest capture
+produce,HERBS,coles,3021889,Basil Cold Blended Paste 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3308498,Garlic Cold Blende Paste Value Pack 120g,120g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3022167,Garlic Cold Blended Paste 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3626915,Ginger Cold Blended Paste 115g,115g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3023206,Ginger Cold Blended Paste 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3214521,Herb Punnets Basil 15g,15g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214747,Herb Punnets Chives 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214612,Herb Punnets Coriander 15g,15g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,1116601,Herb Punnets Curry Leaves 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214769,Herb Punnets Dill 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3123186,Herb Punnets Lemon Thyme 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,5747863,Herb Punnets Lemongrass 30g,30g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,1116703,Herb Punnets Lime Leaves 10g,10g,3.50,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214725,Herb Punnets Mint 15g,15g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3215091,Herb Punnets Oregano 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214576,Herb Punnets Parsley Continental 15g,15g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3214780,Herb Punnets Rosemary 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3215138,Herb Punnets Sage 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3593430,Herb Punnets Thai Basil 15g,15g,3.30,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3215171,Herb Punnets Thyme 10g,10g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3593190,Herb Punnets Vietnamese Mint 15g,15g,3.50,not-compared,group-only,herbs,,"we cannot yet tell which variety this is, so it is not compared"
+produce,HERBS,coles,3023272,Lemongrass Cold Blended Paste 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,2997944,Lightly Dried Basil 10g,10g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,2999258,Lightly Dried Coriander 8g,8g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,2997999,Lightly Dried Mixed Herbs 8g,8g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,2999327,Lightly Dried Parsley 8g,8g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,3023308,Mild Chilli Stir In Paste 80g,80g,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,HERBS,coles,4574920,Sleeved Herbs Basil 1 Bunch,bunch,3.50,not-compared,group-only,herbs,herbs:basil,no basil at woolworths in the latest capture
+produce,HERBS,coles,4575810,Sleeved Herbs Watercress 1 Bunch,bunch,3.50,not-compared,group-only,leafy-greens,leafy-greens:watercress,no watercress at woolworths in the latest capture
+produce,HERBS,coles,7649300,Tube Hint Of Lemon 160g,160g,5.00,not-compared,group-only,citrus,,"we cannot yet tell which variety this is, so it is not compared"
+produce,IM PERFECT CITRUS,coles,3586912,I'm Perfect Lemons Prepack 1kg,1kg prepack,7.50,not-compared,strong,citrus,citrus:lemon:imperfect,the capture recorded no unit price for one side
+produce,IM PERFECT CITRUS,coles,5208450,I'm Perfect Limes Prepacked 500g,500g prepack,8.90,not-compared,strong,citrus,citrus:lime:imperfect,the capture recorded no unit price for one side
+produce,KIWI FRUIT,coles,4498311,Kiwifruit Prepacked 6 Pack,6 pack,8.50,not-compared,strong,tropical-fruit,tropical-fruit:gold-kiwifruit,6-pack vs single — pack sizes differ
+produce,LEAF,coles,6885716,4 Leaf Salad Mix 120g,120g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,8209722,4 Leaf Salad Mix 200g,200g,3.30,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,8647548,Australian Salad Family Baby Leaf Blend 300g,300g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,9106055,Australian Spinach 400g,400g,4.00,not-compared,group-only,leafy-greens,leafy-greens:spinach,no spinach at woolworths in the latest capture
+produce,LEAF,coles,5040192,Baby Leaf Salad & Beetroot 150g,150g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,5427352,Baby Oak Lettuce 150g,150g,4.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAF,coles,1499759,Baby Rocket 60g,60g,2.20,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAF,coles,1499340,Baby Spinach 120g,120g,3.30,not-compared,group-only,leafy-greens,leafy-greens:baby-spinach,no baby spinach at woolworths in the latest capture
+produce,LEAF,coles,1499486,Baby Spinach 60g,60g,2.20,not-compared,group-only,leafy-greens,leafy-greens:baby-spinach,no baby spinach at woolworths in the latest capture
+produce,LEAF,coles,3308716,Butter Leaf Blend 120g,120g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,2674606,Chopped Kale 140g,140g,3.30,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,1062590,CHOPPED SPINACH,each,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,5450831,Iceberg Salad Blend 300g,300g,3.30,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,5040396,Jumbo Value Pack Baby Spinach 400g,400g,6.00,not-compared,group-only,leafy-greens,leafy-greens:baby-spinach,no baby spinach at woolworths in the latest capture
+produce,LEAF,coles,1499475,Lettuce Baby Rocket 120g,120g,3.30,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAF,coles,1999977,Mediterranean Salad With Red Capsicum Dressing- Dukkah & Kalamata Olives 116g,116g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,5464290,Salad Baby Leaf Spinach & Rocket 120g,120g,3.30,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,5519519,Salad Blend Iceberg & Cos 500g,500g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,8658588,Salad Family Spinach 280g,280g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,2470526,Shredded Iceberg Lettuce 200g,200g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAF,coles,3613141,Spinach & Rocket 60g,60g,2.20,not-compared,group-only,leafy-greens,leafy-greens:rocket,no rocket at woolworths in the latest capture
+produce,LEAF,coles,1999886,Spring Garden Salad With Edible Flowers- Fetta & Almonds 155g,155g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAFY VEG,woolworths,134801,Buk Choy Asian Greens,each,3.00,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,760033,Buk Choy Asian Greens 2 Pack 280g,2 pack,3.00,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,170127,Cabbage Chinese Wombok Whole,each,7.90,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,154992,Choy Sum Baby Asian Greens,each,,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,170154,Fresh Chinese Cabbage Wombok Half,each · half,3.95,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,137605,Fresh Fennel,each,3.90,not-compared,strong,continental-veg,continental-veg:fennel,priced per each but one listing is a single piece and the other a bunch
+produce,LEAFY VEG,woolworths,380338,Kale Fresh Bunch,bunch,4.60,not-compared,group-only,brassicas,brassicas:kale,no kale at coles in the latest capture
+produce,LEAFY VEG,woolworths,308186,Leek Twin 2 pack,2 pack,5.70,not-compared,group-only,continental-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,728246,Pak Choy Asian Greens Punnet 220g,220g punnet,3.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,154991,Pak Choy Baby Asian Greens,each,3.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,179004,Perfection Chinese Wombok Baby Whole,each,,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,178497,Silverbeet Fresh Bunch,bunch,4.50,not-compared,strong,leafy-greens,leafy-greens:silverbeet,priced per each but one listing is a bunch and the other a single piece
+produce,LEAFY VEG,woolworths,147863,Spinach English Salad Bunch,bunch,3.90,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAFY VEG,woolworths,147799,Spinach Salad Bunch,bunch,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,LEAFY VEG,woolworths,135037,Woolworths Baby Buk Choy Asian Greens,each,,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,136691,Woolworths Broccoli Chinese Bunch,bunch,3.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,760043,Woolworths Chinese Broccoli Asian Greens 200g,200g,3.00,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,728244,Woolworths Choy Sum 220g,220g,3.00,not-compared,group-only,leafy-greens,leafy-greens:choy-sum,no choy sum at coles in the latest capture
+produce,LEAFY VEG,woolworths,136979,Woolworths Choy Sum Asian Greens,each,3.00,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEAFY VEG,woolworths,134286,Woolworths Melon Bitter Whole,each,7.16,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LEMONS,coles,409728,Lemons 5 Pack,5 pack,5.90,not-compared,strong,citrus,citrus:lemon,5-pack vs single — pack sizes differ
+produce,LEMONS,coles,1866747,Seedless Lemon 4 Pack,4 pack,5.00,not-compared,strong,citrus,citrus:lemon,4-pack vs single — pack sizes differ
+produce,LETTUCE,woolworths,256240,Swanport Harvest Bagged Lettuce,each,4.90,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LETTUCE,woolworths,141496,Woolworths Cos Hearts Lettuce 2 pack,2 pack,3.90,not-compared,group-only,lettuce,lettuce:cos,no cos at coles in the latest capture
+produce,LETTUCE,woolworths,190092,Woolworths Lettuce Baby Cos,each,3.50,not-compared,strong,lettuce,lettuce:baby-cos,single vs 2-pack — pack sizes differ
+produce,LETTUCE,woolworths,721337,Woolworths Lettuce Oakleaf Combo,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LETTUCE,woolworths,119808,Woolworths Lettuce Oakleaf Green,each,3.50,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LETTUCE,woolworths,823691,Woolworths Little Gem Lettuce Combo 2 pack,2 pack,4.90,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LETTUCE,woolworths,823690,Woolworths Little Gem Lettuce Green 2 pack,2 pack,4.90,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,LIMES,coles,1419920,Blood Limes 400g,400g,6.90,not-compared,group-only,citrus,citrus:blood-lime,no blood lime at woolworths in the latest capture
+produce,MACADAMIA,coles,8162232,Honey Macadamias 400g,400g,18.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MACADAMIA,coles,5272391,Natural Macadamias 400g,400g,18.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MACADAMIA,coles,4502430,Roast Salted Macadamias 400g,400g,18.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MANDARIN,woolworths,6072969,Delite Mandarins 750g,750g,4.50,not-compared,group-only,mandarins,mandarins:delite,no delite at coles in the latest capture
+produce,MANDARIN,woolworths,314075,Mandarin Afourer,each,0.64,not-compared,strong,mandarins,mandarins:afourer,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,MANDARIN,woolworths,283414,Mandarin Amorette 750g,750g,4.50,not-compared,group-only,mandarins,mandarins:amorette,no amorette at coles in the latest capture
+produce,MANDARIN,woolworths,829107,Mandarin Amorette® Seedless,each,0.59,not-compared,group-only,mandarins,mandarins:amorette,no amorette at coles in the latest capture
+produce,MANDARIN,woolworths,259421,Mandarin Clementine,each,,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARIN,woolworths,731091,Mandarin Delite Seedless,each,,not-compared,group-only,mandarins,mandarins:delite,no delite at coles in the latest capture
+produce,MANDARIN,woolworths,799310,Mandarin Gold Nugget,each,0.81,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARIN,woolworths,651492,Mandarin Tangold Seedless,each,0.64,not-compared,group-only,mandarins,mandarins:tangold,no tangold at coles in the latest capture
+produce,MANDARIN,woolworths,79642,Mandarins 550g,550g,,not-compared,group-only,mandarins,mandarins:mandarin,no mandarin at coles in the latest capture
+produce,MANDARIN,woolworths,393157,Summerina Mandarin,each,,not-compared,group-only,mandarins,mandarins:summerina,no summerina at coles in the latest capture
+produce,MANDARIN,woolworths,384383,Sumo Citrus,each,,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARIN,woolworths,649090,Woolworths Fresh Food Kids Mini Mandarins 5 pack,5 pack,3.90,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARIN,woolworths,591940,Woolworths Sweet & Juicy Mandarins 750g,750g,3.90,not-compared,group-only,mandarins,mandarins:mandarin,no mandarin at coles in the latest capture
+produce,MANDARINS,coles,4786418,Gold Imperial Mandarins approx. 180g,approx. 180g loose,0.81,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARINS,coles,5560330,Gold Nugget Seedless Mandarins approx. 130g,approx. 130g loose,0.72,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANDARINS,coles,7174994,Mandarins Afourer approx. 130g,approx. 130g loose,0.64,not-compared,strong,mandarins,mandarins:afourer,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,MANDARINS,coles,5211604,Mini Pack Mandarins 850g,850g,3.90,not-compared,group-only,mandarins,mandarins:mini,no mini at woolworths in the latest capture
+produce,MANDARINS,coles,204893,Murcott Mandarins Medium approx. 130g,approx. 130g loose,0.64,not-compared,group-only,mandarins,mandarins:murcott,no murcott at woolworths in the latest capture
+produce,MANDARINS,coles,8894547,Orri Mandarins approx. 100g,approx. 100g loose,0.55,not-compared,group-only,mandarins,mandarins:orri,no orri at woolworths in the latest capture
+produce,MANDARINS,coles,5907223,Red Imperial Mandarins approx .130g,approx. .130g,,not-compared,group-only,mandarins,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,coles,3655935,Calypso Mangoe Prepacked 3 pack,3 pack,7.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,coles,4965122,Honey Gold Mangoes Medium,each,3.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,coles,3627463,I'm Perfect Mangoes Prepacked 1.5kg,1.5kg prepack,13.90,not-compared,group-only,mangoes,mangoes:mango:imperfect,no mango at woolworths in the latest capture
+produce,MANGOES,coles,409772,Kensington Pride Mangoes Medium,each,3.50,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,coles,9003121,Mangoes Prepack 4 Pack,4 pack,9.90,not-compared,group-only,mangoes,mangoes:mango,no mango at woolworths in the latest capture
+produce,MANGOES,coles,5604356,R2e2 Mangoes,each,3.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,713928,Calypso Mango 4 pack,4 pack,10.00,not-compared,strong,mangoes,mangoes:calypso,4-pack vs single — pack sizes differ
+produce,MANGOES,woolworths,224301,Honey Gold™ Mango,each,3.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,139428,Kensington Pride Mango,each,2.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,366489,Mango Calypso Tray,tray,,not-compared,strong,mangoes,mangoes:calypso,the capture recorded no unit price for one side
+produce,MANGOES,woolworths,763767,Mango Lady Jane,each,,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,187397,Mango Maha Chanok,each,,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,143168,Mango R2E2,each,3.90,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MANGOES,woolworths,893958,The Odd Bunch Mistaken Mangos 4 pack,4 pack,8.00,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MELONS,coles,5536981,Half Honeydew Melon,each · half,3.50,not-compared,strong,melons,melons:honeydew,half vs whole — different portion
+produce,MELONS,coles,4205264,Melon Watermelon Whole Seedless approx. 8kg,approx. 8kg loose,23.20,not-compared,group-only,melons,melons:watermelon,no watermelon at woolworths in the latest capture
+produce,MELONS,coles,7508229,Seedless Watermelon Cut approx. 1.8Kg,approx. 1.8kg loose,5.22,no-match,,,,no match key — the lexicon could not key this row
+produce,MELONS,woolworths,924029,Melon De Sapo,each,,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MELONS,woolworths,696428,Melon Orange Candy,each,,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MELONS,woolworths,66613,Melonball,each,5.90,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MELONS,woolworths,139429,Red Seedless Watermelon Whole,each,30.80,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,MELONS,woolworths,120384,Red Watermelon Cut Quarter,each · quarter,7.70,no-match,,,,no match key — the lexicon could not key this row
+produce,MELONS,woolworths,113616,Woolworths Honeydew Large Half,each · half,,not-compared,strong,melons,melons:honeydew,the capture recorded no unit price for one side
+produce,MIXED,coles,5299478,Mixed Nuts Dry Roasted Mixed Nuts 400g,400g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MIXED,coles,1000160,R&s Peanuts & Cashews 750g,750g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MIXED,coles,1000158,R&s Peanuts Cashews & Macadamias Nut Mix 400g,400g,8.50,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MIXED FRUIT & NUT,coles,5476234,Fruit & Nut Trail Mix 400g,400g,7.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MIXED FRUIT & NUT,coles,7999492,Roasted And Salted Mixed Nuts 400g,400g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MIXED FRUIT & NUT,coles,3137293,Superfood Mix 400g,400g,10.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,827507,Country Fresh Exotic Mushroom Stir Fry Mix 150g,150g,6.90,no-match,,,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,145028,Mushrooms Flat Large Loose per 350g,per 350g loose,13.50,not-compared,group-only,mushrooms,mushrooms:flat,no flat at coles in the latest capture
+produce,MUSHROOM,woolworths,89466,Woolworths Mushroom Sliced 500g,500g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,201685,Woolworths Mushrooms Cups Sliced Punnet 375g,375g punnet,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,179994,Woolworths Mushrooms Oyster Punnet 150g,150g punnet,,not-compared,group-only,mushrooms,mushrooms:oyster,no oyster at coles in the latest capture
+produce,MUSHROOM,woolworths,143311,Woolworths Mushrooms Shiitake Punnet 100g,100g punnet,6.90,not-compared,group-only,mushrooms,mushrooms:shiitake,no shiitake at coles in the latest capture
+produce,MUSHROOM,woolworths,381241,Woolworths Mushrooms Swiss Brown Sliced Punnet 200g,200g punnet,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,149930,Woolworths Swiss Brown Mushrooms Punnet 200g,200g punnet,5.50,not-compared,group-only,mushrooms,mushrooms:swiss-brown,no swiss brown at coles in the latest capture
+produce,MUSHROOM,woolworths,147981,Woolworths White Cup Sliced Mushroom Punnet 200g,200g punnet,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,MUSHROOM,woolworths,215610,Woolworths White Flat Mushrooms Punnet 375g,375g punnet,6.50,not-compared,group-only,mushrooms,,"we cannot yet tell which variety this is, so it is not compared"
+produce,NATOORA,coles,1867874,Chives Bunch 1 Bunch,bunch,6.50,not-compared,strong,herbs,herbs:chive,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,NATOORA,coles,1869359,Organic Dutch Cream Potatoes 1Kg,1kg,6.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,NATOORA,coles,1000190,Organic Japnut Pumpkin 700g,700g,,not-compared,group-only,pumpkin,pumpkin:japnut:organic,no japnut at woolworths in the latest capture
+produce,NATOORA,coles,2116254,Organic Large Fennel 1 Unit,1 unit,4.80,not-compared,group-only,continental-veg,continental-veg:fennel:organic,no fennel at woolworths in the latest capture
+produce,NATOORA,coles,1869370,Organic Purple Haze Carrots 500g,500g,5.50,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,NATOORA,coles,1504564,Organic Purple Sprouting Baby Broccoli 1 Bunch,bunch,6.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,NATOORA,coles,1593430,Organic Rainbow Chard Bunch 400g,400g bunch,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,NATOORA,coles,1504510,Tuscan Cavolo Nero Bunch 400g,400g bunch,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,NATOORA,coles,1501883,Unwaxed Blood Oranges 700g,700g,4.90,not-compared,strong,citrus,citrus:blood-orange,not in woolworths's latest capture — last seen 2026-10-01
+produce,NATOORA,coles,1501894,Unwaxed Cara Cara Oranges 700g,700g,4.50,not-compared,strong,citrus,citrus:cara-cara-orange,not in woolworths's latest capture — last seen 2026-10-28
+produce,NATOORA,coles,1869483,Unwaxed Navel Oranges 700g,700g,4.50,not-compared,strong,citrus,citrus:navel-orange,not in woolworths's latest capture — last seen 2026-11-06
+produce,NATOORA,coles,1591944,Young Shoot Microgreens 110g,110g,9.90,no-match,,,,no match key — the lexicon could not key this row
+produce,NECTARINES,coles,409808,Yellow Nectarines approx. 120g,approx. 120g loose,0.90,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ONION,coles,5134809,Brown Onion Shallots Loose approx. 35g,approx. 35g loose,0.46,not-compared,strong,onions,onions:shallot,not in woolworths's latest capture — last seen 2026-11-12
+produce,ONION,coles,2992690,Brown Onions 5 kg,5kg,,not-compared,strong,onions,onions:brown,the capture recorded no unit price for one side
+produce,ONION,coles,9964284,I'm Perfect Onions Prepack 2Kg,2kg prepack,5.30,not-compared,group-only,onions,onions:onion:imperfect,no onion at woolworths in the latest capture
+produce,ONION,coles,4218459,Onions Red Local approx. 200g,approx. 200g loose,1.10,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ONION,woolworths,144329,Onion Brown,each,0.63,not-compared,strong,onions,onions:brown,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ONION,woolworths,144497,Onion Red,each,0.83,not-compared,strong,onions,onions:red,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ONION,woolworths,671169,Onion Red Peeled,each,0.89,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ONION,woolworths,189459,Onion Shallot French,each,0.65,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ONION,woolworths,144523,Onion White,each,,not-compared,group-only,onions,onions:white,no white at coles in the latest capture
+produce,ONION,woolworths,6049539,Red Onions 5kg,5kg,,not-compared,strong,onions,onions:red,the capture recorded no unit price for one side
+produce,ONION,woolworths,6055658,Woolworths Shallots 400g,400g,4.50,not-compared,strong,onions,onions:shallot,captured 60 h apart — not a like-for-like comparison
+produce,ORANGES,coles,5967167,Blood Oranges approx. 200g,approx. 200g loose,1.18,not-compared,strong,citrus,citrus:blood-orange,not in woolworths's latest capture — last seen 2026-10-01
+produce,ORANGES,coles,3906514,CARA CARA ORANGES,each,,not-compared,strong,citrus,citrus:cara-cara-orange,the capture recorded no unit price for one side
+produce,ORANGES,coles,9599134,Cara Cara Oranges approx. 250g,approx. 250g loose,1.13,not-compared,strong,citrus,citrus:cara-cara-orange,not in woolworths's latest capture — last seen 2026-10-28
+produce,ORANGES,coles,1866678,Imperfect Juicing Orange 4Kg,4kg,7.90,not-compared,group-only,citrus,citrus:juicing-orange:imperfect,no juicing orange at woolworths in the latest capture
+produce,ORANGES,coles,4255717,Orange Navel approx. 250g,approx. 250g loose,1.13,not-compared,strong,citrus,citrus:navel-orange,not in woolworths's latest capture — last seen 2026-11-06
+produce,ORANGES,coles,1866973,Prepacked Oranges 2Kg,2kg prepack,4.90,not-compared,group-only,citrus,citrus:orange,no orange at woolworths in the latest capture
+produce,ORGANICS,woolworths,110568,Absolute Organic Wombok Cabbage Half,each · half,,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,188154,Fresh Celery Organic,each,8.90,not-compared,group-only,celery,celery:celery:organic,no celery at coles in the latest capture
+produce,ORGANICS,woolworths,122556,Fresh Leek Organic,each,4.50,not-compared,strong,continental-veg,continental-veg:leek:organic,listed as unavailable at capture
+produce,ORGANICS,woolworths,426888,Macro Avocado Mini Organic 550g,550g,7.50,not-compared,group-only,avocados,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,717238,Macro Certified Organic Salad Mix 100g,100g,4.40,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,149792,Macro Fresh Cabbage Organic Green Half,each · half,5.80,not-compared,strong,brassicas,brassicas:cabbage:organic,half vs whole — different portion
+produce,ORGANICS,woolworths,169763,Macro Fresh Cauliflower Half Organic,each · half,3.50,not-compared,strong,brassicas,brassicas:cauliflower:organic,half vs whole — different portion
+produce,ORGANICS,woolworths,789892,Macro Fresh Celery Heart Organic,each,6.90,not-compared,group-only,celery,celery:heart:organic,no heart at coles in the latest capture
+produce,ORGANICS,woolworths,306519,Macro Kensington Mango Pride Organic,each,4.40,not-compared,group-only,mangoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,773340,Macro Mini Organic Apple 1kg,1kg,9.00,not-compared,group-only,apples,apples:mini:organic,no mini at coles in the latest capture
+produce,ORGANICS,woolworths,122674,Macro Onion Spring Organic,each,4.90,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,786006,Macro Organic Baby Cos Lettuce Twin Pack,each,,not-compared,group-only,lettuce,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,906770,Macro Organic Baby Purple Broccoli,each,4.90,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,306510,Macro Organic Banana,each,1.28,not-compared,strong,bananas,bananas:banana:organic,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ORGANICS,woolworths,806260,Macro Organic Beetroot 250g,250g,4.80,not-compared,strong,root-veg,root-veg:beetroot:organic,listed as unavailable at capture
+produce,ORGANICS,woolworths,116277,Macro Organic Beetroot Punnet 500g,500g punnet,5.50,not-compared,strong,root-veg,root-veg:beetroot:organic,listed as unavailable at capture
+produce,ORGANICS,woolworths,810386,Macro Organic Broccoli 500g,500g,,not-compared,strong,brassicas,brassicas:broccoli:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,145947,Macro Organic Brown Onions Bag 1kg,1kg bag,6.50,not-compared,strong,onions,onions:brown:organic,captured 60 h apart — not a like-for-like comparison
+produce,ORGANICS,woolworths,629215,Macro Organic Celery Sticks 250g,250g,,not-compared,group-only,celery,celery:stick:organic,no stick at coles in the latest capture
+produce,ORGANICS,woolworths,651491,Macro Organic Coleslaw & Kale Slaw Kit 250g,250g,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,515925,Macro Organic Corn Cobettes Pre-Pack 425g,425g prepack,8.50,not-compared,group-only,sweet-corn,sweet-corn:cobette:organic,no cobette at coles in the latest capture
+produce,ORGANICS,woolworths,318163,Macro Organic Dates Punnet 200g,200g punnet,6.70,not-compared,group-only,dates,dates:date:organic,no date at coles in the latest capture
+produce,ORGANICS,woolworths,769063,Macro Organic Dutch Cream Potatoes Bag 1kg,1kg bag,6.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,426911,Macro Organic Gourmet Salad Mix 100g,100g,4.80,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,160903,Macro Organic Green Asparagus Bunch,bunch,,not-compared,strong,asparagus,asparagus:green:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,117383,Macro Organic Green Zucchini Punnet 500g,500g punnet,5.90,not-compared,group-only,zucchini,zucchini:green:organic,no green at coles in the latest capture
+produce,ORGANICS,woolworths,427867,Macro Organic Herb Coriander Bunch,bunch,4.50,not-compared,group-only,herbs,herbs:coriander:organic,no coriander at coles in the latest capture
+produce,ORGANICS,woolworths,427873,Macro Organic Herb Parsley Bunch,bunch,4.50,not-compared,group-only,herbs,herbs:parsley:organic,no parsley at coles in the latest capture
+produce,ORGANICS,woolworths,772786,Macro Organic Kale,each,6.50,not-compared,group-only,brassicas,brassicas:kale:organic,no kale at coles in the latest capture
+produce,ORGANICS,woolworths,153654,Macro Organic Kiwi Fruit 6 pack,6 pack,,not-compared,group-only,tropical-fruit,tropical-fruit:kiwifruit:organic,no kiwifruit at coles in the latest capture
+produce,ORGANICS,woolworths,6091144,Macro Organic Kiwi Fruit Green 450g,450g,,not-compared,group-only,tropical-fruit,tropical-fruit:green-kiwifruit:organic,no green kiwifruit at coles in the latest capture
+produce,ORGANICS,woolworths,63832,Macro Organic Lemon 500g,500g,7.50,not-compared,group-only,citrus,citrus:lemon:organic,no lemon at coles in the latest capture
+produce,ORGANICS,woolworths,72109,Macro Organic Mango 4 pack,4 pack,,not-compared,group-only,mangoes,mangoes:mango:organic,no mango at coles in the latest capture
+produce,ORGANICS,woolworths,7238,Macro Organic Mini Capsicum 175g,175g,,not-compared,group-only,capsicums,capsicums:mini:organic,no mini at coles in the latest capture
+produce,ORGANICS,woolworths,814379,Macro Organic Nectarine 500g,500g,,not-compared,group-only,stone-fruit,stone-fruit:nectarine:organic,no nectarine at coles in the latest capture
+produce,ORGANICS,woolworths,545294,Macro Organic Orange Loose,loose,,not-compared,strong,citrus,citrus:orange:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,135245,Macro Organic Orange Navel Bag 1.5kg,1.5kg bag,,not-compared,group-only,citrus,citrus:navel-orange:organic,no navel orange at coles in the latest capture
+produce,ORGANICS,woolworths,60053,Macro Organic Parsnip 350g,350g,6.90,not-compared,group-only,root-veg,root-veg:parsnip:organic,no parsnip at coles in the latest capture
+produce,ORGANICS,woolworths,160888,Macro Organic Pink Lady Apple Punnet 1kg,1kg punnet,9.00,not-compared,strong,apples,apples:pink-lady:organic,not in coles's latest capture — last seen 2026-11-14
+produce,ORGANICS,woolworths,499124,Macro Organic Potato White Washed 1kg,1kg,6.90,not-compared,group-only,potatoes,potatoes:white-washed:organic,no white washed at coles in the latest capture
+produce,ORGANICS,woolworths,169761,Macro Organic Roma Tomato 500g,500g,,not-compared,group-only,tomatoes,tomatoes:roma:organic,no roma at coles in the latest capture
+produce,ORGANICS,woolworths,306567,Macro Organic Round Beans 200g,200g,5.50,not-compared,group-only,peas-beans,peas-beans:green-bean:organic,no green bean at coles in the latest capture
+produce,ORGANICS,woolworths,769064,Macro Organic Sebago Potatoes Bag 1kg,1kg bag,3.90,not-compared,group-only,potatoes,potatoes:sebago:organic,no sebago at coles in the latest capture
+produce,ORGANICS,woolworths,120471,Macro Organic Silverbeet Bunch,bunch,5.50,not-compared,group-only,leafy-greens,leafy-greens:silverbeet:organic,no silverbeet at coles in the latest capture
+produce,ORGANICS,woolworths,349592,Macro Organic Silverbeet Rainbow,each,4.90,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,625377,Macro Organic Snacking Tomato Punnet 200g,200g punnet,5.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,117393,Macro Organic Snow Peas 125g,125g,,not-compared,group-only,peas-beans,peas-beans:snow-pea:organic,no snow pea at coles in the latest capture
+produce,ORGANICS,woolworths,688869,Macro Organic Solanato Tomatoes 200g,200g,6.90,not-compared,group-only,tomatoes,tomatoes:solanato:organic,no solanato at coles in the latest capture
+produce,ORGANICS,woolworths,116276,Macro Organic Spinach English Bunch,bunch,5.90,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,372556,Macro Organic Sweet Corn 400g,400g,7.90,not-compared,strong,sweet-corn,sweet-corn:sweet-corn:organic,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,ORGANICS,woolworths,413886,Macro Organic Sweet Potato,each,5.36,not-compared,group-only,sweet-potatoes,sweet-potatoes:sweet-potato:organic,no sweet potato at coles in the latest capture
+produce,ORGANICS,woolworths,271214,Macro Organic Sweet Potato 500g,500g,6.90,not-compared,group-only,sweet-potatoes,sweet-potatoes:sweet-potato:organic,no sweet potato at coles in the latest capture
+produce,ORGANICS,woolworths,6000384,Macro Organic Tomato Snacking Mix 200g,200g,5.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,102305,Macro Organic Tumeric 75g,75g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,796562,Macro Organic Tuscan Kale Bunch,bunch,5.90,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,141407,Macro Organic Valencia Oranges Bag 1.5kg,1.5kg bag,8.90,not-compared,group-only,citrus,citrus:valencia-orange:organic,no valencia orange at coles in the latest capture
+produce,ORGANICS,woolworths,717236,Macro Organic Wild Rocket 100g,100g,4.90,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,814378,Macro Organic Yellow Peaches Pre Packed 500g,500g,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,940332,Macro Prepack Mandarin 750g,750g prepack,,not-compared,strong,mandarins,mandarins:mandarin:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,1634,Macro Pumpkin Butternut Cut Organic,each,4.20,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,1632,Macro Pumpkin Kent Cut Organic,each,3.85,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,528836,Macro Purple Carrot Organic 500g,500g,,not-compared,group-only,carrots,carrots:purple:organic,no purple at coles in the latest capture
+produce,ORGANICS,woolworths,751602,Macro Sugar Plum Organic 500g,500g,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,241189,Organic Apples Southern Bliss,each,1.18,not-compared,group-only,apples,apples:apple:organic,no apple at coles in the latest capture
+produce,ORGANICS,woolworths,57541,Organic Coloured Cauliflower,each,6.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,391697,Organic Eggplant 500g,500g,9.90,not-compared,group-only,continental-veg,continental-veg:eggplant:organic,no eggplant at coles in the latest capture
+produce,ORGANICS,woolworths,6069760,Organic Green Chilli 50g,50g,3.90,not-compared,group-only,chillies,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,238802,Organic In Conversion Apple Jazz 1kg,1kg,,not-compared,group-only,apples,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,503006,Organic Mini Cauliflower,each,,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,79288,Organic Mini Watermelon Seedless,each,9.90,not-compared,group-only,melons,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,856965,Organic Pak Choy Baby,each,5.50,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,239825,Organic Papaya Whole,each,8.90,not-compared,group-only,tropical-fruit,tropical-fruit:papaya:organic,no papaya at coles in the latest capture
+produce,ORGANICS,woolworths,685740,Organic Pumpkin Butternut,each,5.90,not-compared,group-only,pumpkin,pumpkin:butternut:organic,no butternut at coles in the latest capture
+produce,ORGANICS,woolworths,255755,Organic Red Cabbage Half,each · half,5.80,not-compared,group-only,brassicas,brassicas:red-cabbage:organic,no red cabbage at coles in the latest capture
+produce,ORGANICS,woolworths,83986,Organic Red Capsicum 400g,400g,,not-compared,strong,capsicums,capsicums:red:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,149820,Organic Strawberry Punnet 250g,250g punnet,,not-compared,strong,berries,berries:strawberry:organic,the capture recorded no unit price for one side
+produce,ORGANICS,woolworths,531025,Organic Zucchini Green Loose,loose,1.49,not-compared,group-only,zucchini,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,168661,Potato Organic Punnet 1kg,1kg punnet,6.50,not-compared,strong,potatoes,potatoes:potato:organic,captured 132 h apart — not a like-for-like comparison
+produce,ORGANICS,woolworths,318290,Southern Bliss Apples Big Juicy Crisp Box 1kg,1kg box,,not-compared,group-only,apples,apples:apple:organic,no apple at coles in the latest capture
+produce,ORGANICS,woolworths,211784,Spanish Onion Red Organic 500g,500g,,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ORGANICS,woolworths,829707,Woolworths Organic Mushroom Cup 180g,180g,6.70,not-compared,group-only,mushrooms,mushrooms:cup:organic,no cup at coles in the latest capture
+produce,ORGANICS,woolworths,806333,Woolworths Organic Salad Coleslaw 200g,200g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,ORGANICS,woolworths,808412,Woolworths Organic Tomato Truss 500g,500g,8.50,not-compared,group-only,tomatoes,tomatoes:truss:organic,no truss at coles in the latest capture
+produce,OTHER BANANAS,coles,8947440,Bananas Green approx. 170g,approx. 170g,,not-compared,group-only,bananas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,OTHER CITRUS,coles,1884465,Kumquat 150g,150g,4.90,no-match,,,,no match key — the lexicon could not key this row
+produce,OTHER CITRUS,coles,6803198,Tangelos Minneola approx. 180g,approx. 180g,,no-match,,,,no match key — the lexicon could not key this row
+produce,PAPAW,coles,3087366,Half Papaya,each · half,2.95,not-compared,group-only,tropical-fruit,tropical-fruit:papaya,no papaya at woolworths in the latest capture
+produce,PAPAW,coles,6950578,Papaya Loose,loose,5.90,not-compared,group-only,tropical-fruit,tropical-fruit:papaya,no papaya at woolworths in the latest capture
+produce,PASSIONFRUIT,coles,5415852,Panama Passionfruit,each,1.90,not-compared,strong,tropical-fruit,tropical-fruit:panama-passionfruit,the capture recorded no unit price for one side
+produce,PASSIONFRUIT,coles,6139353,Passionfruit 6 Pack,6 pack,7.90,not-compared,strong,tropical-fruit,tropical-fruit:passionfruit,the capture recorded no unit price for one side
+produce,PASSIONFRUIT,coles,8381564,Passionfruit prepack 4 Pack,4 pack,,not-compared,strong,tropical-fruit,tropical-fruit:passionfruit,the capture recorded no unit price for one side
+produce,PEACHES,coles,4552326,Peaches White approx. 150g,approx. 150g loose,1.19,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEACHES,coles,156713,Peaches Yellow approx. 120g,approx. 120g loose,0.95,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEANUTS,coles,1110092,Aust Roasted & Salted Peanuts 750g,750g,8.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,PEANUTS,coles,8161433,Roasted & Salted Peanuts 400g,400g,5.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,PEAR,woolworths,145111,Fresh Beurre Bosc Pear,each,1.13,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAR,woolworths,784073,Fresh Beurre Bosc Pear Punnet 750g,750g punnet,3.50,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAR,woolworths,145289,Fresh Brown Nashi Pear,each,2.14,not-compared,strong,pears,pears:brown-nashi,listed as unavailable at capture
+produce,PEAR,woolworths,145182,Fresh Corella Pear,each,1.38,not-compared,group-only,pears,pears:corella,no corella at coles in the latest capture
+produce,PEAR,woolworths,145259,Fresh Green Nashi Pear,each,,not-compared,strong,pears,pears:green-nashi,the capture recorded no unit price for one side
+produce,PEAR,woolworths,145193,Fresh Josephine Pear,each,,not-compared,strong,pears,pears:josephine,the capture recorded no unit price for one side
+produce,PEAR,woolworths,115330,Fresh Packham Pear,each,1.02,not-compared,strong,pears,pears:packham,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,PEAR,woolworths,609700,Fresh Papple,each,1.42,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAR,woolworths,116404,Pear Red Angel,each,1.09,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAR,woolworths,668580,Woolworths Corella Pear 750g,750g,,not-compared,group-only,pears,pears:corella,no corella at coles in the latest capture
+produce,PEAR,woolworths,588302,Woolworths Fresh Food Kids Mini Pears 5 pack,5 pack,3.90,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAR,woolworths,668581,Woolworths Fresh Josephine Pear Punnet 750g,750g punnet,,not-compared,strong,pears,pears:josephine,the capture recorded no unit price for one side
+produce,PEAR,woolworths,310965,Woolworths Packham Pear Punnet 1kg,1kg punnet,3.50,not-compared,strong,pears,pears:packham,not in coles's latest capture — last seen 2026-11-14
+produce,PEARS,coles,409987,Beurre Bosc Pears approx. 230g,approx. 230g loose,1.04,not-compared,group-only,pears,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEARS,coles,7063042,Brown Nashi Pears,each,2.00,not-compared,strong,pears,pears:brown-nashi,not in woolworths's latest capture — last seen 2026-11-12
+produce,PEARS,coles,7062775,Green Nashi Pears,each,2.00,not-compared,strong,pears,pears:green-nashi,the capture recorded no unit price for one side
+produce,PEARS,coles,444503,Josephine Pears approx. 230g,approx. 230g loose,0.90,not-compared,strong,pears,pears:josephine,the capture recorded no unit price for one side
+produce,PEAS / BEANS,woolworths,134072,Beans Round per 250g,per 250g loose,7.90,not-compared,group-only,peas-beans,peas-beans:green-bean,no green bean at coles in the latest capture
+produce,PEAS / BEANS,woolworths,730118,Mulgowie Green Beans Cleaned & Cut 340g,340g,6.30,no-match,,,,no match key — the lexicon could not key this row
+produce,PEAS / BEANS,woolworths,144275,Okra Fresh per 250g,per 250g loose,,not-compared,group-only,peas-beans,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PEAS / BEANS,woolworths,105925,Woolworths Beanette Bag 400g,400g bag,4.60,not-compared,group-only,peas-beans,peas-beans:beanette,no beanette at coles in the latest capture
+produce,PEAS / BEANS,woolworths,163783,Woolworths Sugar Snap Peas Bag 150g,150g bag,4.90,not-compared,strong,peas-beans,peas-beans:sugar-snap,listed as unavailable at capture
+produce,PECAN,coles,2147087,Australian Pecans Nut 400g,400g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,PINEAPPLES,coles,410046,Pineapple Tops On Medium,each,7.90,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PISTACHIO,coles,8381531,Australian Roasted & Salted Pistachios 750g,750g,20.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,PISTACHIO,coles,2131611,Pistachios Roasted & Salted 400g,400g,14.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,POMEGRANATES,coles,1859027,Pomegranate Arils 75g,75g,4.90,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POMEGRANATES,coles,4519320,Pomegranate Medium,each,7.50,not-compared,group-only,tropical-fruit,tropical-fruit:pomegranate,no pomegranate at woolworths in the latest capture
+produce,POTATO,woolworths,197423,Blue Washed Potato,each,0.90,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,246566,Potato Brushed,each,1.18,not-compared,strong,potatoes,potatoes:brushed,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,POTATO,woolworths,255068,Potato Dutch Cream Loose,loose,0.88,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,111670,Potato Red Washed,each,0.90,not-compared,group-only,potatoes,potatoes:red-washed,no red washed at coles in the latest capture
+produce,POTATO,woolworths,208895,Potato White Washed,each,0.90,not-compared,group-only,potatoes,potatoes:white-washed,no white washed at coles in the latest capture
+produce,POTATO,woolworths,652008,The Odd Bunch Potato Prepacked 4kg,4kg prepack,8.50,not-compared,strong,potatoes,potatoes:potato:imperfect,captured 132 h apart — not a like-for-like comparison
+produce,POTATO,woolworths,385086,Woolworths Baby Red Washed Potato Bag 1kg,1kg bag,4.80,not-compared,group-only,potatoes,potatoes:baby-red-washed,no baby red washed at coles in the latest capture
+produce,POTATO,woolworths,178636,Woolworths Blue Washed Potato Bag 2kg,2kg bag,8.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,255066,Woolworths Dutch Cream Potato Bag 2kg,2kg bag,7.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,307538,Woolworths Lower Carb Potatoes 1.5kg,1.5kg,6.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,177574,Woolworths Mashing Potatoes Bag 1.5kg,1.5kg bag,7.50,not-compared,strong,potatoes,potatoes:mashing,listed as unavailable at capture
+produce,POTATO,woolworths,777223,Woolworths Pink Eye Baby Potato Bag 1kg,1kg bag,4.00,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,757488,Woolworths Potato Mini Microwavable White Bag 500g,500g bag,3.20,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,101638,Woolworths Red Washed Potatoes Bag 2kg,2kg bag,5.00,not-compared,group-only,potatoes,potatoes:red-washed,no red washed at coles in the latest capture
+produce,POTATO,woolworths,606727,Woolworths Royal Blue Baby Potatoes Bag 1kg,1kg bag,4.80,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,POTATO,woolworths,192783,Woolworths Washed Potato Bag 4kg,4kg bag,12.50,not-compared,strong,potatoes,potatoes:washed,captured 60 h apart — not a like-for-like comparison
+produce,POTATO,woolworths,385085,Woolworths White Washed Baby Potatoes Bag 1kg,1kg bag,4.80,not-compared,group-only,potatoes,potatoes:baby-white-washed,no baby white washed at coles in the latest capture
+produce,POTATO,woolworths,459369,Zerella Fresh Spudlite Baby Potatoes 750g,750g,4.00,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PRE PACK BANANAS,coles,2511791,Bananas Mini Pack 750g,750g,4.90,not-compared,group-only,bananas,bananas:mini,no mini at woolworths in the latest capture
+produce,PREPACKED GRAPES,coles,1983693,BLACK SEEDLESS GRAPES,each,,not-compared,strong,grapes,grapes:black-seedless,the capture recorded no unit price for one side
+produce,PREPACKED GRAPES,coles,5658468,CANDY SNAPS GRAPES,each,9.90,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PREPACKED GRAPES,coles,9070912,Grapes Seedless Applause Red Prepack 400g,400g prepack,,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PREPACKED GRAPES,coles,7543241,Grower's Selection White Grapes 400g,400g,9.50,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PREPACKED GRAPES,coles,1612862,Seedless Applause White Grapes 400g,400g,9.90,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PREPARED VEGETABLES,coles,2859066,Australian Diced Butternut Pumpkin 500g,500g,5.00,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,3256849,Baby Beetroot Prepacked 250g,250g prepack,3.00,not-compared,group-only,root-veg,root-veg:baby-beetroot,no baby beetroot at woolworths in the latest capture
+produce,PREPARED VEGETABLES,coles,2310111,Broccoli & Cauliflower Florets 150g,150g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,2310971,Broccoli Florets 150g,150g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,2674650,Carrot & Broccoli Florets 150g,150g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,2313448,Carrot Sticks 150g,150g,2.20,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PREPARED VEGETABLES,coles,5040126,CHICKEN STYLE SOUP KIT,each,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,1001234,Classic Veg Stir Fry 500g,500g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,4462223,Classic Vegetable Stir Fry 750g,750g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,2679519,Creme Royale Potato Mash 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,6133889,Family Stir Fry Mix 400g,400g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,8391138,Kitchen Asian Style Vegetable Stir Fry 300g,300g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,8391193,Kitchen Julienne Cut Vegetable Stir Fry 300g,300g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,3505819,Roasting Vegetables With Garlic And Rosemary 500g,500g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,2470424,Shredded Carrot 200g,200g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,5541562,Stir Fry Superfood 250g,250g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,8164806,Vegetables Baby Potatoes Herb Butter 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PREPARED VEGETABLES,coles,6140385,Veggie Mash 320g,320g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PUMPKIN,coles,4183423,Butternut Pumpkin Whole approx. 2kg,approx. 2kg loose,7.80,not-compared,strong,pumpkin,pumpkin:butternut,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,PUMPKIN,coles,9665782,Fresh Halloween Jack O Lantern Pumpkin 1 Each approx. 4.5kg,approx. 4.5kg loose,15.75,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,coles,1091169,Fresh Halloween Mini Jack Pumpkin,each,3.20,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,coles,1418087,Fresh Halloween Mini Wart Pumpkin,each,5.20,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,coles,2047027,Fresh Halloween Pump Kee Mon,each,3.20,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,coles,9038487,Fresh Halloween Warty Gnome Pumpkin,each,5.20,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,coles,4202540,Kent Pumpkin Cut approx. 800g,approx. 800g loose,2.00,no-match,,,,no match key — the lexicon could not key this row
+produce,PUMPKIN,coles,4183558,Pumpkin Whole Kent approx. 4Kg,approx. 4kg loose,10.00,not-compared,strong,pumpkin,pumpkin:kent,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,PUMPKIN,coles,4190600,Wrapped Butternut Pumpkin approx. 700g,approx. 700g loose,2.73,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,woolworths,147197,Butternut Pumpkin Cut,each,2.25,no-match,,,,no match key — the lexicon could not key this row
+produce,PUMPKIN,woolworths,147195,Fresh Butternut Pumpkin Whole,each,4.50,not-compared,strong,pumpkin,pumpkin:butternut,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,PUMPKIN,woolworths,127017,Fresh Jarrahdale Pumpkin Grey Whole,each,10.50,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,woolworths,120037,Fresh Kent Pumpkin Whole,each,6.75,not-compared,strong,pumpkin,pumpkin:kent,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,PUMPKIN,woolworths,364450,Halloween Carving Pumpkin Whole,each,,not-compared,group-only,pumpkin,,"we cannot yet tell which variety this is, so it is not compared"
+produce,PUMPKIN,woolworths,147199,Pumpkin Jarrahdale Grey Cut,each,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,PUMPKIN,woolworths,143709,Pumpkin Kent Cut,each,2.38,no-match,,,,no match key — the lexicon could not key this row
+produce,READY MEALS PRE PACKED,woolworths,828744,Woolworths Classic Potato Mash 475g,475g,6.75,no-match,,,,no match key — the lexicon could not key this row
+produce,READY MEALS PRE PACKED,woolworths,828746,Woolworths Roasted Garlic Mash 475g,475g,6.75,no-match,,,,no match key — the lexicon could not key this row
+produce,READY MEALS PRE PACKED,woolworths,674323,Woolworths Sweet Potato Mash 475g,475g,6.75,no-match,,,,no match key — the lexicon could not key this row
+produce,RED GRAPES,coles,8133562,Red Seedless Grapes approx. 1kg,approx. 1kg loose,11.90,not-compared,strong,grapes,grapes:red-seedless,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,RED POTATOES,coles,1181308,Red Royale Potatoes Loose approx. 170g,approx. 170g loose,0.85,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,RED POTATOES,coles,7963859,Red Royale Washed Potatoes 2Kg,2kg,8.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,RED POTATOES,coles,5952272,Royal Blue Potatoes 2kg,2kg,8.00,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,REGULAR BANANAS,coles,409499,Bananas approx. 170g,approx. 170g loose,0.83,not-compared,strong,bananas,bananas:banana,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG,coles,4966737,Fresh Turnips approx. 180g,approx. 180g loose,1.35,not-compared,strong,root-veg,root-veg:turnip,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG,coles,5298748,Parsnips Loose approx. 200g,approx. 200g loose,2.40,not-compared,strong,root-veg,root-veg:parsnip,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG,coles,4966930,Swedes Loose approx. 320g,approx. 320g loose,2.40,not-compared,strong,root-veg,root-veg:swede,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG,coles,5108751,Vegetable Starter Pack 1kg,1kg,,not-compared,group-only,root-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ROOT VEG (INC OTHERS),woolworths,185267,Beetroot Loose,loose,1.95,not-compared,strong,root-veg,root-veg:beetroot,priced per each but one listing is a single piece and the other a bunch
+produce,ROOT VEG (INC OTHERS),woolworths,147319,Fresh Radish Bunch,bunch,3.90,not-compared,strong,root-veg,root-veg:radish,not in coles's latest capture — last seen 2026-11-14
+produce,ROOT VEG (INC OTHERS),woolworths,144793,Parsnip Fresh,each,1.68,not-compared,strong,root-veg,root-veg:parsnip,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG (INC OTHERS),woolworths,738337,Parsnip Mini 350g,350g,,not-compared,group-only,root-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ROOT VEG (INC OTHERS),woolworths,149358,Swedes Fresh,each,1.66,not-compared,strong,root-veg,root-veg:swede,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG (INC OTHERS),woolworths,199732,Turnip Fresh,each,1.44,not-compared,strong,root-veg,root-veg:turnip,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ROOT VEG (INC OTHERS),woolworths,135334,Woolworths Carrot Dutch Bunch,bunch,,not-compared,group-only,carrots,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ROOT VEG (INC OTHERS),woolworths,105931,Woolworths Fresh Onion White Globe Bunch,bunch,5.00,not-compared,group-only,onions,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ROOT VEG (INC OTHERS),woolworths,120230,Woolworths Mixed Vegetables Soup Starter With Celery 1kg,1kg,,not-compared,group-only,celery,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ROOT VEG (INC OTHERS),woolworths,173264,Woolworths Yellow Squash Punnet 250g,250g punnet,,not-compared,group-only,root-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,RUBUS AND OTHER BERRY,woolworths,669459,Birch & Waite Belgian Chocolate Dessert Sauce 130g,130g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,RUBUS AND OTHER BERRY,woolworths,296813,Blackberries Punnet 125g,125g punnet,3.50,not-compared,strong,berries,berries:blackberry,captured 60 h apart — not a like-for-like comparison
+produce,RUBUS AND OTHER BERRY,woolworths,80815,Blackberries Punnet 170g,170g punnet,5.00,not-compared,group-only,berries,,"we cannot yet tell which variety this is, so it is not compared"
+produce,RUBUS AND OTHER BERRY,woolworths,827719,Premium Blackberries Punnet 125g,125g punnet,,not-compared,group-only,berries,,"we cannot yet tell which variety this is, so it is not compared"
+produce,RUBUS AND OTHER BERRY,woolworths,165262,Raspberries Punnet 125g,125g punnet,5.50,not-compared,group-only,berries,,"we cannot yet tell which variety this is, so it is not compared"
+produce,SALAD,woolworths,702151,Woolworths American Style Slaw Kit 450g,450g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164644,Woolworths Asian Salad Bowl 230g,230g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,743361,Woolworths Asian Style Salad Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6080019,Woolworths Asian Style Salad With Chicken 200g,200g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,54900,Woolworths Baby Leaf Rocket 120g,120g,3.30,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,380580,Woolworths Baby Leaf Rocket 60g,60g,2.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,705439,Woolworths Baby Leaf Spinach & Rocket 120g,120g,3.30,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,524322,Woolworths Baby Leaf Spinach 120g,120g,3.30,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,524336,Woolworths Baby Leaf Spinach 280g,280g,5.00,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,379515,Woolworths Baby Leaf Spinach 60g,60g,2.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164620,Woolworths Beetroot & Feta Salad Bowl 200g,200g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,703808,Woolworths Beetroot & Fetta Salad Kit 270g,270g,6.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164642,Woolworths Caesar Salad Bowl 200g,200g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,233376,Woolworths Caesar Salad Kit 290g,290g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,210691,Woolworths Caesar Salad Kit Entertainer Pack 500g,500g,8.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,169160,Woolworths Caesar Salad Kit Tub 250g,250g tub,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,56533,Woolworths Chicken Buffalo Salad Bowl 180g,180g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,642106,Woolworths Chicken Caesar Salad Bowl 180g,180g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6036189,Woolworths Chili Lime Salad Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,54899,Woolworths Classic Coleslaw Kit 500g,500g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,531041,Woolworths Classic Shredded Coleslaw 200g,200g,1.80,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164641,Woolworths Cobb Salad Bowl 240g,240g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,210687,Woolworths Cranberry & Kale Slaw Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,193753,Woolworths Crunchy Noodle Coleslaw Kit 520g,520g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,315670,Woolworths Finely Shredded Coleslaw 300g,300g,2.70,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,233567,Woolworths Four Seasons Coleslaw 400g,400g,4.70,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164646,Woolworths Garden Salad Bowl 180g,180g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6036212,Woolworths Gourmet Leaf Mix 120g,120g,3.30,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,159626,Woolworths Greek Salad Kit 270g,270g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,56534,Woolworths Green Goodness Salad Bowl 240g,240g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,210686,Woolworths Honey Mustard Salad Kit 285g,285g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,447755,Woolworths Iceberg Lettuce Mix 300g,300g,3.30,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,638009,Woolworths Iceberg Shredded Lettuce 200g,200g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,901516,Woolworths Japanese Style Slaw Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,54901,Woolworths Kale & Baby Spinach 300g,300g,5.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,705436,Woolworths Kale Slaw Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,703827,Woolworths Korean Style Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,847873,Woolworths Lettuce Butter 170g,170g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6080018,Woolworths Maple & Bacon Salad With Chicken 185g,185g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6036211,Woolworths Mesclun Salad Mix 60g,60g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,164645,Woolworths Mexican Style Salad Bowl 220g,220g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,901520,Woolworths Mexican Style Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,827628,Woolworths Mixed Leaf Salad 120g,120g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,714823,Woolworths Mixed Leaf Salad 200g,200g,3.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,317566,Woolworths Mixed Leaf With Beetroot & Carrot 180g,180g,4.00,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,447762,Woolworths Mixed Leaf With Carrot 300g,300g,5.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,702156,Woolworths Rainbow Coleslaw 300g,300g,3.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6079964,Woolworths Rainbow Crunch Salad 200g,200g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,901517,Woolworths Ranch Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,515547,Woolworths Thai Style Salad Kit 315g,315g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,6036210,Woolworths Vitality Boost Salad Bowl 200g,200g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,780371,Woolworths Whole Fresh Beetroot 250g,250g,3.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALAD,woolworths,780372,Woolworths Whole Fresh Beetroot 500g,500g,5.50,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3015977,American BBQ Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,4989110,Asian Salad Kit 550g,550g,8.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2786585,Asian Style Salad Bowl 230g,230g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2787974,Asian Style Salad Kit 350g,350g,5.90,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2786778,Beetroot Slaw 200g,200g,2.40,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3869699,Beetslaw Salad Kit 320g,320g,5.90,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,8174708,Caesar Salad Bowl 200g,200g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,5515278,Caesar Salad Kit 290g,290g,6.10,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1492920,Caesar Salad Kit Big Pack Value 500g,500g,8.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2038660,Caramelised Balsamic Salad Kit 190g,190g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3294724,Chicken Caesar Salad Bowl 180g,180g,7.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,4876554,Classics Mixed Leaf Garden Salad 180g,180g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2791406,Coleslaw 200g,200g,2.40,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,4878120,Creamy Ranch Salad Bowl 210g,210g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,6051547,Crunchy Noodle Salad Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1999580,Dill Pickle Ranch Salad Kit Bag 340g,340g bag,5.90,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1999616,Everything Bagel Chicken Salad Kit 220g,220g,8.80,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,5485993,Extra Creamy Coleslaw Kit 500g,500g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3615657,Family Coleslaw Kit 520g,520g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3858943,Family Ranch Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,5039590,Fine Cut Coleslaw 300g,300g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1999795,Greek Style Chicken & Potato Shaker Salad 320g,320g,10.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3858896,Green Goddess Salad Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,4462562,Green Goddess Veggie Pot 200g,200g,5.50,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALADS,coles,5040240,Honey Mustard & Crouton Salad Kit 350g,350g,5.90,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2790390,Kaleslaw Salad Kit 350g,350g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,2038605,Leafy Caesar Salad Kit 230g,230g,7.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,5486169,Made For Sharing Salad Kit Greek Style 300g,300g,8.80,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1999638,Mediterranean Pasta Salad Kit 320g,320g,8.80,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3294768,Mediterranean Style Salad Bowl 185g,185g,7.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1593473,Mexican Style Cheese Taco & Beans Shaker Salad 340g,340g,10.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3015966,Mexican Style Salad Kit 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1999718,Middle Eastern Style Falafel & Chickpea Shaker Salad 310g,310g,10.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,6133460,SALAD BOWL SUPERFOOD,each,7.20,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1593418,SHAKER CHICK SUSHI SLD,each,10.00,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALADS,coles,3016120,Superfood Slaw Mix 350g,350g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,4462573,Superfood Veggie Pot 200g,200g,5.50,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1323821,ULTIMATE CRUNCH SALAD TUB,tub,,no-match,,,,no match key — the lexicon could not key this row
+produce,SALADS,coles,7433436,Va Green Goddess Better Bowl 200g,200g,7.20,no-match,,salads,,no match key — the lexicon could not key this row
+produce,SALADS,coles,1593291,Vietnamese Style Chicken & Vermicelli Noodle Shaker Salad 270g,270g,10.00,no-match,,,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,1472719,Dressings Berry Balsamic 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,7482453,Dressings Creamy Caesar 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,1472694,Dressings Gourmet Coleslaw 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,7483310,Dressings Greek Lemon 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,7482963,Dressings Greek Style Yogurt 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,7487402,Dressings Green Goddess 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SAUCES,coles,7487526,Dressings Honey & Mustard 250mL,250ml,5.70,no-match,,sauces,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,8895448,Apricot Delight Tub 430g,430g tub,12.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1718524,Asian Fusion Nut Mix 600g,600g,18.50,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,7035182,Asian Style Party Mix 400g,400g,7.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1420941,Aussie Beer Nuts 1Kg,1kg,10.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,8899620,Aussie Natural Nut Mix Tub 340g,340g tub,10.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1975990,Californian Walnuts 1Kg,1kg,19.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1420920,Chilli Lime Cashew Crunch 750g,750g,15.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,2032019,Choc Pretzel Medley 230g,230g,14.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,8901187,Cranberry Yoghurt Nut Mix Tub 380g,380g tub,10.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1995976,Deluxe Fruit & Nut Mix 275g,275g,14.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1718433,Fruit & Nut Tropical Mix 775g,775g,18.50,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1718477,Honey Roasted Nut Medley 750g,750g,18.50,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1329690,M&ms Ultimate Mash UP Mix 375g,375g,10.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,9071121,Natural Nut Mix 825g,825g,19.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,9071041,Peanut Butter Pretzels 550g,550g,16.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,2051035,Premium Jumbo R&s Cashews 315g,315g,12.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1975913,R&s Cashews 1.2Kg,1.2kg,22.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,2031990,R&s Inshell Macadamias 350g,350g,12.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1420930,R&s Mixed Nuts 1Kg,1kg,20.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1975888,R&s Peanuts & Cashews 400g,400g,6.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1975764,"R&s Peanuts, Cashews & Macadamias Nut Mix 400g",400g,12.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1976031,Roasted & Salted Peanuts 1.3Kg,1.3kg,10.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,8897910,Savoury Snack Mix Tub 310g,310g tub,8.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1420850,Snackaroo Mix 750g,750g,14.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,2032132,Spicy BBQ 400g,400g,9.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,1401903,Sriracha Crunch 400g,400g,8.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SNACKS,coles,2032041,Sriracha Crunch 400g,400g,9.00,no-match,,snacks,,no match key — the lexicon could not key this row
+produce,SOFT DRIED FRUIT,coles,8551937,Australian Sunmuscat Sultanas 400g,400g,6.00,no-match,,dried-fruit,,no match key — the lexicon could not key this row
+produce,SOFT DRIED FRUIT,coles,7381490,Honey Cashews 400g,400g,9.50,no-match,,dried-fruit,,no match key — the lexicon could not key this row
+produce,SOFT DRIED FRUIT,coles,3505444,Sweet Chilli And Lime Soy Crisps 400g,400g,7.00,no-match,,dried-fruit,,no match key — the lexicon could not key this row
+produce,SOFT DRIED FRUIT,coles,2149231,Turkish Dried Apricot 400g,400g,10.00,no-match,,dried-fruit,,no match key — the lexicon could not key this row
+produce,SPROUTS,coles,4544849,Combo Sprouts 200g,200g,2.80,not-compared,group-only,brassicas,,"we cannot yet tell which variety this is, so it is not compared"
+produce,SPROUTS,coles,4544770,Shoots Prepacked 250g,250g prepack,2.80,not-compared,group-only,leafy-greens,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,149779,Apricot Fresh,each,,not-compared,strong,stone-fruit,stone-fruit:apricot,the capture recorded no unit price for one side
+produce,STONE FRUIT,woolworths,828551,King Midas Sweet Yellow Plums Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,185785,Nectarine White Flesh,each,1.25,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,144926,Peach White Flesh,each,1.25,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,778121,Plum Croc Eggs Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,784014,Plum Fresh Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,stone-fruit:plum,no plum at coles in the latest capture
+produce,STONE FRUIT,woolworths,828536,Plum Queen Garnet Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,282861,Plum Red,each,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,838820,Queen Garnet The Antioxidant Plum,each,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,676329,Rubycot Red Flesh Apricots Punnet 500g,500g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,826528,The Odd Bunch Apricot Fresh Punnet 500g,500g punnet,,not-compared,group-only,stone-fruit,stone-fruit:apricot:imperfect,no apricot at coles in the latest capture
+produce,STONE FRUIT,woolworths,775260,The Odd Bunch Peach Punnet 1kg,1kg punnet,,not-compared,group-only,stone-fruit,stone-fruit:peach:imperfect,no peach at coles in the latest capture
+produce,STONE FRUIT,woolworths,568058,Woolworths White Flesh Peach Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,568056,Woolworths Yellow Flesh Nectarine Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,567982,Woolworths Yellow Flesh Peach Punnet 750g,750g punnet,,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,143494,Yellow Flesh Nectarines,each,1.25,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STONE FRUIT,woolworths,144848,Yellow Flesh Peach,each,1.25,not-compared,group-only,stone-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STRAWBERRY,woolworths,262083,Fresh Strawberries 850g,850g,,not-compared,strong,berries,berries:strawberry,the capture recorded no unit price for one side
+produce,STRAWBERRY,woolworths,659179,Premium Strawberries Punnet 350g,350g punnet,,not-compared,strong,berries,berries:strawberry,the capture recorded no unit price for one side
+produce,STRAWBERRY,woolworths,149276,Strawberries 500g,500g,6.50,not-compared,strong,berries,berries:strawberry,captured 192 h apart — not a like-for-like comparison
+produce,STRAWBERRY,woolworths,748374,Strawberries Punnet 450g,450g punnet,,not-compared,strong,berries,berries:strawberry,the capture recorded no unit price for one side
+produce,STRAWBERRY,woolworths,195767,Sweetest Batch® Premium Strawberries Punnet 300g,300g punnet,,not-compared,group-only,berries,,"we cannot yet tell which variety this is, so it is not compared"
+produce,STRAWBERRY,woolworths,732262,The Odd Bunch Strawberries Punnet 500g,500g punnet,,not-compared,group-only,berries,berries:strawberry:imperfect,no strawberry at coles in the latest capture
+produce,SWEET CORN,woolworths,165715,Corn Sweet Polka Dot Punnet 500g,500g punnet,5.80,not-compared,group-only,sweet-corn,,"we cannot yet tell which variety this is, so it is not compared"
+produce,SWEET CORN,woolworths,307315,Woolworths Corn Cobbettes 425g,425g,5.90,not-compared,group-only,sweet-corn,,"we cannot yet tell which variety this is, so it is not compared"
+produce,SWEET CORN,woolworths,139897,Woolworths Corn Sweet 500g,500g,5.50,not-compared,strong,sweet-corn,sweet-corn:sweet-corn,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,SWEET POTATO,woolworths,147071,Sweet Potato Gold,each,2.15,not-compared,group-only,sweet-potatoes,sweet-potatoes:gold,no gold at coles in the latest capture
+produce,SWEET POTATO,woolworths,156015,Woolworths Gold Sweet Potatoes Bag 1kg,1kg bag,4.90,not-compared,group-only,sweet-potatoes,sweet-potatoes:gold,no gold at coles in the latest capture
+produce,SWEET POTATOES,coles,3616751,I'm Perfect Sweet Potato 1.5kg,1.5kg,4.90,not-compared,group-only,sweet-potatoes,sweet-potatoes:sweet-potato:imperfect,no sweet potato at woolworths in the latest capture
+produce,SWEET POTATOES,coles,4199503,Potatoes Sweet Gold approx. 500g,approx. 500g loose,2.45,not-compared,group-only,potatoes,potatoes:gold,no gold at woolworths in the latest capture
+produce,SWEETCORN,coles,4150570,Corn Cobettes 400g,400g,6.50,not-compared,group-only,sweet-corn,sweet-corn:cobette,no cobette at woolworths in the latest capture
+produce,SWEETCORN,coles,5806601,Sweet Corn 3 Pack,3 pack,5.50,not-compared,strong,sweet-corn,sweet-corn:sweet-corn,3-pack vs single — pack sizes differ
+produce,TOMATO,woolworths,6003524,Ausfresh Tomato Medley 250g,250g,,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,584927,Cherry Tomatoes Loose,loose,0.26,not-compared,strong,tomatoes,tomatoes:cherry,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,TOMATO,woolworths,134034,Gourmet Tomato,each,0.98,not-compared,strong,tomatoes,tomatoes:gourmet,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,TOMATO,woolworths,584925,Grape Kumato Loose,loose,,not-compared,group-only,grapes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,584928,Grape Tomato Golden,each,0.18,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,166144,Mini-Roma Tomato Punnet 250g,250g punnet,3.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,346757,Oxheart Tomato per 100g,per 100g loose,11.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,663649,Perfection Fresh Kumato Tomato 300g,300g punnet,4.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,61078,Perfection Fresh Mix-a-Mato® Tomatoes 320g,320g,4.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,6010753,Perfection Petite Tomatoes Punnet 200g,200g punnet,,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,584924,Sweet Solanato Tomato,each,0.14,not-compared,group-only,tomatoes,tomatoes:solanato,no solanato at coles in the latest capture
+produce,TOMATO,woolworths,665587,The Odd Bunch Tasty Snacking Tomato 350g,350g,,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,825891,The Odd Bunch Tomato Prepacked 1kg,1kg prepack,6.30,not-compared,group-only,tomatoes,tomatoes:tomato:imperfect,no tomato at coles in the latest capture
+produce,TOMATO,woolworths,6055511,Tinyberry Tomatoes 125g,125g,3.00,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,725063,Tomato Kumato Loose,loose,0.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,163364,Tomato Loose Vine Ripened,loose,1.02,not-compared,strong,tomatoes,tomatoes:vine,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,TOMATO,woolworths,176148,Tomato Roma Mini,each,,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,149864,Tomato Roma Red,each,0.89,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATO,woolworths,169438,Truss Tomatoes,each,0.83,not-compared,strong,tomatoes,tomatoes:truss,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,TOMATO,woolworths,727144,Woolworths Sweet Solanato Tomato Punnet 200g,200g punnet,4.00,not-compared,group-only,tomatoes,tomatoes:solanato,no solanato at coles in the latest capture
+produce,TOMATO,woolworths,143123,Woolworths Tomato Grape Punnet 200g,200g punnet,,not-compared,strong,tomatoes,tomatoes:grape,the capture recorded no unit price for one side
+produce,TOMATOES,coles,7511380,Grandma's Heirloom Tomatoes Black approx. 200g,approx. 200g loose,2.38,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES,coles,7511416,Grandma's Heirloom Tomatoes Red approx. 250g,approx. 250g loose,2.98,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES,coles,7513036,Grandma's Heirloom Tomatoes Yellow approx. 300g,approx. 300g loose,3.57,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,4498173,Glasshouse Grape Tomatoes 200g,200g,3.00,not-compared,strong,tomatoes,tomatoes:grape,the capture recorded no unit price for one side
+produce,TOMATOES P/P,coles,4488464,Mini Tomatoes 125g,125g,4.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,3835890,Mix-a-mato Grape Tomatoes 300g,300g,5.90,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,5069434,Perino Entertainer Red Grape Tomatoes 350g,350g,6.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,5079482,Perino Noir Grape Tomatoes 200g,200g,4.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,7265535,Perino Red Grape Tomatoes 200g,200g,4.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,9129094,Perino Tomatoes Entertainer Medley 350g,350g,6.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TOMATOES P/P,coles,4835171,Vine Ripened Tomatoes 500g,500g,3.50,not-compared,strong,tomatoes,tomatoes:vine,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,TROPICAL FRUIT,woolworths,143745,Chestnuts Large per 250g,per 250g loose,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,137147,Cumquat,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,199757,Custard Apple Fresh,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,170701,Durian Whole,each,49.75,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,137567,Feijoa Fresh,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,139238,Kiwi Fruit Green,each,,not-compared,strong,tropical-fruit,tropical-fruit:green-kiwifruit,the capture recorded no unit price for one side
+produce,TROPICAL FRUIT,woolworths,786152,Kiwi Fruit Green 8 pack,8 pack,,not-compared,strong,tropical-fruit,tropical-fruit:green-kiwifruit,the capture recorded no unit price for one side
+produce,TROPICAL FRUIT,woolworths,6040856,Longan 400g,400g,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,6006286,Lychee Dragon Egg 6 pack,6 pack,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,141336,Lychee Fresh per 250g,per 250g loose,31.50,not-compared,group-only,tropical-fruit,tropical-fruit:lychee,no lychee at coles in the latest capture
+produce,TROPICAL FRUIT,woolworths,777286,Lychees 400g,400g,,not-compared,group-only,tropical-fruit,tropical-fruit:lychee,no lychee at coles in the latest capture
+produce,TROPICAL FRUIT,woolworths,283185,Mangosteen,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,173415,Papaya Red Cut Half,each · half,1.95,no-match,,,,no match key — the lexicon could not key this row
+produce,TROPICAL FRUIT,woolworths,172659,Papaya Red Whole,each,3.90,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,125222,Passionfruit 6 pack,6 pack,,not-compared,strong,tropical-fruit,tropical-fruit:passionfruit,the capture recorded no unit price for one side
+produce,TROPICAL FRUIT,woolworths,144795,Passionfruit Fresh,each,,not-compared,strong,tropical-fruit,tropical-fruit:passionfruit,the capture recorded no unit price for one side
+produce,TROPICAL FRUIT,woolworths,144800,Passionfruit Panama,each,,not-compared,strong,tropical-fruit,tropical-fruit:panama-passionfruit,the capture recorded no unit price for one side
+produce,TROPICAL FRUIT,woolworths,144803,Paw Paw Fresh Whole,each,4.13,not-compared,group-only,tropical-fruit,tropical-fruit:pawpaw,no pawpaw at coles in the latest capture
+produce,TROPICAL FRUIT,woolworths,145919,Persimmon Fresh,each,,not-compared,group-only,tropical-fruit,tropical-fruit:persimmon,no persimmon at coles in the latest capture
+produce,TROPICAL FRUIT,woolworths,146344,Pomelo Fresh,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,178560,Pomelo Pink,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,147315,Quince Fresh,each,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,6070115,Ruby Red Kiwifruit 500g,500g,,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICAL FRUIT,woolworths,621085,Sungold Kiwifruit Punnet 500g,500g punnet,7.20,not-compared,strong,tropical-fruit,tropical-fruit:gold-kiwifruit,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,TROPICAL FRUIT,woolworths,135385,Woolworths Paw Paw Half,each · half,2.24,not-compared,group-only,tropical-fruit,tropical-fruit:pawpaw,no pawpaw at coles in the latest capture
+produce,TROPICALS,coles,2050757,Red Dragonfruit,each,5.90,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,TROPICALS,coles,6866880,White Dragonfruit Fresh,each,5.90,not-compared,group-only,tropical-fruit,,"we cannot yet tell which variety this is, so it is not compared"
+produce,VALUE ADD FRUIT,woolworths,6003626,Kimaye Fresh Pomegranate Arils Punnet 75g,75g punnet,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,73195,Woolworths Fresh Pineapple Tub 200g,200g tub,4.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,73197,Woolworths Fresh Rockmelon Tub 200g,200g tub,4.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,880303,Woolworths Freshly Cut Watermelon With Mint Tub 200g,200g tub,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,70435,Woolworths Fruit Duo Tub 200g,200g tub,,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,515705,Woolworths Fruit Mix 400g,400g,6.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,73196,Woolworths Mixed Fruit Salad With Passionfruit Tub 200g,200g tub,,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,73192,Woolworths Seasonal Fruit Salad Tub 200g,200g tub,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,73194,Woolworths Seasonal Melon Mix Tub 200g,200g tub,4.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD FRUIT,woolworths,6035856,Woolworths Watermelon Fingers 600g,600g,7.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,147947,Aussie Sprouts Alfalfa 125g,125g,2.60,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,133687,Aussie Sprouts Bean 250g,250g,2.60,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,127101,Aussie Sprouts Pea Shoots 100g,100g,3.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6063617,Aussie Sprouts Sweet & Crunchy Stir Fry Mix 400g,400g,4.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6024084,Aussie Sprouts Tender Pea Shoots 60g,60g,3.20,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,920756,Bright & Crunchy Stir Fry Vegetables 300g,300g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,919477,Classic Stir Fry Vegetables 300g,300g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,919390,Garlic & Rosemary Potatoes 400g,400g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,921142,Just Veg. Carrot Shred 300g,300g,3.30,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,259404,Just Veg. Carrot Sticks 150g,150g,2.20,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,921080,Just Veg. Carrot Sticks 300g,300g,3.30,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,616009,Mediterranean Roast Vegetables With Fresh Lemon & Fetta 300g,300g,7.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,919391,Parmesan Crumbed Potatoes With Garlic Butter 500g,500g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,571447,Rainbow Vegetables With Herby Seasoned Butter 280g,280g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,920755,Thai Style Stir Fry Vegetables 300g,300g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,573712,Woolworths Asian Greens & Broccolini With Japanese Style Sauce 175g,175g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,224918,Woolworths Baby Potatoes With Butter & Herb 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,571556,Woolworths Broccolini & Green Beans With Almond Flakes 170g,170g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054791,Woolworths Buffalo Style Potato Wedges & Ranch Dressing 400g,400g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,79928,Woolworths Carrot Corn & Beans 350g,350g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,583617,"Woolworths Carrots, Broccoli & Cauliflower With Herb Butter 200g",200g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054793,Woolworths COOK Chicken Flavoured Soup Kit 450g,450g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054723,Woolworths COOK Chunky Veggie Mix 400g,400g,4.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054724,Woolworths COOK Pumpkin & Veg Soup Kit 450g,450g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,218235,Woolworths COOK Simmer Veggie Mix 400g,400g,4.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,431074,Woolworths COOK Stir Fry Kit With Honey Soy Sauce Sachet 400g,400g sachet,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,409878,Woolworths COOK Stir Fry Kit With Teriyaki Sauce Sachet 400g,400g sachet,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,409879,Woolworths COOK Stir Fry Mix Asian Style Vegetables 400g,400g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,185251,Woolworths COOK Stir Fry Mix Rainbow Vegetables 400g,400g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,443314,Woolworths COOK Stir Fry Mix Superfood Vegetables 250g,250g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,139033,Woolworths COOK Stir Fry Mix Traditional Vegetables 400g,400g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,30758,Woolworths Diced Pumpkin & Sweet Potato 500g,500g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,571899,Woolworths Honey Sea Salt Carrots & Broccolini 180g,180g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054792,Woolworths Loaded Potatoes 400g,400g,7.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054726,Woolworths Maple Sweet Potato & Pumpkin 375g,375g,7.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,79931,Woolworths Mixed Green Vegetables & Edamame With Mint Chive Butter 225g,225g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054728,"Woolworths Potatoes, Carrots & Beans With Garlic Herb Butter 325g",325g,5.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,583615,Woolworths Roast Mixed Vegetables With Garlic & Rosemary 500g,500g,5.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054722,Woolworths Seasonal Vegetable Medley 150g,150g,2.40,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054725,Woolworths Spicy Potato & Cauliflower 325g,325g,,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,6054727,Woolworths Sweet Chilli Crispy Potatoes 375g,375g,7.50,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,159054,Woolworths Washed & Ready To Cook Broccoli & Cauliflower Florets 150g,150g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,159055,Woolworths Washed & Ready To Cook Broccoli Florets 150g,150g,2.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,409952,Woolworths Washed & Ready To Cook Carrot Broccoli & Cauliflower Mix 750g,750g,7.00,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,158938,Woolworths Washed & Ready To Cook Carrot Sticks 150g,150g,2.20,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,159074,Woolworths Washed & Ready To Cook Mixed Rainbow Vegetables 750g,750g,7.70,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,159072,Woolworths Washed & Ready To Cook Pumpkin Cubes 500g,500g,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADD VEG,woolworths,158940,Woolworths Washed & Ready To Cook Vegetable Medley 150g,150g,2.40,no-match,,prepared,,no match key — the lexicon could not key this row
+produce,VALUE ADDED,coles,2724760,Baby Salad Leaves Lettuce Mix 100g,100g,4.90,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADDED,coles,3014293,Coleslaw 200g,200g,3.50,no-match,,,,no match key — the lexicon could not key this row
+produce,VALUE ADDED,coles,2724828,Rocket 100g,100g,4.90,not-compared,group-only,leafy-greens,leafy-greens:rocket:organic,no rocket at woolworths in the latest capture
+produce,VALUE ADDED,coles,9041233,Stir Fry 250g,250g,4.90,no-match,,,,no match key — the lexicon could not key this row
+produce,VEGETABLES,coles,8686801,Baby Broccoli 1 Bunch,bunch,5.50,not-compared,group-only,brassicas,brassicas:baby-broccoli:organic,no baby broccoli at woolworths in the latest capture
+produce,VEGETABLES,coles,3576260,Baby Capsicums 175g,175g,7.90,not-compared,group-only,capsicums,capsicums:baby:organic,no baby at woolworths in the latest capture
+produce,VEGETABLES,coles,9210035,Baby Cos Lettuce 2 Pack,2 pack,6.90,not-compared,group-only,lettuce,lettuce:baby-cos:organic,no baby cos at woolworths in the latest capture
+produce,VEGETABLES,coles,3048820,Broccoli 500g,500g,8.90,not-compared,strong,brassicas,brassicas:broccoli:organic,the capture recorded no unit price for one side
+produce,VEGETABLES,coles,3520845,Brown Mushrooms 180g,180g,6.90,not-compared,group-only,mushrooms,mushrooms:mushroom:organic,no mushroom at woolworths in the latest capture
+produce,VEGETABLES,coles,5076305,Brown Onions 1Kg,1kg,7.90,not-compared,strong,onions,onions:brown:organic,not in woolworths's latest capture — last seen 2026-11-12
+produce,VEGETABLES,coles,3119190,Butternut Pumpkin Cut approx. 800g,approx. 800g loose,5.20,no-match,,,,no match key — the lexicon could not key this row
+produce,VEGETABLES,coles,7233448,Cabbage Whole,each,6.90,not-compared,strong,brassicas,brassicas:cabbage:organic,whole vs half — different portion
+produce,VEGETABLES,coles,3004041,Capsicum Red 400g,400g,,not-compared,strong,capsicums,capsicums:red:organic,the capture recorded no unit price for one side
+produce,VEGETABLES,coles,4491980,Carrot Snacking 250g,250g,4.50,not-compared,group-only,carrots,carrots:snacking:organic,no snacking at woolworths in the latest capture
+produce,VEGETABLES,coles,4982948,Cauliflower,each,6.90,not-compared,strong,brassicas,brassicas:cauliflower:organic,whole vs half — different portion
+produce,VEGETABLES,coles,6509485,Celery Trimmed,each,7.90,not-compared,group-only,celery,celery:trimmed:organic,no trimmed at woolworths in the latest capture
+produce,VEGETABLES,coles,5017430,Choy Pack 1 Bunch,bunch,5.90,no-match,,,,no match key — the lexicon could not key this row
+produce,VEGETABLES,coles,3091556,Continental Parsley,each,4.50,not-compared,group-only,herbs,herbs:continental-parsley:organic,no continental parsley at woolworths in the latest capture
+produce,VEGETABLES,coles,9861850,Green Beans 250g,250g,7.50,not-compared,group-only,peas-beans,,"we cannot yet tell which variety this is, so it is not compared"
+produce,VEGETABLES,coles,5010985,Leek,each,4.90,not-compared,strong,continental-veg,continental-veg:leek:organic,not in woolworths's latest capture — last seen 2026-11-12
+produce,VEGETABLES,coles,3448293,Mushroom White 180g,180g,5.90,not-compared,group-only,mushrooms,,"we cannot yet tell which variety this is, so it is not compared"
+produce,VEGETABLES,coles,4967999,Organic Asparagus Green,each,5.90,not-compared,strong,asparagus,asparagus:green:organic,the capture recorded no unit price for one side
+produce,VEGETABLES,coles,7233856,Organic Iceberg Lettuce,each,5.90,not-compared,group-only,lettuce,lettuce:iceberg:organic,no iceberg at woolworths in the latest capture
+produce,VEGETABLES,coles,6917517,Organic Red Onions 500g,500g,,not-compared,group-only,onions,onions:red:organic,no red at woolworths in the latest capture
+produce,VEGETABLES,coles,4350944,Organic Silver Beet 1 Bunch,bunch,5.90,not-compared,group-only,root-veg,,"we cannot yet tell which variety this is, so it is not compared"
+produce,VEGETABLES,coles,6391046,Organic Washed Potatoes 1kg,1kg,6.50,not-compared,group-only,potatoes,potatoes:washed:organic,no washed at woolworths in the latest capture
+produce,VEGETABLES,coles,5024866,Potatoes Brushed 2Kg,2kg,11.90,not-compared,group-only,potatoes,potatoes:brushed:organic,no brushed at woolworths in the latest capture
+produce,VEGETABLES,coles,5045470,Potatoes Sweet 500g,500g,6.90,not-compared,strong,potatoes,potatoes:potato:organic,not in woolworths's latest capture — last seen 2026-11-09
+produce,VEGETABLES,coles,3119043,Pumpkin Kent approx. 800g,approx. 800g loose,4.72,not-compared,group-only,pumpkin,pumpkin:kent:organic,no kent at woolworths in the latest capture
+produce,VEGETABLES,coles,5071833,Red Onions 1kg,1kg,7.90,not-compared,group-only,onions,onions:red:organic,no red at woolworths in the latest capture
+produce,VEGETABLES,coles,8412726,Snacking Tomatoes 200g,200g,6.50,not-compared,group-only,tomatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,VEGETABLES,coles,5011831,Spring Onions,each,5.50,not-compared,group-only,onions,onions:spring:organic,no spring at woolworths in the latest capture
+produce,VEGETABLES,coles,2985377,Sweet Corn 3 Pack,3 pack,9.90,not-compared,strong,sweet-corn,sweet-corn:sweet-corn:organic,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,VEGETABLES,coles,5032219,Zucchini 500g,500g,7.90,not-compared,group-only,zucchini,zucchini:zucchini:organic,no zucchini at woolworths in the latest capture
+produce,WALNUTS,coles,1110570,Australian Walnut Kernel 400g,400g,12.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,WALNUTS,coles,1401641,Australian Walnuts In Shell 400g,400g,6.00,no-match,,nuts,,no match key — the lexicon could not key this row
+produce,WASHED POTATOES,coles,7712327,Carisma Washed Potatoes 2kg,2kg,8.50,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,WASHED POTATOES,coles,1182162,Creme Gold Washed Potatoes Loose approx. 150g,approx. 150g loose,0.75,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,WASHED POTATOES,coles,9852032,I'm Perfect Potatoes Imperfect 4Kg,4kg,8.90,not-compared,strong,potatoes,potatoes:potato:imperfect,not in woolworths's latest capture — last seen 2026-11-09
+produce,WASHED POTATOES,coles,2743866,Kestrel Washed Potatoes 2Kg,2kg,8.00,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,WASHED POTATOES,coles,1311710,Microwave Bag 350g,350g bag,3.10,no-match,,,,no match key — the lexicon could not key this row
+produce,WASHED POTATOES,coles,3026260,Spud Lite Baby Potato 750g,750g,4.00,not-compared,group-only,potatoes,,"we cannot yet tell which variety this is, so it is not compared"
+produce,WHITE GRAPES,coles,8133391,White Seedless Grapes approx. 1kg,approx. 1kg loose,11.90,not-compared,strong,grapes,grapes:white-seedless,"priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure"
+produce,WHITE MUSHROOMS,coles,2728862,Mushrooms Sliced 500g,500g,6.00,no-match,,,,no match key — the lexicon could not key this row
+produce,WHITE MUSHROOMS,coles,5750960,Sliced Mushrooms 200g,200g,4.00,no-match,,,,no match key — the lexicon could not key this row
+produce,WHITE MUSHROOMS,coles,4835466,White Flat Mushrooms 375g,375g,7.00,not-compared,group-only,mushrooms,,"we cannot yet tell which variety this is, so it is not compared"
+produce,ZUCCHINI,woolworths,170225,Fresh Zucchini Green,each,1.38,not-compared,strong,zucchini,zucchini:green,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
+produce,ZUCCHINI,woolworths,825869,The Odd Bunch Zucchini Prepacked 750g,750g prepack,4.10,not-compared,group-only,zucchini,zucchini:zucchini:imperfect,no zucchini at coles in the latest capture
+produce,ZUCCHINI,woolworths,174172,Zucchini Green,each,2.20,not-compared,strong,zucchini,zucchini:green,"priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure"
