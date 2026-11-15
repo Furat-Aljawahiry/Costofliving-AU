@@ -36,9 +36,9 @@ the Terraform state — not against the docs, several of which are out of date.
 | **The drift alarm earned its keep** | 24 Sep 06:00: the exit IP resolved to **store 2631**, not the pinned 1101 — 452 products instead of 473. `store_changed: true, alarm: true`; the run was kept and flagged, not silently appended. P0.7 works as designed, and P2.3's series must read the flag. |
 | **P1.2 shipped** (`2046e1d`) | Real ABS Food CPI end to end, the index chart, and a new full **Cheapest today** page (`#/cheapest`, `client/src/pages/Cheapest.jsx`). |
 | **P2.0 shipped** (out of order, deliberately) | Same-retailer size grouping — `server/data/produceNames.js`, `/api/items`, real size tabs on the product page. It is the groundwork 2.1 needs; see P2.0. |
-| **"Did you know?" facts** (uncommitted) | `client/src/lib/facts/{compute,vegetables}.js` — aisle facts whose numbers are computed from the ABS series at render time, so they stay true after every `npm run fetch-abs`, with a `when(s)` guard that hides a fact which has stopped being true. The category page picks one per visit and unfolds the index chart with that fact's quarters shaded. The honesty rule is extended to prose: every fact carries `ABS CPI 6401.0` or `GENERAL` as its source tag. |
+| **"Did you know?" facts** | `client/src/lib/facts/{compute,vegetables}.js` — aisle facts whose numbers are computed from the ABS series at render time, so they stay true after every `npm run fetch-abs`, with a `when(s)` guard that hides a fact which has stopped being true. The category page picks one per visit and unfolds the index chart with that fact's quarters shaded. The honesty rule is extended to prose: every fact carries `ABS CPI 6401.0` or `GENERAL` as its source tag. |
 | **First tests exist** | `server/scripts/fetch-abs.test.mjs`, `server/data/produceNames.test.mjs`, run by `npm run test:server` (`node --test`). Not the view-model coverage P1.7 asks for, and still nothing on the client. |
-| **Uncommitted** | 19 modified files plus `client/src/lib/facts/`, `server/data/produceNames.{js,test.mjs}`, `server/scripts/produce-names-report.mjs`. **Commit before anything else** — P0.1 bought version control and this much work sitting in the working tree hands it back. |
+| **Working tree committed** | 15 Nov: the whole 21 Sep → 15 Nov backlog is on `main` (`fdaee63`, 117 files) — meat/snacks/matching/season, `server/config.js` and the staleness rules, the client pages and facts, `lambda_{meat,snacks}.tf`, the 18–21 Oct captures and the review output. The tree is clean. |
 
 ### 0.1 Data pipeline
 
@@ -65,7 +65,7 @@ the Terraform state — not against the docs, several of which are out of date.
 | Mobile | No. Home bento rows are fixed-pixel heights and spans. |
 | Tests | **Two server suites** (`npm run test:server`: `fetch-abs`, `produceNames`). Nothing on the client, nothing yet on the view-model builders P1.7 names. |
 | Hosting | None. Runs on `localhost` only. |
-| Version control | Git, `main` on GitHub (P0.1, 17 Sep), 17 commits. **19 modified + 4 new files are uncommitted right now.** |
+| Version control | Git, `main` on GitHub (P0.1, 17 Sep). Working tree clean as of 15 Nov; the Kmart/Big W watcher lives on the `pokemon` branch, out of main. |
 | Docs | `README.md` still leads with "works immediately with realistic mock prices"; `ARCHITECTURE.md` (Aug 24) predates everything in §0.2. |
 
 ### 0.3 What v1 asked for, and what happened
@@ -239,7 +239,7 @@ P2 waits on — is underway.
 
 | Risk | Status | Mitigation |
 |---|---|---|
-| Work lost — no version control | Solved 17 Sep. **But 23 files are uncommitted right now**, which is the same risk wearing a different hat. | Commit today (§0.0). |
+| Work lost — no version control | Solved 17 Sep, and actually held as of 15 Nov: nothing uncommitted, `origin/main` current, and the meat/snacks Terraform is no longer laptop-only. | Keep the tree clean; `terraform plan` reports no drift. |
 | Schedule fires but nobody notices it stop | **Occurred Sep 5–13.** Mitigated 17 Sep, pending email confirmation. | `fruitveg-no-data-24h` + SNS → email; every alarm has an action. |
 | Woolworths never `complete` → never `_SUCCESS` | **Live, and now the project's top risk.** The 17 Sep fix reduced it (5–8 rows → 1–4) but did not remove it, and since 23 Sep the mornings miss too: 12 `_SUCCESS` in 29 runs. Every downstream "complete history" claim is Coles-only until this closes. | P0.3, reopened with a concrete next step. `fruitveg-partial-runs` is firing, which is the alarm working, not noise to be muted. |
 | Retailer blocks the residential exit (AWS egress is already blocked by both) | Not currently. One rotation on 23 Sep 06:00 (`proxy_rotations: 1`) is the only sign so far. | `DATA_SUPPLY_DECISION.md` §4: stop that retailer, don't rotate. ABS-only mode (P1.2) keeps the trend story alive. |
