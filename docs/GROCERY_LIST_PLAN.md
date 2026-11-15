@@ -21,10 +21,18 @@ unstyled page to click through.** The designed receipt is the round after.
 Measured 2026-11-15 against the committed archive (`DATA_SYNC=off`, newest capture
 2026-11-14T18:32:15Z). These numbers decide what the feature can honestly say.
 
-| | Items | Comparable match | Coverage |
+Measured against **what is on the shelf today** (any SKU of the item in its
+retailer's live run). This is the honest denominator; measuring against every
+item in the archive includes months of delisted seasonal lines and understates
+coverage:
+
+| | On shelf | Comparable match | Coverage |
 |---|---|---|---|
-| Fruit & veg | 960 | 146 | **15.2%** |
-| Meat & seafood | 1117 | 288 | **25.8%** |
+| Fruit & veg | 771 | 170 | **22.0%** |
+| Meat & seafood | 974 | 288 | **29.6%** |
+
+Against every item the site currently lists, including off-shelf ones, it is
+18.2% and 25.8% — see the `getItems` liveness gap in §10.
 
 Of the comparable pairs:
 

@@ -101,7 +101,7 @@ function ProductBody({ p, v }) {
         <h2 className={styles.h2Light}>Price now</h2>
         <div className={styles.storePrices}>
           {RETAILERS.map((r) => {
-            if (r === p.retailer) return <StorePrice key={r} retailer={r} obs={L} pack={p.sizeLabel} verdict={v.verdict} />;
+            if (r === p.retailer) return <StorePrice key={r} retailer={r} obs={L} pack={p.sizeLabel} verdict={v.verdict} product={p} />;
             const m = v.matchByRetailer[r];
             // A matched retailer with a comparable price gets a real card. One
             // that is matched but not comparable gets the price AND the server's
@@ -280,7 +280,42 @@ function ProductBody({ p, v }) {
 
 // ---- pieces -----------------------------------------------------------------
 
-function StorePrice({ retailer, obs, pack, verdict }) {
+/**
+ * The item a price bar is quoting: its picture and its name, linking to OUR
+ * listing of it.
+ *
+ * Both bars carry one, which is the point. A reader who does not trust the
+ * matcher can look at the two photographs and settle it themselves — the Coles
+ * bunch and the Woolworths bunch either are the same vegetable or they are not,
+ * and that judgement needs no faith in a lexicon. The retailer's own site stays
+ * on its separate "at Woolworths ↗" link, so the picture never leaves the site.
+ */
+function StoreItem({ retailer, sku, name, imageUrl, children }) {
+  const href = `#/product/${retailer}/${sku}`;
+  // Woolworths' image CDN answers 403 to this site, so a captured imageUrl is
+  // not a promise that a picture will arrive. An empty bordered box reads as a
+  // bug; the dashed placeholder is the same "not wired" language the rest of
+  // the page uses for a thing we know about but cannot show.
+  const [broken, setBroken] = useState(false);
+  const showImage = imageUrl && !broken;
+  return (
+    <div className={styles.storeItem}>
+      {showImage ? (
+        <a className={styles.storeItemThumb} href={href} aria-label={`Our listing for ${name}`}>
+          <img src={imageUrl} alt="" loading="lazy" onError={() => setBroken(true)} />
+        </a>
+      ) : (
+        <span className={styles.storeItemNoThumb} aria-hidden="true" />
+      )}
+      <p className={styles.storeItemText}>
+        <a href={href}>{name}</a>
+        {children}
+      </p>
+    </div>
+  );
+}
+
+function StorePrice({ retailer, obs, pack, verdict, product }) {
   const special = obs.isOnSpecial;
   return (
     <div className={`${styles.storePrice} ${special ? styles.storePriceSpecial : ""} ${verdict === "cheapest" ? styles.storePriceWins : ""}`}>
@@ -298,6 +333,16 @@ function StorePrice({ retailer, obs, pack, verdict }) {
       <p className={special ? styles.specialLine : styles.unitLine}>
         {special ? `SPECIAL${obs.wasPrice != null ? ` · was ${money(obs.wasPrice)}` : ""}${obs.promoText && obs.promoText !== "SPECIAL" ? ` · ${obs.promoText}` : ""}` : formatUnit(obs) || "unit price not captured"}
       </p>
+      {product && (
+        <StoreItem retailer={retailer} sku={product.sku} name={product.displayName} imageUrl={product.imageUrl}>
+          {product.productUrl && (
+            <>
+              {" · "}
+              <a href={product.productUrl} target="_blank" rel="noreferrer">at {STORE_LABEL[retailer]} ↗</a>
+            </>
+          )}
+        </StoreItem>
+      )}
     </div>
   );
 }
@@ -346,12 +391,15 @@ function MatchedStorePrice({ match }) {
         </p>
       )}
       {!match.comparable && <p className={styles.uncomparedLine}>{match.notComparableReason}</p>}
-      {best?.productUrl && (
-        <p className={styles.matchLink}>
-          <a href={`#/product/${r}/${best.sku}`}>{best.displayName}</a>
-          {" · "}
-          <a href={best.productUrl} target="_blank" rel="noreferrer">at {STORE_LABEL[r]} ↗</a>
-        </p>
+      {best && (
+        <StoreItem retailer={r} sku={best.sku} name={best.displayName} imageUrl={best.imageUrl}>
+          {best.productUrl && (
+            <>
+              {" · "}
+              <a href={best.productUrl} target="_blank" rel="noreferrer">at {STORE_LABEL[r]} ↗</a>
+            </>
+          )}
+        </StoreItem>
       )}
     </div>
   );
