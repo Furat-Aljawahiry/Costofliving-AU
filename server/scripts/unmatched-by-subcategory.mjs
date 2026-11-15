@@ -38,6 +38,10 @@ const { loadObservations, getProduct, isPublicRow } = await import('../data/obse
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 const argv = process.argv.slice(2)
+// Every flag here takes a value, so a bare word is the output directory only
+// when the word before it is not one of them — otherwise `--top 5` silently
+// writes the whole report into a directory called "5".
+const VALUE_FLAGS = ['--domain', '--state', '--retailer', '--top']
 const flag = (name, dflt = null) => {
   const i = argv.indexOf(`--${name}`)
   return i === -1 ? dflt : argv[i + 1]
@@ -46,7 +50,8 @@ const onlyDomain = flag('domain')
 const onlyState = flag('state')
 const onlyRetailer = flag('retailer')
 const topN = Number(flag('top', 25))
-const OUT = path.resolve(argv.find((a) => !a.startsWith('--') && argv[argv.indexOf(a) - 1] !== '--domain') || path.join(REPO, 'data', 'review', 'unmatched'))
+const positional = argv.filter((a, i) => !a.startsWith('--') && !VALUE_FLAGS.includes(argv[i - 1]))
+const OUT = path.resolve(positional[0] || path.join(REPO, 'data', 'review', 'unmatched'))
 
 const idx = loadObservations({ sync: false })
 

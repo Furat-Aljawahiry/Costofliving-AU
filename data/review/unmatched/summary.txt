@@ -1,7 +1,7 @@
 UNCOMPARED SHELF ROWS — SUMMARY
 ===============================
 
-generated  2026-11-15T04:51:30.610Z
+generated  2026-11-15T04:52:57.149Z
 
 shelf rows                 2630
   price-compared            616  23.4%
