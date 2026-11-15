@@ -2,17 +2,17 @@ UNCOMPARED SHELF ROWS, BY SUBCATEGORY
 =====================================
 
 data dir   C:\Users\furat\Documents\GitHub\costofliving-au\data\out
-generated  2026-11-15T04:52:57.133Z
+generated  2026-11-15T05:08:51.822Z
 
 shelf rows                   2630
-  price-compared              616  23.4%   <- the rate to move
-  matched, not compared      1193  45.4%   pair exists; the matcher refused a number
-  no counterpart at all       821  31.2%   nothing shares the key
+  price-compared              650  24.7%   <- the rate to move
+  matched, not compared      1160  44.1%   pair exists; the matcher refused a number
+  no counterpart at all       820  31.2%   nothing shares the key
 
 RANKED BY ROWS THAT CANNOT BE COMPARED
 --------------------------------------
 subcategory                       domain    rows   cmp   rate  nomatch  refused  top reason
-ORGANICS                          produce     91     8   8.8%        7       76  23× we cannot yet tell which variety this is, so it is not compared
+ORGANICS                          produce     91    10  11.0%        7       74  15× we cannot yet tell which variety this is, so it is not compared
 FRESH POULTRY                     meat        85    24  28.2%        8       53  18× this line is not in woolworths's latest capture
 HALAL                             meat        72    15  20.8%       36       21  21× no match key — the lexicon could not key this row
 SMALLGOODS MEAT                   meat        58     2   3.4%       41       15  21× no match key — the lexicon could not key this row
@@ -27,8 +27,7 @@ DAIRY - SMALLGOODS                meat        38     0   0.0%       38        0 
 VALUE ADDED POULTRY               meat        39     4  10.3%        6       29  4× no counterpart under this key
 VALUE ADDED PROTEIN               meat        36     2   5.6%       20       14  14× no match key — the lexicon could not key this row
 BEEF CASE READY                   meat        58    26  44.8%        5       27  5× no counterpart under this key
-HERBS                             produce     34     4  11.8%       11       19  17× we cannot yet tell which variety this is, so it is not compared
-VEGETABLES                        produce     36     6  16.7%        2       28  4× we cannot yet tell which variety this is, so it is not compared
+VEGETABLES                        produce     36     7  19.4%        1       28  4× the capture recorded no unit price for one side
 SAUSAGES                          meat        60    33  55.0%        4       23  3× no match key — the lexicon could not key this row
 SNACKS                            produce     27     0   0.0%       27        0  27× no match key — the lexicon could not key this row
 SEAFOOD ENTERTAINING              meat        42    16  38.1%        7       19  5× no match key — the lexicon could not key this row
@@ -36,6 +35,7 @@ TROPICAL FRUIT                    produce     32     7  21.9%        1       24 
 FREE RANGE                        meat        60    36  60.0%        6       18  5× no counterpart under this key
 GAME                              meat        33     9  27.3%       14       10  11× no match key — the lexicon could not key this row
 CONDIMENTS & HERBS                produce     23     0   0.0%       20        3  20× no match key — the lexicon could not key this row
+HERBS                             produce     34    12  35.3%       11       11  11× no match key — the lexicon could not key this row
 LEAF                              produce     22     0   0.0%       14        8  14× no match key — the lexicon could not key this row
 … and 209 more subcategories (all of them are in the CSVs)
 
@@ -44,12 +44,12 @@ EVERY UNCOMPARED ITEM, UNDER ITS SUBCATEGORY
 --------------------------------------------
 
 ====================================================================================================
-ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
+ORGANICS  [produce]  — 81 of 91 rows not compared  (7 no-match, 74 refused)
 ====================================================================================================
-     23×  we cannot yet tell which variety this is, so it is not compared
+     15×  we cannot yet tell which variety this is, so it is not compared
+      7×  the capture recorded no unit price for one side
       7×  no match key — the lexicon could not key this row
-      6×  the capture recorded no unit price for one side
-      3×  listed as unavailable at capture
+      4×  listed as unavailable at capture
       2×  half vs whole — different portion
       2×  no sweet potato at coles in the latest capture
       2×  no apple at coles in the latest capture
@@ -76,22 +76,26 @@ ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
       1×  no solanato at coles in the latest capture
       1×  no kale at coles in the latest capture
       1×  no heart at coles in the latest capture
+      1×  no tuscan kale at coles in the latest capture
       1×  no truss at coles in the latest capture
       1×  no cup at coles in the latest capture
+      1×  no baby pak choy at coles in the latest capture
       1×  no green at coles in the latest capture
       1×  no silverbeet at coles in the latest capture
       1×  captured 60 h apart — not a like-for-like comparison
       1×  no sebago at coles in the latest capture
       1×  no celery at coles in the latest capture
       1×  no papaya at coles in the latest capture
+      1×  priced per each but one listing is a single piece and the other a bunch
       1×  captured 132 h apart — not a like-for-like comparison
+      1×  no wombok at coles in the latest capture
       1×  no eggplant at coles in the latest capture
       1×  no parsnip at coles in the latest capture
       1×  no valencia orange at coles in the latest capture
       1×  no mango at coles in the latest capture
       1×  no nectarine at coles in the latest capture
 
-  woolworths Absolute Organic Wombok Cabbage Half                  each · half           —  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
+  woolworths Absolute Organic Wombok Cabbage Half                  each · half           —  not-compared brassicas             no wombok at coles in the latest capture
   woolworths Fresh Celery Organic                                  each              $8.90  not-compared celery                no celery at coles in the latest capture
   woolworths Fresh Leek Organic                                    each              $4.50  not-compared continental-veg       listed as unavailable at capture
   woolworths Macro Avocado Mini Organic 550g                       550g              $7.50  not-compared avocados              we cannot yet tell which variety this is, so it is not compared
@@ -102,8 +106,8 @@ ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
   woolworths Macro Kensington Mango Pride Organic                  each              $4.40  not-compared mangoes               we cannot yet tell which variety this is, so it is not compared
   woolworths Macro Mini Organic Apple 1kg                          1kg               $9.00  not-compared apples                no mini at coles in the latest capture
   woolworths Macro Onion Spring Organic                            each              $4.90  not-compared onions                we cannot yet tell which variety this is, so it is not compared
-  woolworths Macro Organic Baby Cos Lettuce Twin Pack              each                  —  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  woolworths Macro Organic Baby Purple Broccoli                    each              $4.90  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
+  woolworths Macro Organic Baby Cos Lettuce Twin Pack              multipack             —  not-compared lettuce               the capture recorded no unit price for one side
+  woolworths Macro Organic Baby Purple Broccoli                    each              $4.90  not-compared brassicas             priced per each but one listing is a single piece and the other a bunch
   woolworths Macro Organic Banana                                  each              $1.28  not-compared bananas               priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   woolworths Macro Organic Beetroot 250g                           250g              $4.80  not-compared root-veg              listed as unavailable at capture
   woolworths Macro Organic Beetroot Punnet 500g                    500g punnet       $5.50  not-compared root-veg              listed as unavailable at capture
@@ -113,7 +117,7 @@ ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
   woolworths Macro Organic Coleslaw & Kale Slaw Kit 250g           250g              $4.50  no-match                           no match key — the lexicon could not key this row
   woolworths Macro Organic Corn Cobettes Pre-Pack 425g             425g prepack      $8.50  not-compared sweet-corn            no cobette at coles in the latest capture
   woolworths Macro Organic Dates Punnet 200g                       200g punnet       $6.70  not-compared dates                 no date at coles in the latest capture
-  woolworths Macro Organic Dutch Cream Potatoes Bag 1kg            1kg bag           $6.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Macro Organic Dutch Cream Potatoes Bag 1kg            1kg bag           $6.50  not-compared potatoes              listed as unavailable at capture
   woolworths Macro Organic Gourmet Salad Mix 100g                  100g              $4.80  no-match                           no match key — the lexicon could not key this row
   woolworths Macro Organic Green Asparagus Bunch                   bunch                 —  not-compared asparagus             the capture recorded no unit price for one side
   woolworths Macro Organic Green Zucchini Punnet 500g              500g punnet       $5.90  not-compared zucchini              no green at coles in the latest capture
@@ -136,16 +140,14 @@ ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
   woolworths Macro Organic Sebago Potatoes Bag 1kg                 1kg bag           $3.90  not-compared potatoes              no sebago at coles in the latest capture
   woolworths Macro Organic Silverbeet Bunch                        bunch             $5.50  not-compared leafy-greens          no silverbeet at coles in the latest capture
   woolworths Macro Organic Silverbeet Rainbow                      each              $4.90  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Macro Organic Snacking Tomato Punnet 200g             200g punnet       $5.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
   woolworths Macro Organic Snow Peas 125g                          125g                  —  not-compared peas-beans            no snow pea at coles in the latest capture
   woolworths Macro Organic Solanato Tomatoes 200g                  200g              $6.90  not-compared tomatoes              no solanato at coles in the latest capture
   woolworths Macro Organic Spinach English Bunch                   bunch             $5.90  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
   woolworths Macro Organic Sweet Corn 400g                         400g              $7.90  not-compared sweet-corn            priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
   woolworths Macro Organic Sweet Potato                            each              $5.36  not-compared sweet-potatoes        no sweet potato at coles in the latest capture
   woolworths Macro Organic Sweet Potato 500g                       500g              $6.90  not-compared sweet-potatoes        no sweet potato at coles in the latest capture
-  woolworths Macro Organic Tomato Snacking Mix 200g                200g              $5.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
   woolworths Macro Organic Tumeric 75g                             75g               $6.50  no-match                           no match key — the lexicon could not key this row
-  woolworths Macro Organic Tuscan Kale Bunch                       bunch             $5.90  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
+  woolworths Macro Organic Tuscan Kale Bunch                       bunch             $5.90  not-compared brassicas             no tuscan kale at coles in the latest capture
   woolworths Macro Organic Valencia Oranges Bag 1.5kg              1.5kg bag         $8.90  not-compared citrus                no valencia orange at coles in the latest capture
   woolworths Macro Organic Wild Rocket 100g                        100g              $4.90  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
   woolworths Macro Organic Yellow Peaches Pre Packed 500g          500g                  —  not-compared stone-fruit           we cannot yet tell which variety this is, so it is not compared
@@ -161,7 +163,7 @@ ORGANICS  [produce]  — 83 of 91 rows not compared  (7 no-match, 76 refused)
   woolworths Organic In Conversion Apple Jazz 1kg                  1kg                   —  not-compared apples                we cannot yet tell which variety this is, so it is not compared
   woolworths Organic Mini Cauliflower                              each                  —  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
   woolworths Organic Mini Watermelon Seedless                      each              $9.90  not-compared melons                we cannot yet tell which variety this is, so it is not compared
-  woolworths Organic Pak Choy Baby                                 each              $5.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
+  woolworths Organic Pak Choy Baby                                 each              $5.50  not-compared brassicas             no baby pak choy at coles in the latest capture
   woolworths Organic Papaya Whole                                  each              $8.90  not-compared tropical-fruit        no papaya at coles in the latest capture
   woolworths Organic Pumpkin Butternut                             each              $5.90  not-compared pumpkin               no butternut at coles in the latest capture
   woolworths Organic Red Cabbage Half                              each · half       $5.80  not-compared brassicas             no red cabbage at coles in the latest capture
@@ -1056,56 +1058,17 @@ BEEF CASE READY  [meat]  — 32 of 58 rows not compared  (5 no-match, 27 refused
   woolworths Woolworths Roast Beef In Onion & Red Wine 800g - 1.5kg800g–1.5kg · pr       —  not-compared meat:beef:roast       no f onion:f red:f wine at coles in the latest capture
 
 ====================================================================================================
-HERBS  [produce]  — 30 of 34 rows not compared  (11 no-match, 19 refused)
+VEGETABLES  [produce]  — 29 of 36 rows not compared  (1 no-match, 28 refused)
 ====================================================================================================
-     17×  we cannot yet tell which variety this is, so it is not compared
-     11×  no match key — the lexicon could not key this row
-      1×  no basil at woolworths in the latest capture
-      1×  no watercress at woolworths in the latest capture
-
-  coles      Basil Cold Blended Paste 80g                          80g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Garlic Cold Blende Paste Value Pack 120g              120g              $5.20  no-match                           no match key — the lexicon could not key this row
-  coles      Garlic Cold Blended Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Ginger Cold Blended Paste 115g                        115g              $5.20  no-match                           no match key — the lexicon could not key this row
-  coles      Ginger Cold Blended Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Herb Punnets Basil 15g                                15g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Chives 10g                               10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Coriander 15g                            15g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Curry Leaves 10g                         10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Dill 10g                                 10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Lemon Thyme 10g                          10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Lemongrass 30g                           30g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Lime Leaves 10g                          10g               $3.50  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Mint 15g                                 15g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Oregano 10g                              10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Parsley Continental 15g                  15g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Rosemary 10g                             10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Sage 10g                                 10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Thai Basil 15g                           15g               $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Thyme 10g                                10g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Herb Punnets Vietnamese Mint 15g                      15g               $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  coles      Lemongrass Cold Blended Paste 80g                     80g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Lightly Dried Basil 10g                               10g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Lightly Dried Coriander 8g                            8g                $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Lightly Dried Mixed Herbs 8g                          8g                $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Lightly Dried Parsley 8g                              8g                $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Mild Chilli Stir In Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
-  coles      Sleeved Herbs Basil 1 Bunch                           bunch             $3.50  not-compared herbs                 no basil at woolworths in the latest capture
-  coles      Sleeved Herbs Watercress 1 Bunch                      bunch             $3.50  not-compared leafy-greens          no watercress at woolworths in the latest capture
-  coles      Tube Hint Of Lemon 160g                               160g              $5.00  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
-
-====================================================================================================
-VEGETABLES  [produce]  — 30 of 36 rows not compared  (2 no-match, 28 refused)
-====================================================================================================
+      4×  the capture recorded no unit price for one side
       4×  we cannot yet tell which variety this is, so it is not compared
-      3×  the capture recorded no unit price for one side
-      2×  no match key — the lexicon could not key this row
       2×  whole vs half — different portion
       2×  not in woolworths's latest capture — last seen 2026-11-12
       2×  no red at woolworths in the latest capture
       1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
       1×  no continental parsley at woolworths in the latest capture
       1×  no kent at woolworths in the latest capture
+      1×  no match key — the lexicon could not key this row
       1×  no mushroom at woolworths in the latest capture
       1×  no baby at woolworths in the latest capture
       1×  no snacking at woolworths in the latest capture
@@ -1117,11 +1080,10 @@ VEGETABLES  [produce]  — 30 of 36 rows not compared  (2 no-match, 28 refused)
       1×  no trimmed at woolworths in the latest capture
       1×  no iceberg at woolworths in the latest capture
       1×  no baby broccoli at woolworths in the latest capture
-      1×  no baby cos at woolworths in the latest capture
 
   coles      Baby Broccoli 1 Bunch                                 bunch             $5.50  not-compared brassicas             no baby broccoli at woolworths in the latest capture
   coles      Baby Capsicums 175g                                   175g              $7.90  not-compared capsicums             no baby at woolworths in the latest capture
-  coles      Baby Cos Lettuce 2 Pack                               2 pack            $6.90  not-compared lettuce               no baby cos at woolworths in the latest capture
+  coles      Baby Cos Lettuce 2 Pack                               2 pack            $6.90  not-compared lettuce               the capture recorded no unit price for one side
   coles      Broccoli 500g                                         500g              $8.90  not-compared brassicas             the capture recorded no unit price for one side
   coles      Brown Mushrooms 180g                                  180g              $6.90  not-compared mushrooms             no mushroom at woolworths in the latest capture
   coles      Brown Onions 1Kg                                      1kg               $7.90  not-compared onions                not in woolworths's latest capture — last seen 2026-11-12
@@ -1131,7 +1093,7 @@ VEGETABLES  [produce]  — 30 of 36 rows not compared  (2 no-match, 28 refused)
   coles      Carrot Snacking 250g                                  250g              $4.50  not-compared carrots               no snacking at woolworths in the latest capture
   coles      Cauliflower                                           each              $6.90  not-compared brassicas             whole vs half — different portion
   coles      Celery Trimmed                                        each              $7.90  not-compared celery                no trimmed at woolworths in the latest capture
-  coles      Choy Pack 1 Bunch                                     bunch             $5.90  no-match                           no match key — the lexicon could not key this row
+  coles      Choy Pack 1 Bunch                                     bunch             $5.90  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
   coles      Continental Parsley                                   each              $4.50  not-compared herbs                 no continental parsley at woolworths in the latest capture
   coles      Green Beans 250g                                      250g              $7.50  not-compared peas-beans            we cannot yet tell which variety this is, so it is not compared
   coles      Leek                                                  each              $4.90  not-compared continental-veg       not in woolworths's latest capture — last seen 2026-11-12
@@ -1145,7 +1107,6 @@ VEGETABLES  [produce]  — 30 of 36 rows not compared  (2 no-match, 28 refused)
   coles      Potatoes Sweet 500g                                   500g              $6.90  not-compared potatoes              not in woolworths's latest capture — last seen 2026-11-09
   coles      Pumpkin Kent approx. 800g                             approx. 800g lo   $4.72  not-compared pumpkin               no kent at woolworths in the latest capture
   coles      Red Onions 1kg                                        1kg               $7.90  not-compared onions                no red at woolworths in the latest capture
-  coles      Snacking Tomatoes 200g                                200g              $6.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
   coles      Spring Onions                                         each              $5.50  not-compared onions                no spring at woolworths in the latest capture
   coles      Sweet Corn 3 Pack                                     3 pack            $9.90  not-compared sweet-corn            priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   coles      Zucchini 500g                                         500g              $7.90  not-compared zucchini              no zucchini at woolworths in the latest capture
@@ -1436,6 +1397,40 @@ CONDIMENTS & HERBS  [produce]  — 23 of 23 rows not compared  (20 no-match, 3 r
   woolworths Holy Moly Smashed Avocado Dip 57g x 3 pack            57g x 3 pack      $6.00  no-match                           no match key — the lexicon could not key this row
 
 ====================================================================================================
+HERBS  [produce]  — 22 of 34 rows not compared  (11 no-match, 11 refused)
+====================================================================================================
+     11×  no match key — the lexicon could not key this row
+      3×  we cannot yet tell which variety this is, so it is not compared
+      3×  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+      2×  no basil at woolworths in the latest capture
+      1×  no lemon thyme at woolworths in the latest capture
+      1×  no vietnamese mint at woolworths in the latest capture
+      1×  no watercress at woolworths in the latest capture
+
+  coles      Basil Cold Blended Paste 80g                          80g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Garlic Cold Blende Paste Value Pack 120g              120g              $5.20  no-match                           no match key — the lexicon could not key this row
+  coles      Garlic Cold Blended Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Ginger Cold Blended Paste 115g                        115g              $5.20  no-match                           no match key — the lexicon could not key this row
+  coles      Ginger Cold Blended Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Herb Punnets Basil 15g                                15g punnet        $3.50  not-compared herbs                 no basil at woolworths in the latest capture
+  coles      Herb Punnets Coriander 15g                            15g punnet        $3.50  not-compared herbs                 priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  coles      Herb Punnets Curry Leaves 10g                         10g punnet        $3.50  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
+  coles      Herb Punnets Lemon Thyme 10g                          10g punnet        $3.50  not-compared herbs                 no lemon thyme at woolworths in the latest capture
+  coles      Herb Punnets Lime Leaves 10g                          10g punnet        $3.50  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
+  coles      Herb Punnets Mint 15g                                 15g punnet        $3.50  not-compared herbs                 priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  coles      Herb Punnets Parsley Continental 15g                  15g punnet        $3.50  not-compared herbs                 priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  coles      Herb Punnets Vietnamese Mint 15g                      15g punnet        $3.50  not-compared herbs                 no vietnamese mint at woolworths in the latest capture
+  coles      Lemongrass Cold Blended Paste 80g                     80g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Lightly Dried Basil 10g                               10g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Lightly Dried Coriander 8g                            8g                $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Lightly Dried Mixed Herbs 8g                          8g                $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Lightly Dried Parsley 8g                              8g                $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Mild Chilli Stir In Paste 80g                         80g               $4.20  no-match                           no match key — the lexicon could not key this row
+  coles      Sleeved Herbs Basil 1 Bunch                           bunch             $3.50  not-compared herbs                 no basil at woolworths in the latest capture
+  coles      Sleeved Herbs Watercress 1 Bunch                      bunch             $3.50  not-compared leafy-greens          no watercress at woolworths in the latest capture
+  coles      Tube Hint Of Lemon 160g                               160g              $5.00  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
+
+====================================================================================================
 LEAF  [produce]  — 22 of 22 rows not compared  (14 no-match, 8 refused)
 ====================================================================================================
      14×  no match key — the lexicon could not key this row
@@ -1507,64 +1502,42 @@ APPLE  [produce]  — 21 of 26 rows not compared  (0 no-match, 21 refused)
 ====================================================================================================
 TOMATO  [produce]  — 21 of 27 rows not compared  (0 no-match, 21 refused)
 ====================================================================================================
-     13×  we cannot yet tell which variety this is, so it is not compared
       4×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+      3×  we cannot yet tell which variety this is, so it is not compared
+      2×  no kumato at coles in the latest capture
       2×  no solanato at coles in the latest capture
+      1×  no tinyberry at coles in the latest capture
+      1×  listed as unavailable at capture
+      1×  no snacking at coles in the latest capture
       1×  no tomato at coles in the latest capture
+      1×  no petite at coles in the latest capture
       1×  the capture recorded no unit price for one side
+      1×  no mini roma at coles in the latest capture
+      1×  no oxheart at coles in the latest capture
+      1×  no golden grape at coles in the latest capture
+      1×  no medley at coles in the latest capture
 
-  woolworths Ausfresh Tomato Medley 250g                           250g                  —  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Ausfresh Tomato Medley 250g                           250g                  —  not-compared tomatoes              no medley at coles in the latest capture
   woolworths Cherry Tomatoes Loose                                 loose             $0.26  not-compared tomatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   woolworths Gourmet Tomato                                        each              $0.98  not-compared tomatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   woolworths Grape Kumato Loose                                    loose                 —  not-compared grapes                we cannot yet tell which variety this is, so it is not compared
-  woolworths Grape Tomato Golden                                   each              $0.18  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Grape Tomato Golden                                   each              $0.18  not-compared tomatoes              no golden grape at coles in the latest capture
   woolworths Mini-Roma Tomato Punnet 250g                          250g punnet       $3.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Oxheart Tomato per 100g                               per 100g loose   $11.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Perfection Fresh Kumato Tomato 300g                   300g punnet       $4.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Perfection Fresh Mix-a-Mato® Tomatoes 320g            320g              $4.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Perfection Petite Tomatoes Punnet 200g                200g punnet           —  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Oxheart Tomato per 100g                               per 100g loose   $11.90  not-compared tomatoes              no oxheart at coles in the latest capture
+  woolworths Perfection Fresh Kumato Tomato 300g                   300g punnet       $4.90  not-compared tomatoes              no kumato at coles in the latest capture
+  woolworths Perfection Fresh Mix-a-Mato® Tomatoes 320g            320g              $4.50  not-compared tomatoes              listed as unavailable at capture
+  woolworths Perfection Petite Tomatoes Punnet 200g                200g punnet           —  not-compared tomatoes              no petite at coles in the latest capture
   woolworths Sweet Solanato Tomato                                 each              $0.14  not-compared tomatoes              no solanato at coles in the latest capture
-  woolworths The Odd Bunch Tasty Snacking Tomato 350g              350g                  —  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths The Odd Bunch Tasty Snacking Tomato 350g              350g                  —  not-compared tomatoes              no snacking at coles in the latest capture
   woolworths The Odd Bunch Tomato Prepacked 1kg                    1kg prepack       $6.30  not-compared tomatoes              no tomato at coles in the latest capture
-  woolworths Tinyberry Tomatoes 125g                               125g              $3.00  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Tomato Kumato Loose                                   loose             $0.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Tinyberry Tomatoes 125g                               125g              $3.00  not-compared tomatoes              no tinyberry at coles in the latest capture
+  woolworths Tomato Kumato Loose                                   loose             $0.90  not-compared tomatoes              no kumato at coles in the latest capture
   woolworths Tomato Loose Vine Ripened                             loose             $1.02  not-compared tomatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
-  woolworths Tomato Roma Mini                                      each                  —  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Tomato Roma Mini                                      each                  —  not-compared tomatoes              no mini roma at coles in the latest capture
   woolworths Tomato Roma Red                                       each              $0.89  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
   woolworths Truss Tomatoes                                        each              $0.83  not-compared tomatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   woolworths Woolworths Sweet Solanato Tomato Punnet 200g          200g punnet       $4.00  not-compared tomatoes              no solanato at coles in the latest capture
   woolworths Woolworths Tomato Grape Punnet 200g                   200g punnet           —  not-compared tomatoes              the capture recorded no unit price for one side
-
-====================================================================================================
-LEAFY VEG  [produce]  — 20 of 21 rows not compared  (2 no-match, 18 refused)
-====================================================================================================
-     14×  we cannot yet tell which variety this is, so it is not compared
-      2×  no match key — the lexicon could not key this row
-      1×  priced per each but one listing is a single piece and the other a bunch
-      1×  priced per each but one listing is a bunch and the other a single piece
-      1×  no kale at coles in the latest capture
-      1×  no choy sum at coles in the latest capture
-
-  woolworths Buk Choy Asian Greens                                 each              $3.00  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Buk Choy Asian Greens 2 Pack 280g                     2 pack            $3.00  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Cabbage Chinese Wombok Whole                          each              $7.90  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Choy Sum Baby Asian Greens                            each                  —  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Fresh Chinese Cabbage Wombok Half                     each · half       $3.95  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Fresh Fennel                                          each              $3.90  not-compared continental-veg       priced per each but one listing is a single piece and the other a bunch
-  woolworths Kale Fresh Bunch                                      bunch             $4.60  not-compared brassicas             no kale at coles in the latest capture
-  woolworths Leek Twin 2 pack                                      2 pack            $5.70  not-compared continental-veg       we cannot yet tell which variety this is, so it is not compared
-  woolworths Pak Choy Asian Greens Punnet 220g                     220g punnet       $3.00  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Pak Choy Baby Asian Greens                            each              $3.00  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Perfection Chinese Wombok Baby Whole                  each                  —  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Silverbeet Fresh Bunch                                bunch             $4.50  not-compared leafy-greens          priced per each but one listing is a bunch and the other a single piece
-  woolworths Spinach English Salad Bunch                           bunch             $3.90  no-match                           no match key — the lexicon could not key this row
-  woolworths Spinach Salad Bunch                                   bunch             $5.00  no-match                           no match key — the lexicon could not key this row
-  woolworths Woolworths Baby Buk Choy Asian Greens                 each                  —  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Broccoli Chinese Bunch                     bunch             $3.00  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Chinese Broccoli Asian Greens 200g         200g              $3.00  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Choy Sum 220g                              220g              $3.00  not-compared leafy-greens          no choy sum at coles in the latest capture
-  woolworths Woolworths Choy Sum Asian Greens                      each              $3.00  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Melon Bitter Whole                         each              $7.16  not-compared melons                we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
 DELI - STYLE SALAD  [produce]  — 19 of 19 rows not compared  (19 no-match, 0 refused)
@@ -1689,38 +1662,6 @@ KOSHER  [meat]  — 18 of 18 rows not compared  (18 no-match, 0 refused)
   coles      Weisswurst 500g                                       500g             $15.50  no-match                           no match key — the lexicon could not key this row
 
 ====================================================================================================
-POTATO  [produce]  — 18 of 23 rows not compared  (0 no-match, 18 refused)
-====================================================================================================
-      9×  we cannot yet tell which variety this is, so it is not compared
-      2×  no red washed at coles in the latest capture
-      1×  no white washed at coles in the latest capture
-      1×  listed as unavailable at capture
-      1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
-      1×  no baby white washed at coles in the latest capture
-      1×  no baby red washed at coles in the latest capture
-      1×  captured 60 h apart — not a like-for-like comparison
-      1×  captured 132 h apart — not a like-for-like comparison
-
-  woolworths Blue Washed Potato                                    each              $0.90  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Potato Brushed                                        each              $1.18  not-compared potatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
-  woolworths Potato Dutch Cream Loose                              loose             $0.88  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Potato Red Washed                                     each              $0.90  not-compared potatoes              no red washed at coles in the latest capture
-  woolworths Potato White Washed                                   each              $0.90  not-compared potatoes              no white washed at coles in the latest capture
-  woolworths The Odd Bunch Potato Prepacked 4kg                    4kg prepack       $8.50  not-compared potatoes              captured 132 h apart — not a like-for-like comparison
-  woolworths Woolworths Baby Red Washed Potato Bag 1kg             1kg bag           $4.80  not-compared potatoes              no baby red washed at coles in the latest capture
-  woolworths Woolworths Blue Washed Potato Bag 2kg                 2kg bag           $8.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Dutch Cream Potato Bag 2kg                 2kg bag           $7.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Lower Carb Potatoes 1.5kg                  1.5kg             $6.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Mashing Potatoes Bag 1.5kg                 1.5kg bag         $7.50  not-compared potatoes              listed as unavailable at capture
-  woolworths Woolworths Pink Eye Baby Potato Bag 1kg               1kg bag           $4.00  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Potato Mini Microwavable White Bag 500g    500g bag          $3.20  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Red Washed Potatoes Bag 2kg                2kg bag           $5.00  not-compared potatoes              no red washed at coles in the latest capture
-  woolworths Woolworths Royal Blue Baby Potatoes Bag 1kg           1kg bag           $4.80  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Washed Potato Bag 4kg                      4kg bag          $12.50  not-compared potatoes              captured 60 h apart — not a like-for-like comparison
-  woolworths Woolworths White Washed Baby Potatoes Bag 1kg         1kg bag           $4.80  not-compared potatoes              no baby white washed at coles in the latest capture
-  woolworths Zerella Fresh Spudlite Baby Potatoes 750g             750g              $4.00  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-
-====================================================================================================
 PREPARED VEGETABLES  [produce]  — 18 of 18 rows not compared  (16 no-match, 2 refused)
 ====================================================================================================
      16×  no match key — the lexicon could not key this row
@@ -1772,6 +1713,42 @@ SERVICED POULTRY  [meat]  — 18 of 26 rows not compared  (1 no-match, 17 refuse
   woolworths Woolworths RSPCA Approved Chicken Thigh Fillet per 190per kg · servic  $15.50  not-compared meat:chicken:fillet-ththis line is not in woolworths's latest capture
   woolworths Woolworths RSPCA Approved Chicken Wings Three Joint peper kg · servic   $6.00  not-compared meat:chicken:wing     this line is not in woolworths's latest capture
   woolworths Woolworths RSPCA Approved Chicken Wings Three Joint peper kg · servic   $6.00  not-compared meat:chicken:wing     this line is not in woolworths's latest capture
+
+====================================================================================================
+POTATO  [produce]  — 17 of 23 rows not compared  (0 no-match, 17 refused)
+====================================================================================================
+      2×  no red washed at coles in the latest capture
+      2×  no dutch cream at coles in the latest capture
+      2×  no blue washed at coles in the latest capture
+      1×  no white washed at coles in the latest capture
+      1×  listed as unavailable at capture
+      1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+      1×  no lower carb at coles in the latest capture
+      1×  no baby white washed at coles in the latest capture
+      1×  no baby red washed at coles in the latest capture
+      1×  we cannot yet tell which variety this is, so it is not compared
+      1×  no pink eye at coles in the latest capture
+      1×  captured 60 h apart — not a like-for-like comparison
+      1×  captured 132 h apart — not a like-for-like comparison
+      1×  no royal blue baby at coles in the latest capture
+
+  woolworths Blue Washed Potato                                    each              $0.90  not-compared potatoes              no blue washed at coles in the latest capture
+  woolworths Potato Brushed                                        each              $1.18  not-compared potatoes              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+  woolworths Potato Dutch Cream Loose                              loose             $0.88  not-compared potatoes              no dutch cream at coles in the latest capture
+  woolworths Potato Red Washed                                     each              $0.90  not-compared potatoes              no red washed at coles in the latest capture
+  woolworths Potato White Washed                                   each              $0.90  not-compared potatoes              no white washed at coles in the latest capture
+  woolworths The Odd Bunch Potato Prepacked 4kg                    4kg prepack       $8.50  not-compared potatoes              captured 132 h apart — not a like-for-like comparison
+  woolworths Woolworths Baby Red Washed Potato Bag 1kg             1kg bag           $4.80  not-compared potatoes              no baby red washed at coles in the latest capture
+  woolworths Woolworths Blue Washed Potato Bag 2kg                 2kg bag           $8.50  not-compared potatoes              no blue washed at coles in the latest capture
+  woolworths Woolworths Dutch Cream Potato Bag 2kg                 2kg bag           $7.50  not-compared potatoes              no dutch cream at coles in the latest capture
+  woolworths Woolworths Lower Carb Potatoes 1.5kg                  1.5kg             $6.50  not-compared potatoes              no lower carb at coles in the latest capture
+  woolworths Woolworths Mashing Potatoes Bag 1.5kg                 1.5kg bag         $7.50  not-compared potatoes              listed as unavailable at capture
+  woolworths Woolworths Pink Eye Baby Potato Bag 1kg               1kg bag           $4.00  not-compared potatoes              no pink eye at coles in the latest capture
+  woolworths Woolworths Potato Mini Microwavable White Bag 500g    500g bag          $3.20  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Red Washed Potatoes Bag 2kg                2kg bag           $5.00  not-compared potatoes              no red washed at coles in the latest capture
+  woolworths Woolworths Royal Blue Baby Potatoes Bag 1kg           1kg bag           $4.80  not-compared potatoes              no royal blue baby at coles in the latest capture
+  woolworths Woolworths Washed Potato Bag 4kg                      4kg bag          $12.50  not-compared potatoes              captured 60 h apart — not a like-for-like comparison
+  woolworths Woolworths White Washed Baby Potatoes Bag 1kg         1kg bag           $4.80  not-compared potatoes              no baby white washed at coles in the latest capture
 
 ====================================================================================================
 STONE FRUIT  [produce]  — 17 of 17 rows not compared  (0 no-match, 17 refused)
@@ -1853,6 +1830,36 @@ CITRUS  [produce]  — 15 of 17 rows not compared  (0 no-match, 15 refused)
   woolworths Woolworths Orange Navel 5 pack                        5 pack                —  not-compared citrus                the capture recorded no unit price for one side
 
 ====================================================================================================
+LEAFY VEG  [produce]  — 15 of 21 rows not compared  (2 no-match, 13 refused)
+====================================================================================================
+      4×  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+      2×  priced per each but one listing is a bunch and the other a single piece
+      2×  no match key — the lexicon could not key this row
+      1×  no baby bok choy at coles in the latest capture
+      1×  priced per each but one listing is a single piece and the other a bunch
+      1×  no baby pak choy at coles in the latest capture
+      1×  no baby choy sum at coles in the latest capture
+      1×  no baby wombok at coles in the latest capture
+      1×  2-pack vs single — pack sizes differ
+      1×  we cannot yet tell which variety this is, so it is not compared
+
+  woolworths Buk Choy Asian Greens 2 Pack 280g                     2 pack            $3.00  not-compared brassicas             priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  woolworths Choy Sum Baby Asian Greens                            each                  —  not-compared brassicas             no baby choy sum at coles in the latest capture
+  woolworths Fresh Fennel                                          each              $3.90  not-compared continental-veg       priced per each but one listing is a single piece and the other a bunch
+  woolworths Leek Twin 2 pack                                      2 pack            $5.70  not-compared continental-veg       2-pack vs single — pack sizes differ
+  woolworths Pak Choy Asian Greens Punnet 220g                     220g punnet       $3.00  not-compared brassicas             priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  woolworths Pak Choy Baby Asian Greens                            each              $3.00  not-compared brassicas             no baby pak choy at coles in the latest capture
+  woolworths Perfection Chinese Wombok Baby Whole                  each                  —  not-compared brassicas             no baby wombok at coles in the latest capture
+  woolworths Silverbeet Fresh Bunch                                bunch             $4.50  not-compared leafy-greens          priced per each but one listing is a bunch and the other a single piece
+  woolworths Spinach English Salad Bunch                           bunch             $3.90  no-match                           no match key — the lexicon could not key this row
+  woolworths Spinach Salad Bunch                                   bunch             $5.00  no-match                           no match key — the lexicon could not key this row
+  woolworths Woolworths Baby Buk Choy Asian Greens                 each                  —  not-compared brassicas             no baby bok choy at coles in the latest capture
+  woolworths Woolworths Broccoli Chinese Bunch                     bunch             $3.00  not-compared brassicas             priced per each but one listing is a bunch and the other a single piece
+  woolworths Woolworths Chinese Broccoli Asian Greens 200g         200g              $3.00  not-compared brassicas             priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  woolworths Woolworths Choy Sum 220g                              220g              $3.00  not-compared brassicas             priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+  woolworths Woolworths Melon Bitter Whole                         each              $7.16  not-compared melons                we cannot yet tell which variety this is, so it is not compared
+
+====================================================================================================
 SMALLGOODS BULK  [meat]  — 15 of 15 rows not compared  (15 no-match, 0 refused)
 ====================================================================================================
      15×  no match key — the lexicon could not key this row
@@ -1920,33 +1927,6 @@ MANGOES  [produce]  — 14 of 16 rows not compared  (0 no-match, 14 refused)
   woolworths Mango Maha Chanok                                     each                  —  not-compared mangoes               we cannot yet tell which variety this is, so it is not compared
   woolworths Mango R2E2                                            each              $3.90  not-compared mangoes               we cannot yet tell which variety this is, so it is not compared
   woolworths The Odd Bunch Mistaken Mangos 4 pack                  4 pack            $8.00  not-compared mangoes               we cannot yet tell which variety this is, so it is not compared
-
-====================================================================================================
-HERB  [produce]  — 13 of 17 rows not compared  (0 no-match, 13 refused)
-====================================================================================================
-      5×  we cannot yet tell which variety this is, so it is not compared
-      1×  no lemongrass at coles in the latest capture
-      1×  no thai basil at coles in the latest capture
-      1×  no dill at coles in the latest capture
-      1×  no thyme at coles in the latest capture
-      1×  no sage at coles in the latest capture
-      1×  no rosemary at coles in the latest capture
-      1×  no oregano at coles in the latest capture
-      1×  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
-
-  woolworths Woolworths Bay Leaf Fresh Herb 10g                    10g               $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Chives Fresh Herb Punnet 10g               10g punnet        $3.30  not-compared herbs                 priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
-  woolworths Woolworths Curry Leaf Fresh Herb Punnet 5g            5g punnet             —  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Dill Fresh Herb 15g                        15g               $3.30  not-compared herbs                 no dill at coles in the latest capture
-  woolworths Woolworths Green Basil Bunch                          bunch             $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Green Basil Punnet 15g                     15g punnet        $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Kaffir Lime Leaf Fresh Herb Punnet 10g     10g punnet        $3.30  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Lemongrass Fresh Herb Punnet 30g           30g punnet        $3.30  not-compared herbs                 no lemongrass at coles in the latest capture
-  woolworths Woolworths Oregano Fresh Herb Punnet 10g              10g punnet        $3.30  not-compared herbs                 no oregano at coles in the latest capture
-  woolworths Woolworths Rosemary Fresh Herb Punnet 10g             10g punnet        $3.30  not-compared herbs                 no rosemary at coles in the latest capture
-  woolworths Woolworths Sage Fresh Herb Punnet 10g                 10g punnet        $3.30  not-compared herbs                 no sage at coles in the latest capture
-  woolworths Woolworths Thai Basil Punnet 15g                      15g punnet        $3.30  not-compared herbs                 no thai basil at coles in the latest capture
-  woolworths Woolworths Thyme Fresh Herb Punnet 10g                10g punnet        $3.30  not-compared herbs                 no thyme at coles in the latest capture
 
 ====================================================================================================
 LAMB CASE READY  [meat]  — 13 of 25 rows not compared  (2 no-match, 11 refused)
@@ -2083,31 +2063,6 @@ BURGERS  [meat]  — 12 of 19 rows not compared  (2 no-match, 10 refused)
   woolworths Woolworths 8 Pack Slider Beef Burgers 400g            400g              $7.50  not-compared meat:beef:burger      no slider at coles in the latest capture
 
 ====================================================================================================
-NATOORA  [produce]  — 12 of 14 rows not compared  (3 no-match, 9 refused)
-====================================================================================================
-      3×  no match key — the lexicon could not key this row
-      3×  we cannot yet tell which variety this is, so it is not compared
-      1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
-      1×  not in woolworths's latest capture — last seen 2026-11-06
-      1×  no fennel at woolworths in the latest capture
-      1×  no japnut at woolworths in the latest capture
-      1×  not in woolworths's latest capture — last seen 2026-10-01
-      1×  not in woolworths's latest capture — last seen 2026-10-28
-
-  coles      Chives Bunch 1 Bunch                                  bunch             $6.50  not-compared herbs                 priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
-  coles      Organic Dutch Cream Potatoes 1Kg                      1kg               $6.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Organic Japnut Pumpkin 700g                           700g                  —  not-compared pumpkin               no japnut at woolworths in the latest capture
-  coles      Organic Large Fennel 1 Unit                           1 unit            $4.80  not-compared continental-veg       no fennel at woolworths in the latest capture
-  coles      Organic Purple Haze Carrots 500g                      500g              $5.50  not-compared carrots               we cannot yet tell which variety this is, so it is not compared
-  coles      Organic Purple Sprouting Baby Broccoli 1 Bunch        bunch             $6.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Organic Rainbow Chard Bunch 400g                      400g bunch        $6.50  no-match                           no match key — the lexicon could not key this row
-  coles      Tuscan Cavolo Nero Bunch 400g                         400g bunch        $6.50  no-match                           no match key — the lexicon could not key this row
-  coles      Unwaxed Blood Oranges 700g                            700g              $4.90  not-compared citrus                not in woolworths's latest capture — last seen 2026-10-01
-  coles      Unwaxed Cara Cara Oranges 700g                        700g              $4.50  not-compared citrus                not in woolworths's latest capture — last seen 2026-10-28
-  coles      Unwaxed Navel Oranges 700g                            700g              $4.50  not-compared citrus                not in woolworths's latest capture — last seen 2026-11-06
-  coles      Young Shoot Microgreens 110g                          110g              $9.90  no-match                           no match key — the lexicon could not key this row
-
-====================================================================================================
 BEEF GRILLING STEAKS  [meat]  — 11 of 19 rows not compared  (6 no-match, 5 refused)
 ====================================================================================================
       4×  no counterpart under this key
@@ -2153,6 +2108,31 @@ BURGERS/RISSOLE/HSTK  [meat]  — 11 of 19 rows not compared  (4 no-match, 7 ref
   coles      Signature Beef Burger 2 Pack 270g                     270g             $10.00  not-compared meat:beef:burger      270g vs 500g — pack sizes differ (1.9×), and bulk packs are priced differently per kg; both shown, not compared
   coles      Thick & Juicy Beef Burger 2 Pack 300g                 300g              $7.00  not-compared meat:beef:burger      no thick at woolworths in the latest capture
   coles      Wagyu Burger 2 Pack 290g                              290g             $10.80  not-compared meat:beef:burger      no wagyu at woolworths in the latest capture
+
+====================================================================================================
+NATOORA  [produce]  — 11 of 14 rows not compared  (3 no-match, 8 refused)
+====================================================================================================
+      3×  no match key — the lexicon could not key this row
+      1×  priced per each but one listing is a bunch and the other a single piece
+      1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+      1×  we cannot yet tell which variety this is, so it is not compared
+      1×  not in woolworths's latest capture — last seen 2026-11-06
+      1×  no fennel at woolworths in the latest capture
+      1×  no japnut at woolworths in the latest capture
+      1×  not in woolworths's latest capture — last seen 2026-10-01
+      1×  not in woolworths's latest capture — last seen 2026-10-28
+
+  coles      Chives Bunch 1 Bunch                                  bunch             $6.50  not-compared herbs                 priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+  coles      Organic Japnut Pumpkin 700g                           700g                  —  not-compared pumpkin               no japnut at woolworths in the latest capture
+  coles      Organic Large Fennel 1 Unit                           1 unit            $4.80  not-compared continental-veg       no fennel at woolworths in the latest capture
+  coles      Organic Purple Haze Carrots 500g                      500g              $5.50  not-compared carrots               we cannot yet tell which variety this is, so it is not compared
+  coles      Organic Purple Sprouting Baby Broccoli 1 Bunch        bunch             $6.50  not-compared brassicas             priced per each but one listing is a bunch and the other a single piece
+  coles      Organic Rainbow Chard Bunch 400g                      400g bunch        $6.50  no-match                           no match key — the lexicon could not key this row
+  coles      Tuscan Cavolo Nero Bunch 400g                         400g bunch        $6.50  no-match                           no match key — the lexicon could not key this row
+  coles      Unwaxed Blood Oranges 700g                            700g              $4.90  not-compared citrus                not in woolworths's latest capture — last seen 2026-10-01
+  coles      Unwaxed Cara Cara Oranges 700g                        700g              $4.50  not-compared citrus                not in woolworths's latest capture — last seen 2026-10-28
+  coles      Unwaxed Navel Oranges 700g                            700g              $4.50  not-compared citrus                not in woolworths's latest capture — last seen 2026-11-06
+  coles      Young Shoot Microgreens 110g                          110g              $9.90  no-match                           no match key — the lexicon could not key this row
 
 ====================================================================================================
 ONION  [produce]  — 11 of 17 rows not compared  (0 no-match, 11 refused)
@@ -2543,22 +2523,6 @@ LAMB ROAST  [meat]  — 8 of 10 rows not compared  (3 no-match, 5 refused)
   coles      Lamb Whole Leg Roast approx. 2.8kg                    approx. 2.8kg    $50.40  not-compared meat:lamb:leg-roast   2.8kg vs 625g — pack sizes differ (4.5×), and bulk packs are priced differently per kg; both shown, not compared
 
 ====================================================================================================
-TOMATOES P/P  [produce]  — 8 of 13 rows not compared  (0 no-match, 8 refused)
-====================================================================================================
-      6×  we cannot yet tell which variety this is, so it is not compared
-      1×  the capture recorded no unit price for one side
-      1×  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
-
-  coles      Glasshouse Grape Tomatoes 200g                        200g              $3.00  not-compared tomatoes              the capture recorded no unit price for one side
-  coles      Mini Tomatoes 125g                                    125g              $4.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Mix-a-mato Grape Tomatoes 300g                        300g              $5.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Perino Entertainer Red Grape Tomatoes 350g            350g              $6.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Perino Noir Grape Tomatoes 200g                       200g              $4.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Perino Red Grape Tomatoes 200g                        200g              $4.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Perino Tomatoes Entertainer Medley 350g               350g              $6.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Vine Ripened Tomatoes 500g                            500g              $3.50  not-compared tomatoes              priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
-
-====================================================================================================
 BEEF ROAST  [meat]  — 7 of 12 rows not compared  (4 no-match, 3 refused)
 ====================================================================================================
       4×  no counterpart under this key
@@ -2573,23 +2537,6 @@ BEEF ROAST  [meat]  — 7 of 12 rows not compared  (4 no-match, 3 refused)
   coles      No Added Hormone Beef Roast Topside approx. 1.3kg     approx. 1.3kg    $24.70  no-match     meat:beef:roast-topsidno counterpart under this key
   coles      No Added Hormone Beef Rump Roast approx. 1.2kg        approx. 1.2kg    $27.60  no-match     meat:beef:roast-rump  no counterpart under this key
   coles      No Added Hormone Beef Short Rib Fingers approx. 930g  approx. 930g     $29.76  not-compared meat:beef:short_rib   no boneless at woolworths in the latest capture
-
-====================================================================================================
-CABBAGE  [produce]  — 7 of 9 rows not compared  (0 no-match, 7 refused)
-====================================================================================================
-      3×  we cannot yet tell which variety this is, so it is not compared
-      1×  no mini red cabbage at woolworths in the latest capture
-      1×  no mini drumhead cabbage at woolworths in the latest capture
-      1×  no mini savoy cabbage at woolworths in the latest capture
-      1×  no wombok at woolworths in the latest capture
-
-  coles      Cabbage Half Drumhead White                           each · half       $4.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Cabbage Half Wombok                                   each · half       $5.00  not-compared brassicas             no wombok at woolworths in the latest capture
-  coles      Drumhead Cabbage Mini                                 each              $6.90  not-compared brassicas             no mini drumhead cabbage at woolworths in the latest capture
-  coles      Mini Red Cabbage                                      each              $6.90  not-compared brassicas             no mini red cabbage at woolworths in the latest capture
-  coles      Mini Savoy Cabbage                                    each              $6.90  not-compared brassicas             no mini savoy cabbage at woolworths in the latest capture
-  coles      Wombok Chinese Cabbage Whole                          each              $7.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Wombok Chinese Cabbage Wombok Petite 2 Pack           2 pack            $6.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
 COOKED POULTRY  [meat]  — 7 of 7 rows not compared  (3 no-match, 4 refused)
@@ -2628,15 +2575,19 @@ CUCUMBER  [produce]  — 7 of 9 rows not compared  (0 no-match, 7 refused)
 ====================================================================================================
 DECORATIVE LETTUCE  [produce]  — 7 of 8 rows not compared  (0 no-match, 7 refused)
 ====================================================================================================
-      6×  we cannot yet tell which variety this is, so it is not compared
+      2×  single vs 2-pack — pack sizes differ
+      1×  3-pack vs 2-pack — pack sizes differ
+      1×  no oak red at woolworths in the latest capture
+      1×  no oak green at woolworths in the latest capture
       1×  2-pack vs single — pack sizes differ
+      1×  we cannot yet tell which variety this is, so it is not compared
 
-  coles      Baby Gem Lettuce 3 Pack                               3 pack            $4.90  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  coles      Cos Lettuce Head                                      each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  coles      Crunchy Cos Lettuce 1 Pack                            1 pack            $3.20  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
+  coles      Baby Gem Lettuce 3 Pack                               3 pack            $4.90  not-compared lettuce               3-pack vs 2-pack — pack sizes differ
+  coles      Cos Lettuce Head                                      each              $3.50  not-compared lettuce               single vs 2-pack — pack sizes differ
+  coles      Crunchy Cos Lettuce 1 Pack                            1 pack            $3.20  not-compared lettuce               single vs 2-pack — pack sizes differ
   coles      Lettuce Cos Baby Hearts 2 Pack                        2 pack            $3.50  not-compared lettuce               2-pack vs single — pack sizes differ
-  coles      Lettuce Decorative Green Oak                          each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  coles      Lettuce Decorative Oak Red                            each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
+  coles      Lettuce Decorative Green Oak                          each              $3.50  not-compared lettuce               no oak green at woolworths in the latest capture
+  coles      Lettuce Decorative Oak Red                            each              $3.50  not-compared lettuce               no oak red at woolworths in the latest capture
   coles      Symphony Lettuce Decorative                           each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
@@ -2659,16 +2610,18 @@ HAM PORTIONS  [meat]  — 7 of 8 rows not compared  (3 no-match, 4 refused)
 ====================================================================================================
 LETTUCE  [produce]  — 7 of 8 rows not compared  (0 no-match, 7 refused)
 ====================================================================================================
-      5×  we cannot yet tell which variety this is, so it is not compared
-      1×  no cos at coles in the latest capture
+      3×  we cannot yet tell which variety this is, so it is not compared
+      1×  2-pack vs single — pack sizes differ
       1×  single vs 2-pack — pack sizes differ
+      1×  no oakleaf at coles in the latest capture
+      1×  2-pack vs 3-pack — pack sizes differ
 
   woolworths Swanport Harvest Bagged Lettuce                       each              $4.90  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Cos Hearts Lettuce 2 pack                  2 pack            $3.90  not-compared lettuce               no cos at coles in the latest capture
+  woolworths Woolworths Cos Hearts Lettuce 2 pack                  2 pack            $3.90  not-compared lettuce               2-pack vs single — pack sizes differ
   woolworths Woolworths Lettuce Baby Cos                           each              $3.50  not-compared lettuce               single vs 2-pack — pack sizes differ
-  woolworths Woolworths Lettuce Oakleaf Combo                      each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Lettuce Oakleaf Combo                      each              $3.50  not-compared lettuce               no oakleaf at coles in the latest capture
   woolworths Woolworths Lettuce Oakleaf Green                      each              $3.50  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
-  woolworths Woolworths Little Gem Lettuce Combo 2 pack            2 pack            $4.90  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Little Gem Lettuce Combo 2 pack            2 pack            $4.90  not-compared lettuce               2-pack vs 3-pack — pack sizes differ
   woolworths Woolworths Little Gem Lettuce Green 2 pack            2 pack            $4.90  not-compared lettuce               we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
@@ -2702,6 +2655,21 @@ SAUCES  [produce]  — 7 of 7 rows not compared  (7 no-match, 0 refused)
   coles      Dressings Honey & Mustard 250mL                       250ml             $5.70  no-match     sauces                no match key — the lexicon could not key this row
 
 ====================================================================================================
+TOMATOES P/P  [produce]  — 7 of 13 rows not compared  (0 no-match, 7 refused)
+====================================================================================================
+      5×  we cannot yet tell which variety this is, so it is not compared
+      1×  the capture recorded no unit price for one side
+      1×  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+
+  coles      Glasshouse Grape Tomatoes 200g                        200g              $3.00  not-compared tomatoes              the capture recorded no unit price for one side
+  coles      Mini Tomatoes 125g                                    125g              $4.90  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Perino Entertainer Red Grape Tomatoes 350g            350g              $6.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Perino Noir Grape Tomatoes 200g                       200g              $4.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Perino Red Grape Tomatoes 200g                        200g              $4.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Perino Tomatoes Entertainer Medley 350g               350g              $6.50  not-compared tomatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Vine Ripened Tomatoes 500g                            500g              $3.50  not-compared tomatoes              priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+
+====================================================================================================
 ASPARAGUS  [produce]  — 6 of 6 rows not compared  (0 no-match, 6 refused)
 ====================================================================================================
       1×  priced per each but one listing is a single piece and the other a bunch
@@ -2717,21 +2685,6 @@ ASPARAGUS  [produce]  — 6 of 6 rows not compared  (0 no-match, 6 refused)
   woolworths Woolworths Asparagus Green Bunch                      bunch             $1.70  not-compared asparagus             priced per each but one listing is a bunch and the other a single piece
   woolworths Woolworths Asparagus Mini                             each              $1.70  not-compared asparagus             we cannot yet tell which variety this is, so it is not compared
   woolworths Woolworths Green Asparagus Bunch                      bunch                 —  not-compared asparagus             the capture recorded no unit price for one side
-
-====================================================================================================
-BUNCH  [produce]  — 6 of 9 rows not compared  (0 no-match, 6 refused)
-====================================================================================================
-      2×  priced per each but one listing is a bunch and the other a single piece
-      2×  we cannot yet tell which variety this is, so it is not compared
-      1×  priced per each but one listing is a single piece and the other a bunch
-      1×  no spinach at woolworths in the latest capture
-
-  coles      Beetroot Bunch                                        bunch             $7.20  not-compared root-veg              priced per each but one listing is a bunch and the other a single piece
-  coles      Dutch Carrots                                         each              $5.60  not-compared carrots               we cannot yet tell which variety this is, so it is not compared
-  coles      Fennel 1 Bunch                                        bunch             $4.20  not-compared continental-veg       priced per each but one listing is a bunch and the other a single piece
-  coles      Kale Bunch Green                                      bunch             $4.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Silverbeet Medium                                     each              $4.90  not-compared leafy-greens          priced per each but one listing is a single piece and the other a bunch
-  coles      Spinach Bunch                                         bunch             $5.90  not-compared leafy-greens          no spinach at woolworths in the latest capture
 
 ====================================================================================================
 DELI CRUMBED  [meat]  — 6 of 6 rows not compared  (6 no-match, 0 refused)
@@ -2823,20 +2776,6 @@ STRAWBERRY  [produce]  — 6 of 7 rows not compared  (0 no-match, 6 refused)
   woolworths The Odd Bunch Strawberries Punnet 500g                500g punnet           —  not-compared berries               no strawberry at coles in the latest capture
 
 ====================================================================================================
-WASHED POTATOES  [produce]  — 6 of 10 rows not compared  (1 no-match, 5 refused)
-====================================================================================================
-      4×  we cannot yet tell which variety this is, so it is not compared
-      1×  no match key — the lexicon could not key this row
-      1×  not in woolworths's latest capture — last seen 2026-11-09
-
-  coles      Carisma Washed Potatoes 2kg                           2kg               $8.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Creme Gold Washed Potatoes Loose approx. 150g         approx. 150g lo   $0.75  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      I'm Perfect Potatoes Imperfect 4Kg                    4kg               $8.90  not-compared potatoes              not in woolworths's latest capture — last seen 2026-11-09
-  coles      Kestrel Washed Potatoes 2Kg                           2kg               $8.00  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Microwave Bag 350g                                    350g bag          $3.10  no-match                           no match key — the lexicon could not key this row
-  coles      Spud Lite Baby Potato 750g                            750g              $4.00  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-
-====================================================================================================
 ALMONDS  [produce]  — 5 of 5 rows not compared  (5 no-match, 0 refused)
 ====================================================================================================
       5×  no match key — the lexicon could not key this row
@@ -2874,6 +2813,35 @@ BEEF VALUE ADDED  [meat]  — 5 of 6 rows not compared  (0 no-match, 5 refused)
   coles      Beef Strips Korean Soy Garlic Marinade 500g           500g             $11.00  not-compared meat:beef:strip       no f korean:f soy_garlic at woolworths in the latest capture
   coles      No Added Hormone Beef Steaks With Steakhouse Seasoning300g              $9.00  not-compared meat:beef:steak       no f steakhouse at woolworths in the latest capture
   coles      No Added Hormones Beef Bone In Rib Eye With Cafe De Paapprox. 500g     $23.00  not-compared meat:beef:scotch      no bone_in:f butter:f cafe_de_paris at woolworths in the latest capture
+
+====================================================================================================
+BUNCH  [produce]  — 5 of 9 rows not compared  (0 no-match, 5 refused)
+====================================================================================================
+      2×  priced per each but one listing is a bunch and the other a single piece
+      1×  priced per each but one listing is a single piece and the other a bunch
+      1×  no spinach at woolworths in the latest capture
+      1×  we cannot yet tell which variety this is, so it is not compared
+
+  coles      Beetroot Bunch                                        bunch             $7.20  not-compared root-veg              priced per each but one listing is a bunch and the other a single piece
+  coles      Dutch Carrots                                         each              $5.60  not-compared carrots               we cannot yet tell which variety this is, so it is not compared
+  coles      Fennel 1 Bunch                                        bunch             $4.20  not-compared continental-veg       priced per each but one listing is a bunch and the other a single piece
+  coles      Silverbeet Medium                                     each              $4.90  not-compared leafy-greens          priced per each but one listing is a single piece and the other a bunch
+  coles      Spinach Bunch                                         bunch             $5.90  not-compared leafy-greens          no spinach at woolworths in the latest capture
+
+====================================================================================================
+CABBAGE  [produce]  — 5 of 9 rows not compared  (0 no-match, 5 refused)
+====================================================================================================
+      1×  no mini red cabbage at woolworths in the latest capture
+      1×  no mini drumhead cabbage at woolworths in the latest capture
+      1×  no mini savoy cabbage at woolworths in the latest capture
+      1×  we cannot yet tell which variety this is, so it is not compared
+      1×  no petite wombok at woolworths in the latest capture
+
+  coles      Cabbage Half Drumhead White                           each · half       $4.50  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
+  coles      Drumhead Cabbage Mini                                 each              $6.90  not-compared brassicas             no mini drumhead cabbage at woolworths in the latest capture
+  coles      Mini Red Cabbage                                      each              $6.90  not-compared brassicas             no mini red cabbage at woolworths in the latest capture
+  coles      Mini Savoy Cabbage                                    each              $6.90  not-compared brassicas             no mini savoy cabbage at woolworths in the latest capture
+  coles      Wombok Chinese Cabbage Wombok Petite 2 Pack           2 pack            $6.50  not-compared brassicas             no petite wombok at woolworths in the latest capture
 
 ====================================================================================================
 CASHEWS  [produce]  — 5 of 5 rows not compared  (5 no-match, 0 refused)
@@ -2925,6 +2893,17 @@ GRAZE  [meat]  — 5 of 6 rows not compared  (2 no-match, 3 refused)
   coles      Graze Lamb Leg Steak 2pack 270g                       270g             $10.00  not-compared meat:lamb:leg-steak   no grass_fed at woolworths in the latest capture
   coles      Graze Lamb Mini Shoulder Roast 2 Pack approx. 700g    approx. 700g     $14.00  not-compared meat:lamb:roast-shouldno grass_fed at woolworths in the latest capture
   coles      Graze Lamb Shoulder Roast Boneless approx. 1.3kg      approx. 1.3kg    $36.40  not-compared meat:lamb:roast-shouldno boneless:grass_fed at woolworths in the latest capture
+
+====================================================================================================
+HERB  [produce]  — 5 of 17 rows not compared  (0 no-match, 5 refused)
+====================================================================================================
+      5×  we cannot yet tell which variety this is, so it is not compared
+
+  woolworths Woolworths Bay Leaf Fresh Herb 10g                    10g               $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Curry Leaf Fresh Herb Punnet 5g            5g punnet             —  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Green Basil Bunch                          bunch             $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Green Basil Punnet 15g                     15g punnet        $3.30  not-compared herbs                 we cannot yet tell which variety this is, so it is not compared
+  woolworths Woolworths Kaffir Lime Leaf Fresh Herb Punnet 10g     10g punnet        $3.30  not-compared citrus                we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
 LAMB STEAK  [meat]  — 5 of 6 rows not compared  (4 no-match, 1 refused)
@@ -2990,6 +2969,21 @@ RUBUS AND OTHER BERRY  [produce]  — 5 of 5 rows not compared  (1 no-match, 4 r
   woolworths Raspberries Punnet 125g                               125g punnet       $5.50  not-compared berries               we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
+WASHED POTATOES  [produce]  — 5 of 10 rows not compared  (1 no-match, 4 refused)
+====================================================================================================
+      1×  no creme gold washed at woolworths in the latest capture
+      1×  no match key — the lexicon could not key this row
+      1×  no kestrel washed at woolworths in the latest capture
+      1×  no carisma washed at woolworths in the latest capture
+      1×  not in woolworths's latest capture — last seen 2026-11-09
+
+  coles      Carisma Washed Potatoes 2kg                           2kg               $8.50  not-compared potatoes              no carisma washed at woolworths in the latest capture
+  coles      Creme Gold Washed Potatoes Loose approx. 150g         approx. 150g lo   $0.75  not-compared potatoes              no creme gold washed at woolworths in the latest capture
+  coles      I'm Perfect Potatoes Imperfect 4Kg                    4kg               $8.90  not-compared potatoes              not in woolworths's latest capture — last seen 2026-11-09
+  coles      Kestrel Washed Potatoes 2Kg                           2kg               $8.00  not-compared potatoes              no kestrel washed at woolworths in the latest capture
+  coles      Microwave Bag 350g                                    350g bag          $3.10  no-match                           no match key — the lexicon could not key this row
+
+====================================================================================================
 APPLES  [produce]  — 4 of 13 rows not compared  (0 no-match, 4 refused)
 ====================================================================================================
       1×  6-pack vs single — pack sizes differ
@@ -3001,16 +2995,6 @@ APPLES  [produce]  — 4 of 13 rows not compared  (0 no-match, 4 refused)
   coles      Apples Mini Pack 1Kg                                  1kg               $5.50  not-compared apples                no mini at woolworths in the latest capture
   coles      Bravo Apples approx. 200g                             approx. 200g lo   $1.78  not-compared apples                the capture recorded no unit price for one side
   coles      Grab N Glow Pink Lady 6 Pack                          6 pack            $4.90  not-compared apples                6-pack vs single — pack sizes differ
-
-====================================================================================================
-ASIAN VEGETABLES  [produce]  — 4 of 4 rows not compared  (0 no-match, 4 refused)
-====================================================================================================
-      4×  we cannot yet tell which variety this is, so it is not compared
-
-  coles      Asian Choy Buk                                        each              $3.00  not-compared continental-veg       we cannot yet tell which variety this is, so it is not compared
-  coles      Asian Choy Chinese Broccoli                           each              $3.00  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Asian Choy Pak                                        each              $3.00  not-compared continental-veg       we cannot yet tell which variety this is, so it is not compared
-  coles      Asian Choy Sum                                        each              $3.00  not-compared continental-veg       we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
 AVOCADOS  [produce]  — 4 of 8 rows not compared  (0 no-match, 4 refused)
@@ -3287,11 +3271,13 @@ WHOLE CHICKENS  [meat]  — 4 of 7 rows not compared  (2 no-match, 2 refused)
 ====================================================================================================
 BABY POTATOES  [produce]  — 3 of 3 rows not compared  (0 no-match, 3 refused)
 ====================================================================================================
-      3×  we cannot yet tell which variety this is, so it is not compared
+      1×  we cannot yet tell which variety this is, so it is not compared
+      1×  no baby carisma at woolworths in the latest capture
+      1×  no baby red royale at woolworths in the latest capture
 
-  coles      Baby Carisma Potatoes 1kg                             1kg               $4.80  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Baby Carisma Potatoes 1kg                             1kg               $4.80  not-compared potatoes              no baby carisma at woolworths in the latest capture
   coles      Baby Potatoes White 1Kg                               1kg               $4.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Baby Red Royale Potatoes 1Kg                          1kg               $4.80  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Baby Red Royale Potatoes 1Kg                          1kg               $4.80  not-compared potatoes              no baby red royale at woolworths in the latest capture
 
 ====================================================================================================
 BLUEBERRY  [produce]  — 3 of 4 rows not compared  (0 no-match, 3 refused)
@@ -3425,11 +3411,13 @@ READY MEALS PRE PACKED  [produce]  — 3 of 3 rows not compared  (3 no-match, 0 
 ====================================================================================================
 RED POTATOES  [produce]  — 3 of 3 rows not compared  (0 no-match, 3 refused)
 ====================================================================================================
-      3×  we cannot yet tell which variety this is, so it is not compared
+      1×  no red royale at woolworths in the latest capture
+      1×  no royal blue at woolworths in the latest capture
+      1×  no red royale washed at woolworths in the latest capture
 
-  coles      Red Royale Potatoes Loose approx. 170g                approx. 170g lo   $0.85  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Red Royale Washed Potatoes 2Kg                        2kg               $8.50  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
-  coles      Royal Blue Potatoes 2kg                               2kg               $8.00  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Red Royale Potatoes Loose approx. 170g                approx. 170g lo   $0.85  not-compared potatoes              no red royale at woolworths in the latest capture
+  coles      Red Royale Washed Potatoes 2Kg                        2kg               $8.50  not-compared potatoes              no red royale washed at woolworths in the latest capture
+  coles      Royal Blue Potatoes 2kg                               2kg               $8.00  not-compared potatoes              no royal blue at woolworths in the latest capture
 
 ====================================================================================================
 SALMON SKIN-ON PPS  [meat]  — 3 of 9 rows not compared  (0 no-match, 3 refused)
@@ -3490,6 +3478,15 @@ ZUCCHINI  [produce]  — 3 of 5 rows not compared  (0 no-match, 3 refused)
   woolworths Fresh Zucchini Green                                  each              $1.38  not-compared zucchini              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
   woolworths The Odd Bunch Zucchini Prepacked 750g                 750g prepack      $4.10  not-compared zucchini              no zucchini at coles in the latest capture
   woolworths Zucchini Green                                        each              $2.20  not-compared zucchini              priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+
+====================================================================================================
+ASIAN VEGETABLES  [produce]  — 2 of 4 rows not compared  (0 no-match, 2 refused)
+====================================================================================================
+      1×  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+      1×  priced per each but one listing is a single piece and the other a bunch
+
+  coles      Asian Choy Chinese Broccoli                           each              $3.00  not-compared brassicas             priced per each but one listing is a single piece and the other a bunch
+  coles      Asian Choy Pak                                        each              $3.00  not-compared brassicas             priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
 
 ====================================================================================================
 BABY BROCCOLI  [produce]  — 2 of 2 rows not compared  (0 no-match, 2 refused)
@@ -3756,14 +3753,6 @@ SMALLGOODS  [meat]  — 2 of 4 rows not compared  (2 no-match, 0 refused)
   coles      Grass-fed Beef Hotdogs Gluten Free 275g               275g             $11.00  no-match                           no match key — the lexicon could not key this row
 
 ====================================================================================================
-SPROUTS  [produce]  — 2 of 3 rows not compared  (0 no-match, 2 refused)
-====================================================================================================
-      2×  we cannot yet tell which variety this is, so it is not compared
-
-  coles      Combo Sprouts 200g                                    200g              $2.80  not-compared brassicas             we cannot yet tell which variety this is, so it is not compared
-  coles      Shoots Prepacked 250g                                 250g prepack      $2.80  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
-
-====================================================================================================
 SWEET POTATO  [produce]  — 2 of 2 rows not compared  (0 no-match, 2 refused)
 ====================================================================================================
       2×  no gold at coles in the latest capture
@@ -3871,9 +3860,9 @@ BROCCOLI  [produce]  — 1 of 1 rows not compared  (0 no-match, 1 refused)
 ====================================================================================================
 BRUSHED POTATOES  [produce]  — 1 of 3 rows not compared  (0 no-match, 1 refused)
 ====================================================================================================
-      1×  we cannot yet tell which variety this is, so it is not compared
+      1×  no creme royale brushed at woolworths in the latest capture
 
-  coles      Potatoes Creme Royale Brushed approx. 200g            approx. 200g lo   $0.86  not-compared potatoes              we cannot yet tell which variety this is, so it is not compared
+  coles      Potatoes Creme Royale Brushed approx. 200g            approx. 200g lo   $0.86  not-compared potatoes              no creme royale brushed at woolworths in the latest capture
 
 ====================================================================================================
 BRUSSEL SPROUTS  [produce]  — 1 of 2 rows not compared  (0 no-match, 1 refused)
@@ -4126,6 +4115,13 @@ SKINLESS/CHEVAPCHICH  [meat]  — 1 of 1 rows not compared  (1 no-match, 0 refus
       1×  no counterpart under this key
 
   coles      Beef Chevap 400g                                      400g              $7.50  no-match     meat:beef:chevap      no counterpart under this key
+
+====================================================================================================
+SPROUTS  [produce]  — 1 of 3 rows not compared  (0 no-match, 1 refused)
+====================================================================================================
+      1×  we cannot yet tell which variety this is, so it is not compared
+
+  coles      Shoots Prepacked 250g                                 250g prepack      $2.80  not-compared leafy-greens          we cannot yet tell which variety this is, so it is not compared
 
 ====================================================================================================
 VEAL  [meat]  — 1 of 1 rows not compared  (1 no-match, 0 refused)

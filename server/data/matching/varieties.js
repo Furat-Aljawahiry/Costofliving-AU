@@ -114,6 +114,24 @@ export const VARIETIES = {
     ['nugget', 'nugget'], ['mini', 'mini'], ['mandarin', 'mandarin'],
   ],
   potatoes: [
+    // Two-word cultivars, before the one-word forms they extend. Each of these
+    // already had an entry that matched only its FIRST word, so the second
+    // ("Dutch CREAM", "Royal BLUE", "Creme GOLD") was left over and the residual
+    // rule refused the row — all four Dutch Cream bags, on both shelves, failed
+    // this way while the lexicon looked like it already knew the cultivar.
+    ['dutch-cream', 'dutch', 'cream'], ['royal-blue', 'royal', 'blue'],
+    ['creme-gold', 'creme', 'gold'], ['creme-royale', 'creme', 'royale'],
+    ['red-royale', 'red', 'royale'], ['baby-red-royale', 'baby', 'red', 'royale'],
+    ['lower-carb', 'carb', 'lower'], ['pink-eye', 'pink', 'eye', 'baby'],
+    ['blue-washed', 'blue', 'washed'], ['royal-blue-baby', 'royal', 'blue', 'baby'],
+    // Both retailers sell the Spud Lite baby, one as "Spud Lite Baby Potato" and
+    // one as "Zerella Fresh Spudlite Baby Potatoes" — byte-identical keys,
+    // refused only because `baby` was unaccounted for.
+    ['spud-lite-baby', 'spudlite', 'baby'],
+    ['baby-carisma', 'carisma', 'baby'], ['carisma-washed', 'carisma', 'washed'],
+    ['kestrel-washed', 'kestrel', 'washed'], ['creme-gold-washed', 'creme', 'gold', 'washed'],
+    ['red-royale-washed', 'red', 'royale', 'washed'],
+    ['creme-royale-brushed', 'creme', 'royale', 'brushed'],
     // Compounds first: a baby washed potato and a washed potato are different
     // products, and both retailers file them apart.
     ['baby-red-washed', 'baby', 'red', 'washed'], ['baby-white-washed', 'baby', 'white', 'washed'],
@@ -132,6 +150,15 @@ export const VARIETIES = {
     ['sweet-potato', 'sweet_potato'],
   ],
   tomatoes: [
+    // Both retailers stock these and neither was in the lexicon: Mix-a-Mato and
+    // the snacking punnets are sold under the same name on both shelves.
+    ['mix-a-mato', 'mix-a-mato', 'grape'], ['mix-a-mato', 'mix-a-mato'],
+    ['snacking', 'snacking', 'mix'], ['snacking', 'snacking', 'tasty'], ['snacking', 'snacking'],
+    ['kumato', 'kumato'], ['oxheart', 'oxheart'], ['tinyberry', 'tinyberry'],
+    ['petite', 'petite'], ['golden-grape', 'grape', 'golden'],
+    ['mini-roma', 'mini-roma'], ['mini-roma', 'mini', 'roma'],
+    ['heirloom-black', 'heirloom', 'black'], ['heirloom-red', 'heirloom', 'red'],
+    ['heirloom-yellow', 'heirloom', 'yellow'],
     ['cherry-truss', 'cherry', 'truss'], ['cocktail-truss', 'cocktail', 'truss'],
     // Coles writes "Tomatoes Cherry Vine Ripened" and Woolworths "Cherry
     // Tomatoes Loose" (whose raw name also carries `red`). Both are cherry
@@ -169,6 +196,32 @@ export const VARIETIES = {
     ['red-cabbage', 'cabbage', 'red'], ['savoy-cabbage', 'cabbage', 'savoy'],
     ['drumhead-cabbage', 'cabbage', 'drumhead'], ['mini-cabbage', 'cabbage', 'mini'],
     ['broccolini', 'broccolini'], ['brussels-sprouts', 'sprout'],
+    // THE ASIAN GREENS. Each of these consumes the word that makes it specific
+    // rather than letting the residual rule ignore it, which is what keeps
+    // Chinese broccoli (gai lan — a leaf-and-stem vegetable) off plain broccoli
+    // and a baby pak choy off a full-size one. Coles "Asian Choy Chinese
+    // Broccoli" and Woolworths "Chinese Broccoli Asian Greens" are the pair this
+    // was written for; both reduce to `broccoli|chinese`.  — 2026-11-15
+    ['chinese-broccoli', 'broccoli', 'chinese'],
+    // "Chinese cabbage" IS wombok, and both retailers say both words on some
+    // lines ("Wombok Chinese Cabbage Whole"), so the two-word form has to win
+    // over the bare one — more matched tokens wins, so it is listed first.
+    ['wombok', 'wombok', 'chinese'], ['wombok', 'cabbage', 'chinese'],
+    // "Chinese" is redundant on a wombok line, so each wombok variant has a
+    // form that consumes it: Woolworths writes "Chinese Wombok Baby", Coles
+    // "Wombok Chinese Cabbage Wombok Petite". Petite is kept distinct from baby
+    // rather than aliased — nothing in the captures says they are one size.
+    ['baby-wombok', 'wombok', 'baby', 'chinese'], ['baby-wombok', 'wombok', 'baby'],
+    ['petite-wombok', 'wombok', 'petite', 'chinese'], ['petite-wombok', 'wombok', 'petite'],
+    ['baby-bok-choy', 'bok_choy', 'baby'], ['baby-pak-choy', 'pak_choy', 'baby'],
+    ['baby-choy-sum', 'choy_sum', 'baby'], ['choy-sum', 'choy_sum'],
+    ['tuscan-kale', 'kale', 'tuscan'], ['purple-kale', 'kale', 'purple'],
+    // Coles "Organic Purple Sprouting Baby Broccoli" and Woolworths "Macro
+    // Organic Baby Purple Broccoli" are the same bunch under two names.
+    ['purple-baby-broccoli', 'baby', 'broccoli', 'purple'],
+    // Curly green kale is the default kale: Coles says "Kale Bunch Green",
+    // Woolworths just "Kale Fresh Bunch", and they are one bunch.
+    ['kale', 'kale', 'green'],
     ['wombok', 'wombok'], ['bok-choy', 'bok_choy'], ['pak-choy', 'pak_choy'],
     ['broccoli', 'broccoli'], ['cauliflower', 'cauliflower'], ['kale', 'kale'],
     ['cabbage', 'cabbage'],
@@ -244,6 +297,11 @@ export const VARIETIES = {
     ['coconut', 'coconut'], ['lychee', 'lychee'], ['fig', 'fig'],
   ],
   lettuce: [
+    // "Baby Gem" (Coles) and "Little Gem" (Woolworths) are one lettuce, so both
+    // spellings resolve to the same slug rather than being aliased globally —
+    // `little` and `baby` do not mean the same thing everywhere.
+    ['little-gem', 'gem', 'baby'], ['little-gem', 'gem', 'little'],
+    ['oak-red', 'oak', 'red'], ['oak-green', 'oak', 'green'],
     ['baby-cos', 'baby', 'cos'], ['little-gem', 'gem'], ['oakleaf', 'oakleaf'],
     ['iceberg', 'iceberg'], ['cos', 'cos'], ['oak', 'oak'], ['lettuce', 'lettuce'],
   ],
@@ -362,6 +420,13 @@ const IGNORABLE_RESIDUE = new Set([
   // same fruit with a slogan. Neither word changes what is in the bag, and the
   // two lines could not meet while either was unread.  — 2026-09-29
   'topless', 'naturally', 'crownless',
+  // Growth habit, left over after the cultivar matched: Coles' purple broccoli
+  // says "Sprouting", Woolworths' does not, and it is the same bunch. — 2026-11-15
+  'sprouting',
+  // Lettuce copy. "Cos Lettuce Head", "Crunchy Cos", "Lettuce Decorative Oak
+  // Red" — a head of cos is a cos, and `decorative` is how Coles sells the
+  // loose-leaf varieties it already names.  — 2026-11-15
+  'head', 'crunchy', 'decorative', 'bagged',
 ])
 
 // For the metrics report: which groups have no lexicon at all yet. This is the

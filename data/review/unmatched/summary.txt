@@ -1,34 +1,34 @@
 UNCOMPARED SHELF ROWS — SUMMARY
 ===============================
 
-generated  2026-11-15T04:52:57.149Z
+generated  2026-11-15T05:08:51.838Z
 
 shelf rows                 2630
-  price-compared            616  23.4%
-  matched, not compared    1193  45.4%
-  no counterpart at all     821  31.2%
+  price-compared            650  24.7%
+  matched, not compared    1160  44.1%
+  no counterpart at all     820  31.2%
 
 BY DOMAIN
   meat        1444 rows     429 compared    29.7%
-  produce     1186 rows     187 compared    15.8%
+  produce     1186 rows     221 compared    18.6%
 
 EVERY REASON A PAIRED ROW WAS NOT COMPARED
-    279  we cannot yet tell which variety this is, so it is not compared
-     57  the capture recorded no unit price for one side
+    198  we cannot yet tell which variety this is, so it is not compared
+     59  the capture recorded no unit price for one side
      56  this line is not in woolworths's latest capture
-     39  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
+     40  priced per ea here and per kg there — only comparable through an approximate weight, which we do not measure
      30  no per-kg price on one side (sold per pack or each with no weight) — not compared
-     22  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
-     17  listed as unavailable at capture
+     28  priced per kg here and per ea there — only comparable through an approximate weight, which we do not measure
+     19  listed as unavailable at capture
      14  this line was listed as unavailable at capture
      14  no  at coles in the latest capture
       9  no plain at woolworths in the latest capture
+      8  priced per each but one listing is a bunch and the other a single piece
+      8  priced per each but one listing is a single piece and the other a bunch
       8  no  at woolworths in the latest capture
       7  this line is not in coles's latest capture
       7  1kg vs 500g — pack sizes differ (2×), and bulk packs are priced differently per kg; both shown, not compared
       7  no plain at coles in the latest capture
-      6  priced per each but one listing is a single piece and the other a bunch
-      6  priced per each but one listing is a bunch and the other a single piece
       6  not in coles's latest capture — last seen 2026-11-14
       5  not in woolworths's latest capture — last seen 2026-11-12
       5  no free_range at woolworths in the latest capture
@@ -50,7 +50,9 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       4  no thick_cut at coles in the latest capture
       3  no baby spinach at woolworths in the latest capture
       3  not in woolworths's latest capture — last seen 2026-11-06
+      3  2-pack vs single — pack sizes differ
       3  half vs whole — different portion
+      3  single vs 2-pack — pack sizes differ
       3  no wagyu at woolworths in the latest capture
       3  not in woolworths's latest capture — last seen 2026-11-10
       3  no free_range:organic at woolworths in the latest capture
@@ -68,6 +70,7 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       2  no trimmed at woolworths in the latest capture
       2  no rocket at woolworths in the latest capture
       2  no papaya at woolworths in the latest capture
+      2  no basil at woolworths in the latest capture
       2  no mushroom at woolworths in the latest capture
       2  no watermelon at woolworths in the latest capture
       2  no snacking at woolworths in the latest capture
@@ -100,17 +103,20 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       2  quarter vs half — different portion
       2  no green bean at coles in the latest capture
       2  no corella at coles in the latest capture
+      2  no baby pak choy at coles in the latest capture
       2  no sweet potato at coles in the latest capture
       2  no apple at coles in the latest capture
-      2  no kale at coles in the latest capture
       2  no mandarin at coles in the latest capture
       2  no delite at coles in the latest capture
       2  no envy at coles in the latest capture
+      2  no kumato at coles in the latest capture
       2  no mini at coles in the latest capture
       2  no heart at coles in the latest capture
       2  no cosmic crisp at coles in the latest capture
       2  no pawpaw at coles in the latest capture
+      2  no dutch cream at coles in the latest capture
       2  no fuji at coles in the latest capture
+      2  no blue washed at coles in the latest capture
       2  no valencia orange at coles in the latest capture
       2  no lychee at coles in the latest capture
       2  no f garlic_herb at coles in the latest capture
@@ -129,6 +135,9 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       2  no f hoisin at coles in the latest capture
       2  no f lime:f sweet_chilli at coles in the latest capture
       2  1.45kg vs 700g — pack sizes differ (2.1×), and bulk packs are priced differently per kg; both shown, not compared
+      1  no creme royale brushed at woolworths in the latest capture
+      1  no red royale at woolworths in the latest capture
+      1  no creme gold washed at woolworths in the latest capture
       1  no capsicum at woolworths in the latest capture
       1  no raspberry at woolworths in the latest capture
       1  no blood lime at woolworths in the latest capture
@@ -139,30 +148,38 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       1  no orange at woolworths in the latest capture
       1  no murcott at woolworths in the latest capture
       1  no fennel at woolworths in the latest capture
+      1  no baby carisma at woolworths in the latest capture
+      1  no baby red royale at woolworths in the latest capture
+      1  3-pack vs 2-pack — pack sizes differ
+      1  no kestrel washed at woolworths in the latest capture
       1  no medjool at woolworths in the latest capture
       1  no continental parsley at woolworths in the latest capture
       1  no kent at woolworths in the latest capture
+      1  no lemon thyme at woolworths in the latest capture
       1  no baby beetroot at woolworths in the latest capture
+      1  no vietnamese mint at woolworths in the latest capture
       1  no sweet potato at woolworths in the latest capture
       1  not in woolworths's latest capture — last seen 2026-10-12
       1  no mixed at woolworths in the latest capture
+      1  no petite wombok at woolworths in the latest capture
       1  5-pack vs single — pack sizes differ
       1  no cobette at woolworths in the latest capture
       1  no gold at woolworths in the latest capture
-      1  no wombok at woolworths in the latest capture
       1  no pomegranate at woolworths in the latest capture
-      1  no basil at woolworths in the latest capture
       1  no watercress at woolworths in the latest capture
-      1  2-pack vs single — pack sizes differ
+      1  no oak red at woolworths in the latest capture
+      1  no oak green at woolworths in the latest capture
       1  no spring at woolworths in the latest capture
       1  no brushed at woolworths in the latest capture
       1  no zucchini at woolworths in the latest capture
       1  3-pack vs single — pack sizes differ
+      1  no royal blue at woolworths in the latest capture
       1  no washed at woolworths in the latest capture
       1  no iceberg at woolworths in the latest capture
+      1  no carisma washed at woolworths in the latest capture
+      1  no red royale washed at woolworths in the latest capture
       1  no asparagus at woolworths in the latest capture
       1  no orri at woolworths in the latest capture
-      1  no baby cos at woolworths in the latest capture
       1  no onion at woolworths in the latest capture
       1  no free_range:f rustic at woolworths in the latest capture
       1  no f crumbed:f panko at woolworths in the latest capture
@@ -267,20 +284,22 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       1  no kids at coles in the latest capture
       1  no beanette at coles in the latest capture
       1  no snow pea at coles in the latest capture
+      1  no baby bok choy at coles in the latest capture
       1  no navel orange at coles in the latest capture
-      1  no cos at coles in the latest capture
       1  no shiitake at coles in the latest capture
       1  no white at coles in the latest capture
       1  no flat at coles in the latest capture
       1  no persimmon at coles in the latest capture
       1  no swiss brown at coles in the latest capture
       1  no kiwifruit at coles in the latest capture
+      1  no baby choy sum at coles in the latest capture
       1  no roma at coles in the latest capture
+      1  no baby wombok at coles in the latest capture
       1  no oyster at coles in the latest capture
-      1  single vs 2-pack — pack sizes differ
       1  no ambrosia at coles in the latest capture
       1  no lebanese at coles in the latest capture
       1  no red cabbage at coles in the latest capture
+      1  no lower carb at coles in the latest capture
       1  no date at coles in the latest capture
       1  no baby white washed at coles in the latest capture
       1  no baby red washed at coles in the latest capture
@@ -288,21 +307,20 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       1  no parsley at coles in the latest capture
       1  no cobette at coles in the latest capture
       1  no purple at coles in the latest capture
+      1  no tinyberry at coles in the latest capture
       1  no green kiwifruit at coles in the latest capture
       1  no stick at coles in the latest capture
       1  no lemon at coles in the latest capture
       1  no tangold at coles in the latest capture
+      1  no snacking at coles in the latest capture
       1  no butternut at coles in the latest capture
-      1  no lemongrass at coles in the latest capture
-      1  no thai basil at coles in the latest capture
-      1  no dill at coles in the latest capture
-      1  no thyme at coles in the latest capture
-      1  no sage at coles in the latest capture
-      1  no rosemary at coles in the latest capture
-      1  no oregano at coles in the latest capture
       1  no head at coles in the latest capture
+      1  no oakleaf at coles in the latest capture
       1  no strawberry at coles in the latest capture
+      1  no kale at coles in the latest capture
+      1  no tuscan kale at coles in the latest capture
       1  no truss at coles in the latest capture
+      1  2-pack vs 3-pack — pack sizes differ
       1  no zucchini at coles in the latest capture
       1  no capsicum at coles in the latest capture
       1  no tomato at coles in the latest capture
@@ -312,10 +330,17 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       1  captured 1452 h apart — not a like-for-like comparison
       1  no green at coles in the latest capture
       1  no silverbeet at coles in the latest capture
-      1  no choy sum at coles in the latest capture
+      1  no petite at coles in the latest capture
       1  no sebago at coles in the latest capture
+      1  no pink eye at coles in the latest capture
+      1  no mini roma at coles in the latest capture
       1  no celery at coles in the latest capture
       1  no papaya at coles in the latest capture
+      1  no oxheart at coles in the latest capture
+      1  no golden grape at coles in the latest capture
+      1  no wombok at coles in the latest capture
+      1  no medley at coles in the latest capture
+      1  no royal blue baby at coles in the latest capture
       1  no plum at coles in the latest capture
       1  no parsnip at coles in the latest capture
       1  no mango at coles in the latest capture
@@ -484,7 +509,7 @@ EVERY REASON A PAIRED ROW WAS NOT COMPARED
       1  no cooked:frozen at coles in the latest capture
 
 WORST SUBCATEGORIES BY BLOCKED ROWS
-     83  ORGANICS                          produce     8.8% compared
+     81  ORGANICS                          produce    11.0% compared
      61  FRESH POULTRY                     meat       28.2% compared
      57  HALAL                             meat       20.8% compared
      56  SMALLGOODS MEAT                   meat        3.4% compared
@@ -499,8 +524,8 @@ WORST SUBCATEGORIES BY BLOCKED ROWS
      35  VALUE ADDED POULTRY               meat       10.3% compared
      34  VALUE ADDED PROTEIN               meat        5.6% compared
      32  BEEF CASE READY                   meat       44.8% compared
-     30  HERBS                             produce    11.8% compared
-     30  VEGETABLES                        produce    16.7% compared
+     29  VEGETABLES                        produce    19.4% compared
      27  SAUSAGES                          meat       55.0% compared
      27  SNACKS                            produce     0.0% compared
      26  SEAFOOD ENTERTAINING              meat       38.1% compared
+     25  TROPICAL FRUIT                    produce    21.9% compared

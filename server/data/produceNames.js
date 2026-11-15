@@ -32,13 +32,23 @@ const BRAND_PHRASES = [
 ]
 // Two-word names the token pass must not split or dedupe.
 // Joined with "_", which titleWord renders back as a space.
-const JOIN_PHRASES = { 'cara cara': 'cara_cara', 'spud lite': 'spudlite', 'kiwi fruit': 'kiwifruit', 'paw paw': 'pawpaw', 'sweet potato': 'sweet_potato', 'pak choy': 'pak_choy', 'bok choy': 'bok_choy', 'spring onion': 'spring_onion', 'snow pea': 'snow_pea', 'sugar snap': 'sugar_snap' }
+// The asian-greens forms come first: Coles writes the pair REVERSED under its
+// own "Asian Choy" range ("Asian Choy Buk", "Asian Choy Pak", "Asian Choy Sum")
+// while Woolworths writes it the usual way round ("Buk Choy", "Choy Sum"), so
+// both orders have to land on one token before anything else reads the name.
+// "Asian Greens" is Woolworths' shelf label for the whole range — joined here so
+// FILLER_WORDS can drop it as one word rather than leaving a bare `green` that
+// the residual rule would read as a colour.  — 2026-11-15
+const JOIN_PHRASES = { 'choy buk': 'bok_choy', 'buk choy': 'bok_choy', 'choy pak': 'pak_choy', 'pak choi': 'pak_choy', 'choy sum': 'choy_sum', 'asian greens': 'asian_green', 'cara cara': 'cara_cara', 'spud lite': 'spudlite', 'kiwi fruit': 'kiwifruit', 'paw paw': 'pawpaw', 'sweet potato': 'sweet_potato', 'pak choy': 'pak_choy', 'bok choy': 'bok_choy', 'spring onion': 'spring_onion', 'snow pea': 'snow_pea', 'sugar snap': 'sugar_snap' }
 // A leading head noun stays put when the item is a dish or a cut, not the
 // produce itself: "Potato Salad" is not a potato.
 const NOT_HEAD_TAIL = new Set(['salad', 'kit', 'mix', 'paste', 'slice', 'chip', 'juice', 'dip', 'soup', 'medley', 'snack', 'bowl', 'noodle', 'rice', 'fries', 'mash', 'stir', 'stick', 'floret', 'wedge', 'cob', 'cobette', 'spear', 'rib', 'heart', 'cup', 'clove', 'leaf', 'bacon', 'egg', 'chicken', 'cheese', 'butter', 'pasta', 'roll', 'wrap'])
 // Dropped only when other words remain: "Sleeved Herbs Basil" is basil.
-const FILLER_WORDS = new Set(['herbs', 'produce', 'style'])
-const BRAND_WORDS = new Set(['woolworths', 'coles', 'kitchen', 'macro', 'fresh', 'natoora', 'zerella', 'australian', 'aust', 'value', 'coco', 'q', 'zespri'])
+// `asian` and `asian_green` are the two retailers' range labels for the same
+// shelf — "Asian Choy Chinese Broccoli" (Coles) and "Chinese Broccoli Asian
+// Greens" (Woolworths) are one vegetable, and neither label says which.
+const FILLER_WORDS = new Set(['herbs', 'herb', 'produce', 'style', 'asian', 'asian_green'])
+const BRAND_WORDS = new Set(['woolworths', 'coles', 'kitchen', 'macro', 'fresh', 'natoora', 'zerella', 'australian', 'aust', 'value', 'coco', 'q', 'zespri', 'perfection', 'absolute', 'ausfresh'])
 
 // Words dropped from `itemKey` but kept in `itemName` — a retailer column
 // already carries the fact, so only one retailer bothers to say it in the name.
@@ -51,6 +61,13 @@ const IMPERFECT_PHRASES = ['the odd bunch', "i'm perfect", "i' m perfect", 'im p
 
 const PACK_WORDS = {
   bunch: 'bunch', punnet: 'punnet', bag: 'bag', tray: 'tray', box: 'box', sleeve: 'sleeve', net: 'net',
+  // The plurals. Only the singulars were listed, so Coles' "Herb Punnets
+  // Basil" kept `punnet` as though it were part of the variety and every one
+  // of its 17 herb punnets failed the residual rule.  — 2026-11-15
+  bunches: 'bunch', punnets: 'punnet', bags: 'bag', trays: 'tray', boxes: 'box', sleeves: 'sleeve', nets: 'net',
+  tubs: 'tub', jars: 'jar', bottles: 'bottle', sachets: 'sachet', packets: 'packet', packs: 'pack',
+  // A combo or twin pack is a pack format, not a kind of lettuce.
+  combo: 'pack', twin: 'multipack',
   loose: 'loose', sleeved: 'sleeve', prepack: 'prepack', prepacked: 'prepack', 'pre-pack': 'prepack', 'pre-packed': 'prepack',
   pack: 'pack', packed: 'pack', bulk: 'bulk', tub: 'tub', jar: 'jar', bottle: 'bottle', sachet: 'sachet', packet: 'packet', pkt: 'packet',
 }
@@ -70,7 +87,7 @@ const HEAD_NOUNS = new Set([
   'mandarin', 'mango', 'melon', 'mushroom', 'nectarine', 'onion', 'orange', 'papaya', 'parsnip', 'passionfruit',
   'peach', 'pear', 'pea', 'pineapple', 'plum', 'potato', 'pumpkin', 'radish', 'raspberry', 'rockmelon', 'shallot',
   'spinach', 'strawberry', 'tomato', 'turnip', 'watermelon', 'zucchini', 'honeydew', 'sprout', 'sweet_potato', 'spring_onion',
-  'snow_pea', 'pak_choy', 'bok_choy', 'beet', 'date', 'fig', 'lychee', 'persimmon', 'pomegranate', 'quince', 'coconut',
+  'snow_pea', 'pak_choy', 'bok_choy', 'choy_sum', 'wombok', 'beet', 'date', 'fig', 'lychee', 'persimmon', 'pomegranate', 'quince', 'coconut',
 ])
 
 // Singular forms for the token key. Regular rules cover most; these are the

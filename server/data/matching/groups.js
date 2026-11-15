@@ -46,6 +46,15 @@ const HEAD_GROUP = {
   blueberry: 'berries', raspberry: 'berries', strawberry: 'berries', blackberry: 'berries',
   broccoli: 'brassicas', broccolini: 'brassicas', cabbage: 'brassicas', cauliflower: 'brassicas',
   brussel: 'brassicas', sprout: 'brassicas', kale: 'brassicas', bok_choy: 'brassicas', pak_choy: 'brassicas',
+  // The asian greens, all Brassica and all previously split across three groups
+  // by the two retailers' shelves: Coles files its "Asian Choy" range under
+  // ASIAN VEGETABLES (-> continental-veg) and Woolworths files the same plants
+  // under LEAFY VEG (-> leafy-greens), so choy sum could never meet choy sum.
+  // Naming them here lets the name-over-map rule below put both sides in one
+  // group. `choy` is the bare head noun — Coles ships "Choy Pack" with nothing
+  // else in the name — and it also stops a leftover `choy` reading as an
+  // unexplained word in the residual rule.  — 2026-11-15
+  choy: 'brassicas', choy_sum: 'brassicas', wombok: 'brassicas',
   capsicum: 'capsicums', carrot: 'carrots', celery: 'celery', chilli: 'chillies',
   lemon: 'citrus', lime: 'citrus', orange: 'citrus', grapefruit: 'citrus',
   eggplant: 'continental-veg', fennel: 'continental-veg', leek: 'continental-veg', artichoke: 'continental-veg',
